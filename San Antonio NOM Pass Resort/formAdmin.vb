@@ -2,5 +2,5 @@
     Dim rooms
     Dim Joseph
     Dim roomNumber
-    Dim roomType As Boolean
+    Dim amount As Integer
 End Class

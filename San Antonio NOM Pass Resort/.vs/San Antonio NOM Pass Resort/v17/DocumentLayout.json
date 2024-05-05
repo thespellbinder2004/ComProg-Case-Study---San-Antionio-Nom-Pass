@@ -1,0 +1,125 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Gabby\\source\\repos\\Macaburas-20240504T025923Z-001\\Macaburas\\San Antonio NOM Pass Resort\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9CF261F8-5FCB-4851-AAD6-C32EAC3E421F}|San Antonio NOM Pass Resort.vbproj|c:\\users\\gabby\\source\\repos\\macaburas-20240504t025923z-001\\macaburas\\san antonio nom pass resort\\formadmin.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{9CF261F8-5FCB-4851-AAD6-C32EAC3E421F}|San Antonio NOM Pass Resort.vbproj|solutionrelative:formadmin.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CF261F8-5FCB-4851-AAD6-C32EAC3E421F}|San Antonio NOM Pass Resort.vbproj|c:\\users\\gabby\\source\\repos\\macaburas-20240504t025923z-001\\macaburas\\san antonio nom pass resort\\formadmin.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{9CF261F8-5FCB-4851-AAD6-C32EAC3E421F}|San Antonio NOM Pass Resort.vbproj|solutionrelative:formadmin.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CF261F8-5FCB-4851-AAD6-C32EAC3E421F}|San Antonio NOM Pass Resort.vbproj|C:\\Users\\Gabby\\source\\repos\\Macaburas-20240504T025923Z-001\\Macaburas\\San Antonio NOM Pass Resort\\formbooking.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{9CF261F8-5FCB-4851-AAD6-C32EAC3E421F}|San Antonio NOM Pass Resort.vbproj|solutionrelative:formbooking.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CF261F8-5FCB-4851-AAD6-C32EAC3E421F}|San Antonio NOM Pass Resort.vbproj|C:\\Users\\Gabby\\source\\repos\\Macaburas-20240504T025923Z-001\\Macaburas\\San Antonio NOM Pass Resort\\formbooking.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{9CF261F8-5FCB-4851-AAD6-C32EAC3E421F}|San Antonio NOM Pass Resort.vbproj|solutionrelative:formbooking.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CF261F8-5FCB-4851-AAD6-C32EAC3E421F}|San Antonio NOM Pass Resort.vbproj|C:\\Users\\Gabby\\source\\repos\\Macaburas-20240504T025923Z-001\\Macaburas\\San Antonio NOM Pass Resort\\formsplashscreen.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{9CF261F8-5FCB-4851-AAD6-C32EAC3E421F}|San Antonio NOM Pass Resort.vbproj|solutionrelative:formsplashscreen.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CF261F8-5FCB-4851-AAD6-C32EAC3E421F}|San Antonio NOM Pass Resort.vbproj|C:\\Users\\Gabby\\source\\repos\\Macaburas-20240504T025923Z-001\\Macaburas\\San Antonio NOM Pass Resort\\formsplashscreen.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{9CF261F8-5FCB-4851-AAD6-C32EAC3E421F}|San Antonio NOM Pass Resort.vbproj|solutionrelative:formsplashscreen.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "formAdmin.vb",
+              "DocumentMoniker": "C:\\Users\\Gabby\\source\\repos\\Macaburas-20240504T025923Z-001\\Macaburas\\San Antonio NOM Pass Resort\\formAdmin.vb",
+              "RelativeDocumentMoniker": "formAdmin.vb",
+              "ToolTip": "C:\\Users\\Gabby\\source\\repos\\Macaburas-20240504T025923Z-001\\Macaburas\\San Antonio NOM Pass Resort\\formAdmin.vb",
+              "RelativeToolTip": "formAdmin.vb",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAIAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-05-05T08:45:40.237Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "formAdmin.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\Gabby\\source\\repos\\Macaburas-20240504T025923Z-001\\Macaburas\\San Antonio NOM Pass Resort\\formAdmin.vb",
+              "RelativeDocumentMoniker": "formAdmin.vb",
+              "ToolTip": "C:\\Users\\Gabby\\source\\repos\\Macaburas-20240504T025923Z-001\\Macaburas\\San Antonio NOM Pass Resort\\formAdmin.vb [Design]",
+              "RelativeToolTip": "formAdmin.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-05-05T00:13:16.877Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "formBooking.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\Gabby\\source\\repos\\Macaburas-20240504T025923Z-001\\Macaburas\\San Antonio NOM Pass Resort\\formBooking.vb",
+              "RelativeDocumentMoniker": "formBooking.vb",
+              "ToolTip": "C:\\Users\\Gabby\\source\\repos\\Macaburas-20240504T025923Z-001\\Macaburas\\San Antonio NOM Pass Resort\\formBooking.vb [Design]",
+              "RelativeToolTip": "formBooking.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-04-27T02:42:09.875Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "formBooking.vb",
+              "DocumentMoniker": "C:\\Users\\Gabby\\source\\repos\\Macaburas-20240504T025923Z-001\\Macaburas\\San Antonio NOM Pass Resort\\formBooking.vb",
+              "RelativeDocumentMoniker": "formBooking.vb",
+              "ToolTip": "C:\\Users\\Gabby\\source\\repos\\Macaburas-20240504T025923Z-001\\Macaburas\\San Antonio NOM Pass Resort\\formBooking.vb",
+              "RelativeToolTip": "formBooking.vb",
+              "ViewState": "AQIAABgAAAAAAAAAAAAowCcAAABZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-04-28T11:20:34.165Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "formSplashScreen.vb",
+              "DocumentMoniker": "C:\\Users\\Gabby\\source\\repos\\Macaburas-20240504T025923Z-001\\Macaburas\\San Antonio NOM Pass Resort\\formSplashScreen.vb",
+              "RelativeDocumentMoniker": "formSplashScreen.vb",
+              "ToolTip": "C:\\Users\\Gabby\\source\\repos\\Macaburas-20240504T025923Z-001\\Macaburas\\San Antonio NOM Pass Resort\\formSplashScreen.vb",
+              "RelativeToolTip": "formSplashScreen.vb",
+              "ViewState": "AQIAAAAAAAAAAAAAAAA6wAoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-04-28T11:20:26.123Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "formSplashScreen.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\Gabby\\source\\repos\\Macaburas-20240504T025923Z-001\\Macaburas\\San Antonio NOM Pass Resort\\formSplashScreen.vb",
+              "RelativeDocumentMoniker": "formSplashScreen.vb",
+              "ToolTip": "C:\\Users\\Gabby\\source\\repos\\Macaburas-20240504T025923Z-001\\Macaburas\\San Antonio NOM Pass Resort\\formSplashScreen.vb [Design]",
+              "RelativeToolTip": "formSplashScreen.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-04-28T11:20:13.271Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

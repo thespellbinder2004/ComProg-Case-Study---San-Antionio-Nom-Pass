@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Gabby\\source\\repos\\Macaburas-20240504T025923Z-001\\Macaburas\\San Antonio NOM Pass Resort\\San Antonio NOM Pass Resort.vbproj",
+      "projectUniqueName": "C:\\Users\\Gabby\\Documents\\GitHub\\ComProg-Case-Study---San-Antionio-Nom-Pass\\San Antonio NOM Pass Resort\\San Antonio NOM Pass Resort.vbproj",
       "projectName": "San Antonio NOM Pass Resort",
-      "projectPath": "C:\\Users\\Gabby\\source\\repos\\Macaburas-20240504T025923Z-001\\Macaburas\\San Antonio NOM Pass Resort\\San Antonio NOM Pass Resort.vbproj",
+      "projectPath": "C:\\Users\\Gabby\\Documents\\GitHub\\ComProg-Case-Study---San-Antionio-Nom-Pass\\San Antonio NOM Pass Resort\\San Antonio NOM Pass Resort.vbproj",
       "packagesPath": "C:\\Users\\Gabby\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Gabby\\source\\repos\\Macaburas-20240504T025923Z-001\\Macaburas\\San Antonio NOM Pass Resort\\obj\\",
+      "outputPath": "C:\\Users\\Gabby\\Documents\\GitHub\\ComProg-Case-Study---San-Antionio-Nom-Pass\\San Antonio NOM Pass Resort\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

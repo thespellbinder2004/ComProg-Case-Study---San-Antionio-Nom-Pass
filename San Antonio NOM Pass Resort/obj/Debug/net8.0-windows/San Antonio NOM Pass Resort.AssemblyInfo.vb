@@ -16,7 +16,7 @@ Imports System.Reflection
 <Assembly: System.Reflection.AssemblyCompanyAttribute("San Antonio NOM Pass Resort"),  _
  Assembly: System.Reflection.AssemblyConfigurationAttribute("Debug"),  _
  Assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0"),  _
- Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0"),  _
+ Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ac3e8dfa21ae75eb228319d722e2dc7c8da0fb85"),  _
  Assembly: System.Reflection.AssemblyProductAttribute("San Antonio NOM Pass Resort"),  _
  Assembly: System.Reflection.AssemblyTitleAttribute("San Antonio NOM Pass Resort"),  _
  Assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0"),  _

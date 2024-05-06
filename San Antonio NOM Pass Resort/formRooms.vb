@@ -3,6 +3,7 @@ Imports System.Drawing.Imaging
 Imports System.Drawing.Text
 
 Public Class formRooms
+
     Dim intAvailableSingleRoom = 0
     Dim intAvailableQueenRoom = 0
     Dim intAvailableKingRoom = 0
@@ -114,7 +115,7 @@ Public Class formRooms
                         End If
                         singleRooms.removeRoom(5 - intAvailableSingleRoom)
                         formReciept.Show()
-                        formReciept.txtFirstName.Text = formBooking.txtFirstName.Text + " " + formBooking.TextBox2.Text
+                        formReciept.txtFirstName.Text = formBooking.txtFirstName.Text + " " + formBooking.txtLastName.Text
                         formReciept.TextBox1.Text = formBooking.intTotalGuests
                         formBooking.intReceiptNumber += 1
                         formReciept.TextBox4.Text = singleRooms.getPayment(formBooking.intTotalNight)
@@ -183,7 +184,7 @@ Public Class formRooms
                         End If
                         queenRoom.removeRoom(5 - intAvailableQueenRoom)
                         formReciept.Show()
-                        formReciept.txtFirstName.Text = formBooking.txtFirstName.Text + " " + formBooking.TextBox2.Text
+                        formReciept.txtFirstName.Text = formBooking.txtFirstName.Text + " " + formBooking.txtLastName.Text
                         formReciept.TextBox1.Text = formBooking.intTotalGuests
                         formBooking.intReceiptNumber += 1
                         formReciept.TextBox4.Text = queenRoom.getPayment(formBooking.intTotalNight)
@@ -252,7 +253,7 @@ Public Class formRooms
                         End If
                         kingRoom.removeRoom(5 - intAvailableKingRoom)
                         formReciept.Show()
-                        formReciept.txtFirstName.Text = formBooking.txtFirstName.Text + " " + formBooking.TextBox2.Text
+                        formReciept.txtFirstName.Text = formBooking.txtFirstName.Text + " " + formBooking.txtLastName.Text
                         formReciept.TextBox1.Text = formBooking.intTotalGuests
                         formBooking.intReceiptNumber += 1
                         formReciept.TextBox4.Text = kingRoom.getPayment(formBooking.intTotalNight)
@@ -320,7 +321,7 @@ Public Class formRooms
                         End If
                         twinRoom.removeRoom(5 - intAvailanleTwinRoom)
                         formReciept.Show()
-                        formReciept.txtFirstName.Text = formBooking.txtFirstName.Text + " " + formBooking.TextBox2.Text
+                        formReciept.txtFirstName.Text = formBooking.txtFirstName.Text + " " + formBooking.txtLastName.Text
                         formReciept.TextBox1.Text = formBooking.intTotalGuests
                         formBooking.intReceiptNumber += 1
                         formReciept.TextBox4.Text = twinRoom.getPayment(formBooking.intTotalNight)
@@ -388,7 +389,7 @@ Public Class formRooms
                         End If
                         standardRoom.removeRoom(5 - intAvailableStandardRoom)
                         formReciept.Show()
-                        formReciept.txtFirstName.Text = formBooking.txtFirstName.Text + " " + formBooking.TextBox2.Text
+                        formReciept.txtFirstName.Text = formBooking.txtFirstName.Text + " " + formBooking.txtLastName.Text
                         formReciept.TextBox1.Text = formBooking.intTotalGuests
                         formBooking.intReceiptNumber += 1
                         formReciept.TextBox4.Text = standardRoom.getPayment(formBooking.intTotalNight)
@@ -457,7 +458,7 @@ Public Class formRooms
                         End If
                         ExecRoom.removeRoom(5 - intAvailableStandardRoom)
                         formReciept.Show()
-                        formReciept.txtFirstName.Text = formBooking.txtFirstName.Text + " " + formBooking.TextBox2.Text
+                        formReciept.txtFirstName.Text = formBooking.txtFirstName.Text + " " + formBooking.txtLastName.Text
                         formReciept.TextBox1.Text = formBooking.intTotalGuests
                         formBooking.intReceiptNumber += 1
                         formReciept.TextBox4.Text = ExecRoom.getPayment(formBooking.intTotalNight)
@@ -525,7 +526,7 @@ Public Class formRooms
                         End If
                         pressRoom.removeRoom(5 - intAvailablePresidentialRoom)
                         formReciept.Show()
-                        formReciept.txtFirstName.Text = formBooking.txtFirstName.Text + " " + formBooking.TextBox2.Text
+                        formReciept.txtFirstName.Text = formBooking.txtFirstName.Text + " " + formBooking.txtLastName.Text
                         formReciept.TextBox1.Text = formBooking.intTotalGuests
                         formBooking.intReceiptNumber += 1
                         formReciept.TextBox4.Text = pressRoom.getPayment(formBooking.intTotalNight)
@@ -564,5 +565,9 @@ Public Class formRooms
                 End If
             End If
         End If
+    End Sub
+
+    Private Sub formRooms_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
     End Sub
 End Class

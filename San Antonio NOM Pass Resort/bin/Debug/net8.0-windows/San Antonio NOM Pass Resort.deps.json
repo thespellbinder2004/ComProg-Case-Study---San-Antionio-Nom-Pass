@@ -9,6 +9,11 @@
       "San Antonio NOM Pass Resort/1.0.0": {
         "runtime": {
           "San Antonio NOM Pass Resort.dll": {}
+        },
+        "resources": {
+          "aa/San Antonio NOM Pass Resort.resources.dll": {
+            "locale": "aa"
+          }
         }
       }
     }

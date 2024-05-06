@@ -4,7 +4,7 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>net8.0-windows</TargetFramework>
     <RootNamespace>San_Antonio_NOM_Pass_Resort</RootNamespace>
-    <StartupObject>Sub Main</StartupObject>
+    <StartupObject>San_Antonio_NOM_Pass_Resort.My.MyApplication</StartupObject>
     <UseWindowsForms>true</UseWindowsForms>
     <MyType>WindowsForms</MyType>
   </PropertyGroup>

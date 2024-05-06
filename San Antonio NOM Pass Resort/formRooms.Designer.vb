@@ -86,10 +86,10 @@ Partial Class formRooms
         ' 
         lblRoom.AutoSize = True
         lblRoom.BackColor = SystemColors.ControlDark
-        lblRoom.Font = New Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblRoom.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         lblRoom.Location = New Point(261, 3)
         lblRoom.Name = "lblRoom"
-        lblRoom.Size = New Size(71, 23)
+        lblRoom.Size = New Size(75, 24)
         lblRoom.TabIndex = 0
         lblRoom.Text = "Rooms"
         ' 
@@ -97,10 +97,10 @@ Partial Class formRooms
         ' 
         lblSAR.AutoSize = True
         lblSAR.BackColor = SystemColors.ControlDark
-        lblSAR.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblSAR.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         lblSAR.Location = New Point(219, 23)
         lblSAR.Name = "lblSAR"
-        lblSAR.Size = New Size(147, 16)
+        lblSAR.Size = New Size(166, 15)
         lblSAR.TabIndex = 1
         lblSAR.Text = "San Antonio NOM Resort"
         ' 
@@ -108,10 +108,10 @@ Partial Class formRooms
         ' 
         Label2.AutoSize = True
         Label2.BackColor = SystemColors.ControlDark
-        Label2.Font = New Font("Century Gothic", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label2.Font = New Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label2.Location = New Point(10, 135)
         Label2.Name = "Label2"
-        Label2.Size = New Size(93, 17)
+        Label2.Size = New Size(99, 17)
         Label2.TabIndex = 6
         Label2.Text = "Single Room"
         ' 
@@ -119,10 +119,10 @@ Partial Class formRooms
         ' 
         Label5.AutoSize = True
         Label5.BackColor = SystemColors.ControlDark
-        Label5.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label5.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label5.Location = New Point(10, 149)
         Label5.Name = "Label5"
-        Label5.Size = New Size(64, 16)
+        Label5.Size = New Size(69, 15)
         Label5.TabIndex = 10
         Label5.Text = "999/Night"
         ' 
@@ -130,10 +130,10 @@ Partial Class formRooms
         ' 
         Label6.AutoSize = True
         Label6.BackColor = SystemColors.ControlDark
-        Label6.Font = New Font("Century Gothic", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label6.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label6.Location = New Point(10, 165)
         Label6.Name = "Label6"
-        Label6.Size = New Size(110, 16)
+        Label6.Size = New Size(110, 13)
         Label6.TabIndex = 11
         Label6.Text = "AVAILABLE ROOMS:"
         ' 
@@ -141,17 +141,17 @@ Partial Class formRooms
         ' 
         Label8.AutoSize = True
         Label8.BackColor = SystemColors.ControlDark
-        Label8.Font = New Font("Century Gothic", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label8.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label8.Location = New Point(10, 185)
         Label8.Name = "Label8"
-        Label8.Size = New Size(103, 16)
+        Label8.Size = New Size(100, 13)
         Label8.TabIndex = 13
         Label8.Text = "ROOM NUMBERS:"
         ' 
         ' btnSingleRoom
         ' 
         btnSingleRoom.FlatStyle = FlatStyle.Flat
-        btnSingleRoom.Font = New Font("Century Gothic", 7.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnSingleRoom.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnSingleRoom.Location = New Point(10, 212)
         btnSingleRoom.Margin = New Padding(3, 2, 3, 2)
         btnSingleRoom.Name = "btnSingleRoom"
@@ -186,7 +186,7 @@ Partial Class formRooms
         ' btnQueenRoom
         ' 
         btnQueenRoom.FlatStyle = FlatStyle.Flat
-        btnQueenRoom.Font = New Font("Century Gothic", 7.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnQueenRoom.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnQueenRoom.Location = New Point(214, 212)
         btnQueenRoom.Margin = New Padding(3, 2, 3, 2)
         btnQueenRoom.Name = "btnQueenRoom"
@@ -199,10 +199,10 @@ Partial Class formRooms
         ' 
         Label1.AutoSize = True
         Label1.BackColor = SystemColors.ControlDark
-        Label1.Font = New Font("Century Gothic", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label1.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label1.Location = New Point(214, 184)
         Label1.Name = "Label1"
-        Label1.Size = New Size(103, 16)
+        Label1.Size = New Size(100, 13)
         Label1.TabIndex = 22
         Label1.Text = "ROOM NUMBERS:"
         ' 
@@ -210,10 +210,10 @@ Partial Class formRooms
         ' 
         Label3.AutoSize = True
         Label3.BackColor = SystemColors.ControlDark
-        Label3.Font = New Font("Century Gothic", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label3.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label3.Location = New Point(214, 165)
         Label3.Name = "Label3"
-        Label3.Size = New Size(110, 16)
+        Label3.Size = New Size(110, 13)
         Label3.TabIndex = 21
         Label3.Text = "AVAILABLE ROOMS:"
         ' 
@@ -221,10 +221,10 @@ Partial Class formRooms
         ' 
         Label4.AutoSize = True
         Label4.BackColor = SystemColors.ControlDark
-        Label4.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label4.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label4.Location = New Point(214, 149)
         Label4.Name = "Label4"
-        Label4.Size = New Size(71, 16)
+        Label4.Size = New Size(77, 15)
         Label4.TabIndex = 20
         Label4.Text = "1199/Night"
         ' 
@@ -232,10 +232,10 @@ Partial Class formRooms
         ' 
         Label7.AutoSize = True
         Label7.BackColor = SystemColors.ControlDark
-        Label7.Font = New Font("Century Gothic", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label7.Font = New Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label7.Location = New Point(214, 135)
         Label7.Name = "Label7"
-        Label7.Size = New Size(98, 17)
+        Label7.Size = New Size(102, 17)
         Label7.TabIndex = 19
         Label7.Text = "Queen Room"
         ' 
@@ -254,7 +254,7 @@ Partial Class formRooms
         ' btnKingRoom
         ' 
         btnKingRoom.FlatStyle = FlatStyle.Flat
-        btnKingRoom.Font = New Font("Century Gothic", 7.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnKingRoom.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnKingRoom.Location = New Point(417, 212)
         btnKingRoom.Margin = New Padding(3, 2, 3, 2)
         btnKingRoom.Name = "btnKingRoom"
@@ -267,10 +267,10 @@ Partial Class formRooms
         ' 
         Label9.AutoSize = True
         Label9.BackColor = SystemColors.ControlDark
-        Label9.Font = New Font("Century Gothic", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label9.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label9.Location = New Point(417, 184)
         Label9.Name = "Label9"
-        Label9.Size = New Size(103, 16)
+        Label9.Size = New Size(100, 13)
         Label9.TabIndex = 30
         Label9.Text = "ROOM NUMBERS:"
         ' 
@@ -278,10 +278,10 @@ Partial Class formRooms
         ' 
         Label10.AutoSize = True
         Label10.BackColor = SystemColors.ControlDark
-        Label10.Font = New Font("Century Gothic", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label10.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label10.Location = New Point(417, 165)
         Label10.Name = "Label10"
-        Label10.Size = New Size(110, 16)
+        Label10.Size = New Size(110, 13)
         Label10.TabIndex = 29
         Label10.Text = "AVAILABLE ROOMS:"
         ' 
@@ -289,10 +289,10 @@ Partial Class formRooms
         ' 
         Label11.AutoSize = True
         Label11.BackColor = SystemColors.ControlDark
-        Label11.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label11.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label11.Location = New Point(417, 149)
         Label11.Name = "Label11"
-        Label11.Size = New Size(71, 16)
+        Label11.Size = New Size(77, 15)
         Label11.TabIndex = 28
         Label11.Text = "1399/Night"
         ' 
@@ -300,10 +300,10 @@ Partial Class formRooms
         ' 
         Label12.AutoSize = True
         Label12.BackColor = SystemColors.ControlDark
-        Label12.Font = New Font("Century Gothic", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label12.Font = New Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label12.Location = New Point(417, 135)
         Label12.Name = "Label12"
-        Label12.Size = New Size(82, 17)
+        Label12.Size = New Size(86, 17)
         Label12.TabIndex = 27
         Label12.Text = "King Room"
         ' 
@@ -322,7 +322,7 @@ Partial Class formRooms
         ' btnExecRoom
         ' 
         btnExecRoom.FlatStyle = FlatStyle.Flat
-        btnExecRoom.Font = New Font("Century Gothic", 7.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnExecRoom.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnExecRoom.Location = New Point(417, 400)
         btnExecRoom.Margin = New Padding(3, 2, 3, 2)
         btnExecRoom.Name = "btnExecRoom"
@@ -334,40 +334,40 @@ Partial Class formRooms
         ' Label13
         ' 
         Label13.AutoSize = True
-        Label13.Font = New Font("Century Gothic", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label13.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label13.Location = New Point(417, 384)
         Label13.Name = "Label13"
-        Label13.Size = New Size(103, 16)
+        Label13.Size = New Size(100, 13)
         Label13.TabIndex = 54
         Label13.Text = "ROOM NUMBERS:"
         ' 
         ' Label14
         ' 
         Label14.AutoSize = True
-        Label14.Font = New Font("Century Gothic", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label14.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label14.Location = New Point(417, 364)
         Label14.Name = "Label14"
-        Label14.Size = New Size(110, 16)
+        Label14.Size = New Size(110, 13)
         Label14.TabIndex = 53
         Label14.Text = "AVAILABLE ROOMS:"
         ' 
         ' Label15
         ' 
         Label15.AutoSize = True
-        Label15.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label15.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label15.Location = New Point(417, 348)
         Label15.Name = "Label15"
-        Label15.Size = New Size(71, 16)
+        Label15.Size = New Size(77, 15)
         Label15.TabIndex = 52
         Label15.Text = "2299/Night"
         ' 
         ' Label16
         ' 
         Label16.AutoSize = True
-        Label16.Font = New Font("Century Gothic", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label16.Font = New Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label16.Location = New Point(417, 334)
         Label16.Name = "Label16"
-        Label16.Size = New Size(117, 17)
+        Label16.Size = New Size(123, 17)
         Label16.TabIndex = 51
         Label16.Text = "Executive Room"
         ' 
@@ -386,7 +386,7 @@ Partial Class formRooms
         ' btnStandardRoom
         ' 
         btnStandardRoom.FlatStyle = FlatStyle.Flat
-        btnStandardRoom.Font = New Font("Century Gothic", 7.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnStandardRoom.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnStandardRoom.Location = New Point(214, 400)
         btnStandardRoom.Margin = New Padding(3, 2, 3, 2)
         btnStandardRoom.Name = "btnStandardRoom"
@@ -398,40 +398,40 @@ Partial Class formRooms
         ' Label17
         ' 
         Label17.AutoSize = True
-        Label17.Font = New Font("Century Gothic", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label17.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label17.Location = New Point(214, 384)
         Label17.Name = "Label17"
-        Label17.Size = New Size(103, 16)
+        Label17.Size = New Size(100, 13)
         Label17.TabIndex = 46
         Label17.Text = "ROOM NUMBERS:"
         ' 
         ' Label18
         ' 
         Label18.AutoSize = True
-        Label18.Font = New Font("Century Gothic", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label18.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label18.Location = New Point(214, 364)
         Label18.Name = "Label18"
-        Label18.Size = New Size(110, 16)
+        Label18.Size = New Size(110, 13)
         Label18.TabIndex = 45
         Label18.Text = "AVAILABLE ROOMS:"
         ' 
         ' Label19
         ' 
         Label19.AutoSize = True
-        Label19.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label19.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label19.Location = New Point(214, 348)
         Label19.Name = "Label19"
-        Label19.Size = New Size(71, 16)
+        Label19.Size = New Size(77, 15)
         Label19.TabIndex = 44
         Label19.Text = "1999/Night"
         ' 
         ' Label20
         ' 
         Label20.AutoSize = True
-        Label20.Font = New Font("Century Gothic", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label20.Font = New Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label20.Location = New Point(214, 334)
         Label20.Name = "Label20"
-        Label20.Size = New Size(111, 17)
+        Label20.Size = New Size(120, 17)
         Label20.TabIndex = 43
         Label20.Text = "Standard Room"
         ' 
@@ -450,7 +450,7 @@ Partial Class formRooms
         ' btnTwinRoom
         ' 
         btnTwinRoom.FlatStyle = FlatStyle.Flat
-        btnTwinRoom.Font = New Font("Century Gothic", 7.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnTwinRoom.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnTwinRoom.Location = New Point(10, 400)
         btnTwinRoom.Margin = New Padding(3, 2, 3, 2)
         btnTwinRoom.Name = "btnTwinRoom"
@@ -462,40 +462,40 @@ Partial Class formRooms
         ' Label21
         ' 
         Label21.AutoSize = True
-        Label21.Font = New Font("Century Gothic", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label21.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label21.Location = New Point(10, 384)
         Label21.Name = "Label21"
-        Label21.Size = New Size(103, 16)
+        Label21.Size = New Size(100, 13)
         Label21.TabIndex = 38
         Label21.Text = "ROOM NUMBERS:"
         ' 
         ' Label22
         ' 
         Label22.AutoSize = True
-        Label22.Font = New Font("Century Gothic", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label22.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label22.Location = New Point(10, 364)
         Label22.Name = "Label22"
-        Label22.Size = New Size(110, 16)
+        Label22.Size = New Size(110, 13)
         Label22.TabIndex = 37
         Label22.Text = "AVAILABLE ROOMS:"
         ' 
         ' Label23
         ' 
         Label23.AutoSize = True
-        Label23.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label23.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label23.Location = New Point(10, 348)
         Label23.Name = "Label23"
-        Label23.Size = New Size(71, 16)
+        Label23.Size = New Size(77, 15)
         Label23.TabIndex = 36
         Label23.Text = "1799/Night"
         ' 
         ' Label24
         ' 
         Label24.AutoSize = True
-        Label24.Font = New Font("Century Gothic", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label24.Font = New Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label24.Location = New Point(10, 334)
         Label24.Name = "Label24"
-        Label24.Size = New Size(81, 17)
+        Label24.Size = New Size(87, 17)
         Label24.TabIndex = 35
         Label24.Text = "Twin Room"
         ' 
@@ -514,7 +514,7 @@ Partial Class formRooms
         ' btnPresRoom
         ' 
         btnPresRoom.FlatStyle = FlatStyle.Flat
-        btnPresRoom.Font = New Font("Century Gothic", 7.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnPresRoom.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnPresRoom.Location = New Point(214, 589)
         btnPresRoom.Margin = New Padding(3, 2, 3, 2)
         btnPresRoom.Name = "btnPresRoom"
@@ -526,47 +526,47 @@ Partial Class formRooms
         ' Label25
         ' 
         Label25.AutoSize = True
-        Label25.Font = New Font("Century Gothic", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label25.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label25.Location = New Point(214, 572)
         Label25.Name = "Label25"
-        Label25.Size = New Size(103, 16)
+        Label25.Size = New Size(100, 13)
         Label25.TabIndex = 62
         Label25.Text = "ROOM NUMBERS:"
         ' 
         ' Label26
         ' 
         Label26.AutoSize = True
-        Label26.Font = New Font("Century Gothic", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label26.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label26.Location = New Point(214, 553)
         Label26.Name = "Label26"
-        Label26.Size = New Size(110, 16)
+        Label26.Size = New Size(110, 13)
         Label26.TabIndex = 61
         Label26.Text = "AVAILABLE ROOMS:"
         ' 
         ' Label27
         ' 
         Label27.AutoSize = True
-        Label27.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label27.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label27.Location = New Point(214, 537)
         Label27.Name = "Label27"
-        Label27.Size = New Size(71, 16)
+        Label27.Size = New Size(77, 15)
         Label27.TabIndex = 60
         Label27.Text = "2699/Night"
         ' 
         ' Label28
         ' 
         Label28.AutoSize = True
-        Label28.Font = New Font("Century Gothic", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label28.Font = New Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label28.Location = New Point(214, 523)
         Label28.Name = "Label28"
-        Label28.Size = New Size(130, 17)
+        Label28.Size = New Size(140, 17)
         Label28.TabIndex = 59
         Label28.Text = "Presidential Room"
         ' 
         ' Button1
         ' 
         Button1.FlatStyle = FlatStyle.Flat
-        Button1.Font = New Font("Century Gothic", 7.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Button1.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Button1.Image = My.Resources.Resources.formRoomsBG
         Button1.Location = New Point(10, 42)
         Button1.Margin = New Padding(3, 2, 3, 2)
@@ -579,7 +579,7 @@ Partial Class formRooms
         ' Button2
         ' 
         Button2.FlatStyle = FlatStyle.Flat
-        Button2.Font = New Font("Century Gothic", 7.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Button2.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Button2.Location = New Point(214, 42)
         Button2.Margin = New Padding(3, 2, 3, 2)
         Button2.Name = "Button2"
@@ -591,7 +591,7 @@ Partial Class formRooms
         ' Button3
         ' 
         Button3.FlatStyle = FlatStyle.Flat
-        Button3.Font = New Font("Century Gothic", 7.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Button3.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Button3.Location = New Point(417, 42)
         Button3.Margin = New Padding(3, 2, 3, 2)
         Button3.Name = "Button3"
@@ -603,7 +603,7 @@ Partial Class formRooms
         ' Button4
         ' 
         Button4.FlatStyle = FlatStyle.Flat
-        Button4.Font = New Font("Century Gothic", 7.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Button4.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Button4.Location = New Point(10, 241)
         Button4.Margin = New Padding(3, 2, 3, 2)
         Button4.Name = "Button4"
@@ -615,7 +615,7 @@ Partial Class formRooms
         ' Button5
         ' 
         Button5.FlatStyle = FlatStyle.Flat
-        Button5.Font = New Font("Century Gothic", 7.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Button5.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Button5.Location = New Point(214, 241)
         Button5.Margin = New Padding(3, 2, 3, 2)
         Button5.Name = "Button5"
@@ -627,7 +627,7 @@ Partial Class formRooms
         ' Button6
         ' 
         Button6.FlatStyle = FlatStyle.Flat
-        Button6.Font = New Font("Century Gothic", 7.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Button6.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Button6.Location = New Point(417, 241)
         Button6.Margin = New Padding(3, 2, 3, 2)
         Button6.Name = "Button6"
@@ -639,7 +639,7 @@ Partial Class formRooms
         ' Button7
         ' 
         Button7.FlatStyle = FlatStyle.Flat
-        Button7.Font = New Font("Century Gothic", 7.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Button7.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Button7.Location = New Point(214, 429)
         Button7.Margin = New Padding(3, 2, 3, 2)
         Button7.Name = "Button7"

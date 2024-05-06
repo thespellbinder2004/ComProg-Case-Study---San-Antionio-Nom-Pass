@@ -1,54 +1,50 @@
-﻿Imports System.Windows.Forms.VisualStyles.VisualStyleElement
+﻿Imports System.Net.Security
+Imports San_Antonio_NOM_Pass_Resort.formRooms
 
 Public Class formBooking
-    Dim intStayLength
-    Class CustomerDetails
-        Dim strFirstName As String
-        Dim strLastName As String
-        'For the combobox, it can be seen in the properties.
+    Public intTotalNight As Double = 1.0
+    Public intTotalGuests As Integer
+    Public strUserName As String
+    Public intReceiptNumber As Integer = 0
 
-        Dim cbSex As String
-        Dim datBirth As Date
-        Dim datArrival As Date
-        Dim datDeparture As Date
-        Dim intLengthOfStay As Integer
+    Class Booking
+        Private totalGuests As Integer
+        Public Function getTotalGuests(x, y, z) As Integer
+            totalGuests = x + y + z
+            Return totalGuests
+        End Function
+        Public Sub fewGuests()
 
+        End Sub
     End Class
 
-    Private Sub formBooking_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        ' already customized in properties
-        dtpBirth.Format = DateTimePickerFormat.Custom
-        dtpBirth.CustomFormat = "ddd, MM / dd / yyyy"
 
-        cbSex.Items.Add("Male")
-        cbSex.Items.Add("Female")
+    Private Sub btnSubmit_Click_1(sender As Object, e As EventArgs) Handles btnSubmit.Click
+        Dim booking = New Booking
 
-        dtpArrival.Format = DateTimePickerFormat.Custom
-        dtpArrival.CustomFormat = "ddd, MM / dd / yyyy"
-        dtpArrival.MinDate = New DateTime(2024, 1, 1)
+        strUserName = txtFirstName.Text + TextBox2.Text
+        intTotalGuests = booking.getTotalGuests(Val(NumericUpDown1.Text), Val(NumericUpDown2.Text), Val(NumericUpDown3.Text))
 
-        dtpDeparture.Format = DateTimePickerFormat.Custom
-        dtpDeparture.CustomFormat = "ddd, MM / dd / yyyy"
-        dtpDeparture.MinDate = New DateTime(2024, 1, 1)
-    End Sub
+        If intTotalGuests > 0 And intTotalGuests < 4 Then
+            booking.fewGuests()
+        ElseIf intTotalGuests > 3 And intTotalGuests < 9 Then
 
-    Private Sub btnSubmit_Click(sender As Object, e As EventArgs) Handles btnSubmit.Click
-        Dim result
-        result = MsgBox("Do you confirm all information is correctly filled out?", vbOKCancel, "San Antonio Nom Pass Resort")
-        If result = vbOK Then
-            Me.Hide()
-            intStayLength = Math.Round((dtpDeparture.Value - dtpArrival.Value).TotalDays)
+        ElseIf intTotalGuests > 8 Then
+        Else
+
         End If
 
-    End Sub
-    Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
-        Me.Close()
-        formSplashScreen.ProgressBar1.Value = 1
-        formSplashScreen.Timer1.Start()
-        formSplashScreen.Show()
+        formRooms.Show()
     End Sub
 
-    Private Sub dtpArrival_ValueChanged(sender As Object, e As EventArgs) Handles dtpArrival.ValueChanged
-        dtpDeparture.MinDate = dtpArrival.Value.AddDays(1)
+    Private Sub formBooking_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Panel5.BackColor = Color.FromArgb(100, 108, 107, 88)
+        Panel4.BackColor = Color.FromArgb(200, 108, 107, 88)
+        Panel3.BackColor = Color.FromArgb(200, 108, 107, 88)
+        Panel2.BackColor = Color.FromArgb(200, 108, 107, 88)
+        Panel1.BackColor = Color.FromArgb(200, 108, 107, 88)
+        Label1.BackColor = Color.FromArgb(200, 108, 107, 88)
+
+
     End Sub
 End Class

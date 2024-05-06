@@ -25,9 +25,9 @@ Partial Class formAdmin
         tbcAdmin = New TabControl()
         tabAdminInfo = New TabPage()
         tabRooms = New TabPage()
-        Label1 = New Label()
         tabGuests = New TabPage()
-        TabPage2 = New TabPage()
+        tabGuestInfo = New TabPage()
+        Label1 = New Label()
         tbcAdmin.SuspendLayout()
         SuspendLayout()
         ' 
@@ -36,7 +36,7 @@ Partial Class formAdmin
         tbcAdmin.Controls.Add(tabAdminInfo)
         tbcAdmin.Controls.Add(tabRooms)
         tbcAdmin.Controls.Add(tabGuests)
-        tbcAdmin.Controls.Add(TabPage2)
+        tbcAdmin.Controls.Add(tabGuestInfo)
         tbcAdmin.Location = New Point(0, 70)
         tbcAdmin.Name = "tbcAdmin"
         tbcAdmin.SelectedIndex = 0
@@ -64,6 +64,25 @@ Partial Class formAdmin
         tabRooms.Text = "Rooms"
         tabRooms.UseVisualStyleBackColor = True
         ' 
+        ' tabGuests
+        ' 
+        tabGuests.AutoScroll = True
+        tabGuests.Location = New Point(4, 24)
+        tabGuests.Name = "tabGuests"
+        tabGuests.Size = New Size(793, 502)
+        tabGuests.TabIndex = 2
+        tabGuests.Text = "Guests"
+        tabGuests.UseVisualStyleBackColor = True
+        ' 
+        ' tabGuestInfo
+        ' 
+        tabGuestInfo.Location = New Point(4, 24)
+        tabGuestInfo.Name = "tabGuestInfo"
+        tabGuestInfo.Size = New Size(793, 502)
+        tabGuestInfo.TabIndex = 3
+        tabGuestInfo.Text = "Guest Info"
+        tabGuestInfo.UseVisualStyleBackColor = True
+        ' 
         ' Label1
         ' 
         Label1.AutoSize = True
@@ -73,24 +92,6 @@ Partial Class formAdmin
         Label1.Size = New Size(434, 32)
         Label1.TabIndex = 1
         Label1.Text = "San Antonion Nom Pass Resort"
-        ' 
-        ' tabGuests
-        ' 
-        tabGuests.Location = New Point(4, 24)
-        tabGuests.Name = "tabGuests"
-        tabGuests.Size = New Size(793, 502)
-        tabGuests.TabIndex = 2
-        tabGuests.Text = "Guests"
-        tabGuests.UseVisualStyleBackColor = True
-        ' 
-        ' TabPage2
-        ' 
-        TabPage2.Location = New Point(4, 24)
-        TabPage2.Name = "TabPage2"
-        TabPage2.Size = New Size(793, 502)
-        TabPage2.TabIndex = 3
-        TabPage2.Text = "TabPage2"
-        TabPage2.UseVisualStyleBackColor = True
         ' 
         ' formAdmin
         ' 
@@ -111,5 +112,5 @@ Partial Class formAdmin
     Friend WithEvents tabRooms As TabPage
     Friend WithEvents Label1 As Label
     Friend WithEvents tabGuests As TabPage
-    Friend WithEvents TabPage2 As TabPage
+    Friend WithEvents tabGuestInfo As TabPage
 End Class

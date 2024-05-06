@@ -1,5 +1,9 @@
 ﻿Public Class formAdmin
-    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
+    Class Guests
+
+    End Class
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs)
 
     End Sub
 End Class

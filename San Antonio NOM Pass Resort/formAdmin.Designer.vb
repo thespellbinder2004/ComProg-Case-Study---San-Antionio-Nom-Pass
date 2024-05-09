@@ -37,29 +37,32 @@ Partial Class formAdmin
         tbcAdmin.Controls.Add(tabRooms)
         tbcAdmin.Controls.Add(tabGuests)
         tbcAdmin.Controls.Add(tabGuestInfo)
-        tbcAdmin.Location = New Point(0, 70)
+        tbcAdmin.Location = New Point(0, 93)
+        tbcAdmin.Margin = New Padding(3, 4, 3, 4)
         tbcAdmin.Name = "tbcAdmin"
         tbcAdmin.SelectedIndex = 0
-        tbcAdmin.Size = New Size(801, 530)
+        tbcAdmin.Size = New Size(915, 707)
         tbcAdmin.SizeMode = TabSizeMode.Fixed
         tbcAdmin.TabIndex = 0
         ' 
         ' tabAdminInfo
         ' 
-        tabAdminInfo.Location = New Point(4, 24)
+        tabAdminInfo.Location = New Point(4, 29)
+        tabAdminInfo.Margin = New Padding(3, 4, 3, 4)
         tabAdminInfo.Name = "tabAdminInfo"
-        tabAdminInfo.Padding = New Padding(3)
-        tabAdminInfo.Size = New Size(793, 502)
+        tabAdminInfo.Padding = New Padding(3, 4, 3, 4)
+        tabAdminInfo.Size = New Size(907, 674)
         tabAdminInfo.TabIndex = 0
         tabAdminInfo.Text = "Admin Info"
         tabAdminInfo.UseVisualStyleBackColor = True
         ' 
         ' tabRooms
         ' 
-        tabRooms.Location = New Point(4, 24)
+        tabRooms.Location = New Point(4, 29)
+        tabRooms.Margin = New Padding(3, 4, 3, 4)
         tabRooms.Name = "tabRooms"
-        tabRooms.Padding = New Padding(3)
-        tabRooms.Size = New Size(793, 502)
+        tabRooms.Padding = New Padding(3, 4, 3, 4)
+        tabRooms.Size = New Size(907, 674)
         tabRooms.TabIndex = 1
         tabRooms.Text = "Rooms"
         tabRooms.UseVisualStyleBackColor = True
@@ -67,18 +70,20 @@ Partial Class formAdmin
         ' tabGuests
         ' 
         tabGuests.AutoScroll = True
-        tabGuests.Location = New Point(4, 24)
+        tabGuests.Location = New Point(4, 29)
+        tabGuests.Margin = New Padding(3, 4, 3, 4)
         tabGuests.Name = "tabGuests"
-        tabGuests.Size = New Size(793, 502)
+        tabGuests.Size = New Size(907, 674)
         tabGuests.TabIndex = 2
         tabGuests.Text = "Guests"
         tabGuests.UseVisualStyleBackColor = True
         ' 
         ' tabGuestInfo
         ' 
-        tabGuestInfo.Location = New Point(4, 24)
+        tabGuestInfo.Location = New Point(4, 29)
+        tabGuestInfo.Margin = New Padding(3, 4, 3, 4)
         tabGuestInfo.Name = "tabGuestInfo"
-        tabGuestInfo.Size = New Size(793, 502)
+        tabGuestInfo.Size = New Size(907, 674)
         tabGuestInfo.TabIndex = 3
         tabGuestInfo.Text = "Guest Info"
         tabGuestInfo.UseVisualStyleBackColor = True
@@ -87,19 +92,20 @@ Partial Class formAdmin
         ' 
         Label1.AutoSize = True
         Label1.Font = New Font("Consolas", 20.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label1.Location = New Point(12, 23)
+        Label1.Location = New Point(14, 31)
         Label1.Name = "Label1"
-        Label1.Size = New Size(434, 32)
+        Label1.Size = New Size(549, 40)
         Label1.TabIndex = 1
         Label1.Text = "San Antonion Nom Pass Resort"
         ' 
         ' formAdmin
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(800, 598)
+        ClientSize = New Size(914, 797)
         Controls.Add(Label1)
         Controls.Add(tbcAdmin)
+        Margin = New Padding(3, 4, 3, 4)
         Name = "formAdmin"
         Text = "formAdmin"
         tbcAdmin.ResumeLayout(False)

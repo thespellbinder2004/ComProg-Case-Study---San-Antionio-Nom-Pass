@@ -8,7 +8,7 @@ Public Class formBooking
     Public strUserName As String
     Public intReceiptNumber As Integer = 0
 
-    Dim listCustomerInfo As New List(Of CustomerDetails)({})
+    Dim listCustomerInfo As New List(Of String)({})
 
     Class Booking
         Private totalGuests As Integer
@@ -68,8 +68,6 @@ Public Class formBooking
         dtpDeparture.CustomFormat = "ddd, MM / dd / yyyy"
         dtpDeparture.MinDate = New DateTime(2024, 1, 1)
 
-        MessageBox.Show(nudMinorGuests.Value.GetType.ToString)
-
     End Sub
 
     Private Sub btnSubmit_Click(sender As Object, e As EventArgs) Handles btnSubmit.Click
@@ -96,9 +94,7 @@ Public Class formBooking
             Me.Hide()
             intStayLength = Math.Round((dtpDeparture.Value - dtpArrival.Value).TotalDays)
         End If
-
         setCustomerDetails()
-
     End Sub
     Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
         Me.Close()
@@ -128,10 +124,18 @@ Public Class formBooking
         Dim dateDeparture = dtpDeparture.Text
         Dim guestSen = nudSeniorGuests.Value.ToString
         Dim guestMin = nudMinorGuests.Value.ToString
-        Dim guestReg = nudRegularGuests.ToString
+        Dim guestReg = nudRegularGuests.Value.ToString
 
         Dim customerInfo = New CustomerDetails(nameFirst, nameLast, sex, dateBirth, dateArrival, dateDeparture, guestSen, guestMin, guestReg)
-        listCustomerInfo.Add(customerInfo)
-        MsgBox(customerInfo.getCustomerDetails())
+        listCustomerInfo.Add(customerInfo.getCustomerDetails())
+
+
+        Dim xd As String = Path.GetFullPath("Customers.txt")
+        Dim writerCustomer = New StreamWriter("C:\Users\Gabby\Documents\GitHub\ComProg-Case-Study---San-Antionio-Nom-Pass\San Antonio NOM Pass Resort\Customers.txt", True)
+        writerCustomer.WriteLine(customerInfo.getCustomerDetails())
+        writerCustomer.Close()
+        MsgBox(readCustomer())
+
     End Sub
+
 End Class

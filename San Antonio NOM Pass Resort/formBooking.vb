@@ -97,10 +97,7 @@ Public Class formBooking
         setCustomerDetails()
     End Sub
     Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
-        Me.Close()
-        formSplashScreen.ProgressBar1.Value = 1
-        formSplashScreen.Timer1.Start()
-        formSplashScreen.Show()
+        MsgBox(readCustomer())
     End Sub
 
     Private Sub dtpArrival_ValueChanged(sender As Object, e As EventArgs) Handles dtpArrival.ValueChanged
@@ -111,7 +108,7 @@ Public Class formBooking
         Dim xd As String = Path.GetFullPath("Customers.txt")
         Dim sheesh = New StreamReader(xd)
         Dim cumList = sheesh.ReadLine.Split("-")
-        Return cumList(0)
+        Return cumList(1)
     End Function
 
     Sub setCustomerDetails()
@@ -134,7 +131,7 @@ Public Class formBooking
         Dim writerCustomer = New StreamWriter("C:\Users\Gabby\Documents\GitHub\ComProg-Case-Study---San-Antionio-Nom-Pass\San Antonio NOM Pass Resort\Customers.txt", True)
         writerCustomer.WriteLine(customerInfo.getCustomerDetails())
         writerCustomer.Close()
-        MsgBox(readCustomer())
+
 
     End Sub
 

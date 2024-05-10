@@ -1,4 +1,5 @@
-﻿Imports System.Windows.Forms.VisualStyles.VisualStyleElement
+﻿Imports System.IO
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 
 Public Class formBooking
     Dim intStayLength
@@ -6,6 +7,9 @@ Public Class formBooking
     Public intTotalGuests As Integer
     Public strUserName As String
     Public intReceiptNumber As Integer = 0
+
+    Dim listCustomerInfo As New List(Of CustomerDetails)({})
+
     Class Booking
         Private totalGuests As Integer
         Public Function getTotalGuests(x, y, z) As Integer
@@ -16,17 +20,36 @@ Public Class formBooking
 
         End Sub
     End Class
+
     Class CustomerDetails
         Dim strFirstName As String
         Dim strLastName As String
+        Dim strSex As String
+        Dim strDatBirth As String
+        Dim strDatDeparture As String
+        Dim strDatArrival As String
+        Dim strGuestSenior As String
+        Dim strGuestMinor As String
+        Dim strGuestRegular As String
+
         'For the combobox, it can be seen in the properties.
 
-        Dim cbSex As String
-        Dim datBirth As Date
-        Dim datArrival As Date
-        Dim datDeparture As Date
-        Dim intLengthOfStay As Integer
 
+        Public Sub New(ByVal firstName As String, ByVal lastName As String, ByVal sex As String, ByVal birthday As String, ByVal arrival As String, ByVal departure As String, ByVal senior As String, ByVal minor As String, ByVal regular As String)
+            strFirstName = firstName
+            strLastName = lastName
+            strSex = sex
+            strDatBirth = birthday
+            strDatArrival = arrival
+            strDatDeparture = departure
+            strGuestSenior = senior
+            strGuestMinor = minor
+            strGuestRegular = regular
+
+        End Sub
+        Function getCustomerDetails()
+            Return strFirstName + "-" + strLastName + "-" + strSex + "-" + strDatBirth + "-" + strDatArrival + "-" + strDatDeparture + "-" + strGuestSenior + "-" + strGuestMinor + "-" + strGuestRegular
+        End Function
     End Class
 
     Private Sub formBooking_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -44,6 +67,9 @@ Public Class formBooking
         dtpDeparture.Format = DateTimePickerFormat.Custom
         dtpDeparture.CustomFormat = "ddd, MM / dd / yyyy"
         dtpDeparture.MinDate = New DateTime(2024, 1, 1)
+
+        MessageBox.Show(nudMinorGuests.Value.GetType.ToString)
+
     End Sub
 
     Private Sub btnSubmit_Click(sender As Object, e As EventArgs) Handles btnSubmit.Click
@@ -64,15 +90,14 @@ Public Class formBooking
 
         formRooms.Show()
 
-
-
-
         Dim result
         result = MsgBox("Do you confirm all information is correctly filled out?", vbOKCancel, "San Antonio Nom Pass Resort")
         If result = vbOK Then
             Me.Hide()
             intStayLength = Math.Round((dtpDeparture.Value - dtpArrival.Value).TotalDays)
         End If
+
+        setCustomerDetails()
 
     End Sub
     Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
@@ -84,5 +109,29 @@ Public Class formBooking
 
     Private Sub dtpArrival_ValueChanged(sender As Object, e As EventArgs) Handles dtpArrival.ValueChanged
         dtpDeparture.MinDate = dtpArrival.Value.AddDays(1)
+    End Sub
+
+    Function readCustomer()
+        Dim xd As String = Path.GetFullPath("Customers.txt")
+        Dim sheesh = New StreamReader(xd)
+        Dim cumList = sheesh.ReadLine.Split("-")
+        Return cumList(0)
+    End Function
+
+    Sub setCustomerDetails()
+
+        Dim nameFirst = txtFirstName.Text
+        Dim nameLast = txtLastName.Text
+        Dim sex = cbSex.Text
+        Dim dateBirth = dtpBirth.Text
+        Dim dateArrival = dtpArrival.Text
+        Dim dateDeparture = dtpDeparture.Text
+        Dim guestSen = nudSeniorGuests.Value.ToString
+        Dim guestMin = nudMinorGuests.Value.ToString
+        Dim guestReg = nudRegularGuests.ToString
+
+        Dim customerInfo = New CustomerDetails(nameFirst, nameLast, sex, dateBirth, dateArrival, dateDeparture, guestSen, guestMin, guestReg)
+        listCustomerInfo.Add(customerInfo)
+        MsgBox(customerInfo.getCustomerDetails())
     End Sub
 End Class

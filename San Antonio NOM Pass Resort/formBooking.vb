@@ -10,19 +10,6 @@ Public Class formBooking
 
     Dim listCustomerInfo As New List(Of CustomerDetails)({})
 
-
-    Function readCustomer()
-        Dim xd As String = Path.GetFullPath("Customers.txt")
-        Dim sheesh = New StreamReader(xd)
-        Dim cumList = sheesh.ReadLine.Split("-")
-        Return cumList(0)
-    End Function
-
-    Function getCustomerDetails()
-        Dim xd = New CustomerDetails
-
-    End Function
-
     Class Booking
         Private totalGuests As Integer
         Public Function getTotalGuests(x, y, z) As Integer
@@ -37,14 +24,27 @@ Public Class formBooking
     Class CustomerDetails
         Dim strFirstName As String
         Dim strLastName As String
-        'For the combobox, it can be seen in the properties.
-        Dim cbSex As String
-        Dim datBirth As Date
-        Dim datArrival As Date
-        Dim datDeparture As Date
-        Dim intLengthOfStay As Integer
+        Dim strSex As String
+        Dim strDatBirth As String
+        Dim strDatDeparture As String
+        Dim strDatArrival As String
+        Dim strGuestSenior As String
+        Dim strGuestMinor As String
+        Dim strGuestRegular As String
 
-        Sub New()
+        'For the combobox, it can be seen in the properties.
+
+
+        Public Sub New(ByVal firstName As String, ByVal lastName As String, ByVal sex As String, ByVal birthday As String, ByVal arrival As String, ByVal departure As String, ByVal senior As String, ByVal minor As String, ByVal regular As String)
+            strFirstName = firstName
+            strLastName = lastName
+            strSex = sex
+            strDatBirth = birthday
+            strDatArrival = arrival
+            strDatDeparture = departure
+            strGuestSenior = senior
+            strGuestMinor = minor
+            strGuestRegular = regular
 
         End Sub
 
@@ -66,7 +66,8 @@ Public Class formBooking
         dtpDeparture.CustomFormat = "ddd, MM / dd / yyyy"
         dtpDeparture.MinDate = New DateTime(2024, 1, 1)
 
-        MessageBox.Show(readCustomer())
+        MessageBox.Show(nudMinorGuests.Value.GetType.ToString)
+
     End Sub
 
     Private Sub btnSubmit_Click(sender As Object, e As EventArgs) Handles btnSubmit.Click
@@ -87,13 +88,14 @@ Public Class formBooking
 
         formRooms.Show()
 
-
         Dim result
         result = MsgBox("Do you confirm all information is correctly filled out?", vbOKCancel, "San Antonio Nom Pass Resort")
         If result = vbOK Then
             Me.Hide()
             intStayLength = Math.Round((dtpDeparture.Value - dtpArrival.Value).TotalDays)
         End If
+
+        getCustomerDetails()
 
     End Sub
     Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
@@ -107,4 +109,27 @@ Public Class formBooking
         dtpDeparture.MinDate = dtpArrival.Value.AddDays(1)
     End Sub
 
+    Function readCustomer()
+        Dim xd As String = Path.GetFullPath("Customers.txt")
+        Dim sheesh = New StreamReader(xd)
+        Dim cumList = sheesh.ReadLine.Split("-")
+        Return cumList(0)
+    End Function
+
+    Function getCustomerDetails()
+
+        Dim nameFirst = txtFirstName.Text
+        Dim nameLast = txtLastName.Text
+        Dim sex = cbSex.Text
+        Dim dateBirth = dtpBirth.Text
+        Dim dateArrival = dtpArrival.Text
+        Dim dateDeparture = dtpDeparture.Text
+        Dim guestSen = nudSeniorGuests.Value.ToString
+        Dim guestMin = nudMinorGuests.Value.ToString
+        Dim guestReg = nudRegularGuests.ToString
+
+        Dim customerInfo = New CustomerDetails(nameFirst, nameLast, sex, dateBirth, dateArrival, dateDeparture, guestSen, guestMin, guestReg)
+        listCustomerInfo.Add(customerInfo)
+        MsgBox(listCustomerInfo(0))
+    End Function
 End Class

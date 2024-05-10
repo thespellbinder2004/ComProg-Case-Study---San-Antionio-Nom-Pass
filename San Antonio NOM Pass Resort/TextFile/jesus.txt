@@ -1,2 +1,0 @@
-customerInfo.getCustomerDetails()
-customerInfo.getCustomerDetails()

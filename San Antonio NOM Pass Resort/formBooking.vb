@@ -91,10 +91,11 @@ Public Class formBooking
         Dim result
         result = MsgBox("Do you confirm all information is correctly filled out?", vbOKCancel, "San Antonio Nom Pass Resort")
         If result = vbOK Then
+            setCustomerDetails()
             Me.Hide()
             intStayLength = Math.Round((dtpDeparture.Value - dtpArrival.Value).TotalDays)
         End If
-        setCustomerDetails()
+
     End Sub
     Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
         MsgBox(readCustomer())
@@ -103,13 +104,6 @@ Public Class formBooking
     Private Sub dtpArrival_ValueChanged(sender As Object, e As EventArgs) Handles dtpArrival.ValueChanged
         dtpDeparture.MinDate = dtpArrival.Value.AddDays(1)
     End Sub
-
-    Function readCustomer()
-        Dim xd As String = Path.GetFullPath("Customers.txt")
-        Dim sheesh = New StreamReader(xd)
-        Dim cumList = sheesh.ReadLine.Split("-")
-        Return cumList(1)
-    End Function
 
     Sub setCustomerDetails()
 
@@ -127,8 +121,8 @@ Public Class formBooking
         listCustomerInfo.Add(customerInfo.getCustomerDetails())
 
 
-        Dim xd As String = Path.GetFullPath("Customers.txt")
-        Dim writerCustomer = New StreamWriter("C:\Users\Gabby\Documents\GitHub\ComProg-Case-Study---San-Antionio-Nom-Pass\San Antonio NOM Pass Resort\Customers.txt", True)
+        Dim pathCustomersTxt As String = Path.GetFullPath("Customers.txt")
+        Dim writerCustomer = New StreamWriter(pathCustomersTxt, True)
         writerCustomer.WriteLine(customerInfo.getCustomerDetails())
         writerCustomer.Close()
 

@@ -47,7 +47,9 @@ Public Class formBooking
             strGuestRegular = regular
 
         End Sub
-
+        Function getCustomerDetails()
+            Return strFirstName + "-" + strLastName + "-" + strSex + "-" + strDatBirth + "-" + strDatArrival + "-" + strDatDeparture + "-" + strGuestSenior + "-" + strGuestMinor + "-" + strGuestRegular
+        End Function
     End Class
 
     Private Sub formBooking_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -95,7 +97,7 @@ Public Class formBooking
             intStayLength = Math.Round((dtpDeparture.Value - dtpArrival.Value).TotalDays)
         End If
 
-        getCustomerDetails()
+        setCustomerDetails()
 
     End Sub
     Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
@@ -116,7 +118,7 @@ Public Class formBooking
         Return cumList(0)
     End Function
 
-    Function getCustomerDetails()
+    Sub setCustomerDetails()
 
         Dim nameFirst = txtFirstName.Text
         Dim nameLast = txtLastName.Text
@@ -130,6 +132,6 @@ Public Class formBooking
 
         Dim customerInfo = New CustomerDetails(nameFirst, nameLast, sex, dateBirth, dateArrival, dateDeparture, guestSen, guestMin, guestReg)
         listCustomerInfo.Add(customerInfo)
-        MsgBox(listCustomerInfo(0))
-    End Function
+        MsgBox(customerInfo.getCustomerDetails())
+    End Sub
 End Class

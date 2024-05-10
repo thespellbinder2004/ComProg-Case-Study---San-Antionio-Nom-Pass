@@ -8,7 +8,7 @@ Public Class formBooking
     Public strUserName As String
     Public intReceiptNumber As Integer = 0
 
-    Dim listCustomerInfo As New List(Of String)({})
+    Dim listCustomerInfo As New List(Of CustomerDetails)({})
 
 
     Function readCustomer()
@@ -16,6 +16,11 @@ Public Class formBooking
         Dim sheesh = New StreamReader(xd)
         Dim cumList = sheesh.ReadLine.Split("-")
         Return cumList(0)
+    End Function
+
+    Function getCustomerDetails()
+        Dim xd = New CustomerDetails
+
     End Function
 
     Class Booking
@@ -28,16 +33,20 @@ Public Class formBooking
 
         End Sub
     End Class
+
     Class CustomerDetails
         Dim strFirstName As String
         Dim strLastName As String
         'For the combobox, it can be seen in the properties.
-
         Dim cbSex As String
         Dim datBirth As Date
         Dim datArrival As Date
         Dim datDeparture As Date
         Dim intLengthOfStay As Integer
+
+        Sub New()
+
+        End Sub
 
     End Class
 
@@ -97,4 +106,5 @@ Public Class formBooking
     Private Sub dtpArrival_ValueChanged(sender As Object, e As EventArgs) Handles dtpArrival.ValueChanged
         dtpDeparture.MinDate = dtpArrival.Value.AddDays(1)
     End Sub
+
 End Class

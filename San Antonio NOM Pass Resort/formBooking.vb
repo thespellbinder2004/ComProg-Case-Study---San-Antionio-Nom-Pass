@@ -1,4 +1,5 @@
-﻿Imports System.Windows.Forms.VisualStyles.VisualStyleElement
+﻿Imports System.IO
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 
 Public Class formBooking
     Dim intStayLength
@@ -6,6 +7,22 @@ Public Class formBooking
     Public intTotalGuests As Integer
     Public strUserName As String
     Public intReceiptNumber As Integer = 0
+
+    Dim listCustomerInfo As New List(Of CustomerDetails)({})
+
+
+    Function readCustomer()
+        Dim xd As String = Path.GetFullPath("Customers.txt")
+        Dim sheesh = New StreamReader(xd)
+        Dim cumList = sheesh.ReadLine.Split("-")
+        Return cumList(0)
+    End Function
+
+    Function getCustomerDetails()
+        Dim xd = New CustomerDetails
+
+    End Function
+
     Class Booking
         Private totalGuests As Integer
         Public Function getTotalGuests(x, y, z) As Integer
@@ -16,16 +33,20 @@ Public Class formBooking
 
         End Sub
     End Class
+
     Class CustomerDetails
         Dim strFirstName As String
         Dim strLastName As String
         'For the combobox, it can be seen in the properties.
-
         Dim cbSex As String
         Dim datBirth As Date
         Dim datArrival As Date
         Dim datDeparture As Date
         Dim intLengthOfStay As Integer
+
+        Sub New()
+
+        End Sub
 
     End Class
 
@@ -44,6 +65,8 @@ Public Class formBooking
         dtpDeparture.Format = DateTimePickerFormat.Custom
         dtpDeparture.CustomFormat = "ddd, MM / dd / yyyy"
         dtpDeparture.MinDate = New DateTime(2024, 1, 1)
+
+        MessageBox.Show(readCustomer())
     End Sub
 
     Private Sub btnSubmit_Click(sender As Object, e As EventArgs) Handles btnSubmit.Click
@@ -65,8 +88,6 @@ Public Class formBooking
         formRooms.Show()
 
 
-
-
         Dim result
         result = MsgBox("Do you confirm all information is correctly filled out?", vbOKCancel, "San Antonio Nom Pass Resort")
         If result = vbOK Then
@@ -85,4 +106,5 @@ Public Class formBooking
     Private Sub dtpArrival_ValueChanged(sender As Object, e As EventArgs) Handles dtpArrival.ValueChanged
         dtpDeparture.MinDate = dtpArrival.Value.AddDays(1)
     End Sub
+
 End Class

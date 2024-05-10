@@ -1,4 +1,5 @@
-﻿Imports System.Windows.Forms.VisualStyles.VisualStyleElement
+﻿Imports System.IO
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 
 Public Class formBooking
     Dim intStayLength
@@ -6,6 +7,17 @@ Public Class formBooking
     Public intTotalGuests As Integer
     Public strUserName As String
     Public intReceiptNumber As Integer = 0
+
+    Dim listCustomerInfo As New List(Of String)({})
+
+
+    Function readCustomer()
+        Dim xd As String = Path.GetFullPath("Customers.txt")
+        Dim sheesh = New StreamReader(xd)
+        Dim cumList = sheesh.ReadLine.Split("-")
+        Return cumList(0)
+    End Function
+
     Class Booking
         Private totalGuests As Integer
         Public Function getTotalGuests(x, y, z) As Integer
@@ -44,6 +56,8 @@ Public Class formBooking
         dtpDeparture.Format = DateTimePickerFormat.Custom
         dtpDeparture.CustomFormat = "ddd, MM / dd / yyyy"
         dtpDeparture.MinDate = New DateTime(2024, 1, 1)
+
+        MessageBox.Show(readCustomer())
     End Sub
 
     Private Sub btnSubmit_Click(sender As Object, e As EventArgs) Handles btnSubmit.Click
@@ -63,8 +77,6 @@ Public Class formBooking
         End If
 
         formRooms.Show()
-
-
 
 
         Dim result

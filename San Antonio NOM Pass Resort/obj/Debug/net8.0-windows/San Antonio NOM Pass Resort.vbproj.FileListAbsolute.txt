@@ -59,3 +59,4 @@ C:\Users\Gabby\Documents\GitHub\ComProg-Case-Study---San-Antionio-Nom-Pass\San A
 C:\Users\Gabby\Documents\GitHub\ComProg-Case-Study---San-Antionio-Nom-Pass\San Antonio NOM Pass Resort\obj\Debug\net8.0-windows\San_Antonio_NOM_Pass_Resort.formSplashScreen.aa.resources
 C:\Users\Gabby\Documents\GitHub\ComProg-Case-Study---San-Antionio-Nom-Pass\San Antonio NOM Pass Resort\bin\Debug\net8.0-windows\aa\San Antonio NOM Pass Resort.resources.dll
 C:\Users\Gabby\Documents\GitHub\ComProg-Case-Study---San-Antionio-Nom-Pass\San Antonio NOM Pass Resort\obj\Debug\net8.0-windows\aa\San Antonio NOM Pass Resort.resources.dll
+C:\Users\Gabby\Documents\GitHub\ComProg-Case-Study---San-Antionio-Nom-Pass\San Antonio NOM Pass Resort\bin\Debug\net8.0-windows\Customers.txt

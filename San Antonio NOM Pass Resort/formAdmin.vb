@@ -3,7 +3,7 @@
     Dim listCustomer As List(Of String) = Globals.getCustomerList()
     Dim listCurCustomer As List(Of String)
     Class Guests
-        Dim EnerssonTest
+
     End Class
 
 
@@ -58,10 +58,27 @@
 
             Dim listInfo As List(Of String) = Globals.getCustomerInfo(listCustomer(i))
             dgvGuestTable.Rows.Add("Edit", listInfo(0), listInfo(1), listInfo(4), listInfo(5), listInfo(10))
+            dgvGuestInfo.Rows.Add(listInfo(0), listInfo(1), listInfo(2), listInfo(3), listInfo(10))
         Next
     End Sub
+
+
+
     'REFRESH AND LOAD
     'END ------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 End Class

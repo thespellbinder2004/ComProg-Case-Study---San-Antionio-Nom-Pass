@@ -24,6 +24,7 @@ Partial Class formAdmin
     Private Sub InitializeComponent()
         tbcAdmin = New TabControl()
         tabAdminInfo = New TabPage()
+        DataGridView1 = New DataGridView()
         txtAdminContact2 = New TextBox()
         txtAdminContact1 = New TextBox()
         txtAdminRole = New TextBox()
@@ -101,12 +102,23 @@ Partial Class formAdmin
         lblQueenRoom = New Label()
         lblSingleRoom = New Label()
         tabGuests = New TabPage()
+        dgvGuestTable = New DataGridView()
         tabGuestInfo = New TabPage()
         Label1 = New Label()
+        btnRefresh = New Button()
+        columnEdit = New DataGridViewButtonColumn()
+        columnFirstName = New DataGridViewTextBoxColumn()
+        columnLastnName = New DataGridViewTextBoxColumn()
+        columnArrival = New DataGridViewTextBoxColumn()
+        columnDeparture = New DataGridViewTextBoxColumn()
+        columnTotalGuests = New DataGridViewTextBoxColumn()
         tbcAdmin.SuspendLayout()
         tabAdminInfo.SuspendLayout()
+        CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
         GroupBox1.SuspendLayout()
         tabRooms.SuspendLayout()
+        tabGuests.SuspendLayout()
+        CType(dgvGuestTable, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' tbcAdmin
@@ -124,6 +136,7 @@ Partial Class formAdmin
         ' 
         ' tabAdminInfo
         ' 
+        tabAdminInfo.Controls.Add(DataGridView1)
         tabAdminInfo.Controls.Add(txtAdminContact2)
         tabAdminInfo.Controls.Add(txtAdminContact1)
         tabAdminInfo.Controls.Add(txtAdminRole)
@@ -149,6 +162,14 @@ Partial Class formAdmin
         tabAdminInfo.TabIndex = 0
         tabAdminInfo.Text = "Admin Info"
         tabAdminInfo.UseVisualStyleBackColor = True
+        ' 
+        ' DataGridView1
+        ' 
+        DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridView1.Location = New Point(457, 56)
+        DataGridView1.Name = "DataGridView1"
+        DataGridView1.Size = New Size(8, 8)
+        DataGridView1.TabIndex = 29
         ' 
         ' txtAdminContact2
         ' 
@@ -958,12 +979,25 @@ Partial Class formAdmin
         ' tabGuests
         ' 
         tabGuests.AutoScroll = True
+        tabGuests.Controls.Add(dgvGuestTable)
         tabGuests.Location = New Point(4, 24)
         tabGuests.Name = "tabGuests"
         tabGuests.Size = New Size(793, 502)
         tabGuests.TabIndex = 2
         tabGuests.Text = "Guests"
         tabGuests.UseVisualStyleBackColor = True
+        ' 
+        ' dgvGuestTable
+        ' 
+        dgvGuestTable.AllowUserToAddRows = False
+        dgvGuestTable.AllowUserToDeleteRows = False
+        dgvGuestTable.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        dgvGuestTable.Columns.AddRange(New DataGridViewColumn() {columnEdit, columnFirstName, columnLastnName, columnArrival, columnDeparture, columnTotalGuests})
+        dgvGuestTable.Location = New Point(1, 3)
+        dgvGuestTable.Name = "dgvGuestTable"
+        dgvGuestTable.RowHeadersVisible = False
+        dgvGuestTable.Size = New Size(787, 496)
+        dgvGuestTable.TabIndex = 0
         ' 
         ' tabGuestInfo
         ' 
@@ -984,11 +1018,72 @@ Partial Class formAdmin
         Label1.TabIndex = 1
         Label1.Text = "San Antonio Nom Pass Resort"
         ' 
+        ' btnRefresh
+        ' 
+        btnRefresh.Location = New Point(690, 32)
+        btnRefresh.Name = "btnRefresh"
+        btnRefresh.Size = New Size(75, 23)
+        btnRefresh.TabIndex = 2
+        btnRefresh.Text = "Refresh"
+        btnRefresh.UseVisualStyleBackColor = True
+        ' 
+        ' columnEdit
+        ' 
+        columnEdit.AutoSizeMode = DataGridViewAutoSizeColumnMode.None
+        columnEdit.HeaderText = "Edit"
+        columnEdit.Name = "columnEdit"
+        columnEdit.ReadOnly = True
+        columnEdit.Resizable = DataGridViewTriState.True
+        columnEdit.SortMode = DataGridViewColumnSortMode.Automatic
+        columnEdit.Width = 37
+        ' 
+        ' columnFirstName
+        ' 
+        columnFirstName.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        columnFirstName.HeaderText = "First Name"
+        columnFirstName.MinimumWidth = 10
+        columnFirstName.Name = "columnFirstName"
+        columnFirstName.ReadOnly = True
+        columnFirstName.Resizable = DataGridViewTriState.False
+        ' 
+        ' columnLastnName
+        ' 
+        columnLastnName.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        columnLastnName.HeaderText = "Last Name"
+        columnLastnName.Name = "columnLastnName"
+        columnLastnName.ReadOnly = True
+        columnLastnName.Resizable = DataGridViewTriState.False
+        ' 
+        ' columnArrival
+        ' 
+        columnArrival.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        columnArrival.HeaderText = "Arrival"
+        columnArrival.Name = "columnArrival"
+        columnArrival.ReadOnly = True
+        columnArrival.Resizable = DataGridViewTriState.False
+        ' 
+        ' columnDeparture
+        ' 
+        columnDeparture.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        columnDeparture.HeaderText = "Departure"
+        columnDeparture.Name = "columnDeparture"
+        columnDeparture.ReadOnly = True
+        columnDeparture.Resizable = DataGridViewTriState.False
+        ' 
+        ' columnTotalGuests
+        ' 
+        columnTotalGuests.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        columnTotalGuests.HeaderText = "Total Guests"
+        columnTotalGuests.Name = "columnTotalGuests"
+        columnTotalGuests.ReadOnly = True
+        columnTotalGuests.Resizable = DataGridViewTriState.False
+        ' 
         ' formAdmin
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(800, 598)
+        Controls.Add(btnRefresh)
         Controls.Add(Label1)
         Controls.Add(tbcAdmin)
         Name = "formAdmin"
@@ -996,10 +1091,13 @@ Partial Class formAdmin
         tbcAdmin.ResumeLayout(False)
         tabAdminInfo.ResumeLayout(False)
         tabAdminInfo.PerformLayout()
+        CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()
         GroupBox1.ResumeLayout(False)
         GroupBox1.PerformLayout()
         tabRooms.ResumeLayout(False)
         tabRooms.PerformLayout()
+        tabGuests.ResumeLayout(False)
+        CType(dgvGuestTable, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -1085,4 +1183,13 @@ Partial Class formAdmin
     Friend WithEvents txtAdminContact1 As TextBox
     Friend WithEvents txtAdminRole As TextBox
     Friend WithEvents txtCurrentAdmin As TextBox
+    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents dgvGuestTable As DataGridView
+    Friend WithEvents btnRefresh As Button
+    Friend WithEvents columnEdit As DataGridViewButtonColumn
+    Friend WithEvents columnFirstName As DataGridViewTextBoxColumn
+    Friend WithEvents columnLastnName As DataGridViewTextBoxColumn
+    Friend WithEvents columnArrival As DataGridViewTextBoxColumn
+    Friend WithEvents columnDeparture As DataGridViewTextBoxColumn
+    Friend WithEvents columnTotalGuests As DataGridViewTextBoxColumn
 End Class

@@ -50,6 +50,7 @@ Public Class formBooking
         Function getCustomerDetails()
             Return strFirstName + "-" + strLastName + "-" + strSex + "-" + strDatBirth + "-" + strDatArrival + "-" + strDatDeparture + "-" + strGuestSenior + "-" + strGuestMinor + "-" + strGuestRegular
         End Function
+
     End Class
 
     Private Sub formBooking_Load(sender As Object, e As EventArgs) Handles MyBase.Load

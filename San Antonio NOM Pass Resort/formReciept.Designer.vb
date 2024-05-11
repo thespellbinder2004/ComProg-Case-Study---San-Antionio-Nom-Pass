@@ -30,11 +30,11 @@ Partial Class formReciept
         Label3 = New Label()
         Label4 = New Label()
         Label5 = New Label()
-        txtFirstName = New TextBox()
-        TextBox1 = New TextBox()
-        TextBox2 = New TextBox()
-        TextBox3 = New TextBox()
-        TextBox4 = New TextBox()
+        txtGuestsName = New TextBox()
+        txtNumberOfGuest = New TextBox()
+        txtArrivalDate = New TextBox()
+        txtDepartureDate = New TextBox()
+        txtTotalPayment = New TextBox()
         Label6 = New Label()
         SuspendLayout()
         ' 
@@ -118,50 +118,50 @@ Partial Class formReciept
         Label5.Size = New Size(0, 18)
         Label5.TabIndex = 19
         ' 
-        ' txtFirstName
+        ' txtGuestsName
         ' 
-        txtFirstName.BackColor = Color.Gainsboro
-        txtFirstName.BorderStyle = BorderStyle.FixedSingle
-        txtFirstName.Location = New Point(130, 61)
-        txtFirstName.Name = "txtFirstName"
-        txtFirstName.Size = New Size(165, 23)
-        txtFirstName.TabIndex = 20
+        txtGuestsName.BackColor = Color.Gainsboro
+        txtGuestsName.BorderStyle = BorderStyle.FixedSingle
+        txtGuestsName.Location = New Point(130, 61)
+        txtGuestsName.Name = "txtGuestsName"
+        txtGuestsName.Size = New Size(165, 23)
+        txtGuestsName.TabIndex = 20
         ' 
-        ' TextBox1
+        ' txtNumberOfGuest
         ' 
-        TextBox1.BackColor = Color.Gainsboro
-        TextBox1.BorderStyle = BorderStyle.FixedSingle
-        TextBox1.Location = New Point(162, 90)
-        TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(133, 23)
-        TextBox1.TabIndex = 21
+        txtNumberOfGuest.BackColor = Color.Gainsboro
+        txtNumberOfGuest.BorderStyle = BorderStyle.FixedSingle
+        txtNumberOfGuest.Location = New Point(162, 90)
+        txtNumberOfGuest.Name = "txtNumberOfGuest"
+        txtNumberOfGuest.Size = New Size(133, 23)
+        txtNumberOfGuest.TabIndex = 21
         ' 
-        ' TextBox2
+        ' txtArrivalDate
         ' 
-        TextBox2.BackColor = Color.Gainsboro
-        TextBox2.BorderStyle = BorderStyle.FixedSingle
-        TextBox2.Location = New Point(148, 148)
-        TextBox2.Name = "TextBox2"
-        TextBox2.Size = New Size(147, 23)
-        TextBox2.TabIndex = 22
+        txtArrivalDate.BackColor = Color.Gainsboro
+        txtArrivalDate.BorderStyle = BorderStyle.FixedSingle
+        txtArrivalDate.Location = New Point(148, 148)
+        txtArrivalDate.Name = "txtArrivalDate"
+        txtArrivalDate.Size = New Size(147, 23)
+        txtArrivalDate.TabIndex = 22
         ' 
-        ' TextBox3
+        ' txtDepartureDate
         ' 
-        TextBox3.BackColor = Color.Gainsboro
-        TextBox3.BorderStyle = BorderStyle.FixedSingle
-        TextBox3.Location = New Point(148, 177)
-        TextBox3.Name = "TextBox3"
-        TextBox3.Size = New Size(147, 23)
-        TextBox3.TabIndex = 23
+        txtDepartureDate.BackColor = Color.Gainsboro
+        txtDepartureDate.BorderStyle = BorderStyle.FixedSingle
+        txtDepartureDate.Location = New Point(148, 177)
+        txtDepartureDate.Name = "txtDepartureDate"
+        txtDepartureDate.Size = New Size(147, 23)
+        txtDepartureDate.TabIndex = 23
         ' 
-        ' TextBox4
+        ' txtTotalPayment
         ' 
-        TextBox4.BackColor = Color.Gainsboro
-        TextBox4.BorderStyle = BorderStyle.FixedSingle
-        TextBox4.Location = New Point(162, 226)
-        TextBox4.Name = "TextBox4"
-        TextBox4.Size = New Size(133, 23)
-        TextBox4.TabIndex = 25
+        txtTotalPayment.BackColor = Color.Gainsboro
+        txtTotalPayment.BorderStyle = BorderStyle.FixedSingle
+        txtTotalPayment.Location = New Point(162, 226)
+        txtTotalPayment.Name = "txtTotalPayment"
+        txtTotalPayment.Size = New Size(133, 23)
+        txtTotalPayment.TabIndex = 25
         ' 
         ' Label6
         ' 
@@ -178,12 +178,12 @@ Partial Class formReciept
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(359, 323)
-        Controls.Add(TextBox4)
+        Controls.Add(txtTotalPayment)
         Controls.Add(Label6)
-        Controls.Add(TextBox3)
-        Controls.Add(TextBox2)
-        Controls.Add(TextBox1)
-        Controls.Add(txtFirstName)
+        Controls.Add(txtDepartureDate)
+        Controls.Add(txtArrivalDate)
+        Controls.Add(txtNumberOfGuest)
+        Controls.Add(txtGuestsName)
         Controls.Add(Label5)
         Controls.Add(Label4)
         Controls.Add(Label3)
@@ -206,10 +206,10 @@ Partial Class formReciept
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label
-    Friend WithEvents txtFirstName As TextBox
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents txtGuestsName As TextBox
+    Friend WithEvents txtNumberOfGuest As TextBox
+    Friend WithEvents txtArrivalDate As TextBox
+    Friend WithEvents txtDepartureDate As TextBox
+    Friend WithEvents txtTotalPayment As TextBox
     Friend WithEvents Label6 As Label
 End Class

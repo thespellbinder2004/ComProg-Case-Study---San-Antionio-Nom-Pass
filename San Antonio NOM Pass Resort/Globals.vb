@@ -15,8 +15,9 @@ Public Class Globals
 
     Shared Function getCustomerInfo(ByVal cust As String)
         Dim custInfoList = cust.Split("-")
-        Return custInfoList
+        Return custInfoList.ToList
     End Function
+
 
 
 End Class

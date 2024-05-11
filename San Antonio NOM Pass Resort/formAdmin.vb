@@ -9,4 +9,7 @@
 
     End Sub
 
+    Private Sub formAdmin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class

@@ -1,0 +1,15 @@
+Index   Item
+
+0. 	First Name
+1. 	Last Name
+2. 	Sex
+3. 	Birthdate
+4. 	Arrival Date
+5. 	Departure Date
+7. 	Guest Regular
+8. 	Guest Senior
+9. 	Guest Minor
+10.	Guest Total
+11.	Stay Length
+
+edit, firstname, lastname, arrival, departure, total guests

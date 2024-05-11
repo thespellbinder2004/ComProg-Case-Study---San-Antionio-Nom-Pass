@@ -7,6 +7,21 @@
     End Class
 
 
+    'Customer Info List 
+    'Index  Item
+    '0. 	First Name
+    '1. 	Last Name
+    '2. 	Sex
+    '3. 	Birthdate
+    '4. 	Arrival Date
+    '5. 	Departure Date
+    '7. 	Guest Regular
+    '8. 	Guest Senior
+    '9. 	Guest Minor
+    '10.	Guest Total
+    '11.	Stay Length
+
+
     'GUEST TAB BY JOSEPH
     'START ------------------------------------------
     Private Sub DataGridView2_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvGuestTable.CellContentClick
@@ -20,13 +35,20 @@
             Next
         End If
     End Sub
+    'GUEST TAB BY JOSEPH
+    'END ------------------------------------------
 
+
+
+
+    'REFRESH AND LOAD
+    'START ------------------------------------------
     Private Sub btnRefresh_Click(sender As Object, e As EventArgs) Handles btnRefresh.Click
         listCustomer = Globals.getCustomerList()
         dgvGuestTable.Rows.Clear()
         For i = 0 To (listCustomer.Count - 1)
             Dim listInfo As List(Of String) = Globals.getCustomerInfo(listCustomer(i))
-            dgvGuestTable.Rows.Add("Edit", listInfo(0), listInfo(1), listInfo(4), listInfo(5), "4")
+            dgvGuestTable.Rows.Add("Edit", listInfo(0), listInfo(1), listInfo(4), listInfo(5), listInfo(10))
         Next
     End Sub
     Private Sub formAdmin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -35,10 +57,11 @@
         For i = 0 To (listCustomer.Count - 1)
 
             Dim listInfo As List(Of String) = Globals.getCustomerInfo(listCustomer(i))
-            dgvGuestTable.Rows.Add("Edit", listInfo(0), listInfo(1), listInfo(4), listInfo(5), "4")
+            dgvGuestTable.Rows.Add("Edit", listInfo(0), listInfo(1), listInfo(4), listInfo(5), listInfo(10))
         Next
     End Sub
-    'GUEST TAB BY JOSEPH
+    'REFRESH AND LOAD
     'END ------------------------------------------
+
 
 End Class

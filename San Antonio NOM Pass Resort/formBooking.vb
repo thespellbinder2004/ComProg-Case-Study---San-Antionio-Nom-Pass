@@ -60,11 +60,13 @@ Public Class formBooking
 
         dtpArrival.Format = DateTimePickerFormat.Custom
         dtpArrival.CustomFormat = "ddd, MM / dd / yyyy"
-        dtpArrival.MinDate = New DateTime(2024, 1, 1)
+        dtpArrival.MinDate = Date.Now
 
         dtpDeparture.Format = DateTimePickerFormat.Custom
         dtpDeparture.CustomFormat = "ddd, MM / dd / yyyy"
-        dtpDeparture.MinDate = New DateTime(2024, 1, 1)
+        dtpDeparture.MinDate = dtpArrival.Value.AddDays(1)
+
+        formAdmin.Show()
 
     End Sub
 

@@ -3,52 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\Gabby\\Documents\\GitHub\\ComProg-Case-Study---San-Antionio-Nom-Pass\\San Antonio NOM Pass Resort\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{9CF261F8-5FCB-4851-AAD6-C32EAC3E421F}|San Antonio NOM Pass Resort.vbproj|C:\\Users\\Gabby\\Documents\\GitHub\\ComProg-Case-Study---San-Antionio-Nom-Pass\\San Antonio NOM Pass Resort\\formadmin.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{9CF261F8-5FCB-4851-AAD6-C32EAC3E421F}|San Antonio NOM Pass Resort.vbproj|solutionrelative:formadmin.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CF261F8-5FCB-4851-AAD6-C32EAC3E421F}|San Antonio NOM Pass Resort.vbproj|C:\\Users\\Gabby\\Documents\\GitHub\\ComProg-Case-Study---San-Antionio-Nom-Pass\\San Antonio NOM Pass Resort\\formadmin.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{9CF261F8-5FCB-4851-AAD6-C32EAC3E421F}|San Antonio NOM Pass Resort.vbproj|solutionrelative:formadmin.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CF261F8-5FCB-4851-AAD6-C32EAC3E421F}|San Antonio NOM Pass Resort.vbproj|C:\\Users\\Gabby\\Documents\\GitHub\\ComProg-Case-Study---San-Antionio-Nom-Pass\\San Antonio NOM Pass Resort\\formbooking.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{9CF261F8-5FCB-4851-AAD6-C32EAC3E421F}|San Antonio NOM Pass Resort.vbproj|solutionrelative:formbooking.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{9CF261F8-5FCB-4851-AAD6-C32EAC3E421F}|San Antonio NOM Pass Resort.vbproj|c:\\users\\gabby\\documents\\github\\comprog-case-study---san-antionio-nom-pass\\san antonio nom pass resort\\formbooking.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{9CF261F8-5FCB-4851-AAD6-C32EAC3E421F}|San Antonio NOM Pass Resort.vbproj|solutionrelative:formbooking.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9CF261F8-5FCB-4851-AAD6-C32EAC3E421F}|San Antonio NOM Pass Resort.vbproj|c:\\users\\gabby\\documents\\github\\comprog-case-study---san-antionio-nom-pass\\san antonio nom pass resort\\formreciept.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{9CF261F8-5FCB-4851-AAD6-C32EAC3E421F}|San Antonio NOM Pass Resort.vbproj|solutionrelative:formreciept.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9CF261F8-5FCB-4851-AAD6-C32EAC3E421F}|San Antonio NOM Pass Resort.vbproj|c:\\users\\gabby\\documents\\github\\comprog-case-study---san-antionio-nom-pass\\san antonio nom pass resort\\formreciept.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{9CF261F8-5FCB-4851-AAD6-C32EAC3E421F}|San Antonio NOM Pass Resort.vbproj|solutionrelative:formreciept.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9CF261F8-5FCB-4851-AAD6-C32EAC3E421F}|San Antonio NOM Pass Resort.vbproj|c:\\users\\gabby\\documents\\github\\comprog-case-study---san-antionio-nom-pass\\san antonio nom pass resort\\formrooms.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{9CF261F8-5FCB-4851-AAD6-C32EAC3E421F}|San Antonio NOM Pass Resort.vbproj|solutionrelative:formrooms.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9CF261F8-5FCB-4851-AAD6-C32EAC3E421F}|San Antonio NOM Pass Resort.vbproj|c:\\users\\gabby\\documents\\github\\comprog-case-study---san-antionio-nom-pass\\san antonio nom pass resort\\formrooms.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{9CF261F8-5FCB-4851-AAD6-C32EAC3E421F}|San Antonio NOM Pass Resort.vbproj|solutionrelative:formrooms.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9CF261F8-5FCB-4851-AAD6-C32EAC3E421F}|San Antonio NOM Pass Resort.vbproj|c:\\users\\gabby\\documents\\github\\comprog-case-study---san-antionio-nom-pass\\san antonio nom pass resort\\formsplashscreen.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{9CF261F8-5FCB-4851-AAD6-C32EAC3E421F}|San Antonio NOM Pass Resort.vbproj|solutionrelative:formsplashscreen.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9CF261F8-5FCB-4851-AAD6-C32EAC3E421F}|San Antonio NOM Pass Resort.vbproj|c:\\users\\gabby\\documents\\github\\comprog-case-study---san-antionio-nom-pass\\san antonio nom pass resort\\formsplashscreen.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "AbsoluteMoniker": "D:0:0:{9CF261F8-5FCB-4851-AAD6-C32EAC3E421F}|San Antonio NOM Pass Resort.vbproj|C:\\Users\\Gabby\\Documents\\GitHub\\ComProg-Case-Study---San-Antionio-Nom-Pass\\San Antonio NOM Pass Resort\\formsplashscreen.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{9CF261F8-5FCB-4851-AAD6-C32EAC3E421F}|San Antonio NOM Pass Resort.vbproj|solutionrelative:formsplashscreen.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9CF261F8-5FCB-4851-AAD6-C32EAC3E421F}|San Antonio NOM Pass Resort.vbproj|c:\\users\\gabby\\documents\\github\\comprog-case-study---san-antionio-nom-pass\\san antonio nom pass resort\\formbooking.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{9CF261F8-5FCB-4851-AAD6-C32EAC3E421F}|San Antonio NOM Pass Resort.vbproj|solutionrelative:formbooking.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9CF261F8-5FCB-4851-AAD6-C32EAC3E421F}|San Antonio NOM Pass Resort.vbproj|C:\\Users\\Gabby\\Documents\\GitHub\\ComProg-Case-Study---San-Antionio-Nom-Pass\\San Antonio NOM Pass Resort\\globals.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{9CF261F8-5FCB-4851-AAD6-C32EAC3E421F}|San Antonio NOM Pass Resort.vbproj|solutionrelative:globals.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9CF261F8-5FCB-4851-AAD6-C32EAC3E421F}|San Antonio NOM Pass Resort.vbproj|C:\\Users\\Gabby\\Documents\\GitHub\\ComProg-Case-Study---San-Antionio-Nom-Pass\\San Antonio NOM Pass Resort\\customers.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{9CF261F8-5FCB-4851-AAD6-C32EAC3E421F}|San Antonio NOM Pass Resort.vbproj|solutionrelative:customers.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9CF261F8-5FCB-4851-AAD6-C32EAC3E421F}|San Antonio NOM Pass Resort.vbproj|c:\\users\\gabby\\documents\\github\\comprog-case-study---san-antionio-nom-pass\\san antonio nom pass resort\\formadmin.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{9CF261F8-5FCB-4851-AAD6-C32EAC3E421F}|San Antonio NOM Pass Resort.vbproj|solutionrelative:formadmin.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9CF261F8-5FCB-4851-AAD6-C32EAC3E421F}|San Antonio NOM Pass Resort.vbproj|C:\\Users\\Gabby\\Documents\\GitHub\\ComProg-Case-Study---San-Antionio-Nom-Pass\\San Antonio NOM Pass Resort\\formadmin.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{9CF261F8-5FCB-4851-AAD6-C32EAC3E421F}|San Antonio NOM Pass Resort.vbproj|solutionrelative:formadmin.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+      "AbsoluteMoniker": "D:0:0:{9CF261F8-5FCB-4851-AAD6-C32EAC3E421F}|San Antonio NOM Pass Resort.vbproj|C:\\Users\\Gabby\\Documents\\GitHub\\ComProg-Case-Study---San-Antionio-Nom-Pass\\San Antonio NOM Pass Resort\\globals.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{9CF261F8-5FCB-4851-AAD6-C32EAC3E421F}|San Antonio NOM Pass Resort.vbproj|solutionrelative:globals.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     }
   ],
   "DocumentGroupContainers": [
@@ -58,17 +38,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 5,
               "Title": "Customers.txt",
               "DocumentMoniker": "C:\\Users\\Gabby\\Documents\\GitHub\\ComProg-Case-Study---San-Antionio-Nom-Pass\\San Antonio NOM Pass Resort\\Customers.txt",
               "RelativeDocumentMoniker": "Customers.txt",
               "ToolTip": "C:\\Users\\Gabby\\Documents\\GitHub\\ComProg-Case-Study---San-Antionio-Nom-Pass\\San Antonio NOM Pass Resort\\Customers.txt",
               "RelativeToolTip": "Customers.txt",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAKAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAABdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
               "WhenOpened": "2024-05-10T23:28:31.591Z",
               "IsPinned": true,
@@ -76,7 +56,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 6,
               "Title": "Globals.vb",
               "DocumentMoniker": "C:\\Users\\Gabby\\Documents\\GitHub\\ComProg-Case-Study---San-Antionio-Nom-Pass\\San Antonio NOM Pass Resort\\Globals.vb",
               "RelativeDocumentMoniker": "Globals.vb",
@@ -90,95 +70,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 4,
               "Title": "formSplashScreen.vb",
               "DocumentMoniker": "C:\\Users\\Gabby\\Documents\\GitHub\\ComProg-Case-Study---San-Antionio-Nom-Pass\\San Antonio NOM Pass Resort\\formSplashScreen.vb",
               "RelativeDocumentMoniker": "formSplashScreen.vb",
               "ToolTip": "C:\\Users\\Gabby\\Documents\\GitHub\\ComProg-Case-Study---San-Antionio-Nom-Pass\\San Antonio NOM Pass Resort\\formSplashScreen.vb",
               "RelativeToolTip": "formSplashScreen.vb",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAALAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2024-05-11T05:36:53.046Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "formSplashScreen.vb [Design]",
-              "DocumentMoniker": "C:\\Users\\Gabby\\Documents\\GitHub\\ComProg-Case-Study---San-Antionio-Nom-Pass\\San Antonio NOM Pass Resort\\formSplashScreen.vb",
-              "RelativeDocumentMoniker": "formSplashScreen.vb",
-              "ToolTip": "C:\\Users\\Gabby\\Documents\\GitHub\\ComProg-Case-Study---San-Antionio-Nom-Pass\\San Antonio NOM Pass Resort\\formSplashScreen.vb [Design]",
-              "RelativeToolTip": "formSplashScreen.vb [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-05-11T05:36:49.486Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "formRooms.vb [Design]",
-              "DocumentMoniker": "C:\\Users\\Gabby\\Documents\\GitHub\\ComProg-Case-Study---San-Antionio-Nom-Pass\\San Antonio NOM Pass Resort\\formRooms.vb",
-              "RelativeDocumentMoniker": "formRooms.vb",
-              "ToolTip": "C:\\Users\\Gabby\\Documents\\GitHub\\ComProg-Case-Study---San-Antionio-Nom-Pass\\San Antonio NOM Pass Resort\\formRooms.vb [Design]",
-              "RelativeToolTip": "formRooms.vb [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-05-11T05:28:26.207Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "formRooms.vb",
-              "DocumentMoniker": "C:\\Users\\Gabby\\Documents\\GitHub\\ComProg-Case-Study---San-Antionio-Nom-Pass\\San Antonio NOM Pass Resort\\formRooms.vb",
-              "RelativeDocumentMoniker": "formRooms.vb",
-              "ToolTip": "C:\\Users\\Gabby\\Documents\\GitHub\\ComProg-Case-Study---San-Antionio-Nom-Pass\\San Antonio NOM Pass Resort\\formRooms.vb",
-              "RelativeToolTip": "formRooms.vb",
-              "ViewState": "AQIAAHABAAAAAAAAAAAMwIoBAABMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-05-11T05:24:07.559Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "formReciept.vb [Design]",
-              "DocumentMoniker": "C:\\Users\\Gabby\\Documents\\GitHub\\ComProg-Case-Study---San-Antionio-Nom-Pass\\San Antonio NOM Pass Resort\\formReciept.vb",
-              "RelativeDocumentMoniker": "formReciept.vb",
-              "ToolTip": "C:\\Users\\Gabby\\Documents\\GitHub\\ComProg-Case-Study---San-Antionio-Nom-Pass\\San Antonio NOM Pass Resort\\formReciept.vb [Design]",
-              "RelativeToolTip": "formReciept.vb [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-05-11T05:22:32.569Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "formReciept.vb",
-              "DocumentMoniker": "C:\\Users\\Gabby\\Documents\\GitHub\\ComProg-Case-Study---San-Antionio-Nom-Pass\\San Antonio NOM Pass Resort\\formReciept.vb",
-              "RelativeDocumentMoniker": "formReciept.vb",
-              "ToolTip": "C:\\Users\\Gabby\\Documents\\GitHub\\ComProg-Case-Study---San-Antionio-Nom-Pass\\San Antonio NOM Pass Resort\\formReciept.vb",
-              "RelativeToolTip": "formReciept.vb",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAyAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-05-11T05:03:31.26Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "formBooking.vb",
               "DocumentMoniker": "C:\\Users\\Gabby\\Documents\\GitHub\\ComProg-Case-Study---San-Antionio-Nom-Pass\\San Antonio NOM Pass Resort\\formBooking.vb",
               "RelativeDocumentMoniker": "formBooking.vb",
               "ToolTip": "C:\\Users\\Gabby\\Documents\\GitHub\\ComProg-Case-Study---San-Antionio-Nom-Pass\\San Antonio NOM Pass Resort\\formBooking.vb",
               "RelativeToolTip": "formBooking.vb",
-              "ViewState": "AQIAAHsAAAAAAAAAAAAkwAQAAAAnAAAA",
+              "ViewState": "AQIAAGwAAAAAAAAAAAAUwH0AAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2024-05-11T04:50:35.746Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 2,
               "Title": "formBooking.vb [Design]",
               "DocumentMoniker": "C:\\Users\\Gabby\\Documents\\GitHub\\ComProg-Case-Study---San-Antionio-Nom-Pass\\San Antonio NOM Pass Resort\\formBooking.vb",
               "RelativeDocumentMoniker": "formBooking.vb",
@@ -190,7 +108,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 1,
               "Title": "formAdmin.vb [Design]",
               "DocumentMoniker": "C:\\Users\\Gabby\\Documents\\GitHub\\ComProg-Case-Study---San-Antionio-Nom-Pass\\San Antonio NOM Pass Resort\\formAdmin.vb",
               "RelativeDocumentMoniker": "formAdmin.vb",
@@ -202,13 +120,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 0,
               "Title": "formAdmin.vb",
               "DocumentMoniker": "C:\\Users\\Gabby\\Documents\\GitHub\\ComProg-Case-Study---San-Antionio-Nom-Pass\\San Antonio NOM Pass Resort\\formAdmin.vb",
               "RelativeDocumentMoniker": "formAdmin.vb",
               "ToolTip": "C:\\Users\\Gabby\\Documents\\GitHub\\ComProg-Case-Study---San-Antionio-Nom-Pass\\San Antonio NOM Pass Resort\\formAdmin.vb",
               "RelativeToolTip": "formAdmin.vb",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
+              "ViewState": "AQIAABsAAAAAAAAAAAAowDUAAAA4AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2024-05-11T02:19:32.84Z",
               "EditorCaption": ""

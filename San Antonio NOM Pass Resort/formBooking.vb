@@ -2,20 +2,16 @@
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 
 Public Class formBooking
-    Dim intStayLength
-    Public intTotalNight As Double = 1.0
-    Public intTotalGuests As Integer
-    Public strUserName As String
+    Public intTotalNight As Integer = 0
+    Public intTotalGuests As Integer = 0
+    Public intSeniorGuests As Integer = 0
+    Public intMinorGuests As Integer = 0
+    Public intRegularGuests As Integer = 0
     Public intReceiptNumber As Integer = 0
-
     Dim listCustomerInfo As New List(Of String)({})
 
     Class Booking
-        Private totalGuests As Integer
-        Public Function getTotalGuests(x, y, z) As Integer
-            totalGuests = x + y + z
-            Return totalGuests
-        End Function
+
         Public Sub fewGuests()
 
         End Sub
@@ -31,11 +27,11 @@ Public Class formBooking
         Dim strGuestSenior As String
         Dim strGuestMinor As String
         Dim strGuestRegular As String
+        Dim strGuestTotal As String
+        Dim strStayLength As String
 
         'For the combobox, it can be seen in the properties.
-
-
-        Public Sub New(ByVal firstName As String, ByVal lastName As String, ByVal sex As String, ByVal birthday As String, ByVal arrival As String, ByVal departure As String, ByVal senior As String, ByVal minor As String, ByVal regular As String)
+        Public Sub New(ByVal firstName As String, ByVal lastName As String, ByVal sex As String, ByVal birthday As String, ByVal arrival As String, ByVal departure As String, ByVal regular As String, ByVal senior As String, ByVal minor As String, ByVal total As String, ByVal stayLength As String)
             strFirstName = firstName
             strLastName = lastName
             strSex = sex
@@ -45,10 +41,11 @@ Public Class formBooking
             strGuestSenior = senior
             strGuestMinor = minor
             strGuestRegular = regular
-
+            strGuestTotal = total
+            strStayLength = stayLength
         End Sub
         Function getCustomerDetails()
-            Return strFirstName + "-" + strLastName + "-" + strSex + "-" + strDatBirth + "-" + strDatArrival + "-" + strDatDeparture + "-" + strGuestSenior + "-" + strGuestMinor + "-" + strGuestRegular
+            Return strFirstName + "-" + strLastName + "-" + strSex + "-" + strDatBirth + "-" + strDatArrival + "-" + strDatDeparture + "-" + strGuestRegular + "-" + strGuestSenior + "-" + strGuestMinor + "-" + strGuestTotal + "-" + strStayLength
         End Function
 
     End Class
@@ -72,31 +69,30 @@ Public Class formBooking
     End Sub
 
     Private Sub btnSubmit_Click(sender As Object, e As EventArgs) Handles btnSubmit.Click
-        Dim booking = New Booking
 
-        strUserName = txtFirstName.Text + txtLastName.Text
-        intTotalGuests = booking.getTotalGuests(Val(nudRegularGuests.Text), Val(nudMinorGuests.Text), Val(nudSeniorGuests.Text))
+        intMinorGuests = nudMinorGuests.Value
+        intSeniorGuests = nudSeniorGuests.Value
+        intRegularGuests = nudRegularGuests.Value
+        intTotalGuests = intMinorGuests + intSeniorGuests + intRegularGuests
 
-        If intTotalGuests > 0 And intTotalGuests < 4 Then
-            booking.fewGuests()
-        ElseIf intTotalGuests > 3 And intTotalGuests < 9 Then
-
-        ElseIf intTotalGuests > 8 Then
+        If (Not intTotalGuests > 0) Or txtFirstName.Text = "" Or txtLastName.Text = "" Then
+            MessageBox.Show("Please Input Required Elements", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         Else
+            Dim result = MessageBox.Show("Do you confirm all information is correctly filled out?", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)
 
-        End If
+            If result = DialogResult.OK Then
 
-        formRooms.Show()
+                formRooms.Show()
+                setCustomerDetails()
+                Me.Hide()
 
-        Dim result
-        result = MsgBox("Do you confirm all information is correctly filled out?", vbOKCancel, "San Antonio Nom Pass Resort")
-        If result = vbOK Then
-            setCustomerDetails()
-            Me.Hide()
-            intStayLength = Math.Round((dtpDeparture.Value - dtpArrival.Value).TotalDays)
+            End If
+
         End If
 
     End Sub
+
+
     Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
         Me.Close()
     End Sub
@@ -105,8 +101,8 @@ Public Class formBooking
         dtpDeparture.MinDate = dtpArrival.Value.AddDays(1)
     End Sub
 
-    Sub setCustomerDetails()
 
+    Sub setCustomerDetails()
         Dim nameFirst = txtFirstName.Text
         Dim nameLast = txtLastName.Text
         Dim sex = cbSex.Text
@@ -116,18 +112,18 @@ Public Class formBooking
         Dim guestSen = nudSeniorGuests.Value.ToString
         Dim guestMin = nudMinorGuests.Value.ToString
         Dim guestReg = nudRegularGuests.Value.ToString
+        Dim guestTotal = (nudSeniorGuests.Value + nudMinorGuests.Value + nudSeniorGuests.Value).ToString
+        Dim intStayLength = Math.Round((dtpDeparture.Value - dtpArrival.Value).TotalDays)
 
-        Dim customerInfo = New CustomerDetails(nameFirst, nameLast, sex, dateBirth, dateArrival, dateDeparture, guestSen, guestMin, guestReg)
+        Dim customerInfo = New CustomerDetails(nameFirst, nameLast, sex, dateBirth, dateArrival, dateDeparture, guestReg, guestSen, guestMin, guestTotal, intStayLength)
         listCustomerInfo.Add(customerInfo.getCustomerDetails())
-
 
         Dim pathCustomersTxt As String = Path.GetFullPath("Customers.txt")
         Dim writerCustomer = New StreamWriter(pathCustomersTxt, True)
         writerCustomer.WriteLine(customerInfo.getCustomerDetails())
         writerCustomer.Close()
 
-
-
     End Sub
+
 
 End Class

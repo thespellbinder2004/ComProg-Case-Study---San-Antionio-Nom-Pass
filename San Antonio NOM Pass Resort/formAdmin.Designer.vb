@@ -24,7 +24,6 @@ Partial Class formAdmin
     Private Sub InitializeComponent()
         tbcAdmin = New TabControl()
         tabAdminInfo = New TabPage()
-        DataGridView1 = New DataGridView()
         txtAdminContact2 = New TextBox()
         txtAdminContact1 = New TextBox()
         txtAdminRole = New TextBox()
@@ -103,18 +102,17 @@ Partial Class formAdmin
         lblSingleRoom = New Label()
         tabGuests = New TabPage()
         dgvGuestTable = New DataGridView()
-        tabGuestInfo = New TabPage()
-        Label1 = New Label()
-        btnRefresh = New Button()
         columnEdit = New DataGridViewButtonColumn()
         columnFirstName = New DataGridViewTextBoxColumn()
         columnLastnName = New DataGridViewTextBoxColumn()
         columnArrival = New DataGridViewTextBoxColumn()
         columnDeparture = New DataGridViewTextBoxColumn()
         columnTotalGuests = New DataGridViewTextBoxColumn()
+        tabGuestInfo = New TabPage()
+        Label1 = New Label()
+        btnRefresh = New Button()
         tbcAdmin.SuspendLayout()
         tabAdminInfo.SuspendLayout()
-        CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
         GroupBox1.SuspendLayout()
         tabRooms.SuspendLayout()
         tabGuests.SuspendLayout()
@@ -136,7 +134,6 @@ Partial Class formAdmin
         ' 
         ' tabAdminInfo
         ' 
-        tabAdminInfo.Controls.Add(DataGridView1)
         tabAdminInfo.Controls.Add(txtAdminContact2)
         tabAdminInfo.Controls.Add(txtAdminContact1)
         tabAdminInfo.Controls.Add(txtAdminRole)
@@ -162,14 +159,6 @@ Partial Class formAdmin
         tabAdminInfo.TabIndex = 0
         tabAdminInfo.Text = "Admin Info"
         tabAdminInfo.UseVisualStyleBackColor = True
-        ' 
-        ' DataGridView1
-        ' 
-        DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridView1.Location = New Point(457, 56)
-        DataGridView1.Name = "DataGridView1"
-        DataGridView1.Size = New Size(8, 8)
-        DataGridView1.TabIndex = 29
         ' 
         ' txtAdminContact2
         ' 
@@ -999,34 +988,6 @@ Partial Class formAdmin
         dgvGuestTable.Size = New Size(787, 496)
         dgvGuestTable.TabIndex = 0
         ' 
-        ' tabGuestInfo
-        ' 
-        tabGuestInfo.Location = New Point(4, 24)
-        tabGuestInfo.Name = "tabGuestInfo"
-        tabGuestInfo.Size = New Size(793, 502)
-        tabGuestInfo.TabIndex = 3
-        tabGuestInfo.Text = "Guest Info"
-        tabGuestInfo.UseVisualStyleBackColor = True
-        ' 
-        ' Label1
-        ' 
-        Label1.AutoSize = True
-        Label1.Font = New Font("Consolas", 20.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label1.Location = New Point(12, 23)
-        Label1.Name = "Label1"
-        Label1.Size = New Size(419, 32)
-        Label1.TabIndex = 1
-        Label1.Text = "San Antonio Nom Pass Resort"
-        ' 
-        ' btnRefresh
-        ' 
-        btnRefresh.Location = New Point(690, 32)
-        btnRefresh.Name = "btnRefresh"
-        btnRefresh.Size = New Size(75, 23)
-        btnRefresh.TabIndex = 2
-        btnRefresh.Text = "Refresh"
-        btnRefresh.UseVisualStyleBackColor = True
-        ' 
         ' columnEdit
         ' 
         columnEdit.AutoSizeMode = DataGridViewAutoSizeColumnMode.None
@@ -1078,6 +1039,34 @@ Partial Class formAdmin
         columnTotalGuests.ReadOnly = True
         columnTotalGuests.Resizable = DataGridViewTriState.False
         ' 
+        ' tabGuestInfo
+        ' 
+        tabGuestInfo.Location = New Point(4, 24)
+        tabGuestInfo.Name = "tabGuestInfo"
+        tabGuestInfo.Size = New Size(793, 502)
+        tabGuestInfo.TabIndex = 3
+        tabGuestInfo.Text = "Guest Info"
+        tabGuestInfo.UseVisualStyleBackColor = True
+        ' 
+        ' Label1
+        ' 
+        Label1.AutoSize = True
+        Label1.Font = New Font("Consolas", 20.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label1.Location = New Point(12, 23)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(419, 32)
+        Label1.TabIndex = 1
+        Label1.Text = "San Antonio Nom Pass Resort"
+        ' 
+        ' btnRefresh
+        ' 
+        btnRefresh.Location = New Point(690, 32)
+        btnRefresh.Name = "btnRefresh"
+        btnRefresh.Size = New Size(75, 23)
+        btnRefresh.TabIndex = 2
+        btnRefresh.Text = "Refresh"
+        btnRefresh.UseVisualStyleBackColor = True
+        ' 
         ' formAdmin
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
@@ -1091,7 +1080,6 @@ Partial Class formAdmin
         tbcAdmin.ResumeLayout(False)
         tabAdminInfo.ResumeLayout(False)
         tabAdminInfo.PerformLayout()
-        CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()
         GroupBox1.ResumeLayout(False)
         GroupBox1.PerformLayout()
         tabRooms.ResumeLayout(False)
@@ -1183,7 +1171,6 @@ Partial Class formAdmin
     Friend WithEvents txtAdminContact1 As TextBox
     Friend WithEvents txtAdminRole As TextBox
     Friend WithEvents txtCurrentAdmin As TextBox
-    Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents dgvGuestTable As DataGridView
     Friend WithEvents btnRefresh As Button
     Friend WithEvents columnEdit As DataGridViewButtonColumn

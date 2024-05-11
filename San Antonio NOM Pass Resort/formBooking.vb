@@ -71,7 +71,6 @@ Public Class formBooking
     End Sub
 
     Private Sub btnSubmit_Click(sender As Object, e As EventArgs) Handles btnSubmit.Click
-
         Dim booking = New Booking
 
         strUserName = txtFirstName.Text + txtLastName.Text
@@ -98,7 +97,7 @@ Public Class formBooking
 
     End Sub
     Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
-        MsgBox(readCustomer())
+        Me.Close()
     End Sub
 
     Private Sub dtpArrival_ValueChanged(sender As Object, e As EventArgs) Handles dtpArrival.ValueChanged
@@ -125,6 +124,7 @@ Public Class formBooking
         Dim writerCustomer = New StreamWriter(pathCustomersTxt, True)
         writerCustomer.WriteLine(customerInfo.getCustomerDetails())
         writerCustomer.Close()
+
 
 
     End Sub

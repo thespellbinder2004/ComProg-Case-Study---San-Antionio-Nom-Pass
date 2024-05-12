@@ -8,14 +8,8 @@ Imports System.Runtime.CompilerServices
 Public Class formRooms
 
     Dim listRoomNums As New List(Of List(Of String))
+    Dim totalBill As Double
 
-    Private Sub btnSingleRoomInfo_Click(sender As Object, e As EventArgs) Handles btnSingleRoomInfo.Click
-        If btnSingleRoomInfo.Text.Contains("Info") Then
-            btnSingleRoomInfo.Text = "Max Guest Number: 3" & vbNewLine & "Bathroom: 1" & vbNewLine & "Bedroom: 1"
-        Else
-            btnSingleRoomInfo.Text = "Click for more Info"
-        End If
-    End Sub
 
     Private Sub formRooms_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim listRooms = Globals.getRoomsList()
@@ -48,7 +42,7 @@ Public Class formRooms
         Next
     End Sub
 
-    Function submitBook(ByVal typeRoom As String, ByVal cbIndex As String, ByVal index As Integer)
+    Function submitBook(ByVal typeRoom As String, ByVal cbIndex As String, ByVal maxCapacity As Integer, ByVal roomCost As Integer, ByVal index As Integer)
 
         Dim mbResult = MessageBox.Show("Do you confirm the details that you entered?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
 
@@ -57,6 +51,10 @@ Public Class formRooms
             listCustomer = formBooking.getListCustomerInfo()
             listCustomer.Add(typeRoom)
             listCustomer.Add(listRoomNums(index)(cbIndex))
+
+            totalBill = calcTotalBill(formBooking.getGuestToPay, formBooking.getLengthOfStay, roomCost, maxCapacity)
+            listCustomer.Add(totalBill)
+
             Dim customerInfo As String = appendAllWithDashes(listCustomer)
 
             listRoomNums(index).RemoveAt(cbIndex + 1)
@@ -94,31 +92,103 @@ Public Class formRooms
         Return appendedString
     End Function
 
+    Function calcTotalBill(ByVal Guests As Double, ByVal lengthOfStay As Double, ByVal roomCost As Double, ByVal maxCapacity As Double)
+        Dim totalBill As Double
+        Dim additionBill As Double = 0
+        If Guests > maxCapacity Then
+            additionBill = 500 * (Guests - maxCapacity)
+        End If
+        totalBill = (lengthOfStay * roomCost) + additionBill
+        Return totalBill
+
+    End Function
+
 
     Private Sub btnSingleRoomBook_Click(sender As Object, e As EventArgs) Handles btnSingleRoomBook.Click
-        submitBook("Single Room", cbSingleRoomNumber.SelectedIndex, 0)
+        submitBook("Single Room", cbSingleRoomNumber.SelectedIndex, 1, 999, 0)
     End Sub
     Private Sub btnTwinRoomBook_Click(sender As Object, e As EventArgs) Handles btnTwinRoomBook.Click
-        submitBook("Twin Room", cbTwinRoomNumber.SelectedIndex, 1)
+        submitBook("Twin Room", cbTwinRoomNumber.SelectedIndex, 5, 1799, 1)
     End Sub
     Private Sub btnStandardRoomBook_Click(sender As Object, e As EventArgs) Handles btnStandardRoomBook.Click
-        submitBook("Standard Room", cbStandardRoomNumber.SelectedIndex, 2)
+        submitBook("Standard Room", cbStandardRoomNumber.SelectedIndex, 6, 1999, 2)
     End Sub
 
     Private Sub btnQueenRoomBook_Click(sender As Object, e As EventArgs) Handles btnQueenRoomBook.Click
-        submitBook("Queen Room", cbQueenRoomNumber.SelectedIndex, 3)
+        submitBook("Queen Room", cbQueenRoomNumber.SelectedIndex, 2, 1199, 3)
     End Sub
 
     Private Sub btnKingRoomBook_Click(sender As Object, e As EventArgs) Handles btnKingRoomBook.Click
-        submitBook("King Room", cbKingRoomNumber.SelectedIndex, 4)
+        submitBook("King Room", cbKingRoomNumber.SelectedIndex, 3, 1399, 4)
     End Sub
 
     Private Sub btnExecRoomBook_Click(sender As Object, e As EventArgs) Handles btnExecRoomBook.Click
-        submitBook("Executive Room", cbExecutiveRoomNumber.SelectedIndex, 5)
+        submitBook("Executive Room", cbExecutiveRoomNumber.SelectedIndex, 8, 2299, 5)
     End Sub
 
     Private Sub btnPresRoomBook_Click(sender As Object, e As EventArgs) Handles btnPresRoomBook.Click
-        submitBook("Presidential Room", cbPresidentialRoomNumber.SelectedIndex, 6)
+        submitBook("Presidential Room", cbPresidentialRoomNumber.SelectedIndex, 10, 2699, 6)
     End Sub
 
+    Private Sub btnSingleRoomInfo_Click(sender As Object, e As EventArgs) Handles btnSingleRoomInfo.Click
+        If btnSingleRoomInfo.Text.Contains("Info") Then
+            btnSingleRoomInfo.Text = "Max Guest Number: 1" & vbNewLine & "Bathroom: 1" & vbNewLine & "Bedroom: 1"
+        Else
+            btnSingleRoomInfo.Text = "Click for more Info"
+        End If
+    End Sub
+
+    Private Sub btnQueenRoomInfo_Click(sender As Object, e As EventArgs) Handles btnQueenRoomInfo.Click
+        If btnSingleRoomInfo.Text.Contains("Info") Then
+            btnSingleRoomInfo.Text = "Max Guest Number: 2" & vbNewLine & "Bathroom: 1" & vbNewLine & "Bedroom: 1"
+        Else
+            btnSingleRoomInfo.Text = "Click for more Info"
+        End If
+    End Sub
+
+    Private Sub btnKingRoomInfo_Click(sender As Object, e As EventArgs) Handles btnKingRoomInfo.Click
+        If btnSingleRoomInfo.Text.Contains("Info") Then
+            btnSingleRoomInfo.Text = "Max Guest Number: 2" & vbNewLine & "Bathroom: 1" & vbNewLine & "Bedroom: 1"
+        Else
+            btnSingleRoomInfo.Text = "Click for more Info"
+        End If
+    End Sub
+
+    Private Sub btnTwinRoomInfo_Click(sender As Object, e As EventArgs) Handles btnTwinRoomInfo.Click
+        If btnSingleRoomInfo.Text.Contains("Info") Then
+            btnSingleRoomInfo.Text = "Max Guest Number: 4" & vbNewLine & "Bathroom: 1" & vbNewLine & "Bedroom: 1"
+        Else
+            btnSingleRoomInfo.Text = "Click for more Info"
+        End If
+    End Sub
+
+    Private Sub btnStandardRoomInfo_Click(sender As Object, e As EventArgs) Handles btnStandardRoomInfo.Click
+        If btnSingleRoomInfo.Text.Contains("Info") Then
+            btnSingleRoomInfo.Text = "Max Guest Number: 6" & vbNewLine & "Bathroom: 1" & vbNewLine & "Bedroom: 1"
+        Else
+            btnSingleRoomInfo.Text = "Click for more Info"
+        End If
+    End Sub
+
+    Private Sub btnExecutiveRoomInfo_Click(sender As Object, e As EventArgs) Handles btnExecutiveRoomInfo.Click
+        If btnSingleRoomInfo.Text.Contains("Info") Then
+            btnSingleRoomInfo.Text = "Max Guest Number: 8" & vbNewLine & "Bathroom: 1" & vbNewLine & "Bedroom: 1"
+        Else
+            btnSingleRoomInfo.Text = "Click for more Info"
+        End If
+    End Sub
+
+    Private Sub btnPresidentialRoomInfo_Click(sender As Object, e As EventArgs) Handles btnPresidentialRoomInfo.Click
+        If btnSingleRoomInfo.Text.Contains("Info") Then
+            btnSingleRoomInfo.Text = "Max Guest Number: 10" & vbNewLine & "Bathroom: 1" & vbNewLine & "Bedroom: 1"
+        Else
+            btnSingleRoomInfo.Text = "Click for more Info"
+        End If
+    End Sub
+
+    'GETTER FUNCTIONS
+    'START ---------------------------------------
+    Function getTotalBill()
+        Return totalBill
+    End Function
 End Class

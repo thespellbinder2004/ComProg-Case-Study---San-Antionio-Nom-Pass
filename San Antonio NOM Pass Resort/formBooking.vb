@@ -8,7 +8,13 @@ Public Class formBooking
     Public intMinorGuests As Integer = 0
     Public intRegularGuests As Integer = 0
     Public intReceiptNumber As Integer = 0
-    Dim listCustomerInfo As New List(Of String)({})
+
+    Dim curUserFullName As String
+    Dim curUserArrivalDate As String
+    Dim curUserDepartureDate As String
+    Dim curUserLengthOfStay As Double
+
+    Dim listCustomerInfo As New List(Of String)
     Function getListCustomerInfo()
         Return listCustomerInfo
     End Function
@@ -68,7 +74,10 @@ Public Class formBooking
         Dim customerInfo = New CustomerDetails(nameFirst, nameLast, sex, dateBirth, dateArrival, dateDeparture, guestReg, guestSen, guestMin, guestTotal, intStayLength)
         listCustomerInfo = Globals.getSplitString(customerInfo.getCustomerDetails())
 
-
+        curUserFullName = nameFirst + " " + nameLast
+        curUserArrivalDate = dateArrival
+        curUserDepartureDate = dateDeparture
+        curUserLengthOfStay = intStayLength
     End Sub
 
     Private Sub formBooking_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -125,5 +134,37 @@ Public Class formBooking
         dtpDeparture.MinDate = dtpArrival.Value.AddDays(1)
     End Sub
 
+
+    'GETTER FUNCTIONS
+    'START ------------------------------------------
+    Function getFullName()
+        Return curUserFullName
+    End Function
+    Function getArrivalDate()
+        Return curUserArrivalDate
+    End Function
+    Function getDepartureDate()
+        Return curUserDepartureDate
+    End Function
+    Function getSeniorGuest()
+        Return Val(intSeniorGuests)
+    End Function
+    Function getMinorGuest()
+        Return Val(intMinorGuests)
+    End Function
+    Function getRegularGuest()
+        Return Val(intRegularGuests)
+    End Function
+    Function getTotalGuest()
+        Return Val(intTotalGuests)
+    End Function
+    Function getGuestToPay()
+        Return Val(intRegularGuests) + Val(intSeniorGuests)
+    End Function
+    Function getLengthOfStay()
+        Return Val(curUserLengthOfStay)
+    End Function
+    'GETTER FUNCTIONS
+    'END ------------------------------------------
 
 End Class

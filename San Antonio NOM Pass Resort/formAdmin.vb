@@ -29,7 +29,7 @@
         Dim rowIndex = dgvGuestTable.Rows(e.RowIndex).Index.ToString
 
         If colName = "columnEdit" Then
-            listCurCustomer = Globals.getCustomerInfo(listCustomer(rowIndex))
+            listCurCustomer = Globals.getSplitString(listCustomer(rowIndex))
             For i = 0 To listCurCustomer.Count - 1
                 MsgBox(listCurCustomer(i))
             Next
@@ -47,7 +47,7 @@
         listCustomer = Globals.getCustomerList()
         dgvGuestTable.Rows.Clear()
         For i = 0 To (listCustomer.Count - 1)
-            Dim listInfo As List(Of String) = Globals.getCustomerInfo(listCustomer(i))
+            Dim listInfo As List(Of String) = Globals.getSplitString(listCustomer(i))
             dgvGuestTable.Rows.Add("Edit", listInfo(0), listInfo(1), listInfo(4), listInfo(5), listInfo(10))
         Next
     End Sub
@@ -56,25 +56,15 @@
         dgvGuestTable.Rows.Clear()
         For i = 0 To (listCustomer.Count - 1)
 
-            Dim listInfo As List(Of String) = Globals.getCustomerInfo(listCustomer(i))
+            Dim listInfo As List(Of String) = Globals.getSplitString(listCustomer(i))
             dgvGuestTable.Rows.Add("Edit", listInfo(0), listInfo(1), listInfo(4), listInfo(5), listInfo(10))
             dgvGuestInfo.Rows.Add(listInfo(0), listInfo(1), listInfo(2), listInfo(3), listInfo(10))
         Next
     End Sub
 
 
-
     'REFRESH AND LOAD
     'END ------------------------------------------
-
-
-
-
-
-
-
-
-
 
 
 

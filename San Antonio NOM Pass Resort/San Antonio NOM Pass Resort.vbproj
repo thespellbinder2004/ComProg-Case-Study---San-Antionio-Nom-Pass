@@ -39,6 +39,16 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="Rooms.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+	
+  <ItemGroup>
     <Folder Include="My Project\NewFolder\" />
     <Folder Include="Pictures\" />
   </ItemGroup>

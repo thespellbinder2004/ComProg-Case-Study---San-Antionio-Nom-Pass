@@ -28,58 +28,58 @@ Partial Class formRooms
         Label5 = New Label()
         Label6 = New Label()
         Label8 = New Label()
-        btnSingleRoom = New Button()
-        TextBox1 = New TextBox()
-        TextBox4 = New TextBox()
-        btnQueenRoom = New Button()
+        btnSingleRoomBook = New Button()
+        txtSingleAvailableRoom = New TextBox()
+        txtQueenAvailableRoom = New TextBox()
+        btnQueenRoomBook = New Button()
         Label1 = New Label()
         Label3 = New Label()
         Label4 = New Label()
         Label7 = New Label()
-        TextBox6 = New TextBox()
-        btnKingRoom = New Button()
+        txtKingAvailableRoom = New TextBox()
+        btnKingRoomBook = New Button()
         Label9 = New Label()
         Label10 = New Label()
         Label11 = New Label()
         Label12 = New Label()
-        TextBox8 = New TextBox()
-        btnExecRoom = New Button()
+        txtExecutiveAvailableRoom = New TextBox()
+        btnExecRoomBook = New Button()
         Label13 = New Label()
         Label14 = New Label()
         Label15 = New Label()
         Label16 = New Label()
-        TextBox10 = New TextBox()
-        btnStandardRoom = New Button()
+        txtStandardAvailableRoom = New TextBox()
+        btnStandardRoomBook = New Button()
         Label17 = New Label()
         Label18 = New Label()
         Label19 = New Label()
         Label20 = New Label()
-        TextBox12 = New TextBox()
-        btnTwinRoom = New Button()
+        txtTwinAvailableRoom = New TextBox()
+        btnTwinRoomBook = New Button()
         Label21 = New Label()
         Label22 = New Label()
         Label23 = New Label()
         Label24 = New Label()
-        TextBox14 = New TextBox()
-        btnPresRoom = New Button()
+        txtPresidentialAvailableRoom = New TextBox()
+        btnPresRoomBook = New Button()
         Label25 = New Label()
         Label26 = New Label()
         Label27 = New Label()
         Label28 = New Label()
-        Button1 = New Button()
-        Button2 = New Button()
-        Button3 = New Button()
-        Button4 = New Button()
-        Button5 = New Button()
-        Button6 = New Button()
-        Button7 = New Button()
-        ComboBox1 = New ComboBox()
-        ComboBox2 = New ComboBox()
-        ComboBox3 = New ComboBox()
-        ComboBox4 = New ComboBox()
-        ComboBox5 = New ComboBox()
-        ComboBox6 = New ComboBox()
-        ComboBox7 = New ComboBox()
+        btnSingleRoomInfo = New Button()
+        btnQueenRoomInfo = New Button()
+        btnKingRoomInfo = New Button()
+        btnTwinRoomInfo = New Button()
+        btnStandardRoomInfo = New Button()
+        btnExecutiveRoomInfo = New Button()
+        btnPresidentialRoomInfo = New Button()
+        cbSingleRoomNumber = New ComboBox()
+        cbQueenRoomNumber = New ComboBox()
+        cbKingRoomNumber = New ComboBox()
+        cbTwinRoomNumber = New ComboBox()
+        cbStandardRoomNumber = New ComboBox()
+        cbExecutiveRoomNumber = New ComboBox()
+        cbPresidentialRoomNumber = New ComboBox()
         SuspendLayout()
         ' 
         ' lblRoom
@@ -148,52 +148,52 @@ Partial Class formRooms
         Label8.TabIndex = 13
         Label8.Text = "ROOM NUMBERS:"
         ' 
-        ' btnSingleRoom
+        ' btnSingleRoomBook
         ' 
-        btnSingleRoom.FlatStyle = FlatStyle.Flat
-        btnSingleRoom.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        btnSingleRoom.Location = New Point(10, 212)
-        btnSingleRoom.Margin = New Padding(3, 2, 3, 2)
-        btnSingleRoom.Name = "btnSingleRoom"
-        btnSingleRoom.Size = New Size(172, 22)
-        btnSingleRoom.TabIndex = 15
-        btnSingleRoom.Text = "Book Now"
-        btnSingleRoom.UseVisualStyleBackColor = True
+        btnSingleRoomBook.FlatStyle = FlatStyle.Flat
+        btnSingleRoomBook.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnSingleRoomBook.Location = New Point(10, 212)
+        btnSingleRoomBook.Margin = New Padding(3, 2, 3, 2)
+        btnSingleRoomBook.Name = "btnSingleRoomBook"
+        btnSingleRoomBook.Size = New Size(172, 22)
+        btnSingleRoomBook.TabIndex = 15
+        btnSingleRoomBook.Text = "Book Now"
+        btnSingleRoomBook.UseVisualStyleBackColor = True
         ' 
-        ' TextBox1
+        ' txtSingleAvailableRoom
         ' 
-        TextBox1.BorderStyle = BorderStyle.None
-        TextBox1.Enabled = False
-        TextBox1.Location = New Point(124, 164)
-        TextBox1.Margin = New Padding(3, 2, 3, 2)
-        TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(59, 16)
-        TextBox1.TabIndex = 16
-        TextBox1.Text = "5"
-        TextBox1.TextAlign = HorizontalAlignment.Center
+        txtSingleAvailableRoom.BorderStyle = BorderStyle.None
+        txtSingleAvailableRoom.Enabled = False
+        txtSingleAvailableRoom.Location = New Point(124, 164)
+        txtSingleAvailableRoom.Margin = New Padding(3, 2, 3, 2)
+        txtSingleAvailableRoom.Name = "txtSingleAvailableRoom"
+        txtSingleAvailableRoom.Size = New Size(59, 16)
+        txtSingleAvailableRoom.TabIndex = 16
+        txtSingleAvailableRoom.Text = "5"
+        txtSingleAvailableRoom.TextAlign = HorizontalAlignment.Center
         ' 
-        ' TextBox4
+        ' txtQueenAvailableRoom
         ' 
-        TextBox4.BorderStyle = BorderStyle.None
-        TextBox4.Location = New Point(328, 164)
-        TextBox4.Margin = New Padding(3, 2, 3, 2)
-        TextBox4.Name = "TextBox4"
-        TextBox4.Size = New Size(59, 16)
-        TextBox4.TabIndex = 24
-        TextBox4.Text = "5"
-        TextBox4.TextAlign = HorizontalAlignment.Center
+        txtQueenAvailableRoom.BorderStyle = BorderStyle.None
+        txtQueenAvailableRoom.Location = New Point(328, 164)
+        txtQueenAvailableRoom.Margin = New Padding(3, 2, 3, 2)
+        txtQueenAvailableRoom.Name = "txtQueenAvailableRoom"
+        txtQueenAvailableRoom.Size = New Size(59, 16)
+        txtQueenAvailableRoom.TabIndex = 24
+        txtQueenAvailableRoom.Text = "5"
+        txtQueenAvailableRoom.TextAlign = HorizontalAlignment.Center
         ' 
-        ' btnQueenRoom
+        ' btnQueenRoomBook
         ' 
-        btnQueenRoom.FlatStyle = FlatStyle.Flat
-        btnQueenRoom.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        btnQueenRoom.Location = New Point(214, 212)
-        btnQueenRoom.Margin = New Padding(3, 2, 3, 2)
-        btnQueenRoom.Name = "btnQueenRoom"
-        btnQueenRoom.Size = New Size(172, 22)
-        btnQueenRoom.TabIndex = 23
-        btnQueenRoom.Text = "Book Now"
-        btnQueenRoom.UseVisualStyleBackColor = True
+        btnQueenRoomBook.FlatStyle = FlatStyle.Flat
+        btnQueenRoomBook.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnQueenRoomBook.Location = New Point(214, 212)
+        btnQueenRoomBook.Margin = New Padding(3, 2, 3, 2)
+        btnQueenRoomBook.Name = "btnQueenRoomBook"
+        btnQueenRoomBook.Size = New Size(172, 22)
+        btnQueenRoomBook.TabIndex = 23
+        btnQueenRoomBook.Text = "Book Now"
+        btnQueenRoomBook.UseVisualStyleBackColor = True
         ' 
         ' Label1
         ' 
@@ -239,29 +239,29 @@ Partial Class formRooms
         Label7.TabIndex = 19
         Label7.Text = "Queen Room"
         ' 
-        ' TextBox6
+        ' txtKingAvailableRoom
         ' 
-        TextBox6.BorderStyle = BorderStyle.None
-        TextBox6.Enabled = False
-        TextBox6.Location = New Point(531, 164)
-        TextBox6.Margin = New Padding(3, 2, 3, 2)
-        TextBox6.Name = "TextBox6"
-        TextBox6.Size = New Size(59, 16)
-        TextBox6.TabIndex = 32
-        TextBox6.Text = "5"
-        TextBox6.TextAlign = HorizontalAlignment.Center
+        txtKingAvailableRoom.BorderStyle = BorderStyle.None
+        txtKingAvailableRoom.Enabled = False
+        txtKingAvailableRoom.Location = New Point(531, 164)
+        txtKingAvailableRoom.Margin = New Padding(3, 2, 3, 2)
+        txtKingAvailableRoom.Name = "txtKingAvailableRoom"
+        txtKingAvailableRoom.Size = New Size(59, 16)
+        txtKingAvailableRoom.TabIndex = 32
+        txtKingAvailableRoom.Text = "5"
+        txtKingAvailableRoom.TextAlign = HorizontalAlignment.Center
         ' 
-        ' btnKingRoom
+        ' btnKingRoomBook
         ' 
-        btnKingRoom.FlatStyle = FlatStyle.Flat
-        btnKingRoom.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        btnKingRoom.Location = New Point(417, 212)
-        btnKingRoom.Margin = New Padding(3, 2, 3, 2)
-        btnKingRoom.Name = "btnKingRoom"
-        btnKingRoom.Size = New Size(172, 22)
-        btnKingRoom.TabIndex = 31
-        btnKingRoom.Text = "Book Now"
-        btnKingRoom.UseVisualStyleBackColor = True
+        btnKingRoomBook.FlatStyle = FlatStyle.Flat
+        btnKingRoomBook.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnKingRoomBook.Location = New Point(417, 212)
+        btnKingRoomBook.Margin = New Padding(3, 2, 3, 2)
+        btnKingRoomBook.Name = "btnKingRoomBook"
+        btnKingRoomBook.Size = New Size(172, 22)
+        btnKingRoomBook.TabIndex = 31
+        btnKingRoomBook.Text = "Book Now"
+        btnKingRoomBook.UseVisualStyleBackColor = True
         ' 
         ' Label9
         ' 
@@ -307,29 +307,29 @@ Partial Class formRooms
         Label12.TabIndex = 27
         Label12.Text = "King Room"
         ' 
-        ' TextBox8
+        ' txtExecutiveAvailableRoom
         ' 
-        TextBox8.BorderStyle = BorderStyle.None
-        TextBox8.Enabled = False
-        TextBox8.Location = New Point(531, 363)
-        TextBox8.Margin = New Padding(3, 2, 3, 2)
-        TextBox8.Name = "TextBox8"
-        TextBox8.Size = New Size(59, 16)
-        TextBox8.TabIndex = 56
-        TextBox8.Text = "5"
-        TextBox8.TextAlign = HorizontalAlignment.Center
+        txtExecutiveAvailableRoom.BorderStyle = BorderStyle.None
+        txtExecutiveAvailableRoom.Enabled = False
+        txtExecutiveAvailableRoom.Location = New Point(531, 363)
+        txtExecutiveAvailableRoom.Margin = New Padding(3, 2, 3, 2)
+        txtExecutiveAvailableRoom.Name = "txtExecutiveAvailableRoom"
+        txtExecutiveAvailableRoom.Size = New Size(59, 16)
+        txtExecutiveAvailableRoom.TabIndex = 56
+        txtExecutiveAvailableRoom.Text = "5"
+        txtExecutiveAvailableRoom.TextAlign = HorizontalAlignment.Center
         ' 
-        ' btnExecRoom
+        ' btnExecRoomBook
         ' 
-        btnExecRoom.FlatStyle = FlatStyle.Flat
-        btnExecRoom.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        btnExecRoom.Location = New Point(417, 400)
-        btnExecRoom.Margin = New Padding(3, 2, 3, 2)
-        btnExecRoom.Name = "btnExecRoom"
-        btnExecRoom.Size = New Size(172, 22)
-        btnExecRoom.TabIndex = 55
-        btnExecRoom.Text = "Book Now"
-        btnExecRoom.UseVisualStyleBackColor = True
+        btnExecRoomBook.FlatStyle = FlatStyle.Flat
+        btnExecRoomBook.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnExecRoomBook.Location = New Point(417, 400)
+        btnExecRoomBook.Margin = New Padding(3, 2, 3, 2)
+        btnExecRoomBook.Name = "btnExecRoomBook"
+        btnExecRoomBook.Size = New Size(172, 22)
+        btnExecRoomBook.TabIndex = 55
+        btnExecRoomBook.Text = "Book Now"
+        btnExecRoomBook.UseVisualStyleBackColor = True
         ' 
         ' Label13
         ' 
@@ -371,29 +371,29 @@ Partial Class formRooms
         Label16.TabIndex = 51
         Label16.Text = "Executive Room"
         ' 
-        ' TextBox10
+        ' txtStandardAvailableRoom
         ' 
-        TextBox10.BorderStyle = BorderStyle.None
-        TextBox10.Enabled = False
-        TextBox10.Location = New Point(328, 363)
-        TextBox10.Margin = New Padding(3, 2, 3, 2)
-        TextBox10.Name = "TextBox10"
-        TextBox10.Size = New Size(59, 16)
-        TextBox10.TabIndex = 48
-        TextBox10.Text = "5"
-        TextBox10.TextAlign = HorizontalAlignment.Center
+        txtStandardAvailableRoom.BorderStyle = BorderStyle.None
+        txtStandardAvailableRoom.Enabled = False
+        txtStandardAvailableRoom.Location = New Point(328, 363)
+        txtStandardAvailableRoom.Margin = New Padding(3, 2, 3, 2)
+        txtStandardAvailableRoom.Name = "txtStandardAvailableRoom"
+        txtStandardAvailableRoom.Size = New Size(59, 16)
+        txtStandardAvailableRoom.TabIndex = 48
+        txtStandardAvailableRoom.Text = "5"
+        txtStandardAvailableRoom.TextAlign = HorizontalAlignment.Center
         ' 
-        ' btnStandardRoom
+        ' btnStandardRoomBook
         ' 
-        btnStandardRoom.FlatStyle = FlatStyle.Flat
-        btnStandardRoom.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        btnStandardRoom.Location = New Point(214, 400)
-        btnStandardRoom.Margin = New Padding(3, 2, 3, 2)
-        btnStandardRoom.Name = "btnStandardRoom"
-        btnStandardRoom.Size = New Size(172, 22)
-        btnStandardRoom.TabIndex = 47
-        btnStandardRoom.Text = "Book Now"
-        btnStandardRoom.UseVisualStyleBackColor = True
+        btnStandardRoomBook.FlatStyle = FlatStyle.Flat
+        btnStandardRoomBook.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnStandardRoomBook.Location = New Point(214, 400)
+        btnStandardRoomBook.Margin = New Padding(3, 2, 3, 2)
+        btnStandardRoomBook.Name = "btnStandardRoomBook"
+        btnStandardRoomBook.Size = New Size(172, 22)
+        btnStandardRoomBook.TabIndex = 47
+        btnStandardRoomBook.Text = "Book Now"
+        btnStandardRoomBook.UseVisualStyleBackColor = True
         ' 
         ' Label17
         ' 
@@ -435,29 +435,29 @@ Partial Class formRooms
         Label20.TabIndex = 43
         Label20.Text = "Standard Room"
         ' 
-        ' TextBox12
+        ' txtTwinAvailableRoom
         ' 
-        TextBox12.BorderStyle = BorderStyle.None
-        TextBox12.Enabled = False
-        TextBox12.Location = New Point(124, 363)
-        TextBox12.Margin = New Padding(3, 2, 3, 2)
-        TextBox12.Name = "TextBox12"
-        TextBox12.Size = New Size(59, 16)
-        TextBox12.TabIndex = 40
-        TextBox12.Text = "5"
-        TextBox12.TextAlign = HorizontalAlignment.Center
+        txtTwinAvailableRoom.BorderStyle = BorderStyle.None
+        txtTwinAvailableRoom.Enabled = False
+        txtTwinAvailableRoom.Location = New Point(124, 363)
+        txtTwinAvailableRoom.Margin = New Padding(3, 2, 3, 2)
+        txtTwinAvailableRoom.Name = "txtTwinAvailableRoom"
+        txtTwinAvailableRoom.Size = New Size(59, 16)
+        txtTwinAvailableRoom.TabIndex = 40
+        txtTwinAvailableRoom.Text = "5"
+        txtTwinAvailableRoom.TextAlign = HorizontalAlignment.Center
         ' 
-        ' btnTwinRoom
+        ' btnTwinRoomBook
         ' 
-        btnTwinRoom.FlatStyle = FlatStyle.Flat
-        btnTwinRoom.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        btnTwinRoom.Location = New Point(10, 400)
-        btnTwinRoom.Margin = New Padding(3, 2, 3, 2)
-        btnTwinRoom.Name = "btnTwinRoom"
-        btnTwinRoom.Size = New Size(172, 22)
-        btnTwinRoom.TabIndex = 39
-        btnTwinRoom.Text = "Book Now"
-        btnTwinRoom.UseVisualStyleBackColor = True
+        btnTwinRoomBook.FlatStyle = FlatStyle.Flat
+        btnTwinRoomBook.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnTwinRoomBook.Location = New Point(10, 400)
+        btnTwinRoomBook.Margin = New Padding(3, 2, 3, 2)
+        btnTwinRoomBook.Name = "btnTwinRoomBook"
+        btnTwinRoomBook.Size = New Size(172, 22)
+        btnTwinRoomBook.TabIndex = 39
+        btnTwinRoomBook.Text = "Book Now"
+        btnTwinRoomBook.UseVisualStyleBackColor = True
         ' 
         ' Label21
         ' 
@@ -499,29 +499,29 @@ Partial Class formRooms
         Label24.TabIndex = 35
         Label24.Text = "Twin Room"
         ' 
-        ' TextBox14
+        ' txtPresidentialAvailableRoom
         ' 
-        TextBox14.BorderStyle = BorderStyle.None
-        TextBox14.Enabled = False
-        TextBox14.Location = New Point(328, 552)
-        TextBox14.Margin = New Padding(3, 2, 3, 2)
-        TextBox14.Name = "TextBox14"
-        TextBox14.Size = New Size(59, 16)
-        TextBox14.TabIndex = 64
-        TextBox14.Text = "5"
-        TextBox14.TextAlign = HorizontalAlignment.Center
+        txtPresidentialAvailableRoom.BorderStyle = BorderStyle.None
+        txtPresidentialAvailableRoom.Enabled = False
+        txtPresidentialAvailableRoom.Location = New Point(328, 552)
+        txtPresidentialAvailableRoom.Margin = New Padding(3, 2, 3, 2)
+        txtPresidentialAvailableRoom.Name = "txtPresidentialAvailableRoom"
+        txtPresidentialAvailableRoom.Size = New Size(59, 16)
+        txtPresidentialAvailableRoom.TabIndex = 64
+        txtPresidentialAvailableRoom.Text = "5"
+        txtPresidentialAvailableRoom.TextAlign = HorizontalAlignment.Center
         ' 
-        ' btnPresRoom
+        ' btnPresRoomBook
         ' 
-        btnPresRoom.FlatStyle = FlatStyle.Flat
-        btnPresRoom.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        btnPresRoom.Location = New Point(214, 589)
-        btnPresRoom.Margin = New Padding(3, 2, 3, 2)
-        btnPresRoom.Name = "btnPresRoom"
-        btnPresRoom.Size = New Size(172, 22)
-        btnPresRoom.TabIndex = 63
-        btnPresRoom.Text = "Book Now"
-        btnPresRoom.UseVisualStyleBackColor = True
+        btnPresRoomBook.FlatStyle = FlatStyle.Flat
+        btnPresRoomBook.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnPresRoomBook.Location = New Point(214, 589)
+        btnPresRoomBook.Margin = New Padding(3, 2, 3, 2)
+        btnPresRoomBook.Name = "btnPresRoomBook"
+        btnPresRoomBook.Size = New Size(172, 22)
+        btnPresRoomBook.TabIndex = 63
+        btnPresRoomBook.Text = "Book Now"
+        btnPresRoomBook.UseVisualStyleBackColor = True
         ' 
         ' Label25
         ' 
@@ -563,153 +563,154 @@ Partial Class formRooms
         Label28.TabIndex = 59
         Label28.Text = "Presidential Room"
         ' 
-        ' Button1
+        ' btnSingleRoomInfo
         ' 
-        Button1.FlatStyle = FlatStyle.Flat
-        Button1.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Button1.Image = My.Resources.Resources.formRoomsBG
-        Button1.Location = New Point(10, 42)
-        Button1.Margin = New Padding(3, 2, 3, 2)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(172, 92)
-        Button1.TabIndex = 66
-        Button1.Text = "Click for More Info"
-        Button1.UseVisualStyleBackColor = True
+        btnSingleRoomInfo.FlatStyle = FlatStyle.Flat
+        btnSingleRoomInfo.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnSingleRoomInfo.Image = My.Resources.Resources.formRoomsBG
+        btnSingleRoomInfo.Location = New Point(10, 42)
+        btnSingleRoomInfo.Margin = New Padding(3, 2, 3, 2)
+        btnSingleRoomInfo.Name = "btnSingleRoomInfo"
+        btnSingleRoomInfo.Size = New Size(172, 92)
+        btnSingleRoomInfo.TabIndex = 66
+        btnSingleRoomInfo.Text = "Click for More Info"
+        btnSingleRoomInfo.UseVisualStyleBackColor = True
         ' 
-        ' Button2
+        ' btnQueenRoomInfo
         ' 
-        Button2.FlatStyle = FlatStyle.Flat
-        Button2.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Button2.Location = New Point(214, 42)
-        Button2.Margin = New Padding(3, 2, 3, 2)
-        Button2.Name = "Button2"
-        Button2.Size = New Size(172, 92)
-        Button2.TabIndex = 67
-        Button2.Text = "Click for More Info"
-        Button2.UseVisualStyleBackColor = True
+        btnQueenRoomInfo.FlatStyle = FlatStyle.Flat
+        btnQueenRoomInfo.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnQueenRoomInfo.Location = New Point(214, 42)
+        btnQueenRoomInfo.Margin = New Padding(3, 2, 3, 2)
+        btnQueenRoomInfo.Name = "btnQueenRoomInfo"
+        btnQueenRoomInfo.Size = New Size(172, 92)
+        btnQueenRoomInfo.TabIndex = 67
+        btnQueenRoomInfo.Text = "Click for More Info"
+        btnQueenRoomInfo.UseVisualStyleBackColor = True
         ' 
-        ' Button3
+        ' btnKingRoomInfo
         ' 
-        Button3.FlatStyle = FlatStyle.Flat
-        Button3.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Button3.Location = New Point(417, 42)
-        Button3.Margin = New Padding(3, 2, 3, 2)
-        Button3.Name = "Button3"
-        Button3.Size = New Size(172, 92)
-        Button3.TabIndex = 68
-        Button3.Text = "Click for More Info"
-        Button3.UseVisualStyleBackColor = True
+        btnKingRoomInfo.FlatStyle = FlatStyle.Flat
+        btnKingRoomInfo.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnKingRoomInfo.Location = New Point(417, 42)
+        btnKingRoomInfo.Margin = New Padding(3, 2, 3, 2)
+        btnKingRoomInfo.Name = "btnKingRoomInfo"
+        btnKingRoomInfo.Size = New Size(172, 92)
+        btnKingRoomInfo.TabIndex = 68
+        btnKingRoomInfo.Text = "Click for More Info"
+        btnKingRoomInfo.UseVisualStyleBackColor = True
         ' 
-        ' Button4
+        ' btnTwinRoomInfo
         ' 
-        Button4.FlatStyle = FlatStyle.Flat
-        Button4.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Button4.Location = New Point(10, 241)
-        Button4.Margin = New Padding(3, 2, 3, 2)
-        Button4.Name = "Button4"
-        Button4.Size = New Size(172, 92)
-        Button4.TabIndex = 69
-        Button4.Text = "Click for More Info"
-        Button4.UseVisualStyleBackColor = True
+        btnTwinRoomInfo.FlatStyle = FlatStyle.Flat
+        btnTwinRoomInfo.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnTwinRoomInfo.Location = New Point(10, 241)
+        btnTwinRoomInfo.Margin = New Padding(3, 2, 3, 2)
+        btnTwinRoomInfo.Name = "btnTwinRoomInfo"
+        btnTwinRoomInfo.Size = New Size(172, 92)
+        btnTwinRoomInfo.TabIndex = 69
+        btnTwinRoomInfo.Text = "Click for More Info"
+        btnTwinRoomInfo.UseVisualStyleBackColor = True
         ' 
-        ' Button5
+        ' btnStandardRoomInfo
         ' 
-        Button5.FlatStyle = FlatStyle.Flat
-        Button5.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Button5.Location = New Point(214, 241)
-        Button5.Margin = New Padding(3, 2, 3, 2)
-        Button5.Name = "Button5"
-        Button5.Size = New Size(172, 92)
-        Button5.TabIndex = 70
-        Button5.Text = "Click for More Info"
-        Button5.UseVisualStyleBackColor = True
+        btnStandardRoomInfo.FlatStyle = FlatStyle.Flat
+        btnStandardRoomInfo.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnStandardRoomInfo.Location = New Point(214, 241)
+        btnStandardRoomInfo.Margin = New Padding(3, 2, 3, 2)
+        btnStandardRoomInfo.Name = "btnStandardRoomInfo"
+        btnStandardRoomInfo.Size = New Size(172, 92)
+        btnStandardRoomInfo.TabIndex = 70
+        btnStandardRoomInfo.Text = "Click for More Info"
+        btnStandardRoomInfo.UseVisualStyleBackColor = True
         ' 
-        ' Button6
+        ' btnExecutiveRoomInfo
         ' 
-        Button6.FlatStyle = FlatStyle.Flat
-        Button6.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Button6.Location = New Point(417, 241)
-        Button6.Margin = New Padding(3, 2, 3, 2)
-        Button6.Name = "Button6"
-        Button6.Size = New Size(172, 92)
-        Button6.TabIndex = 71
-        Button6.Text = "Click for More Info"
-        Button6.UseVisualStyleBackColor = True
+        btnExecutiveRoomInfo.FlatStyle = FlatStyle.Flat
+        btnExecutiveRoomInfo.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnExecutiveRoomInfo.Location = New Point(417, 241)
+        btnExecutiveRoomInfo.Margin = New Padding(3, 2, 3, 2)
+        btnExecutiveRoomInfo.Name = "btnExecutiveRoomInfo"
+        btnExecutiveRoomInfo.Size = New Size(172, 92)
+        btnExecutiveRoomInfo.TabIndex = 71
+        btnExecutiveRoomInfo.Text = "Click for More Info"
+        btnExecutiveRoomInfo.UseVisualStyleBackColor = True
         ' 
-        ' Button7
+        ' btnPresidentialRoomInfo
         ' 
-        Button7.FlatStyle = FlatStyle.Flat
-        Button7.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Button7.Location = New Point(214, 429)
-        Button7.Margin = New Padding(3, 2, 3, 2)
-        Button7.Name = "Button7"
-        Button7.Size = New Size(172, 92)
-        Button7.TabIndex = 72
-        Button7.Text = "Click for More Info"
-        Button7.UseVisualStyleBackColor = True
+        btnPresidentialRoomInfo.FlatStyle = FlatStyle.Flat
+        btnPresidentialRoomInfo.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnPresidentialRoomInfo.Location = New Point(214, 429)
+        btnPresidentialRoomInfo.Margin = New Padding(3, 2, 3, 2)
+        btnPresidentialRoomInfo.Name = "btnPresidentialRoomInfo"
+        btnPresidentialRoomInfo.Size = New Size(172, 92)
+        btnPresidentialRoomInfo.TabIndex = 72
+        btnPresidentialRoomInfo.Text = "Click for More Info"
+        btnPresidentialRoomInfo.UseVisualStyleBackColor = True
         ' 
-        ' ComboBox1
+        ' cbSingleRoomNumber
         ' 
-        ComboBox1.DropDownStyle = ComboBoxStyle.DropDownList
-        ComboBox1.FormattingEnabled = True
-        ComboBox1.Location = New Point(124, 184)
-        ComboBox1.Name = "ComboBox1"
-        ComboBox1.Size = New Size(59, 23)
-        ComboBox1.TabIndex = 73
+        cbSingleRoomNumber.DropDownStyle = ComboBoxStyle.DropDownList
+        cbSingleRoomNumber.FormattingEnabled = True
+        cbSingleRoomNumber.Items.AddRange(New Object() {"asdf", "sad", "fsa", "fsad", "fsdaf", "sda"})
+        cbSingleRoomNumber.Location = New Point(124, 184)
+        cbSingleRoomNumber.Name = "cbSingleRoomNumber"
+        cbSingleRoomNumber.Size = New Size(59, 23)
+        cbSingleRoomNumber.TabIndex = 73
         ' 
-        ' ComboBox2
+        ' cbQueenRoomNumber
         ' 
-        ComboBox2.DropDownStyle = ComboBoxStyle.DropDownList
-        ComboBox2.FormattingEnabled = True
-        ComboBox2.Location = New Point(328, 184)
-        ComboBox2.Name = "ComboBox2"
-        ComboBox2.Size = New Size(59, 23)
-        ComboBox2.TabIndex = 74
+        cbQueenRoomNumber.DropDownStyle = ComboBoxStyle.DropDownList
+        cbQueenRoomNumber.FormattingEnabled = True
+        cbQueenRoomNumber.Location = New Point(328, 184)
+        cbQueenRoomNumber.Name = "cbQueenRoomNumber"
+        cbQueenRoomNumber.Size = New Size(59, 23)
+        cbQueenRoomNumber.TabIndex = 74
         ' 
-        ' ComboBox3
+        ' cbKingRoomNumber
         ' 
-        ComboBox3.DropDownStyle = ComboBoxStyle.DropDownList
-        ComboBox3.FormattingEnabled = True
-        ComboBox3.Location = New Point(531, 185)
-        ComboBox3.Name = "ComboBox3"
-        ComboBox3.Size = New Size(59, 23)
-        ComboBox3.TabIndex = 75
+        cbKingRoomNumber.DropDownStyle = ComboBoxStyle.DropDownList
+        cbKingRoomNumber.FormattingEnabled = True
+        cbKingRoomNumber.Location = New Point(531, 185)
+        cbKingRoomNumber.Name = "cbKingRoomNumber"
+        cbKingRoomNumber.Size = New Size(59, 23)
+        cbKingRoomNumber.TabIndex = 75
         ' 
-        ' ComboBox4
+        ' cbTwinRoomNumber
         ' 
-        ComboBox4.DropDownStyle = ComboBoxStyle.DropDownList
-        ComboBox4.FormattingEnabled = True
-        ComboBox4.Location = New Point(119, 377)
-        ComboBox4.Name = "ComboBox4"
-        ComboBox4.Size = New Size(59, 23)
-        ComboBox4.TabIndex = 76
+        cbTwinRoomNumber.DropDownStyle = ComboBoxStyle.DropDownList
+        cbTwinRoomNumber.FormattingEnabled = True
+        cbTwinRoomNumber.Location = New Point(119, 377)
+        cbTwinRoomNumber.Name = "cbTwinRoomNumber"
+        cbTwinRoomNumber.Size = New Size(59, 23)
+        cbTwinRoomNumber.TabIndex = 76
         ' 
-        ' ComboBox5
+        ' cbStandardRoomNumber
         ' 
-        ComboBox5.DropDownStyle = ComboBoxStyle.DropDownList
-        ComboBox5.FormattingEnabled = True
-        ComboBox5.Location = New Point(328, 380)
-        ComboBox5.Name = "ComboBox5"
-        ComboBox5.Size = New Size(59, 23)
-        ComboBox5.TabIndex = 77
+        cbStandardRoomNumber.DropDownStyle = ComboBoxStyle.DropDownList
+        cbStandardRoomNumber.FormattingEnabled = True
+        cbStandardRoomNumber.Location = New Point(328, 380)
+        cbStandardRoomNumber.Name = "cbStandardRoomNumber"
+        cbStandardRoomNumber.Size = New Size(59, 23)
+        cbStandardRoomNumber.TabIndex = 77
         ' 
-        ' ComboBox6
+        ' cbExecutiveRoomNumber
         ' 
-        ComboBox6.DropDownStyle = ComboBoxStyle.DropDownList
-        ComboBox6.FormattingEnabled = True
-        ComboBox6.Location = New Point(528, 377)
-        ComboBox6.Name = "ComboBox6"
-        ComboBox6.Size = New Size(59, 23)
-        ComboBox6.TabIndex = 78
+        cbExecutiveRoomNumber.DropDownStyle = ComboBoxStyle.DropDownList
+        cbExecutiveRoomNumber.FormattingEnabled = True
+        cbExecutiveRoomNumber.Location = New Point(528, 377)
+        cbExecutiveRoomNumber.Name = "cbExecutiveRoomNumber"
+        cbExecutiveRoomNumber.Size = New Size(59, 23)
+        cbExecutiveRoomNumber.TabIndex = 78
         ' 
-        ' ComboBox7
+        ' cbPresidentialRoomNumber
         ' 
-        ComboBox7.DropDownStyle = ComboBoxStyle.DropDownList
-        ComboBox7.FormattingEnabled = True
-        ComboBox7.Location = New Point(328, 568)
-        ComboBox7.Name = "ComboBox7"
-        ComboBox7.Size = New Size(59, 23)
-        ComboBox7.TabIndex = 79
+        cbPresidentialRoomNumber.DropDownStyle = ComboBoxStyle.DropDownList
+        cbPresidentialRoomNumber.FormattingEnabled = True
+        cbPresidentialRoomNumber.Location = New Point(328, 568)
+        cbPresidentialRoomNumber.Name = "cbPresidentialRoomNumber"
+        cbPresidentialRoomNumber.Size = New Size(59, 23)
+        cbPresidentialRoomNumber.TabIndex = 79
         ' 
         ' formRooms
         ' 
@@ -718,58 +719,58 @@ Partial Class formRooms
         BackgroundImage = My.Resources.Resources.formBookingBG1
         BackgroundImageLayout = ImageLayout.Center
         ClientSize = New Size(613, 705)
-        Controls.Add(ComboBox7)
-        Controls.Add(ComboBox6)
-        Controls.Add(ComboBox5)
-        Controls.Add(ComboBox4)
-        Controls.Add(ComboBox3)
-        Controls.Add(ComboBox2)
-        Controls.Add(ComboBox1)
-        Controls.Add(Button7)
-        Controls.Add(Button6)
-        Controls.Add(Button5)
-        Controls.Add(Button4)
-        Controls.Add(Button3)
-        Controls.Add(Button2)
-        Controls.Add(Button1)
-        Controls.Add(TextBox14)
-        Controls.Add(btnPresRoom)
+        Controls.Add(cbPresidentialRoomNumber)
+        Controls.Add(cbExecutiveRoomNumber)
+        Controls.Add(cbStandardRoomNumber)
+        Controls.Add(cbTwinRoomNumber)
+        Controls.Add(cbKingRoomNumber)
+        Controls.Add(cbQueenRoomNumber)
+        Controls.Add(cbSingleRoomNumber)
+        Controls.Add(btnPresidentialRoomInfo)
+        Controls.Add(btnExecutiveRoomInfo)
+        Controls.Add(btnStandardRoomInfo)
+        Controls.Add(btnTwinRoomInfo)
+        Controls.Add(btnKingRoomInfo)
+        Controls.Add(btnQueenRoomInfo)
+        Controls.Add(btnSingleRoomInfo)
+        Controls.Add(txtPresidentialAvailableRoom)
+        Controls.Add(btnPresRoomBook)
         Controls.Add(Label25)
         Controls.Add(Label26)
         Controls.Add(Label27)
         Controls.Add(Label28)
-        Controls.Add(TextBox8)
-        Controls.Add(btnExecRoom)
+        Controls.Add(txtExecutiveAvailableRoom)
+        Controls.Add(btnExecRoomBook)
         Controls.Add(Label13)
         Controls.Add(Label14)
         Controls.Add(Label15)
         Controls.Add(Label16)
-        Controls.Add(TextBox10)
-        Controls.Add(btnStandardRoom)
+        Controls.Add(txtStandardAvailableRoom)
+        Controls.Add(btnStandardRoomBook)
         Controls.Add(Label17)
         Controls.Add(Label18)
         Controls.Add(Label19)
         Controls.Add(Label20)
-        Controls.Add(TextBox12)
-        Controls.Add(btnTwinRoom)
+        Controls.Add(txtTwinAvailableRoom)
+        Controls.Add(btnTwinRoomBook)
         Controls.Add(Label21)
         Controls.Add(Label22)
         Controls.Add(Label23)
         Controls.Add(Label24)
-        Controls.Add(TextBox6)
-        Controls.Add(btnKingRoom)
+        Controls.Add(txtKingAvailableRoom)
+        Controls.Add(btnKingRoomBook)
         Controls.Add(Label9)
         Controls.Add(Label10)
         Controls.Add(Label11)
         Controls.Add(Label12)
-        Controls.Add(TextBox4)
-        Controls.Add(btnQueenRoom)
+        Controls.Add(txtQueenAvailableRoom)
+        Controls.Add(btnQueenRoomBook)
         Controls.Add(Label1)
         Controls.Add(Label3)
         Controls.Add(Label4)
         Controls.Add(Label7)
-        Controls.Add(TextBox1)
-        Controls.Add(btnSingleRoom)
+        Controls.Add(txtSingleAvailableRoom)
+        Controls.Add(btnSingleRoomBook)
         Controls.Add(Label8)
         Controls.Add(Label6)
         Controls.Add(Label5)
@@ -790,57 +791,57 @@ Partial Class formRooms
     Friend WithEvents Label5 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents Label8 As Label
-    Friend WithEvents btnSingleRoom As Button
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents btnQueenRoom As Button
+    Friend WithEvents btnSingleRoomBook As Button
+    Friend WithEvents txtSingleAvailableRoom As TextBox
+    Friend WithEvents txtQueenAvailableRoom As TextBox
+    Friend WithEvents btnQueenRoomBook As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label7 As Label
-    Friend WithEvents TextBox6 As TextBox
-    Friend WithEvents btnKingRoom As Button
+    Friend WithEvents txtKingAvailableRoom As TextBox
+    Friend WithEvents btnKingRoomBook As Button
     Friend WithEvents Label9 As Label
     Friend WithEvents Label10 As Label
     Friend WithEvents Label11 As Label
     Friend WithEvents Label12 As Label
-    Friend WithEvents TextBox8 As TextBox
-    Friend WithEvents btnExecRoom As Button
+    Friend WithEvents txtExecutiveAvailableRoom As TextBox
+    Friend WithEvents btnExecRoomBook As Button
     Friend WithEvents Label13 As Label
     Friend WithEvents Label14 As Label
     Friend WithEvents Label15 As Label
     Friend WithEvents Label16 As Label
-    Friend WithEvents TextBox10 As TextBox
-    Friend WithEvents btnStandardRoom As Button
+    Friend WithEvents txtStandardAvailableRoom As TextBox
+    Friend WithEvents btnStandardRoomBook As Button
     Friend WithEvents Label17 As Label
     Friend WithEvents Label18 As Label
     Friend WithEvents Label19 As Label
     Friend WithEvents Label20 As Label
-    Friend WithEvents TextBox12 As TextBox
-    Friend WithEvents btnTwinRoom As Button
+    Friend WithEvents txtTwinAvailableRoom As TextBox
+    Friend WithEvents btnTwinRoomBook As Button
     Friend WithEvents Label21 As Label
     Friend WithEvents Label22 As Label
     Friend WithEvents Label23 As Label
     Friend WithEvents Label24 As Label
-    Friend WithEvents TextBox14 As TextBox
-    Friend WithEvents btnPresRoom As Button
+    Friend WithEvents txtPresidentialAvailableRoom As TextBox
+    Friend WithEvents btnPresRoomBook As Button
     Friend WithEvents Label25 As Label
     Friend WithEvents Label26 As Label
     Friend WithEvents Label27 As Label
     Friend WithEvents Label28 As Label
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button4 As Button
-    Friend WithEvents Button5 As Button
-    Friend WithEvents Button6 As Button
-    Friend WithEvents Button7 As Button
-    Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents ComboBox2 As ComboBox
-    Friend WithEvents ComboBox3 As ComboBox
-    Friend WithEvents ComboBox4 As ComboBox
-    Friend WithEvents ComboBox5 As ComboBox
-    Friend WithEvents ComboBox6 As ComboBox
-    Friend WithEvents ComboBox7 As ComboBox
+    Friend WithEvents btnSingleRoomInfo As Button
+    Friend WithEvents btnQueenRoomInfo As Button
+    Friend WithEvents btnKingRoomInfo As Button
+    Friend WithEvents btnTwinRoomInfo As Button
+    Friend WithEvents btnStandardRoomInfo As Button
+    Friend WithEvents btnExecutiveRoomInfo As Button
+    Friend WithEvents btnPresidentialRoomInfo As Button
+    Friend WithEvents cbSingleRoomNumber As ComboBox
+    Friend WithEvents cbQueenRoomNumber As ComboBox
+    Friend WithEvents cbKingRoomNumber As ComboBox
+    Friend WithEvents cbTwinRoomNumber As ComboBox
+    Friend WithEvents cbStandardRoomNumber As ComboBox
+    Friend WithEvents cbExecutiveRoomNumber As ComboBox
+    Friend WithEvents cbPresidentialRoomNumber As ComboBox
 
 End Class

@@ -9,7 +9,9 @@ Public Class formBooking
     Public intRegularGuests As Integer = 0
     Public intReceiptNumber As Integer = 0
     Dim listCustomerInfo As New List(Of String)({})
-
+    Function getListCustomerInfo()
+        Return listCustomerInfo
+    End Function
     Class Booking
 
         Public Sub fewGuests()
@@ -49,6 +51,25 @@ Public Class formBooking
         End Function
 
     End Class
+    Sub setCustomerDetails()
+        Dim nameFirst = txtFirstName.Text
+        Dim nameLast = txtLastName.Text
+        Dim sex = cbSex.Text
+        Dim dateBirth = dtpBirth.Text
+        Dim dateArrival = dtpArrival.Text
+        Dim dateDeparture = dtpDeparture.Text
+        Dim guestSen = nudSeniorGuests.Value.ToString
+        Dim guestMin = nudMinorGuests.Value.ToString
+        Dim guestReg = nudRegularGuests.Value.ToString
+        Dim guestTotal = (nudSeniorGuests.Value + nudMinorGuests.Value + nudSeniorGuests.Value).ToString
+        Dim intStayLength = Math.Round((dtpDeparture.Value - dtpArrival.Value).TotalDays)
+
+
+        Dim customerInfo = New CustomerDetails(nameFirst, nameLast, sex, dateBirth, dateArrival, dateDeparture, guestReg, guestSen, guestMin, guestTotal, intStayLength)
+        listCustomerInfo = Globals.getSplitString(customerInfo.getCustomerDetails())
+
+
+    End Sub
 
     Private Sub formBooking_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' already customized in properties
@@ -67,6 +88,7 @@ Public Class formBooking
         dtpDeparture.MinDate = dtpArrival.Value.AddDays(1)
 
         formAdmin.Show()
+
 
     End Sub
 
@@ -101,30 +123,6 @@ Public Class formBooking
 
     Private Sub dtpArrival_ValueChanged(sender As Object, e As EventArgs) Handles dtpArrival.ValueChanged
         dtpDeparture.MinDate = dtpArrival.Value.AddDays(1)
-    End Sub
-
-
-    Sub setCustomerDetails()
-        Dim nameFirst = txtFirstName.Text
-        Dim nameLast = txtLastName.Text
-        Dim sex = cbSex.Text
-        Dim dateBirth = dtpBirth.Text
-        Dim dateArrival = dtpArrival.Text
-        Dim dateDeparture = dtpDeparture.Text
-        Dim guestSen = nudSeniorGuests.Value.ToString
-        Dim guestMin = nudMinorGuests.Value.ToString
-        Dim guestReg = nudRegularGuests.Value.ToString
-        Dim guestTotal = (nudSeniorGuests.Value + nudMinorGuests.Value + nudSeniorGuests.Value).ToString
-        Dim intStayLength = Math.Round((dtpDeparture.Value - dtpArrival.Value).TotalDays)
-
-        Dim customerInfo = New CustomerDetails(nameFirst, nameLast, sex, dateBirth, dateArrival, dateDeparture, guestReg, guestSen, guestMin, guestTotal, intStayLength)
-        listCustomerInfo.Add(customerInfo.getCustomerDetails())
-
-        Dim pathCustomersTxt As String = Path.GetFullPath("Customers.txt")
-        Dim writerCustomer = New StreamWriter(pathCustomersTxt, True)
-        writerCustomer.WriteLine(customerInfo.getCustomerDetails())
-        writerCustomer.Close()
-
     End Sub
 
 

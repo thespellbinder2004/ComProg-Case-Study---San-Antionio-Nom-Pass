@@ -4,7 +4,7 @@
         dick = Globals.getCustomerList()
         Dim jesus = dick(1)
 
-        Dim foo As List(Of String) = Globals.getCustomerInfo(jesus)
+        Dim foo As List(Of String) = Globals.getSplitString(jesus)
 
         For i = 0 To (foo.Count - 1)
             MsgBox(foo(i))

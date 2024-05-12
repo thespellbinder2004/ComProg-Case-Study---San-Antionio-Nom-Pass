@@ -97,28 +97,20 @@ Public Class formRooms
         Else
             If intAvailableSingleRoom < 5 Then
                 If singleRooms.getRoom(intAvailableSingleRoom) = False And (ComboBox1.Text = "") = False Then
-                    Dim getRoom = MsgBox("Are you sure you want to pic this room?", vbYesNo, "Confirm")
+                    Dim getRoom = MsgBox("Are you sure you want to pick this room?", vbYesNo, "Confirm")
                     If getRoom = 6 Then
                         singleRooms.setRoomUnavailable(intAvailableSingleRoom)
                         intAvailableSingleRoom += 1
                         TextBox1.Text = 5 - intAvailableSingleRoom
-                        If ComboBox1.Text = "101" Then
-                            ComboBox1.Items.Remove("101")
-                        ElseIf ComboBox1.Text = "102" Then
-                            ComboBox1.Items.Remove("102")
-                        ElseIf ComboBox1.Text = "103" Then
-                            ComboBox1.Items.Remove("103")
-                        ElseIf ComboBox1.Text = "104" Then
-                            ComboBox1.Items.Remove("104")
-                        Else
-                            ComboBox1.Items.Remove("105")
-                        End If
+                        ComboBox1.Items.Remove(ComboBox1.Text)
                         singleRooms.removeRoom(5 - intAvailableSingleRoom)
                         formReciept.Show()
-                        formReciept.txtFirstName.Text = formBooking.txtFirstName.Text + " " + formBooking.txtLastName.Text
-                        formReciept.TextBox1.Text = formBooking.intTotalGuests
+                        formReciept.txtGuestsName.Text = formBooking.txtFirstName.Text + " " + formBooking.txtLastName.Text
+                        formReciept.txtNumberOfGuest.Text = formBooking.intTotalGuests
                         formBooking.intReceiptNumber += 1
-                        formReciept.TextBox4.Text = singleRooms.getPayment(formBooking.intTotalNight)
+                        formReciept.txtTotalPayment.Text = singleRooms.getPayment(formBooking.intTotalNight)
+                        formReciept.txtArrivalDate.Text = formBooking.dtpArrival.Text
+                        formReciept.txtDepartureDate.Text = formBooking.dtpDeparture.Text
                     End If
                 Else
                     MsgBox("Choose a Room number")
@@ -138,22 +130,12 @@ Public Class formRooms
     End Sub
 
     Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.Click
-        If ComboBox1.Items.Contains("101") = False Then
-            If ComboBox1.Items.Contains("102") = False Then
-                If ComboBox1.Items.Contains("103") = False Then
-                    If ComboBox1.Items.Contains("104") = False Then
-                        If ComboBox1.Items.Contains("105") = False Then
-                            If intAvailableSingleRoom > 4 Then
-                                MsgBox("There are no available rooms")
-                            Else
-                                For i = 0 To arrSingleRooms.Length - 1
-                                    ComboBox1.Items.Add(arrSingleRooms(i))
-                                Next i
-                            End If
-                        End If
-                    End If
-                End If
-            End If
+        If intAvailableSingleRoom > 4 Then
+            MsgBox("There are no Available rooms", "Fully Booked", MessageBoxIcon.Warning)
+        ElseIf ComboBox1.Text.Count = 0 Then
+            For i = 0 To arrSingleRooms.Length - 1
+                ComboBox1.Items.Add(arrSingleRooms(i))
+            Next i
         End If
     End Sub
 
@@ -166,28 +148,20 @@ Public Class formRooms
         Else
             If intAvailableQueenRoom < 5 Then
                 If queenRoom.getRoom(intAvailableQueenRoom) = False And (ComboBox2.Text = "") = False Then
-                    Dim getRoom = MsgBox("Are you sure you want to pic this room?", vbYesNo, "Confirm")
+                    Dim getRoom = MsgBox("Are you sure you want to pick this room?", vbYesNo, "Confirm")
                     If getRoom = 6 Then
                         queenRoom.setRoomUnavailable(intAvailableQueenRoom)
                         intAvailableQueenRoom += 1
                         TextBox4.Text = 5 - intAvailableQueenRoom
-                        If ComboBox2.Text = "116" Then
-                            ComboBox2.Items.Remove("116")
-                        ElseIf ComboBox2.Text = "117" Then
-                            ComboBox2.Items.Remove("117")
-                        ElseIf ComboBox2.Text = "118" Then
-                            ComboBox2.Items.Remove("118")
-                        ElseIf ComboBox2.Text = "119" Then
-                            ComboBox2.Items.Remove("119")
-                        Else
-                            ComboBox2.Items.Remove("120")
-                        End If
+                        ComboBox2.Items.Remove(ComboBox2.Text)
                         queenRoom.removeRoom(5 - intAvailableQueenRoom)
                         formReciept.Show()
-                        formReciept.txtFirstName.Text = formBooking.txtFirstName.Text + " " + formBooking.txtLastName.Text
-                        formReciept.TextBox1.Text = formBooking.intTotalGuests
+                        formReciept.txtGuestsName.Text = formBooking.txtFirstName.Text + " " + formBooking.txtLastName.Text
+                        formReciept.txtNumberOfGuest.Text = formBooking.intTotalGuests
                         formBooking.intReceiptNumber += 1
-                        formReciept.TextBox4.Text = queenRoom.getPayment(formBooking.intTotalNight)
+                        formReciept.txtTotalPayment.Text = queenRoom.getPayment(formBooking.intTotalNight)
+                        formReciept.txtArrivalDate.Text = formBooking.dtpArrival.Text
+                        formReciept.txtDepartureDate.Text = formBooking.dtpDeparture.Text
                     End If
                 Else
                     MsgBox("Choose a Room number")
@@ -207,22 +181,12 @@ Public Class formRooms
     End Sub
 
     Private Sub ComboBox2_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox2.Click 'queenrooms
-        If ComboBox2.Items.Contains("116") = False Then
-            If ComboBox2.Items.Contains("117") = False Then
-                If ComboBox2.Items.Contains("118") = False Then
-                    If ComboBox2.Items.Contains("119") = False Then
-                        If ComboBox2.Items.Contains("120") = False Then
-                            If intAvailableQueenRoom > 4 Then
-                                MsgBox("There are no available rooms")
-                            Else
-                                For i = 0 To arrQueenRooms.Length - 1
-                                    ComboBox2.Items.Add(arrQueenRooms(i))
-                                Next i
-                            End If
-                        End If
-                    End If
-                End If
-            End If
+        If intAvailableQueenRoom > 4 Then
+            MsgBox("There are no Available rooms", "Fully Booked", MessageBoxIcon.Warning)
+        ElseIf ComboBox2.Text.Count = 0 Then
+            For i = 0 To arrQueenRooms.Length - 1
+                ComboBox2.Items.Add(arrQueenRooms(i))
+            Next i
         End If
     End Sub
 
@@ -235,28 +199,20 @@ Public Class formRooms
         Else
             If intAvailableKingRoom < 5 Then
                 If kingRoom.getRoom(intAvailableKingRoom) = False And (ComboBox3.Text = "") = False Then
-                    Dim getRoom = MsgBox("Are you sure you want to pic this room?", vbYesNo, "Confirm")
+                    Dim getRoom = MsgBox("Are you sure you want to pick this room?", vbYesNo, "Confirm")
                     If getRoom = 6 Then
                         kingRoom.setRoomUnavailable(intAvailableKingRoom)
                         intAvailableKingRoom += 1
                         TextBox6.Text = 5 - intAvailableKingRoom
-                        If ComboBox3.Text = "121" Then
-                            ComboBox3.Items.Remove("121")
-                        ElseIf ComboBox3.Text = "122" Then
-                            ComboBox3.Items.Remove("122")
-                        ElseIf ComboBox3.Text = "123" Then
-                            ComboBox3.Items.Remove("123")
-                        ElseIf ComboBox3.Text = "124" Then
-                            ComboBox3.Items.Remove("124")
-                        Else
-                            ComboBox3.Items.Remove("125")
-                        End If
+                        ComboBox3.Items.Remove(ComboBox3.Text)
                         kingRoom.removeRoom(5 - intAvailableKingRoom)
                         formReciept.Show()
-                        formReciept.txtFirstName.Text = formBooking.txtFirstName.Text + " " + formBooking.txtLastName.Text
-                        formReciept.TextBox1.Text = formBooking.intTotalGuests
+                        formReciept.txtGuestsName.Text = formBooking.txtFirstName.Text + " " + formBooking.txtLastName.Text
+                        formReciept.txtNumberOfGuest.Text = formBooking.intTotalGuests
                         formBooking.intReceiptNumber += 1
-                        formReciept.TextBox4.Text = kingRoom.getPayment(formBooking.intTotalNight)
+                        formReciept.txtTotalPayment.Text = kingRoom.getPayment(formBooking.intTotalNight)
+                        formReciept.txtArrivalDate.Text = formBooking.dtpArrival.Text
+                        formReciept.txtDepartureDate.Text = formBooking.dtpDeparture.Text
                     End If
                 Else
                     MsgBox("Choose a Room number")
@@ -276,22 +232,12 @@ Public Class formRooms
     End Sub
 
     Private Sub ComboBox3_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox3.Click 'kingrooms
-        If ComboBox3.Items.Contains("116") = False Then
-            If ComboBox3.Items.Contains("117") = False Then
-                If ComboBox3.Items.Contains("118") = False Then
-                    If ComboBox3.Items.Contains("119") = False Then
-                        If ComboBox3.Items.Contains("120") = False Then
-                            If intAvailableKingRoom > 4 Then
-                                MsgBox("There are no available rooms")
-                            Else
-                                For i = 0 To arrKingRooms.Length - 1
-                                    ComboBox3.Items.Add(arrKingRooms(i))
-                                Next i
-                            End If
-                        End If
-                    End If
-                End If
-            End If
+        If intAvailableKingRoom > 4 Then
+            MsgBox("There are no Available rooms", "Fully Booked", MessageBoxIcon.Warning)
+        ElseIf ComboBox3.Text.Count = 0 Then
+            For i = 0 To arrKingRooms.Length - 1
+                ComboBox3.Items.Add(arrKingRooms(i))
+            Next i
         End If
     End Sub
 
@@ -304,27 +250,20 @@ Public Class formRooms
         Else
             If intAvailanleTwinRoom < 5 Then
                 If twinRoom.getRoom(intAvailanleTwinRoom) = False And (ComboBox4.Text = "") = False Then
-                    Dim getRoom = MsgBox("Are you sure you want to pic this room?", vbYesNo, "Confirm")
+                    Dim getRoom = MsgBox("Are you sure you want to pick this room?", vbYesNo, "Confirm")
                     If getRoom = 6 Then
                         twinRoom.setRoomUnavailable(intAvailanleTwinRoom)
                         intAvailanleTwinRoom += 1
                         TextBox12.Text = 5 - intAvailanleTwinRoom
-                        If ComboBox4.Text = "106" Then
-                            ComboBox4.Items.Remove("106")
-                        ElseIf ComboBox4.Text = "107" Then
-                            ComboBox4.Items.Remove("107")
-                        ElseIf ComboBox4.Text = "108" Then
-                            ComboBox4.Items.Remove("108")
-                        ElseIf ComboBox4.Text = "109" Then
-                        Else
-                            ComboBox4.Items.Remove("110")
-                        End If
+                        ComboBox4.Items.Remove(ComboBox4.Text)
                         twinRoom.removeRoom(5 - intAvailanleTwinRoom)
                         formReciept.Show()
-                        formReciept.txtFirstName.Text = formBooking.txtFirstName.Text + " " + formBooking.txtLastName.Text
-                        formReciept.TextBox1.Text = formBooking.intTotalGuests
+                        formReciept.txtGuestsName.Text = formBooking.txtFirstName.Text + " " + formBooking.txtLastName.Text
+                        formReciept.txtNumberOfGuest.Text = formBooking.intTotalGuests
                         formBooking.intReceiptNumber += 1
-                        formReciept.TextBox4.Text = twinRoom.getPayment(formBooking.intTotalNight)
+                        formReciept.txtTotalPayment.Text = twinRoom.getPayment(formBooking.intTotalNight)
+                        formReciept.txtArrivalDate.Text = formBooking.dtpArrival.Text
+                        formReciept.txtDepartureDate.Text = formBooking.dtpDeparture.Text
                     End If
                 Else
                     MsgBox("Choose a Room number")
@@ -343,22 +282,12 @@ Public Class formRooms
     End Sub
 
     Private Sub ComboBox4_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox4.Click 'twinrooms
-        If ComboBox4.Items.Contains("106") = False Then
-            If ComboBox4.Items.Contains("107") = False Then
-                If ComboBox4.Items.Contains("108") = False Then
-                    If ComboBox4.Items.Contains("109") = False Then
-                        If ComboBox4.Items.Contains("110") = False Then
-                            If intAvailanleTwinRoom > 4 Then
-                                MsgBox("There are no available rooms")
-                            Else
-                                For i = 0 To arrTwinRoom.Length - 1
-                                    ComboBox4.Items.Add(arrTwinRoom(i))
-                                Next i
-                            End If
-                        End If
-                    End If
-                End If
-            End If
+        If intAvailanleTwinRoom > 4 Then
+            MsgBox("There are no Available rooms", "Fully Booked", MessageBoxIcon.Warning)
+        ElseIf ComboBox4.Text.Count = 0 Then
+            For i = 0 To arrTwinRoom.Length - 1
+                ComboBox4.Items.Add(arrTwinRoom(i))
+            Next i
         End If
     End Sub
 
@@ -371,28 +300,20 @@ Public Class formRooms
         Else
             If intAvailableStandardRoom < 5 Then
                 If standardRoom.getRoom(intAvailableStandardRoom) = False And (ComboBox5.Text = "") = False Then
-                    Dim getRoom = MsgBox("Are you sure you want to pic this room?", vbYesNo, "Confirm")
+                    Dim getRoom = MsgBox("Are you sure you want to pick this room?", vbYesNo, "Confirm")
                     If getRoom = 6 Then
                         standardRoom.setRoomUnavailable(intAvailableStandardRoom)
                         intAvailableStandardRoom += 1
                         TextBox12.Text = 5 - intAvailableStandardRoom
-                        If ComboBox5.Text = "111" Then
-                            ComboBox5.Items.Remove("111")
-                        ElseIf ComboBox5.Text = "112" Then
-                            ComboBox5.Items.Remove("112")
-                        ElseIf ComboBox5.Text = "113" Then
-                            ComboBox5.Items.Remove("113")
-                        ElseIf ComboBox5.Text = "114" Then
-                            ComboBox5.Items.Remove("114")
-                        Else
-                            ComboBox5.Items.Remove("115")
-                        End If
+                        ComboBox5.Items.Remove(ComboBox5.Text)
                         standardRoom.removeRoom(5 - intAvailableStandardRoom)
                         formReciept.Show()
-                        formReciept.txtFirstName.Text = formBooking.txtFirstName.Text + " " + formBooking.txtLastName.Text
-                        formReciept.TextBox1.Text = formBooking.intTotalGuests
+                        formReciept.txtGuestsName.Text = formBooking.txtFirstName.Text + " " + formBooking.txtLastName.Text
+                        formReciept.txtNumberOfGuest.Text = formBooking.intTotalGuests
                         formBooking.intReceiptNumber += 1
-                        formReciept.TextBox4.Text = standardRoom.getPayment(formBooking.intTotalNight)
+                        formReciept.txtTotalPayment.Text = standardRoom.getPayment(formBooking.intTotalNight)
+                        formReciept.txtArrivalDate.Text = formBooking.dtpArrival.Text
+                        formReciept.txtDepartureDate.Text = formBooking.dtpDeparture.Text
                     End If
                 Else
                     MsgBox("Choose a Room number")
@@ -412,22 +333,12 @@ Public Class formRooms
     End Sub
 
     Private Sub ComboBox5_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox5.Click 'standardrooms
-        If ComboBox5.Items.Contains("111") = False Then
-            If ComboBox5.Items.Contains("112") = False Then
-                If ComboBox5.Items.Contains("113") = False Then
-                    If ComboBox5.Items.Contains("114") = False Then
-                        If ComboBox5.Items.Contains("115") = False Then
-                            If intAvailableStandardRoom > 4 Then
-                                MsgBox("There are no available rooms")
-                            Else
-                                For i = 0 To arrStandardRoom.Length - 1
-                                    ComboBox5.Items.Add(arrStandardRoom(i))
-                                Next i
-                            End If
-                        End If
-                    End If
-                End If
-            End If
+        If intAvailableStandardRoom > 4 Then
+            MsgBox("There are no Available rooms", "Fully Booked", MessageBoxIcon.Warning)
+        ElseIf ComboBox5.Text.Count = 0 Then
+            For i = 0 To arrStandardRoom.Length - 1
+                ComboBox5.Items.Add(arrStandardRoom(i))
+            Next i
         End If
     End Sub
 
@@ -440,28 +351,20 @@ Public Class formRooms
         Else
             If intAvailableExecutiveRoom < 5 Then
                 If ExecRoom.getRoom(intAvailableExecutiveRoom) = False And (ComboBox6.Text = "") = False Then
-                    Dim getRoom = MsgBox("Are you sure you want to pic this room?", vbYesNo, "Confirm")
+                    Dim getRoom = MsgBox("Are you sure you want to pick this room?", vbYesNo, "Confirm")
                     If getRoom = 6 Then
                         ExecRoom.setRoomUnavailable(intAvailableExecutiveRoom)
                         intAvailableExecutiveRoom += 1
                         TextBox8.Text = 5 - intAvailableExecutiveRoom
-                        If ComboBox6.Text = "201" Then
-                            ComboBox6.Items.Remove("201")
-                        ElseIf ComboBox6.Text = "202" Then
-                            ComboBox6.Items.Remove("202")
-                        ElseIf ComboBox6.Text = "203" Then
-                            ComboBox6.Items.Remove("203")
-                        ElseIf ComboBox6.Text = "204" Then
-                            ComboBox6.Items.Remove("204")
-                        Else
-                            ComboBox6.Items.Remove("205")
-                        End If
+                        ComboBox6.Items.Remove(ComboBox6.Text)
                         ExecRoom.removeRoom(5 - intAvailableStandardRoom)
                         formReciept.Show()
-                        formReciept.txtFirstName.Text = formBooking.txtFirstName.Text + " " + formBooking.txtLastName.Text
-                        formReciept.TextBox1.Text = formBooking.intTotalGuests
+                        formReciept.txtGuestsName.Text = formBooking.txtFirstName.Text + " " + formBooking.txtLastName.Text
+                        formReciept.txtNumberOfGuest.Text = formBooking.intTotalGuests
                         formBooking.intReceiptNumber += 1
-                        formReciept.TextBox4.Text = ExecRoom.getPayment(formBooking.intTotalNight)
+                        formReciept.txtTotalPayment.Text = ExecRoom.getPayment(formBooking.intTotalNight)
+                        formReciept.txtArrivalDate.Text = formBooking.dtpArrival.Text
+                        formReciept.txtDepartureDate.Text = formBooking.dtpDeparture.Text
                     End If
                 Else
                     MsgBox("Choose a Room number")
@@ -480,22 +383,12 @@ Public Class formRooms
     End Sub
 
     Private Sub ComboBox6_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox6.Click 'execrooms
-        If ComboBox6.Items.Contains("201") = False Then
-            If ComboBox6.Items.Contains("202") = False Then
-                If ComboBox6.Items.Contains("203") = False Then
-                    If ComboBox6.Items.Contains("204") = False Then
-                        If ComboBox6.Items.Contains("205") = False Then
-                            If intAvailableExecutiveRoom > 4 Then
-                                MsgBox("There are no available rooms")
-                            Else
-                                For i = 0 To arrExecutiveRoom.Length - 1
-                                    ComboBox6.Items.Add(arrExecutiveRoom(i))
-                                Next i
-                            End If
-                        End If
-                    End If
-                End If
-            End If
+        If intAvailableExecutiveRoom > 4 Then
+            MsgBox("There are no Available rooms", "Fully Booked", MessageBoxIcon.Warning)
+        ElseIf ComboBox6.Text.Count = 0 Then
+            For i = 0 To arrExecutiveRoom.Length - 1
+                ComboBox6.Items.Add(arrExecutiveRoom(i))
+            Next i
         End If
     End Sub
 
@@ -508,28 +401,20 @@ Public Class formRooms
         Else
             If intAvailablePresidentialRoom < 5 Then
                 If pressRoom.getRoom(intAvailablePresidentialRoom) = False And (ComboBox7.Text = "") = False Then
-                    Dim getRoom = MsgBox("Are you sure you want to pic this room?", vbYesNo, "Confirm")
+                    Dim getRoom = MsgBox("Are you sure you want to pick this room?", vbYesNo, "Confirm")
                     If getRoom = 6 Then
                         pressRoom.setRoomUnavailable(intAvailablePresidentialRoom)
                         intAvailablePresidentialRoom += 1
                         TextBox14.Text = 5 - intAvailablePresidentialRoom
-                        If ComboBox7.Text = "206" Then
-                            ComboBox7.Items.Remove("206")
-                        ElseIf ComboBox7.Text = "207" Then
-                            ComboBox7.Items.Remove("207")
-                        ElseIf ComboBox7.Text = "208" Then
-                            ComboBox7.Items.Remove("208")
-                        ElseIf ComboBox7.Text = "209" Then
-                            ComboBox7.Items.Remove("209")
-                        Else
-                            ComboBox7.Items.Remove("210")
-                        End If
+                        ComboBox7.Items.Remove(ComboBox7.Text)
                         pressRoom.removeRoom(5 - intAvailablePresidentialRoom)
                         formReciept.Show()
-                        formReciept.txtFirstName.Text = formBooking.txtFirstName.Text + " " + formBooking.txtLastName.Text
-                        formReciept.TextBox1.Text = formBooking.intTotalGuests
+                        formReciept.txtGuestsName.Text = formBooking.txtFirstName.Text + " " + formBooking.txtLastName.Text
+                        formReciept.txtNumberOfGuest.Text = formBooking.intTotalGuests
                         formBooking.intReceiptNumber += 1
-                        formReciept.TextBox4.Text = pressRoom.getPayment(formBooking.intTotalNight)
+                        formReciept.txtTotalPayment.Text = pressRoom.getPayment(formBooking.intTotalNight)
+                        formReciept.txtArrivalDate.Text = formBooking.dtpArrival.Text
+                        formReciept.txtDepartureDate.Text = formBooking.dtpDeparture.Text
                     End If
                 Else
                     MsgBox("Choose a Room number")
@@ -548,22 +433,12 @@ Public Class formRooms
     End Sub
 
     Private Sub ComboBox7_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox7.Click 'execrooms
-        If ComboBox7.Items.Contains("206") = False Then
-            If ComboBox7.Items.Contains("207") = False Then
-                If ComboBox7.Items.Contains("208") = False Then
-                    If ComboBox7.Items.Contains("209") = False Then
-                        If ComboBox7.Items.Contains("210") = False Then
-                            If intAvailablePresidentialRoom > 4 Then
-                                MsgBox("There are no available rooms")
-                            Else
-                                For i = 0 To arrPresidentialRoom.Length - 1
-                                    ComboBox7.Items.Add(arrPresidentialRoom(i))
-                                Next i
-                            End If
-                        End If
-                    End If
-                End If
-            End If
+        If intAvailablePresidentialRoom > 4 Then
+            MsgBox("There are no Available rooms", "Fully Booked", MessageBoxIcon.Warning)
+        ElseIf ComboBox7.Text.Count = 0 Then
+            For i = 0 To arrPresidentialRoom.Length - 1
+                ComboBox7.Items.Add(arrPresidentialRoom(i))
+            Next i
         End If
     End Sub
 

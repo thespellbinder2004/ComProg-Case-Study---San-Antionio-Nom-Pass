@@ -165,6 +165,7 @@ Public Class formBooking
         Return Val(curUserLengthOfStay)
     End Function
 
+
     'GETTER FUNCTIONS
     'END ------------------------------------------
 

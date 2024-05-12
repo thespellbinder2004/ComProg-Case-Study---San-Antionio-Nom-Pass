@@ -11,5 +11,8 @@ Index   Item
 9. 	Guest Minor
 10.	Guest Total
 11.	Stay Length
+12.	Room Type
+13.	Room Number
+14.	Total Bill
 
 edit, firstname, lastname, arrival, departure, total guests

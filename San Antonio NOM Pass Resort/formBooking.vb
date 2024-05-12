@@ -101,14 +101,14 @@ Public Class formBooking
 
     End Sub
 
-    Private Sub btnSubmit_Click(sender As Object, e As EventArgs) Handles btnSubmit.Click
+    Private Sub btnSubmit_Click(sender As Object, e As EventArgs) Handles btnSubmit.Click, btnEnterGuest.Click
 
         intMinorGuests = nudMinorGuests.Value
         intSeniorGuests = nudSeniorGuests.Value
         intRegularGuests = nudRegularGuests.Value
         intTotalGuests = intMinorGuests + intSeniorGuests + intRegularGuests
 
-        If (Not intTotalGuests > 0) Or txtFirstName.Text = "" Or txtLastName.Text = "" Then
+        If Not intTotalGuests > 0 Or txtFirstName.Text = "" Or txtLastName.Text = "" Then
             MessageBox.Show("Please Input Required Elements", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         Else
             Dim result = MessageBox.Show("Do you confirm all information is correctly filled out?", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)
@@ -117,7 +117,7 @@ Public Class formBooking
 
                 formRooms.Show()
                 setCustomerDetails()
-                Me.Hide()
+                Hide()
 
             End If
 
@@ -164,6 +164,7 @@ Public Class formBooking
     Function getLengthOfStay()
         Return Val(curUserLengthOfStay)
     End Function
+
     'GETTER FUNCTIONS
     'END ------------------------------------------
 

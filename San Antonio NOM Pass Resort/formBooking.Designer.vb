@@ -45,6 +45,11 @@ Partial Class formBooking
         nudRegularGuests = New NumericUpDown()
         nudMinorGuests = New NumericUpDown()
         nudSeniorGuests = New NumericUpDown()
+        lbxGuestNames = New ListBox()
+        txtGuestName = New TextBox()
+        Label2 = New Label()
+        cbGuestType = New ComboBox()
+        btnEnterGuest = New Button()
         CType(nudRegularGuests, ComponentModel.ISupportInitialize).BeginInit()
         CType(nudMinorGuests, ComponentModel.ISupportInitialize).BeginInit()
         CType(nudSeniorGuests, ComponentModel.ISupportInitialize).BeginInit()
@@ -196,7 +201,7 @@ Partial Class formBooking
         btnSubmit.BackColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
         btnSubmit.Font = New Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         btnSubmit.ForeColor = SystemColors.ButtonFace
-        btnSubmit.Location = New Point(46, 483)
+        btnSubmit.Location = New Point(46, 552)
         btnSubmit.Name = "btnSubmit"
         btnSubmit.Size = New Size(221, 50)
         btnSubmit.TabIndex = 14
@@ -208,7 +213,7 @@ Partial Class formBooking
         btnCancel.BackColor = Color.Maroon
         btnCancel.Font = New Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         btnCancel.ForeColor = SystemColors.ButtonFace
-        btnCancel.Location = New Point(277, 483)
+        btnCancel.Location = New Point(277, 552)
         btnCancel.Name = "btnCancel"
         btnCancel.Size = New Size(221, 50)
         btnCancel.TabIndex = 14
@@ -229,11 +234,11 @@ Partial Class formBooking
         ' 
         Label12.AutoSize = True
         Label12.Font = New Font("Consolas", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label12.Location = New Point(273, 91)
+        Label12.Location = New Point(49, 389)
         Label12.Name = "Label12"
-        Label12.Size = New Size(112, 18)
+        Label12.Size = New Size(152, 18)
         Label12.TabIndex = 17
-        Label12.Text = "Senior Guests"
+        Label12.Text = "Input Guest Names:"
         ' 
         ' nudRegularGuests
         ' 
@@ -259,17 +264,67 @@ Partial Class formBooking
         nudSeniorGuests.Size = New Size(222, 23)
         nudSeniorGuests.TabIndex = 19
         ' 
+        ' lbxGuestNames
+        ' 
+        lbxGuestNames.FormattingEnabled = True
+        lbxGuestNames.ItemHeight = 15
+        lbxGuestNames.Location = New Point(46, 439)
+        lbxGuestNames.Name = "lbxGuestNames"
+        lbxGuestNames.Size = New Size(352, 109)
+        lbxGuestNames.TabIndex = 20
+        ' 
+        ' txtGuestName
+        ' 
+        txtGuestName.Location = New Point(46, 410)
+        txtGuestName.Name = "txtGuestName"
+        txtGuestName.Size = New Size(270, 23)
+        txtGuestName.TabIndex = 21
+        ' 
+        ' Label2
+        ' 
+        Label2.AutoSize = True
+        Label2.Location = New Point(46, 392)
+        Label2.Name = "Label2"
+        Label2.Size = New Size(0, 15)
+        Label2.TabIndex = 22
+        ' 
+        ' cbGuestType
+        ' 
+        cbGuestType.FormattingEnabled = True
+        cbGuestType.Items.AddRange(New Object() {"Regular", "Below 7"})
+        cbGuestType.Location = New Point(322, 410)
+        cbGuestType.Name = "cbGuestType"
+        cbGuestType.Size = New Size(76, 23)
+        cbGuestType.TabIndex = 23
+        ' 
+        ' btnEnterGuest
+        ' 
+        btnEnterGuest.BackColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
+        btnEnterGuest.Font = New Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        btnEnterGuest.ForeColor = SystemColors.ButtonFace
+        btnEnterGuest.Location = New Point(404, 410)
+        btnEnterGuest.Name = "btnEnterGuest"
+        btnEnterGuest.Size = New Size(121, 74)
+        btnEnterGuest.TabIndex = 14
+        btnEnterGuest.Text = "Enter"
+        btnEnterGuest.UseVisualStyleBackColor = False
+        ' 
         ' formBooking
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(546, 646)
+        Controls.Add(cbGuestType)
+        Controls.Add(Label2)
+        Controls.Add(txtGuestName)
+        Controls.Add(lbxGuestNames)
         Controls.Add(nudSeniorGuests)
         Controls.Add(nudMinorGuests)
         Controls.Add(nudRegularGuests)
         Controls.Add(Label12)
         Controls.Add(Label11)
         Controls.Add(btnCancel)
+        Controls.Add(btnEnterGuest)
         Controls.Add(btnSubmit)
         Controls.Add(dtpDeparture)
         Controls.Add(Label10)
@@ -319,5 +374,10 @@ Partial Class formBooking
     Friend WithEvents nudRegularGuests As NumericUpDown
     Friend WithEvents nudMinorGuests As NumericUpDown
     Friend WithEvents nudSeniorGuests As NumericUpDown
+    Friend WithEvents lbxGuestNames As ListBox
+    Friend WithEvents txtGuestName As TextBox
+    Friend WithEvents Label2 As Label
+    Friend WithEvents cbGuestType As ComboBox
+    Friend WithEvents btnEnterGuest As Button
 
 End Class

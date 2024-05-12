@@ -101,7 +101,7 @@ Public Class formBooking
 
     End Sub
 
-    Private Sub btnSubmit_Click(sender As Object, e As EventArgs) Handles btnSubmit.Click, btnEnterGuest.Click
+    Private Sub btnSubmit_Click(sender As Object, e As EventArgs) Handles btnSubmit.Click
 
         intMinorGuests = nudMinorGuests.Value
         intSeniorGuests = nudSeniorGuests.Value
@@ -164,6 +164,10 @@ Public Class formBooking
     Function getLengthOfStay()
         Return Val(curUserLengthOfStay)
     End Function
+
+    Private Sub btnEnterGuest_Click(sender As Object, e As EventArgs) Handles btnEnterGuest.Click
+        lbxGuestNames.
+    End Sub
 
 
     'GETTER FUNCTIONS

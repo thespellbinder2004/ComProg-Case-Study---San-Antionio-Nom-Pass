@@ -109,14 +109,22 @@ Partial Class formAdmin
         columnDeparture = New DataGridViewTextBoxColumn()
         columnTotalGuests = New DataGridViewTextBoxColumn()
         tabGuestInfo = New TabPage()
+        dgvGuestInfo = New DataGridView()
         Label1 = New Label()
         btnRefresh = New Button()
+        DataGridViewTextBoxColumn1 = New DataGridViewTextBoxColumn()
+        DataGridViewTextBoxColumn2 = New DataGridViewTextBoxColumn()
+        DataGridViewTextBoxColumn3 = New DataGridViewTextBoxColumn()
+        DataGridViewTextBoxColumn4 = New DataGridViewTextBoxColumn()
+        DataGridViewTextBoxColumn5 = New DataGridViewTextBoxColumn()
         tbcAdmin.SuspendLayout()
         tabAdminInfo.SuspendLayout()
         GroupBox1.SuspendLayout()
         tabRooms.SuspendLayout()
         tabGuests.SuspendLayout()
         CType(dgvGuestTable, ComponentModel.ISupportInitialize).BeginInit()
+        tabGuestInfo.SuspendLayout()
+        CType(dgvGuestInfo, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' tbcAdmin
@@ -1041,12 +1049,25 @@ Partial Class formAdmin
         ' 
         ' tabGuestInfo
         ' 
+        tabGuestInfo.Controls.Add(dgvGuestInfo)
         tabGuestInfo.Location = New Point(4, 24)
         tabGuestInfo.Name = "tabGuestInfo"
         tabGuestInfo.Size = New Size(793, 502)
         tabGuestInfo.TabIndex = 3
         tabGuestInfo.Text = "Guest Info"
         tabGuestInfo.UseVisualStyleBackColor = True
+        ' 
+        ' dgvGuestInfo
+        ' 
+        dgvGuestInfo.AllowUserToAddRows = False
+        dgvGuestInfo.AllowUserToDeleteRows = False
+        dgvGuestInfo.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        dgvGuestInfo.Columns.AddRange(New DataGridViewColumn() {DataGridViewTextBoxColumn1, DataGridViewTextBoxColumn2, DataGridViewTextBoxColumn3, DataGridViewTextBoxColumn4, DataGridViewTextBoxColumn5})
+        dgvGuestInfo.Location = New Point(0, 0)
+        dgvGuestInfo.Name = "dgvGuestInfo"
+        dgvGuestInfo.RowHeadersVisible = False
+        dgvGuestInfo.Size = New Size(793, 502)
+        dgvGuestInfo.TabIndex = 1
         ' 
         ' Label1
         ' 
@@ -1067,6 +1088,47 @@ Partial Class formAdmin
         btnRefresh.Text = "Refresh"
         btnRefresh.UseVisualStyleBackColor = True
         ' 
+        ' DataGridViewTextBoxColumn1
+        ' 
+        DataGridViewTextBoxColumn1.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        DataGridViewTextBoxColumn1.HeaderText = "First Name"
+        DataGridViewTextBoxColumn1.MinimumWidth = 10
+        DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        DataGridViewTextBoxColumn1.ReadOnly = True
+        DataGridViewTextBoxColumn1.Resizable = DataGridViewTriState.False
+        ' 
+        ' DataGridViewTextBoxColumn2
+        ' 
+        DataGridViewTextBoxColumn2.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        DataGridViewTextBoxColumn2.HeaderText = "Last Name"
+        DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        DataGridViewTextBoxColumn2.ReadOnly = True
+        DataGridViewTextBoxColumn2.Resizable = DataGridViewTriState.False
+        ' 
+        ' DataGridViewTextBoxColumn3
+        ' 
+        DataGridViewTextBoxColumn3.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        DataGridViewTextBoxColumn3.HeaderText = "Sex"
+        DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        DataGridViewTextBoxColumn3.ReadOnly = True
+        DataGridViewTextBoxColumn3.Resizable = DataGridViewTriState.False
+        ' 
+        ' DataGridViewTextBoxColumn4
+        ' 
+        DataGridViewTextBoxColumn4.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        DataGridViewTextBoxColumn4.HeaderText = "Birthday"
+        DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
+        DataGridViewTextBoxColumn4.ReadOnly = True
+        DataGridViewTextBoxColumn4.Resizable = DataGridViewTriState.False
+        ' 
+        ' DataGridViewTextBoxColumn5
+        ' 
+        DataGridViewTextBoxColumn5.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        DataGridViewTextBoxColumn5.HeaderText = "Total Guests"
+        DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
+        DataGridViewTextBoxColumn5.ReadOnly = True
+        DataGridViewTextBoxColumn5.Resizable = DataGridViewTriState.False
+        ' 
         ' formAdmin
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
@@ -1086,6 +1148,8 @@ Partial Class formAdmin
         tabRooms.PerformLayout()
         tabGuests.ResumeLayout(False)
         CType(dgvGuestTable, ComponentModel.ISupportInitialize).EndInit()
+        tabGuestInfo.ResumeLayout(False)
+        CType(dgvGuestInfo, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -1179,4 +1243,11 @@ Partial Class formAdmin
     Friend WithEvents columnArrival As DataGridViewTextBoxColumn
     Friend WithEvents columnDeparture As DataGridViewTextBoxColumn
     Friend WithEvents columnTotalGuests As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents dgvGuestInfo As DataGridView
+    Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn5 As DataGridViewTextBoxColumn
 End Class

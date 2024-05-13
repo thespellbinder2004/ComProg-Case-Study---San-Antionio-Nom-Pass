@@ -159,7 +159,7 @@
   <data name="$this.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAABLAAAAMhCAYAAAD4vEinAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wgAADsIBFShKgAAA/7JJREFUeF7k/We3HMeVtgnzL85MtyQakQRAEABhCIJGUkstQxLeEYak1M98GUk0
+        wQAADsEBuJFr7QAA/7JJREFUeF7k/We3HMeVtgnzL85MtyQakQRAEABhCIJGUkstQxLeEYak1M98GUk0
         AOFBSpTU/cz7z8677x1xR9yxc0dW1QGo7rXmw7UqM1xGmlO58zqRUS8cu3RnL3L04teNMe+bBW+ev9s4
         cuEbq3OvgfU3zt3ZO2x54E1bB1hG+qGzXxt3G2+c+2ZYjyCfZQ5+fGfvwEdf7x04+0Xlq4qlC6999FXK
         qx9+6cT1yE8t7xX7JFj/qW33lQ+R/tXey7/7svHSb79YYnXIi7/7wvnJb/+89+JvbN348a+/2PvRv//Z
@@ -34980,6 +34980,12 @@
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>700, 400</value>
+  </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>Off</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>formSplashScreen</value>

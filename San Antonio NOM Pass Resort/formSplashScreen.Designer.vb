@@ -45,9 +45,13 @@ Partial Class formSplashScreen
         BackColor = SystemColors.MenuBar
         ControlBox = False
         Controls.Add(ProgressBar1)
+        DoubleBuffered = True
         FormBorderStyle = FormBorderStyle.None
         MaximizeBox = False
+        MdiChildrenMinimizedAnchorBottom = False
+        MinimizeBox = False
         Name = "formSplashScreen"
+        ShowIcon = False
         UseWaitCursor = True
         ResumeLayout(False)
     End Sub

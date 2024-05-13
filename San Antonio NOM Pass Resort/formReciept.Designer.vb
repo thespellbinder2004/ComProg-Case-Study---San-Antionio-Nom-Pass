@@ -177,6 +177,7 @@ Partial Class formReciept
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
+        BackColor = SystemColors.ButtonHighlight
         ClientSize = New Size(359, 323)
         Controls.Add(txtTotalPayment)
         Controls.Add(Label6)
@@ -193,6 +194,7 @@ Partial Class formReciept
         Controls.Add(Label2)
         Controls.Add(Label1)
         Name = "formReciept"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "formReciept"
         ResumeLayout(False)
         PerformLayout()

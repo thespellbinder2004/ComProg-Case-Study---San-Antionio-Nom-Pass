@@ -109,23 +109,21 @@ Partial Class formAdmin
         columnDeparture = New DataGridViewTextBoxColumn()
         columnTotalGuests = New DataGridViewTextBoxColumn()
         tabGuestInfo = New TabPage()
-        TextBox7 = New TextBox()
-        Label46 = New Label()
-        TextBox2 = New TextBox()
+        Label47 = New Label()
+        TextBox1 = New TextBox()
         Label41 = New Label()
         TextBox6 = New TextBox()
         Label45 = New Label()
-        TextBox5 = New TextBox()
-        Label44 = New Label()
-        TextBox4 = New TextBox()
-        Label43 = New Label()
         TextBox3 = New TextBox()
+        Label44 = New Label()
+        TextBox2 = New TextBox()
+        Label43 = New Label()
+        TextBox4 = New TextBox()
         Label42 = New Label()
-        TextBox1 = New TextBox()
+        TextBox0 = New TextBox()
         Label40 = New Label()
         Label1 = New Label()
         btnRefresh = New Button()
-        Label47 = New Label()
         tbcAdmin.SuspendLayout()
         tabAdminInfo.SuspendLayout()
         GroupBox1.SuspendLayout()
@@ -1078,19 +1076,17 @@ Partial Class formAdmin
         ' tabGuestInfo
         ' 
         tabGuestInfo.Controls.Add(Label47)
-        tabGuestInfo.Controls.Add(TextBox7)
-        tabGuestInfo.Controls.Add(Label46)
-        tabGuestInfo.Controls.Add(TextBox2)
+        tabGuestInfo.Controls.Add(TextBox1)
         tabGuestInfo.Controls.Add(Label41)
         tabGuestInfo.Controls.Add(TextBox6)
         tabGuestInfo.Controls.Add(Label45)
-        tabGuestInfo.Controls.Add(TextBox5)
-        tabGuestInfo.Controls.Add(Label44)
-        tabGuestInfo.Controls.Add(TextBox4)
-        tabGuestInfo.Controls.Add(Label43)
         tabGuestInfo.Controls.Add(TextBox3)
+        tabGuestInfo.Controls.Add(Label44)
+        tabGuestInfo.Controls.Add(TextBox2)
+        tabGuestInfo.Controls.Add(Label43)
+        tabGuestInfo.Controls.Add(TextBox4)
         tabGuestInfo.Controls.Add(Label42)
-        tabGuestInfo.Controls.Add(TextBox1)
+        tabGuestInfo.Controls.Add(TextBox0)
         tabGuestInfo.Controls.Add(Label40)
         tabGuestInfo.Location = New Point(4, 24)
         tabGuestInfo.Name = "tabGuestInfo"
@@ -1099,31 +1095,23 @@ Partial Class formAdmin
         tabGuestInfo.Text = "Guest Info"
         tabGuestInfo.UseVisualStyleBackColor = True
         ' 
-        ' TextBox7
+        ' Label47
         ' 
-        TextBox7.Font = New Font("Consolas", 12F)
-        TextBox7.Location = New Point(548, 355)
-        TextBox7.Name = "TextBox7"
-        TextBox7.Size = New Size(133, 26)
-        TextBox7.TabIndex = 17
+        Label47.AutoSize = True
+        Label47.Font = New Font("Consolas", 36F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label47.Location = New Point(164, 68)
+        Label47.Name = "Label47"
+        Label47.Size = New Size(466, 56)
+        Label47.TabIndex = 18
+        Label47.Text = "Customer Details:"
         ' 
-        ' Label46
+        ' TextBox1
         ' 
-        Label46.AutoSize = True
-        Label46.Font = New Font("Consolas", 12F)
-        Label46.Location = New Point(398, 358)
-        Label46.Name = "Label46"
-        Label46.Size = New Size(144, 19)
-        Label46.TabIndex = 16
-        Label46.Text = "Total of Guest:"
-        ' 
-        ' TextBox2
-        ' 
-        TextBox2.Font = New Font("Consolas", 12F)
-        TextBox2.Location = New Point(211, 217)
-        TextBox2.Name = "TextBox2"
-        TextBox2.Size = New Size(470, 26)
-        TextBox2.TabIndex = 15
+        TextBox1.Font = New Font("Consolas", 12F)
+        TextBox1.Location = New Point(211, 217)
+        TextBox1.Name = "TextBox1"
+        TextBox1.Size = New Size(470, 26)
+        TextBox1.TabIndex = 15
         ' 
         ' Label41
         ' 
@@ -1153,13 +1141,13 @@ Partial Class formAdmin
         Label45.TabIndex = 12
         Label45.Text = "Address :"
         ' 
-        ' TextBox5
+        ' TextBox3
         ' 
-        TextBox5.Font = New Font("Consolas", 12F)
-        TextBox5.Location = New Point(211, 355)
-        TextBox5.Name = "TextBox5"
-        TextBox5.Size = New Size(181, 26)
-        TextBox5.TabIndex = 11
+        TextBox3.Font = New Font("Consolas", 12F)
+        TextBox3.Location = New Point(211, 355)
+        TextBox3.Name = "TextBox3"
+        TextBox3.Size = New Size(181, 26)
+        TextBox3.TabIndex = 11
         ' 
         ' Label44
         ' 
@@ -1171,13 +1159,13 @@ Partial Class formAdmin
         Label44.TabIndex = 10
         Label44.Text = "Birthday :"
         ' 
-        ' TextBox4
+        ' TextBox2
         ' 
-        TextBox4.Font = New Font("Consolas", 12F)
-        TextBox4.Location = New Point(458, 313)
-        TextBox4.Name = "TextBox4"
-        TextBox4.Size = New Size(223, 26)
-        TextBox4.TabIndex = 9
+        TextBox2.Font = New Font("Consolas", 12F)
+        TextBox2.Location = New Point(458, 313)
+        TextBox2.Name = "TextBox2"
+        TextBox2.Size = New Size(223, 26)
+        TextBox2.TabIndex = 9
         ' 
         ' Label43
         ' 
@@ -1189,13 +1177,13 @@ Partial Class formAdmin
         Label43.TabIndex = 8
         Label43.Text = "Sex :"
         ' 
-        ' TextBox3
+        ' TextBox4
         ' 
-        TextBox3.Font = New Font("Consolas", 12F)
-        TextBox3.Location = New Point(211, 310)
-        TextBox3.Name = "TextBox3"
-        TextBox3.Size = New Size(181, 26)
-        TextBox3.TabIndex = 7
+        TextBox4.Font = New Font("Consolas", 12F)
+        TextBox4.Location = New Point(211, 310)
+        TextBox4.Name = "TextBox4"
+        TextBox4.Size = New Size(181, 26)
+        TextBox4.TabIndex = 7
         ' 
         ' Label42
         ' 
@@ -1207,13 +1195,13 @@ Partial Class formAdmin
         Label42.TabIndex = 6
         Label42.Text = "Age :"
         ' 
-        ' TextBox1
+        ' TextBox0
         ' 
-        TextBox1.Font = New Font("Consolas", 12F)
-        TextBox1.Location = New Point(211, 170)
-        TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(470, 26)
-        TextBox1.TabIndex = 3
+        TextBox0.Font = New Font("Consolas", 12F)
+        TextBox0.Location = New Point(211, 170)
+        TextBox0.Name = "TextBox0"
+        TextBox0.Size = New Size(470, 26)
+        TextBox0.TabIndex = 3
         ' 
         ' Label40
         ' 
@@ -1244,25 +1232,19 @@ Partial Class formAdmin
         btnRefresh.Text = "Refresh"
         btnRefresh.UseVisualStyleBackColor = True
         ' 
-        ' Label47
-        ' 
-        Label47.AutoSize = True
-        Label47.Font = New Font("Consolas", 36F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
-        Label47.Location = New Point(164, 68)
-        Label47.Name = "Label47"
-        Label47.Size = New Size(466, 56)
-        Label47.TabIndex = 18
-        Label47.Text = "Customer Details:"
-        ' 
         ' formAdmin
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
+        BackColor = Color.Snow
         ClientSize = New Size(800, 598)
         Controls.Add(btnRefresh)
         Controls.Add(Label1)
         Controls.Add(tbcAdmin)
+        FormBorderStyle = FormBorderStyle.FixedSingle
         Name = "formAdmin"
+        ShowIcon = False
+        StartPosition = FormStartPosition.CenterScreen
         Text = "formAdmin"
         tbcAdmin.ResumeLayout(False)
         tabAdminInfo.ResumeLayout(False)
@@ -1390,18 +1372,16 @@ Partial Class formAdmin
     Friend WithEvents nudPresidentialRoomNumbers As NumericUpDown
     Friend WithEvents nudStandardRoomNumbers As NumericUpDown
     Friend WithEvents Label40 As Label
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Label41 As Label
     Friend WithEvents TextBox6 As TextBox
     Friend WithEvents Label45 As Label
-    Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents Label44 As Label
     Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents Label42 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox7 As TextBox
-    Friend WithEvents Label46 As Label
+    Friend WithEvents Label44 As Label
     Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents Label42 As Label
+    Friend WithEvents TextBox0 As TextBox
+    Friend WithEvents TextBox2 As TextBox
     Friend WithEvents Label43 As Label
     Friend WithEvents Label47 As Label
 End Class

@@ -3,4 +3,5 @@
         Label2.Text = formBooking.intReceiptNumber
     End Sub
 
+
 End Class

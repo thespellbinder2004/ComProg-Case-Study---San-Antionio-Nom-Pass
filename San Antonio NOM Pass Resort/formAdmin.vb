@@ -2,9 +2,6 @@
 
     Dim listCustomer As List(Of String) = Globals.getCustomerList()
     Dim listCurCustomer As List(Of String)
-    Class Guests
-
-    End Class
 
 
     'Customer Info List 
@@ -30,10 +27,23 @@
 
         If colName = "columnEdit" Then
             listCurCustomer = Globals.getSplitString(listCustomer(rowIndex))
+            tbcAdmin.SelectedTab = tabGuestInfo
+
+            TextBox0.Text = listCurCustomer(0)
+            TextBox1.Text = listCurCustomer(1)
+            TextBox2.Text = listCurCustomer(2)
+            TextBox3.Text = listCurCustomer(3)
+            TextBox4.Text = listCurCustomer(4)
+
+
             For i = 0 To listCurCustomer.Count - 1
-                MsgBox(listCurCustomer(i))
+                'MsgBox(listCurCustomer(i))
+
             Next
+
         End If
+
+
     End Sub
     'GUEST TAB BY JOSEPH
     'END ------------------------------------------
@@ -60,6 +70,12 @@
             dgvGuestTable.Rows.Add("Edit", listInfo(0), listInfo(1), listInfo(4), listInfo(5), listInfo(10))
 
         Next
+
+
+    End Sub
+
+    Private Sub tabGuestInfo_Click(sender As Object, e As EventArgs) Handles tabGuestInfo.Click
+
     End Sub
 
 

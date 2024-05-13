@@ -109,14 +109,23 @@ Partial Class formAdmin
         columnDeparture = New DataGridViewTextBoxColumn()
         columnTotalGuests = New DataGridViewTextBoxColumn()
         tabGuestInfo = New TabPage()
-        dgvGuestInfo = New DataGridView()
-        DataGridViewTextBoxColumn1 = New DataGridViewTextBoxColumn()
-        DataGridViewTextBoxColumn2 = New DataGridViewTextBoxColumn()
-        DataGridViewTextBoxColumn3 = New DataGridViewTextBoxColumn()
-        DataGridViewTextBoxColumn4 = New DataGridViewTextBoxColumn()
-        DataGridViewTextBoxColumn5 = New DataGridViewTextBoxColumn()
+        TextBox7 = New TextBox()
+        Label46 = New Label()
+        TextBox2 = New TextBox()
+        Label41 = New Label()
+        TextBox6 = New TextBox()
+        Label45 = New Label()
+        TextBox5 = New TextBox()
+        Label44 = New Label()
+        TextBox4 = New TextBox()
+        Label43 = New Label()
+        TextBox3 = New TextBox()
+        Label42 = New Label()
+        TextBox1 = New TextBox()
+        Label40 = New Label()
         Label1 = New Label()
         btnRefresh = New Button()
+        Label47 = New Label()
         tbcAdmin.SuspendLayout()
         tabAdminInfo.SuspendLayout()
         GroupBox1.SuspendLayout()
@@ -138,7 +147,6 @@ Partial Class formAdmin
         tabGuests.SuspendLayout()
         CType(dgvGuestTable, ComponentModel.ISupportInitialize).BeginInit()
         tabGuestInfo.SuspendLayout()
-        CType(dgvGuestInfo, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' tbcAdmin
@@ -176,7 +184,7 @@ Partial Class formAdmin
         tabAdminInfo.Controls.Add(Label21)
         tabAdminInfo.Location = New Point(4, 24)
         tabAdminInfo.Name = "tabAdminInfo"
-        tabAdminInfo.Padding = New Padding(3, 3, 3, 3)
+        tabAdminInfo.Padding = New Padding(3)
         tabAdminInfo.Size = New Size(793, 502)
         tabAdminInfo.TabIndex = 0
         tabAdminInfo.Text = "Admin Info"
@@ -495,7 +503,7 @@ Partial Class formAdmin
         tabRooms.Controls.Add(lblSingleRoom)
         tabRooms.Location = New Point(4, 24)
         tabRooms.Name = "tabRooms"
-        tabRooms.Padding = New Padding(3, 3, 3, 3)
+        tabRooms.Padding = New Padding(3)
         tabRooms.Size = New Size(793, 502)
         tabRooms.TabIndex = 1
         tabRooms.Text = "Rooms"
@@ -1069,7 +1077,21 @@ Partial Class formAdmin
         ' 
         ' tabGuestInfo
         ' 
-        tabGuestInfo.Controls.Add(dgvGuestInfo)
+        tabGuestInfo.Controls.Add(Label47)
+        tabGuestInfo.Controls.Add(TextBox7)
+        tabGuestInfo.Controls.Add(Label46)
+        tabGuestInfo.Controls.Add(TextBox2)
+        tabGuestInfo.Controls.Add(Label41)
+        tabGuestInfo.Controls.Add(TextBox6)
+        tabGuestInfo.Controls.Add(Label45)
+        tabGuestInfo.Controls.Add(TextBox5)
+        tabGuestInfo.Controls.Add(Label44)
+        tabGuestInfo.Controls.Add(TextBox4)
+        tabGuestInfo.Controls.Add(Label43)
+        tabGuestInfo.Controls.Add(TextBox3)
+        tabGuestInfo.Controls.Add(Label42)
+        tabGuestInfo.Controls.Add(TextBox1)
+        tabGuestInfo.Controls.Add(Label40)
         tabGuestInfo.Location = New Point(4, 24)
         tabGuestInfo.Name = "tabGuestInfo"
         tabGuestInfo.Size = New Size(793, 502)
@@ -1077,63 +1099,131 @@ Partial Class formAdmin
         tabGuestInfo.Text = "Guest Info"
         tabGuestInfo.UseVisualStyleBackColor = True
         ' 
-        ' dgvGuestInfo
+        ' TextBox7
         ' 
-        dgvGuestInfo.AllowUserToAddRows = False
-        dgvGuestInfo.AllowUserToDeleteRows = False
-        dgvGuestInfo.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        dgvGuestInfo.Columns.AddRange(New DataGridViewColumn() {DataGridViewTextBoxColumn1, DataGridViewTextBoxColumn2, DataGridViewTextBoxColumn3, DataGridViewTextBoxColumn4, DataGridViewTextBoxColumn5})
-        dgvGuestInfo.Location = New Point(0, 0)
-        dgvGuestInfo.Name = "dgvGuestInfo"
-        dgvGuestInfo.RowHeadersVisible = False
-        dgvGuestInfo.RowHeadersWidth = 51
-        dgvGuestInfo.Size = New Size(793, 502)
-        dgvGuestInfo.TabIndex = 1
+        TextBox7.Font = New Font("Consolas", 12F)
+        TextBox7.Location = New Point(548, 355)
+        TextBox7.Name = "TextBox7"
+        TextBox7.Size = New Size(133, 26)
+        TextBox7.TabIndex = 17
         ' 
-        ' DataGridViewTextBoxColumn1
+        ' Label46
         ' 
-        DataGridViewTextBoxColumn1.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
-        DataGridViewTextBoxColumn1.HeaderText = "First Name"
-        DataGridViewTextBoxColumn1.MinimumWidth = 10
-        DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
-        DataGridViewTextBoxColumn1.ReadOnly = True
-        DataGridViewTextBoxColumn1.Resizable = DataGridViewTriState.False
+        Label46.AutoSize = True
+        Label46.Font = New Font("Consolas", 12F)
+        Label46.Location = New Point(398, 358)
+        Label46.Name = "Label46"
+        Label46.Size = New Size(144, 19)
+        Label46.TabIndex = 16
+        Label46.Text = "Total of Guest:"
         ' 
-        ' DataGridViewTextBoxColumn2
+        ' TextBox2
         ' 
-        DataGridViewTextBoxColumn2.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
-        DataGridViewTextBoxColumn2.HeaderText = "Last Name"
-        DataGridViewTextBoxColumn2.MinimumWidth = 6
-        DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        DataGridViewTextBoxColumn2.ReadOnly = True
-        DataGridViewTextBoxColumn2.Resizable = DataGridViewTriState.False
+        TextBox2.Font = New Font("Consolas", 12F)
+        TextBox2.Location = New Point(211, 217)
+        TextBox2.Name = "TextBox2"
+        TextBox2.Size = New Size(470, 26)
+        TextBox2.TabIndex = 15
         ' 
-        ' DataGridViewTextBoxColumn3
+        ' Label41
         ' 
-        DataGridViewTextBoxColumn3.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
-        DataGridViewTextBoxColumn3.HeaderText = "Sex"
-        DataGridViewTextBoxColumn3.MinimumWidth = 6
-        DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
-        DataGridViewTextBoxColumn3.ReadOnly = True
-        DataGridViewTextBoxColumn3.Resizable = DataGridViewTriState.False
+        Label41.AutoSize = True
+        Label41.Font = New Font("Consolas", 12F)
+        Label41.Location = New Point(82, 220)
+        Label41.Name = "Label41"
+        Label41.Size = New Size(99, 19)
+        Label41.TabIndex = 14
+        Label41.Text = "Last Name:"
         ' 
-        ' DataGridViewTextBoxColumn4
+        ' TextBox6
         ' 
-        DataGridViewTextBoxColumn4.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
-        DataGridViewTextBoxColumn4.HeaderText = "Birthday"
-        DataGridViewTextBoxColumn4.MinimumWidth = 6
-        DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
-        DataGridViewTextBoxColumn4.ReadOnly = True
-        DataGridViewTextBoxColumn4.Resizable = DataGridViewTriState.False
+        TextBox6.Font = New Font("Consolas", 12F)
+        TextBox6.Location = New Point(211, 263)
+        TextBox6.Name = "TextBox6"
+        TextBox6.Size = New Size(470, 26)
+        TextBox6.TabIndex = 13
         ' 
-        ' DataGridViewTextBoxColumn5
+        ' Label45
         ' 
-        DataGridViewTextBoxColumn5.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
-        DataGridViewTextBoxColumn5.HeaderText = "Total Guests"
-        DataGridViewTextBoxColumn5.MinimumWidth = 6
-        DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
-        DataGridViewTextBoxColumn5.ReadOnly = True
-        DataGridViewTextBoxColumn5.Resizable = DataGridViewTriState.False
+        Label45.AutoSize = True
+        Label45.Font = New Font("Consolas", 12F)
+        Label45.Location = New Point(82, 266)
+        Label45.Name = "Label45"
+        Label45.Size = New Size(90, 19)
+        Label45.TabIndex = 12
+        Label45.Text = "Address :"
+        ' 
+        ' TextBox5
+        ' 
+        TextBox5.Font = New Font("Consolas", 12F)
+        TextBox5.Location = New Point(211, 355)
+        TextBox5.Name = "TextBox5"
+        TextBox5.Size = New Size(181, 26)
+        TextBox5.TabIndex = 11
+        ' 
+        ' Label44
+        ' 
+        Label44.AutoSize = True
+        Label44.Font = New Font("Consolas", 12F)
+        Label44.Location = New Point(82, 358)
+        Label44.Name = "Label44"
+        Label44.Size = New Size(99, 19)
+        Label44.TabIndex = 10
+        Label44.Text = "Birthday :"
+        ' 
+        ' TextBox4
+        ' 
+        TextBox4.Font = New Font("Consolas", 12F)
+        TextBox4.Location = New Point(458, 313)
+        TextBox4.Name = "TextBox4"
+        TextBox4.Size = New Size(223, 26)
+        TextBox4.TabIndex = 9
+        ' 
+        ' Label43
+        ' 
+        Label43.AutoSize = True
+        Label43.Font = New Font("Consolas", 12F)
+        Label43.Location = New Point(398, 313)
+        Label43.Name = "Label43"
+        Label43.Size = New Size(54, 19)
+        Label43.TabIndex = 8
+        Label43.Text = "Sex :"
+        ' 
+        ' TextBox3
+        ' 
+        TextBox3.Font = New Font("Consolas", 12F)
+        TextBox3.Location = New Point(211, 310)
+        TextBox3.Name = "TextBox3"
+        TextBox3.Size = New Size(181, 26)
+        TextBox3.TabIndex = 7
+        ' 
+        ' Label42
+        ' 
+        Label42.AutoSize = True
+        Label42.Font = New Font("Consolas", 12F)
+        Label42.Location = New Point(82, 313)
+        Label42.Name = "Label42"
+        Label42.Size = New Size(54, 19)
+        Label42.TabIndex = 6
+        Label42.Text = "Age :"
+        ' 
+        ' TextBox1
+        ' 
+        TextBox1.Font = New Font("Consolas", 12F)
+        TextBox1.Location = New Point(211, 170)
+        TextBox1.Name = "TextBox1"
+        TextBox1.Size = New Size(470, 26)
+        TextBox1.TabIndex = 3
+        ' 
+        ' Label40
+        ' 
+        Label40.AutoSize = True
+        Label40.Font = New Font("Consolas", 12F)
+        Label40.Location = New Point(82, 173)
+        Label40.Name = "Label40"
+        Label40.Size = New Size(117, 19)
+        Label40.TabIndex = 0
+        Label40.Text = "First Name :"
         ' 
         ' Label1
         ' 
@@ -1153,6 +1243,16 @@ Partial Class formAdmin
         btnRefresh.TabIndex = 2
         btnRefresh.Text = "Refresh"
         btnRefresh.UseVisualStyleBackColor = True
+        ' 
+        ' Label47
+        ' 
+        Label47.AutoSize = True
+        Label47.Font = New Font("Consolas", 36F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label47.Location = New Point(164, 68)
+        Label47.Name = "Label47"
+        Label47.Size = New Size(466, 56)
+        Label47.TabIndex = 18
+        Label47.Text = "Customer Details:"
         ' 
         ' formAdmin
         ' 
@@ -1188,7 +1288,7 @@ Partial Class formAdmin
         tabGuests.ResumeLayout(False)
         CType(dgvGuestTable, ComponentModel.ISupportInitialize).EndInit()
         tabGuestInfo.ResumeLayout(False)
-        CType(dgvGuestInfo, ComponentModel.ISupportInitialize).EndInit()
+        tabGuestInfo.PerformLayout()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -1275,12 +1375,6 @@ Partial Class formAdmin
     Friend WithEvents columnDeparture As DataGridViewTextBoxColumn
     Friend WithEvents columnTotalGuests As DataGridViewTextBoxColumn
     Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents dgvGuestInfo As DataGridView
-    Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn5 As DataGridViewTextBoxColumn
     Friend WithEvents nudSingleAvailableRooms As NumericUpDown
     Friend WithEvents nudTwinAvailableRooms As NumericUpDown
     Friend WithEvents nudKingAvailableRooms As NumericUpDown
@@ -1295,4 +1389,19 @@ Partial Class formAdmin
     Friend WithEvents nudSingleRoomNumbers As NumericUpDown
     Friend WithEvents nudPresidentialRoomNumbers As NumericUpDown
     Friend WithEvents nudStandardRoomNumbers As NumericUpDown
+    Friend WithEvents Label40 As Label
+    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents Label41 As Label
+    Friend WithEvents TextBox6 As TextBox
+    Friend WithEvents Label45 As Label
+    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents Label44 As Label
+    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents Label42 As Label
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents TextBox7 As TextBox
+    Friend WithEvents Label46 As Label
+    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents Label43 As Label
+    Friend WithEvents Label47 As Label
 End Class

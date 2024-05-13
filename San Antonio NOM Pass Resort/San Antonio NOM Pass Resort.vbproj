@@ -50,7 +50,6 @@
 	
   <ItemGroup>
     <Folder Include="My Project\NewFolder\" />
-    <Folder Include="Pictures\" />
   </ItemGroup>
 
   <ItemGroup>

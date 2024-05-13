@@ -58,12 +58,8 @@
 
             Dim listInfo As List(Of String) = Globals.getSplitString(listCustomer(i))
             dgvGuestTable.Rows.Add("Edit", listInfo(0), listInfo(1), listInfo(4), listInfo(5), listInfo(10))
-            dgvGuestInfo.Rows.Add(listInfo(0), listInfo(1), listInfo(2), listInfo(3), listInfo(10))
+
         Next
-    End Sub
-
-    Private Sub tabRooms_Click(sender As Object, e As EventArgs) Handles tabRooms.Click
-
     End Sub
 
 

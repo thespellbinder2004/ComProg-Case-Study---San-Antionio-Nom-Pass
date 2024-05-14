@@ -51,13 +51,7 @@ Partial Class formAdmin
         Label22 = New Label()
         Label21 = New Label()
         tabRooms = New TabPage()
-        nudPresidentialRoomNumbers = New NumericUpDown()
-        nudStandardRoomNumbers = New NumericUpDown()
-        nudExecutiveRoomNumbers = New NumericUpDown()
-        nudTwinRoomNumbers = New NumericUpDown()
-        nudKingRoomNumbers = New NumericUpDown()
-        nudQueenRoomNumbers = New NumericUpDown()
-        nudSingleRoomNumbers = New NumericUpDown()
+        cbSingleRoomNumbers = New ComboBox()
         nudPresidentialAvailableRooms = New NumericUpDown()
         nudExecutiveAvailableRooms = New NumericUpDown()
         nudStandardAvailableRooms = New NumericUpDown()
@@ -124,18 +118,16 @@ Partial Class formAdmin
         Label40 = New Label()
         Label1 = New Label()
         btnRefresh = New Button()
-        ComboBox3 = New ComboBox()
+        cbQueenRoomNumbers = New ComboBox()
+        cbTwinRoomNumbers = New ComboBox()
+        Me.cbPresidentialRoomNumbers = New ComboBox()
+        cbKingRoomNumbers = New ComboBox()
+        cbStandardRoomNumbers = New ComboBox()
+        Me.cbExecutiveRoomNumbers = New ComboBox()
         tbcAdmin.SuspendLayout()
         tabAdminInfo.SuspendLayout()
         GroupBox1.SuspendLayout()
         tabRooms.SuspendLayout()
-        CType(nudPresidentialRoomNumbers, ComponentModel.ISupportInitialize).BeginInit()
-        CType(nudStandardRoomNumbers, ComponentModel.ISupportInitialize).BeginInit()
-        CType(nudExecutiveRoomNumbers, ComponentModel.ISupportInitialize).BeginInit()
-        CType(nudTwinRoomNumbers, ComponentModel.ISupportInitialize).BeginInit()
-        CType(nudKingRoomNumbers, ComponentModel.ISupportInitialize).BeginInit()
-        CType(nudQueenRoomNumbers, ComponentModel.ISupportInitialize).BeginInit()
-        CType(nudSingleRoomNumbers, ComponentModel.ISupportInitialize).BeginInit()
         CType(nudPresidentialAvailableRooms, ComponentModel.ISupportInitialize).BeginInit()
         CType(nudExecutiveAvailableRooms, ComponentModel.ISupportInitialize).BeginInit()
         CType(nudStandardAvailableRooms, ComponentModel.ISupportInitialize).BeginInit()
@@ -461,14 +453,13 @@ Partial Class formAdmin
         ' tabRooms
         ' 
         tabRooms.AutoScroll = True
-        tabRooms.Controls.Add(ComboBox3)
-        tabRooms.Controls.Add(nudPresidentialRoomNumbers)
-        tabRooms.Controls.Add(nudStandardRoomNumbers)
-        tabRooms.Controls.Add(nudExecutiveRoomNumbers)
-        tabRooms.Controls.Add(nudTwinRoomNumbers)
-        tabRooms.Controls.Add(nudKingRoomNumbers)
-        tabRooms.Controls.Add(nudQueenRoomNumbers)
-        tabRooms.Controls.Add(nudSingleRoomNumbers)
+        tabRooms.Controls.Add(Me.cbExecutiveRoomNumbers)
+        tabRooms.Controls.Add(cbStandardRoomNumbers)
+        tabRooms.Controls.Add(cbKingRoomNumbers)
+        tabRooms.Controls.Add(Me.cbPresidentialRoomNumbers)
+        tabRooms.Controls.Add(cbTwinRoomNumbers)
+        tabRooms.Controls.Add(cbQueenRoomNumbers)
+        tabRooms.Controls.Add(cbSingleRoomNumbers)
         tabRooms.Controls.Add(nudPresidentialAvailableRooms)
         tabRooms.Controls.Add(nudExecutiveAvailableRooms)
         tabRooms.Controls.Add(nudStandardAvailableRooms)
@@ -520,54 +511,13 @@ Partial Class formAdmin
         tabRooms.Text = "Rooms"
         tabRooms.UseVisualStyleBackColor = True
         ' 
-        ' nudPresidentialRoomNumbers
+        ' cbSingleRoomNumbers
         ' 
-        nudPresidentialRoomNumbers.Location = New Point(773, 381)
-        nudPresidentialRoomNumbers.Name = "nudPresidentialRoomNumbers"
-        nudPresidentialRoomNumbers.Size = New Size(123, 27)
-        nudPresidentialRoomNumbers.TabIndex = 116
-        ' 
-        ' nudStandardRoomNumbers
-        ' 
-        nudStandardRoomNumbers.Location = New Point(453, 381)
-        nudStandardRoomNumbers.Name = "nudStandardRoomNumbers"
-        nudStandardRoomNumbers.Size = New Size(123, 27)
-        nudStandardRoomNumbers.TabIndex = 115
-        ' 
-        ' nudExecutiveRoomNumbers
-        ' 
-        nudExecutiveRoomNumbers.Location = New Point(453, 605)
-        nudExecutiveRoomNumbers.Name = "nudExecutiveRoomNumbers"
-        nudExecutiveRoomNumbers.Size = New Size(123, 27)
-        nudExecutiveRoomNumbers.TabIndex = 114
-        ' 
-        ' nudTwinRoomNumbers
-        ' 
-        nudTwinRoomNumbers.Location = New Point(453, 151)
-        nudTwinRoomNumbers.Name = "nudTwinRoomNumbers"
-        nudTwinRoomNumbers.Size = New Size(123, 27)
-        nudTwinRoomNumbers.TabIndex = 113
-        ' 
-        ' nudKingRoomNumbers
-        ' 
-        nudKingRoomNumbers.Location = New Point(134, 605)
-        nudKingRoomNumbers.Name = "nudKingRoomNumbers"
-        nudKingRoomNumbers.Size = New Size(123, 27)
-        nudKingRoomNumbers.TabIndex = 112
-        ' 
-        ' nudQueenRoomNumbers
-        ' 
-        nudQueenRoomNumbers.Location = New Point(133, 381)
-        nudQueenRoomNumbers.Name = "nudQueenRoomNumbers"
-        nudQueenRoomNumbers.Size = New Size(123, 27)
-        nudQueenRoomNumbers.TabIndex = 111
-        ' 
-        ' nudSingleRoomNumbers
-        ' 
-        nudSingleRoomNumbers.Location = New Point(133, 151)
-        nudSingleRoomNumbers.Name = "nudSingleRoomNumbers"
-        nudSingleRoomNumbers.Size = New Size(123, 27)
-        nudSingleRoomNumbers.TabIndex = 110
+        cbSingleRoomNumbers.FormattingEnabled = True
+        cbSingleRoomNumbers.Location = New Point(133, 151)
+        cbSingleRoomNumbers.Name = "cbSingleRoomNumbers"
+        cbSingleRoomNumbers.Size = New Size(124, 28)
+        cbSingleRoomNumbers.TabIndex = 117
         ' 
         ' nudPresidentialAvailableRooms
         ' 
@@ -1234,13 +1184,53 @@ Partial Class formAdmin
         btnRefresh.Text = "Refresh"
         btnRefresh.UseVisualStyleBackColor = True
         ' 
-        ' ComboBox3
+        ' cbQueenRoomNumbers
         ' 
-        ComboBox3.FormattingEnabled = True
-        ComboBox3.Location = New Point(281, 233)
-        ComboBox3.Name = "ComboBox3"
-        ComboBox3.Size = New Size(151, 28)
-        ComboBox3.TabIndex = 117
+        cbQueenRoomNumbers.FormattingEnabled = True
+        cbQueenRoomNumbers.Location = New Point(133, 381)
+        cbQueenRoomNumbers.Name = "cbQueenRoomNumbers"
+        cbQueenRoomNumbers.Size = New Size(124, 28)
+        cbQueenRoomNumbers.TabIndex = 118
+        ' 
+        ' cbTwinRoomNumbers
+        ' 
+        cbTwinRoomNumbers.FormattingEnabled = True
+        cbTwinRoomNumbers.Location = New Point(454, 151)
+        cbTwinRoomNumbers.Name = "cbTwinRoomNumbers"
+        cbTwinRoomNumbers.Size = New Size(124, 28)
+        cbTwinRoomNumbers.TabIndex = 119
+        ' 
+        ' cbPresidentialRoomNumbers
+        ' 
+        Me.cbPresidentialRoomNumbers.FormattingEnabled = True
+        Me.cbPresidentialRoomNumbers.Location = New Point(772, 381)
+        Me.cbPresidentialRoomNumbers.Name = "cbPresidentialRoomNumbers"
+        Me.cbPresidentialRoomNumbers.Size = New Size(124, 28)
+        Me.cbPresidentialRoomNumbers.TabIndex = 120
+        ' 
+        ' cbKingRoomNumbers
+        ' 
+        cbKingRoomNumbers.FormattingEnabled = True
+        cbKingRoomNumbers.Location = New Point(134, 605)
+        cbKingRoomNumbers.Name = "cbKingRoomNumbers"
+        cbKingRoomNumbers.Size = New Size(124, 28)
+        cbKingRoomNumbers.TabIndex = 121
+        ' 
+        ' cbStandardRoomNumbers
+        ' 
+        cbStandardRoomNumbers.FormattingEnabled = True
+        cbStandardRoomNumbers.Location = New Point(454, 381)
+        cbStandardRoomNumbers.Name = "cbStandardRoomNumbers"
+        cbStandardRoomNumbers.Size = New Size(124, 28)
+        cbStandardRoomNumbers.TabIndex = 122
+        ' 
+        ' cbExecutiveRoomNumbers
+        ' 
+        Me.cbExecutiveRoomNumbers.FormattingEnabled = True
+        Me.cbExecutiveRoomNumbers.Location = New Point(454, 605)
+        Me.cbExecutiveRoomNumbers.Name = "cbExecutiveRoomNumbers"
+        Me.cbExecutiveRoomNumbers.Size = New Size(124, 28)
+        Me.cbExecutiveRoomNumbers.TabIndex = 123
         ' 
         ' formAdmin
         ' 
@@ -1264,13 +1254,6 @@ Partial Class formAdmin
         GroupBox1.PerformLayout()
         tabRooms.ResumeLayout(False)
         tabRooms.PerformLayout()
-        CType(nudPresidentialRoomNumbers, ComponentModel.ISupportInitialize).EndInit()
-        CType(nudStandardRoomNumbers, ComponentModel.ISupportInitialize).EndInit()
-        CType(nudExecutiveRoomNumbers, ComponentModel.ISupportInitialize).EndInit()
-        CType(nudTwinRoomNumbers, ComponentModel.ISupportInitialize).EndInit()
-        CType(nudKingRoomNumbers, ComponentModel.ISupportInitialize).EndInit()
-        CType(nudQueenRoomNumbers, ComponentModel.ISupportInitialize).EndInit()
-        CType(nudSingleRoomNumbers, ComponentModel.ISupportInitialize).EndInit()
         CType(nudPresidentialAvailableRooms, ComponentModel.ISupportInitialize).EndInit()
         CType(nudExecutiveAvailableRooms, ComponentModel.ISupportInitialize).EndInit()
         CType(nudStandardAvailableRooms, ComponentModel.ISupportInitialize).EndInit()
@@ -1377,9 +1360,6 @@ Partial Class formAdmin
     Friend WithEvents nudPresidentialAvailableRooms As NumericUpDown
     Friend WithEvents nudExecutiveRoomNumbers As NumericUpDown
     Friend WithEvents nudTwinRoomNumbers As NumericUpDown
-    Friend WithEvents nudKingRoomNumbers As NumericUpDown
-    Friend WithEvents nudQueenRoomNumbers As NumericUpDown
-    Friend WithEvents nudSingleRoomNumbers As NumericUpDown
     Friend WithEvents nudPresidentialRoomNumbers As NumericUpDown
     Friend WithEvents nudStandardRoomNumbers As NumericUpDown
     Friend WithEvents Label40 As Label
@@ -1395,5 +1375,11 @@ Partial Class formAdmin
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents Label43 As Label
     Friend WithEvents Label47 As Label
-    Friend WithEvents ComboBox3 As ComboBox
+    Friend WithEvents cbSingleRoomNumbers As ComboBox
+    Friend WithEvents cbKingRoomNumbers As ComboBox
+    Friend WithEvents ComboBox5 As ComboBox
+    Friend WithEvents cbTwinRoomNumbers As ComboBox
+    Friend WithEvents cbQueenRoomNumbers As ComboBox
+    Friend WithEvents ComboBox6 As ComboBox
+    Friend WithEvents cbStandardRoomNumbers As ComboBox
 End Class

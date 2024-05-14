@@ -42,7 +42,7 @@ Partial Class formReciept
         ' 
         Label1.AutoSize = True
         Label1.Font = New Font("Consolas", 20.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label1.Location = New Point(12, 9)
+        Label1.Location = New Point(30, 9)
         Label1.Name = "Label1"
         Label1.Size = New Size(179, 32)
         Label1.TabIndex = 1
@@ -52,7 +52,7 @@ Partial Class formReciept
         ' 
         Label2.AutoSize = True
         Label2.Font = New Font("Consolas", 20.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label2.Location = New Point(197, 9)
+        Label2.Location = New Point(215, 9)
         Label2.Name = "Label2"
         Label2.Size = New Size(104, 32)
         Label2.TabIndex = 2
@@ -62,7 +62,7 @@ Partial Class formReciept
         ' 
         Label10.AutoSize = True
         Label10.Font = New Font("Consolas", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label10.Location = New Point(12, 182)
+        Label10.Location = New Point(36, 177)
         Label10.Name = "Label10"
         Label10.Size = New Size(120, 18)
         Label10.TabIndex = 14
@@ -72,7 +72,7 @@ Partial Class formReciept
         ' 
         Label9.AutoSize = True
         Label9.Font = New Font("Consolas", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label9.Location = New Point(12, 153)
+        Label9.Location = New Point(36, 148)
         Label9.Name = "Label9"
         Label9.Size = New Size(104, 18)
         Label9.TabIndex = 13
@@ -82,7 +82,7 @@ Partial Class formReciept
         ' 
         Label11.AutoSize = True
         Label11.Font = New Font("Consolas", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label11.Location = New Point(12, 66)
+        Label11.Location = New Point(36, 61)
         Label11.Name = "Label11"
         Label11.Size = New Size(112, 18)
         Label11.TabIndex = 16
@@ -92,7 +92,7 @@ Partial Class formReciept
         ' 
         Label3.AutoSize = True
         Label3.Font = New Font("Consolas", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label3.Location = New Point(12, 95)
+        Label3.Location = New Point(36, 90)
         Label3.Name = "Label3"
         Label3.Size = New Size(144, 18)
         Label3.TabIndex = 17
@@ -102,7 +102,7 @@ Partial Class formReciept
         ' 
         Label4.AutoSize = True
         Label4.Font = New Font("Consolas", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label4.Location = New Point(39, 278)
+        Label4.Location = New Point(55, 265)
         Label4.Name = "Label4"
         Label4.Size = New Size(264, 36)
         Label4.TabIndex = 18
@@ -113,7 +113,7 @@ Partial Class formReciept
         ' 
         Label5.AutoSize = True
         Label5.Font = New Font("Consolas", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label5.Location = New Point(162, 66)
+        Label5.Location = New Point(186, 61)
         Label5.Name = "Label5"
         Label5.Size = New Size(0, 18)
         Label5.TabIndex = 19
@@ -122,7 +122,7 @@ Partial Class formReciept
         ' 
         txtGuestsName.BackColor = Color.Gainsboro
         txtGuestsName.BorderStyle = BorderStyle.FixedSingle
-        txtGuestsName.Location = New Point(130, 61)
+        txtGuestsName.Location = New Point(154, 56)
         txtGuestsName.Name = "txtGuestsName"
         txtGuestsName.Size = New Size(165, 23)
         txtGuestsName.TabIndex = 20
@@ -131,7 +131,7 @@ Partial Class formReciept
         ' 
         txtNumberOfGuest.BackColor = Color.Gainsboro
         txtNumberOfGuest.BorderStyle = BorderStyle.FixedSingle
-        txtNumberOfGuest.Location = New Point(162, 90)
+        txtNumberOfGuest.Location = New Point(186, 85)
         txtNumberOfGuest.Name = "txtNumberOfGuest"
         txtNumberOfGuest.Size = New Size(133, 23)
         txtNumberOfGuest.TabIndex = 21
@@ -140,7 +140,7 @@ Partial Class formReciept
         ' 
         txtArrivalDate.BackColor = Color.Gainsboro
         txtArrivalDate.BorderStyle = BorderStyle.FixedSingle
-        txtArrivalDate.Location = New Point(148, 148)
+        txtArrivalDate.Location = New Point(172, 143)
         txtArrivalDate.Name = "txtArrivalDate"
         txtArrivalDate.Size = New Size(147, 23)
         txtArrivalDate.TabIndex = 22
@@ -149,7 +149,7 @@ Partial Class formReciept
         ' 
         txtDepartureDate.BackColor = Color.Gainsboro
         txtDepartureDate.BorderStyle = BorderStyle.FixedSingle
-        txtDepartureDate.Location = New Point(148, 177)
+        txtDepartureDate.Location = New Point(172, 172)
         txtDepartureDate.Name = "txtDepartureDate"
         txtDepartureDate.Size = New Size(147, 23)
         txtDepartureDate.TabIndex = 23
@@ -158,7 +158,7 @@ Partial Class formReciept
         ' 
         txtTotalPayment.BackColor = Color.Gainsboro
         txtTotalPayment.BorderStyle = BorderStyle.FixedSingle
-        txtTotalPayment.Location = New Point(162, 226)
+        txtTotalPayment.Location = New Point(186, 221)
         txtTotalPayment.Name = "txtTotalPayment"
         txtTotalPayment.Size = New Size(133, 23)
         txtTotalPayment.TabIndex = 25
@@ -167,7 +167,7 @@ Partial Class formReciept
         ' 
         Label6.AutoSize = True
         Label6.Font = New Font("Consolas", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label6.Location = New Point(12, 231)
+        Label6.Location = New Point(36, 226)
         Label6.Name = "Label6"
         Label6.Size = New Size(120, 18)
         Label6.TabIndex = 24
@@ -177,6 +177,7 @@ Partial Class formReciept
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
+        BackColor = SystemColors.ButtonHighlight
         ClientSize = New Size(359, 323)
         Controls.Add(txtTotalPayment)
         Controls.Add(Label6)
@@ -193,6 +194,7 @@ Partial Class formReciept
         Controls.Add(Label2)
         Controls.Add(Label1)
         Name = "formReciept"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "formReciept"
         ResumeLayout(False)
         PerformLayout()

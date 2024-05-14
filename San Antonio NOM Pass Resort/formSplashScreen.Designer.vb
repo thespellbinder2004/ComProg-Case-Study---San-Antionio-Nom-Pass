@@ -24,18 +24,9 @@ Partial Class formSplashScreen
     Private Sub InitializeComponent()
         components = New ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(formSplashScreen))
-        Title = New Label()
         Timer1 = New Timer(components)
         ProgressBar1 = New ProgressBar()
         SuspendLayout()
-        ' 
-        ' Title
-        ' 
-        resources.ApplyResources(Title, "Title")
-        Title.BackColor = Color.Transparent
-        Title.ForeColor = SystemColors.ActiveCaptionText
-        Title.Name = "Title"
-        Title.UseWaitCursor = True
         ' 
         ' Timer1
         ' 
@@ -54,16 +45,16 @@ Partial Class formSplashScreen
         BackColor = SystemColors.MenuBar
         ControlBox = False
         Controls.Add(ProgressBar1)
-        Controls.Add(Title)
+        DoubleBuffered = True
         FormBorderStyle = FormBorderStyle.None
         MaximizeBox = False
+        MdiChildrenMinimizedAnchorBottom = False
+        MinimizeBox = False
         Name = "formSplashScreen"
+        ShowIcon = False
         UseWaitCursor = True
         ResumeLayout(False)
-        PerformLayout()
     End Sub
-
-    Friend WithEvents Title As Label
     Friend WithEvents Timer1 As Timer
     Friend WithEvents ProgressBar1 As ProgressBar
 End Class

@@ -51,13 +51,13 @@ Partial Class formAdmin
         Label22 = New Label()
         Label21 = New Label()
         tabRooms = New TabPage()
-        nudPresidentialRoomNumbers = New NumericUpDown()
-        nudStandardRoomNumbers = New NumericUpDown()
-        nudExecutiveRoomNumbers = New NumericUpDown()
-        nudTwinRoomNumbers = New NumericUpDown()
-        nudKingRoomNumbers = New NumericUpDown()
-        nudQueenRoomNumbers = New NumericUpDown()
-        nudSingleRoomNumbers = New NumericUpDown()
+        cbPresidentialRoomNumbers = New ComboBox()
+        cbExecutiveRoomNumbers = New ComboBox()
+        cbStandardRoomNumbers = New ComboBox()
+        cbTwinRoomNumbers = New ComboBox()
+        cbKingRoomNumbers = New ComboBox()
+        cbQueenRoomNumbers = New ComboBox()
+        cbSingleRoomNumbers = New ComboBox()
         nudPresidentialAvailableRooms = New NumericUpDown()
         nudExecutiveAvailableRooms = New NumericUpDown()
         nudStandardAvailableRooms = New NumericUpDown()
@@ -121,13 +121,6 @@ Partial Class formAdmin
         tabAdminInfo.SuspendLayout()
         GroupBox1.SuspendLayout()
         tabRooms.SuspendLayout()
-        CType(nudPresidentialRoomNumbers, ComponentModel.ISupportInitialize).BeginInit()
-        CType(nudStandardRoomNumbers, ComponentModel.ISupportInitialize).BeginInit()
-        CType(nudExecutiveRoomNumbers, ComponentModel.ISupportInitialize).BeginInit()
-        CType(nudTwinRoomNumbers, ComponentModel.ISupportInitialize).BeginInit()
-        CType(nudKingRoomNumbers, ComponentModel.ISupportInitialize).BeginInit()
-        CType(nudQueenRoomNumbers, ComponentModel.ISupportInitialize).BeginInit()
-        CType(nudSingleRoomNumbers, ComponentModel.ISupportInitialize).BeginInit()
         CType(nudPresidentialAvailableRooms, ComponentModel.ISupportInitialize).BeginInit()
         CType(nudExecutiveAvailableRooms, ComponentModel.ISupportInitialize).BeginInit()
         CType(nudStandardAvailableRooms, ComponentModel.ISupportInitialize).BeginInit()
@@ -147,10 +140,11 @@ Partial Class formAdmin
         tbcAdmin.Controls.Add(tabRooms)
         tbcAdmin.Controls.Add(tabGuests)
         tbcAdmin.Controls.Add(tabGuestInfo)
-        tbcAdmin.Location = New Point(0, 70)
+        tbcAdmin.Location = New Point(0, 93)
+        tbcAdmin.Margin = New Padding(3, 4, 3, 4)
         tbcAdmin.Name = "tbcAdmin"
         tbcAdmin.SelectedIndex = 0
-        tbcAdmin.Size = New Size(801, 530)
+        tbcAdmin.Size = New Size(915, 707)
         tbcAdmin.SizeMode = TabSizeMode.Fixed
         tbcAdmin.TabIndex = 0
         ' 
@@ -174,49 +168,54 @@ Partial Class formAdmin
         tabAdminInfo.Controls.Add(Label23)
         tabAdminInfo.Controls.Add(Label22)
         tabAdminInfo.Controls.Add(Label21)
-        tabAdminInfo.Location = New Point(4, 24)
+        tabAdminInfo.Location = New Point(4, 29)
+        tabAdminInfo.Margin = New Padding(3, 4, 3, 4)
         tabAdminInfo.Name = "tabAdminInfo"
-        tabAdminInfo.Padding = New Padding(3, 3, 3, 3)
-        tabAdminInfo.Size = New Size(793, 502)
+        tabAdminInfo.Padding = New Padding(3, 4, 3, 4)
+        tabAdminInfo.Size = New Size(907, 674)
         tabAdminInfo.TabIndex = 0
         tabAdminInfo.Text = "Admin Info"
         tabAdminInfo.UseVisualStyleBackColor = True
         ' 
         ' txtAdminContact2
         ' 
-        txtAdminContact2.Location = New Point(220, 439)
+        txtAdminContact2.Location = New Point(251, 585)
+        txtAdminContact2.Margin = New Padding(3, 4, 3, 4)
         txtAdminContact2.Name = "txtAdminContact2"
-        txtAdminContact2.Size = New Size(225, 23)
+        txtAdminContact2.Size = New Size(257, 27)
         txtAdminContact2.TabIndex = 28
         ' 
         ' txtAdminContact1
         ' 
-        txtAdminContact1.Location = New Point(220, 406)
+        txtAdminContact1.Location = New Point(251, 541)
+        txtAdminContact1.Margin = New Padding(3, 4, 3, 4)
         txtAdminContact1.Name = "txtAdminContact1"
-        txtAdminContact1.Size = New Size(225, 23)
+        txtAdminContact1.Size = New Size(257, 27)
         txtAdminContact1.TabIndex = 27
         ' 
         ' txtAdminRole
         ' 
-        txtAdminRole.Location = New Point(220, 377)
+        txtAdminRole.Location = New Point(251, 503)
+        txtAdminRole.Margin = New Padding(3, 4, 3, 4)
         txtAdminRole.Name = "txtAdminRole"
-        txtAdminRole.Size = New Size(225, 23)
+        txtAdminRole.Size = New Size(257, 27)
         txtAdminRole.TabIndex = 26
         ' 
         ' txtCurrentAdmin
         ' 
-        txtCurrentAdmin.Location = New Point(220, 348)
+        txtCurrentAdmin.Location = New Point(251, 464)
+        txtCurrentAdmin.Margin = New Padding(3, 4, 3, 4)
         txtCurrentAdmin.Name = "txtCurrentAdmin"
-        txtCurrentAdmin.Size = New Size(225, 23)
+        txtCurrentAdmin.Size = New Size(257, 27)
         txtCurrentAdmin.TabIndex = 25
         ' 
         ' Label39
         ' 
         Label39.AutoSize = True
         Label39.Font = New Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label39.Location = New Point(65, 409)
+        Label39.Location = New Point(74, 545)
         Label39.Name = "Label39"
-        Label39.Size = New Size(90, 19)
+        Label39.Size = New Size(109, 23)
         Label39.TabIndex = 24
         Label39.Text = "Contacts:"
         ' 
@@ -224,9 +223,9 @@ Partial Class formAdmin
         ' 
         Label38.AutoSize = True
         Label38.Font = New Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label38.Location = New Point(65, 380)
+        Label38.Location = New Point(74, 507)
         Label38.Name = "Label38"
-        Label38.Size = New Size(135, 19)
+        Label38.Size = New Size(164, 23)
         Label38.TabIndex = 23
         Label38.Text = "Role/Position:"
         ' 
@@ -234,9 +233,9 @@ Partial Class formAdmin
         ' 
         Label37.AutoSize = True
         Label37.Font = New Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label37.Location = New Point(65, 352)
+        Label37.Location = New Point(74, 469)
         Label37.Name = "Label37"
-        Label37.Size = New Size(135, 19)
+        Label37.Size = New Size(164, 23)
         Label37.TabIndex = 22
         Label37.Text = "Current Admin:"
         ' 
@@ -244,9 +243,9 @@ Partial Class formAdmin
         ' 
         Label30.AutoSize = True
         Label30.Font = New Font("Consolas", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label30.Location = New Point(17, 323)
+        Label30.Location = New Point(19, 431)
         Label30.Name = "Label30"
-        Label30.Size = New Size(162, 19)
+        Label30.Size = New Size(197, 23)
         Label30.TabIndex = 21
         Label30.Text = "Admin Information"
         ' 
@@ -254,9 +253,9 @@ Partial Class formAdmin
         ' 
         Label29.AutoSize = True
         Label29.Font = New Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label29.Location = New Point(184, 139)
+        Label29.Location = New Point(210, 185)
         Label29.Name = "Label29"
-        Label29.Size = New Size(261, 19)
+        Label29.Size = New Size(318, 23)
         Label29.TabIndex = 20
         Label29.Text = "https://SanAntonioResort.com"
         ' 
@@ -264,9 +263,9 @@ Partial Class formAdmin
         ' 
         Label28.AutoSize = True
         Label28.Font = New Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label28.Location = New Point(184, 118)
+        Label28.Location = New Point(210, 157)
         Label28.Name = "Label28"
-        Label28.Size = New Size(108, 19)
+        Label28.Size = New Size(131, 23)
         Label28.TabIndex = 19
         Label28.Text = "09123456789"
         ' 
@@ -274,9 +273,9 @@ Partial Class formAdmin
         ' 
         Label27.AutoSize = True
         Label27.Font = New Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label27.Location = New Point(184, 95)
+        Label27.Location = New Point(210, 127)
         Label27.Name = "Label27"
-        Label27.Size = New Size(216, 19)
+        Label27.Size = New Size(263, 23)
         Label27.TabIndex = 18
         Label27.Text = "sanantonio143@gmail.com"
         ' 
@@ -284,9 +283,9 @@ Partial Class formAdmin
         ' 
         Label26.AutoSize = True
         Label26.Font = New Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label26.Location = New Point(184, 70)
+        Label26.Location = New Point(210, 93)
         Label26.Name = "Label26"
-        Label26.Size = New Size(234, 19)
+        Label26.Size = New Size(285, 23)
         Label26.TabIndex = 17
         Label26.Text = "Kaliwa, Doon, Tarlac City"
         ' 
@@ -294,9 +293,9 @@ Partial Class formAdmin
         ' 
         Label25.AutoSize = True
         Label25.Font = New Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label25.Location = New Point(184, 44)
+        Label25.Location = New Point(210, 59)
         Label25.Name = "Label25"
-        Label25.Size = New Size(252, 19)
+        Label25.Size = New Size(307, 23)
         Label25.TabIndex = 16
         Label25.Text = "San Antonio Nom Pass Resort"
         ' 
@@ -311,9 +310,11 @@ Partial Class formAdmin
         GroupBox1.Controls.Add(Label32)
         GroupBox1.Controls.Add(Label31)
         GroupBox1.Font = New Font("Consolas", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        GroupBox1.Location = New Point(184, 173)
+        GroupBox1.Location = New Point(210, 231)
+        GroupBox1.Margin = New Padding(3, 4, 3, 4)
         GroupBox1.Name = "GroupBox1"
-        GroupBox1.Size = New Size(376, 132)
+        GroupBox1.Padding = New Padding(3, 4, 3, 4)
+        GroupBox1.Size = New Size(430, 176)
         GroupBox1.TabIndex = 15
         GroupBox1.TabStop = False
         GroupBox1.Text = "Resort Details"
@@ -323,9 +324,10 @@ Partial Class formAdmin
         ComboBox2.Font = New Font("Consolas", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         ComboBox2.FormattingEnabled = True
         ComboBox2.Items.AddRange(New Object() {"Internet Access", "Swimming Pools", "Water Sports/Activities", "On-site Restaurant and Bar", "Kids' Club", "Laundry and Dry Cleaning", "Transportation"})
-        ComboBox2.Location = New Point(180, 79)
+        ComboBox2.Location = New Point(206, 105)
+        ComboBox2.Margin = New Padding(3, 4, 3, 4)
         ComboBox2.Name = "ComboBox2"
-        ComboBox2.Size = New Size(121, 23)
+        ComboBox2.Size = New Size(138, 27)
         ComboBox2.TabIndex = 25
         ComboBox2.Text = "Services"
         ' 
@@ -334,9 +336,10 @@ Partial Class formAdmin
         ComboBox1.Font = New Font("Consolas", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         ComboBox1.FormattingEnabled = True
         ComboBox1.Items.AddRange(New Object() {"Single Room", "", "Queen Room", "", "King Room", "", "Twin Room", "", "Standard Room", "", "Executive Suite", "", "Presidential Suite"})
-        ComboBox1.Location = New Point(180, 50)
+        ComboBox1.Location = New Point(206, 67)
+        ComboBox1.Margin = New Padding(3, 4, 3, 4)
         ComboBox1.Name = "ComboBox1"
-        ComboBox1.Size = New Size(121, 23)
+        ComboBox1.Size = New Size(138, 27)
         ComboBox1.TabIndex = 24
         ComboBox1.Text = "Room Type"
         ' 
@@ -345,9 +348,9 @@ Partial Class formAdmin
         Label36.AutoSize = True
         Label36.Font = New Font("Consolas", 21.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label36.ForeColor = Color.Orange
-        Label36.Location = New Point(175, 96)
+        Label36.Location = New Point(200, 128)
         Label36.Name = "Label36"
-        Label36.Size = New Size(105, 34)
+        Label36.Size = New Size(139, 43)
         Label36.TabIndex = 23
         Label36.Text = "★★★★★"
         ' 
@@ -355,9 +358,9 @@ Partial Class formAdmin
         ' 
         Label35.AutoSize = True
         Label35.Font = New Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label35.Location = New Point(180, 27)
+        Label35.Location = New Point(206, 36)
         Label35.Name = "Label35"
-        Label35.Size = New Size(27, 19)
+        Label35.Size = New Size(32, 23)
         Label35.TabIndex = 22
         Label35.Text = "71"
         ' 
@@ -365,9 +368,9 @@ Partial Class formAdmin
         ' 
         Label34.AutoSize = True
         Label34.Font = New Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label34.Location = New Point(31, 103)
+        Label34.Location = New Point(35, 137)
         Label34.Name = "Label34"
-        Label34.Size = New Size(81, 19)
+        Label34.Size = New Size(98, 23)
         Label34.TabIndex = 14
         Label34.Text = "Ratings:"
         ' 
@@ -375,9 +378,9 @@ Partial Class formAdmin
         ' 
         Label33.AutoSize = True
         Label33.Font = New Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label33.Location = New Point(31, 78)
+        Label33.Location = New Point(35, 104)
         Label33.Name = "Label33"
-        Label33.Size = New Size(90, 19)
+        Label33.Size = New Size(109, 23)
         Label33.TabIndex = 13
         Label33.Text = "Services:"
         ' 
@@ -385,9 +388,9 @@ Partial Class formAdmin
         ' 
         Label32.AutoSize = True
         Label32.Font = New Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label32.Location = New Point(31, 52)
+        Label32.Location = New Point(35, 69)
         Label32.Name = "Label32"
-        Label32.Size = New Size(108, 19)
+        Label32.Size = New Size(131, 23)
         Label32.TabIndex = 12
         Label32.Text = "Room Types:"
         ' 
@@ -395,9 +398,9 @@ Partial Class formAdmin
         ' 
         Label31.AutoSize = True
         Label31.Font = New Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label31.Location = New Point(31, 27)
+        Label31.Location = New Point(35, 36)
         Label31.Name = "Label31"
-        Label31.Size = New Size(117, 19)
+        Label31.Size = New Size(142, 23)
         Label31.TabIndex = 11
         Label31.Text = "Total Rooms:"
         ' 
@@ -405,9 +408,9 @@ Partial Class formAdmin
         ' 
         Label24.AutoSize = True
         Label24.Font = New Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label24.Location = New Point(65, 95)
+        Label24.Location = New Point(74, 127)
         Label24.Name = "Label24"
-        Label24.Size = New Size(90, 19)
+        Label24.Size = New Size(109, 23)
         Label24.TabIndex = 14
         Label24.Text = "Contacts:"
         ' 
@@ -415,9 +418,9 @@ Partial Class formAdmin
         ' 
         Label23.AutoSize = True
         Label23.Font = New Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label23.Location = New Point(65, 70)
+        Label23.Location = New Point(74, 93)
         Label23.Name = "Label23"
-        Label23.Size = New Size(90, 19)
+        Label23.Size = New Size(109, 23)
         Label23.TabIndex = 13
         Label23.Text = "Location:"
         ' 
@@ -425,9 +428,9 @@ Partial Class formAdmin
         ' 
         Label22.AutoSize = True
         Label22.Font = New Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label22.Location = New Point(65, 44)
+        Label22.Location = New Point(74, 59)
         Label22.Name = "Label22"
-        Label22.Size = New Size(54, 19)
+        Label22.Size = New Size(65, 23)
         Label22.TabIndex = 12
         Label22.Text = "Name:"
         ' 
@@ -435,22 +438,22 @@ Partial Class formAdmin
         ' 
         Label21.AutoSize = True
         Label21.Font = New Font("Consolas", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label21.Location = New Point(17, 14)
+        Label21.Location = New Point(19, 19)
         Label21.Name = "Label21"
-        Label21.Size = New Size(171, 19)
+        Label21.Size = New Size(208, 23)
         Label21.TabIndex = 11
         Label21.Text = "Resort Information"
         ' 
         ' tabRooms
         ' 
         tabRooms.AutoScroll = True
-        tabRooms.Controls.Add(nudPresidentialRoomNumbers)
-        tabRooms.Controls.Add(nudStandardRoomNumbers)
-        tabRooms.Controls.Add(nudExecutiveRoomNumbers)
-        tabRooms.Controls.Add(nudTwinRoomNumbers)
-        tabRooms.Controls.Add(nudKingRoomNumbers)
-        tabRooms.Controls.Add(nudQueenRoomNumbers)
-        tabRooms.Controls.Add(nudSingleRoomNumbers)
+        tabRooms.Controls.Add(cbPresidentialRoomNumbers)
+        tabRooms.Controls.Add(cbExecutiveRoomNumbers)
+        tabRooms.Controls.Add(cbStandardRoomNumbers)
+        tabRooms.Controls.Add(cbTwinRoomNumbers)
+        tabRooms.Controls.Add(cbKingRoomNumbers)
+        tabRooms.Controls.Add(cbQueenRoomNumbers)
+        tabRooms.Controls.Add(cbSingleRoomNumbers)
         tabRooms.Controls.Add(nudPresidentialAvailableRooms)
         tabRooms.Controls.Add(nudExecutiveAvailableRooms)
         tabRooms.Controls.Add(nudStandardAvailableRooms)
@@ -493,133 +496,127 @@ Partial Class formAdmin
         tabRooms.Controls.Add(lblKingRoom)
         tabRooms.Controls.Add(lblQueenRoom)
         tabRooms.Controls.Add(lblSingleRoom)
-        tabRooms.Location = New Point(4, 24)
+        tabRooms.Location = New Point(4, 29)
+        tabRooms.Margin = New Padding(3, 4, 3, 4)
         tabRooms.Name = "tabRooms"
-        tabRooms.Padding = New Padding(3, 3, 3, 3)
-        tabRooms.Size = New Size(793, 502)
+        tabRooms.Padding = New Padding(3, 4, 3, 4)
+        tabRooms.Size = New Size(907, 674)
         tabRooms.TabIndex = 1
         tabRooms.Text = "Rooms"
         tabRooms.UseVisualStyleBackColor = True
         ' 
-        ' nudPresidentialRoomNumbers
+        ' cbPresidentialRoomNumbers
         ' 
-        nudPresidentialRoomNumbers.Location = New Point(676, 286)
-        nudPresidentialRoomNumbers.Margin = New Padding(3, 2, 3, 2)
-        nudPresidentialRoomNumbers.Name = "nudPresidentialRoomNumbers"
-        nudPresidentialRoomNumbers.Size = New Size(108, 23)
-        nudPresidentialRoomNumbers.TabIndex = 116
+        cbPresidentialRoomNumbers.FormattingEnabled = True
+        cbPresidentialRoomNumbers.Location = New Point(773, 379)
+        cbPresidentialRoomNumbers.Name = "cbPresidentialRoomNumbers"
+        cbPresidentialRoomNumbers.Size = New Size(123, 28)
+        cbPresidentialRoomNumbers.TabIndex = 123
         ' 
-        ' nudStandardRoomNumbers
+        ' cbExecutiveRoomNumbers
         ' 
-        nudStandardRoomNumbers.Location = New Point(396, 286)
-        nudStandardRoomNumbers.Margin = New Padding(3, 2, 3, 2)
-        nudStandardRoomNumbers.Name = "nudStandardRoomNumbers"
-        nudStandardRoomNumbers.Size = New Size(108, 23)
-        nudStandardRoomNumbers.TabIndex = 115
+        cbExecutiveRoomNumbers.FormattingEnabled = True
+        cbExecutiveRoomNumbers.Location = New Point(447, 605)
+        cbExecutiveRoomNumbers.Name = "cbExecutiveRoomNumbers"
+        cbExecutiveRoomNumbers.Size = New Size(123, 28)
+        cbExecutiveRoomNumbers.TabIndex = 122
         ' 
-        ' nudExecutiveRoomNumbers
+        ' cbStandardRoomNumbers
         ' 
-        nudExecutiveRoomNumbers.Location = New Point(396, 454)
-        nudExecutiveRoomNumbers.Margin = New Padding(3, 2, 3, 2)
-        nudExecutiveRoomNumbers.Name = "nudExecutiveRoomNumbers"
-        nudExecutiveRoomNumbers.Size = New Size(108, 23)
-        nudExecutiveRoomNumbers.TabIndex = 114
+        cbStandardRoomNumbers.FormattingEnabled = True
+        cbStandardRoomNumbers.Location = New Point(133, 605)
+        cbStandardRoomNumbers.Name = "cbStandardRoomNumbers"
+        cbStandardRoomNumbers.Size = New Size(123, 28)
+        cbStandardRoomNumbers.TabIndex = 121
         ' 
-        ' nudTwinRoomNumbers
+        ' cbTwinRoomNumbers
         ' 
-        nudTwinRoomNumbers.Location = New Point(396, 113)
-        nudTwinRoomNumbers.Margin = New Padding(3, 2, 3, 2)
-        nudTwinRoomNumbers.Name = "nudTwinRoomNumbers"
-        nudTwinRoomNumbers.Size = New Size(108, 23)
-        nudTwinRoomNumbers.TabIndex = 113
+        cbTwinRoomNumbers.FormattingEnabled = True
+        cbTwinRoomNumbers.Location = New Point(133, 380)
+        cbTwinRoomNumbers.Name = "cbTwinRoomNumbers"
+        cbTwinRoomNumbers.Size = New Size(123, 28)
+        cbTwinRoomNumbers.TabIndex = 120
         ' 
-        ' nudKingRoomNumbers
+        ' cbKingRoomNumbers
         ' 
-        nudKingRoomNumbers.Location = New Point(117, 454)
-        nudKingRoomNumbers.Margin = New Padding(3, 2, 3, 2)
-        nudKingRoomNumbers.Name = "nudKingRoomNumbers"
-        nudKingRoomNumbers.Size = New Size(108, 23)
-        nudKingRoomNumbers.TabIndex = 112
+        cbKingRoomNumbers.FormattingEnabled = True
+        cbKingRoomNumbers.Location = New Point(448, 380)
+        cbKingRoomNumbers.Name = "cbKingRoomNumbers"
+        cbKingRoomNumbers.Size = New Size(123, 28)
+        cbKingRoomNumbers.TabIndex = 119
         ' 
-        ' nudQueenRoomNumbers
+        ' cbQueenRoomNumbers
         ' 
-        nudQueenRoomNumbers.Location = New Point(116, 286)
-        nudQueenRoomNumbers.Margin = New Padding(3, 2, 3, 2)
-        nudQueenRoomNumbers.Name = "nudQueenRoomNumbers"
-        nudQueenRoomNumbers.Size = New Size(108, 23)
-        nudQueenRoomNumbers.TabIndex = 111
+        cbQueenRoomNumbers.FormattingEnabled = True
+        cbQueenRoomNumbers.Location = New Point(447, 153)
+        cbQueenRoomNumbers.Name = "cbQueenRoomNumbers"
+        cbQueenRoomNumbers.Size = New Size(123, 28)
+        cbQueenRoomNumbers.TabIndex = 118
         ' 
-        ' nudSingleRoomNumbers
+        ' cbSingleRoomNumbers
         ' 
-        nudSingleRoomNumbers.Location = New Point(116, 113)
-        nudSingleRoomNumbers.Margin = New Padding(3, 2, 3, 2)
-        nudSingleRoomNumbers.Name = "nudSingleRoomNumbers"
-        nudSingleRoomNumbers.Size = New Size(108, 23)
-        nudSingleRoomNumbers.TabIndex = 110
+        cbSingleRoomNumbers.FormattingEnabled = True
+        cbSingleRoomNumbers.Location = New Point(133, 151)
+        cbSingleRoomNumbers.Name = "cbSingleRoomNumbers"
+        cbSingleRoomNumbers.Size = New Size(123, 28)
+        cbSingleRoomNumbers.TabIndex = 117
         ' 
         ' nudPresidentialAvailableRooms
         ' 
-        nudPresidentialAvailableRooms.Location = New Point(676, 256)
-        nudPresidentialAvailableRooms.Margin = New Padding(3, 2, 3, 2)
+        nudPresidentialAvailableRooms.Location = New Point(773, 341)
         nudPresidentialAvailableRooms.Name = "nudPresidentialAvailableRooms"
-        nudPresidentialAvailableRooms.Size = New Size(108, 23)
+        nudPresidentialAvailableRooms.Size = New Size(123, 27)
         nudPresidentialAvailableRooms.TabIndex = 109
         ' 
         ' nudExecutiveAvailableRooms
         ' 
-        nudExecutiveAvailableRooms.Location = New Point(397, 424)
-        nudExecutiveAvailableRooms.Margin = New Padding(3, 2, 3, 2)
+        nudExecutiveAvailableRooms.Location = New Point(448, 565)
         nudExecutiveAvailableRooms.Name = "nudExecutiveAvailableRooms"
-        nudExecutiveAvailableRooms.Size = New Size(108, 23)
+        nudExecutiveAvailableRooms.Size = New Size(123, 27)
         nudExecutiveAvailableRooms.TabIndex = 108
         ' 
         ' nudStandardAvailableRooms
         ' 
-        nudStandardAvailableRooms.Location = New Point(396, 256)
-        nudStandardAvailableRooms.Margin = New Padding(3, 2, 3, 2)
+        nudStandardAvailableRooms.Location = New Point(132, 565)
         nudStandardAvailableRooms.Name = "nudStandardAvailableRooms"
-        nudStandardAvailableRooms.Size = New Size(108, 23)
+        nudStandardAvailableRooms.Size = New Size(123, 27)
         nudStandardAvailableRooms.TabIndex = 107
         ' 
         ' nudTwinAvailableRooms
         ' 
-        nudTwinAvailableRooms.Location = New Point(396, 84)
-        nudTwinAvailableRooms.Margin = New Padding(3, 2, 3, 2)
+        nudTwinAvailableRooms.Location = New Point(133, 341)
         nudTwinAvailableRooms.Name = "nudTwinAvailableRooms"
-        nudTwinAvailableRooms.Size = New Size(108, 23)
+        nudTwinAvailableRooms.Size = New Size(123, 27)
         nudTwinAvailableRooms.TabIndex = 106
         ' 
         ' nudKingAvailableRooms
         ' 
-        nudKingAvailableRooms.Location = New Point(117, 424)
-        nudKingAvailableRooms.Margin = New Padding(3, 2, 3, 2)
+        nudKingAvailableRooms.Location = New Point(448, 341)
         nudKingAvailableRooms.Name = "nudKingAvailableRooms"
-        nudKingAvailableRooms.Size = New Size(108, 23)
+        nudKingAvailableRooms.Size = New Size(123, 27)
         nudKingAvailableRooms.TabIndex = 105
         ' 
         ' nudQueenAvailableRooms
         ' 
-        nudQueenAvailableRooms.Location = New Point(116, 256)
-        nudQueenAvailableRooms.Margin = New Padding(3, 2, 3, 2)
+        nudQueenAvailableRooms.Location = New Point(447, 115)
         nudQueenAvailableRooms.Name = "nudQueenAvailableRooms"
-        nudQueenAvailableRooms.Size = New Size(108, 23)
+        nudQueenAvailableRooms.Size = New Size(123, 27)
         nudQueenAvailableRooms.TabIndex = 104
         ' 
         ' nudSingleAvailableRooms
         ' 
-        nudSingleAvailableRooms.Location = New Point(116, 84)
-        nudSingleAvailableRooms.Margin = New Padding(3, 2, 3, 2)
+        nudSingleAvailableRooms.Location = New Point(133, 112)
         nudSingleAvailableRooms.Name = "nudSingleAvailableRooms"
-        nudSingleAvailableRooms.Size = New Size(108, 23)
+        nudSingleAvailableRooms.Size = New Size(123, 27)
         nudSingleAvailableRooms.TabIndex = 103
         ' 
         ' Label20
         ' 
         Label20.AutoSize = True
         Label20.Font = New Font("Bahnschrift Light SemiCondensed", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label20.Location = New Point(628, 207)
+        Label20.Location = New Point(718, 276)
         Label20.Name = "Label20"
-        Label20.Size = New Size(62, 14)
+        Label20.Size = New Size(75, 18)
         Label20.TabIndex = 102
         Label20.Text = "1 King Bed |"
         ' 
@@ -627,9 +624,9 @@ Partial Class formAdmin
         ' 
         Label19.AutoSize = True
         Label19.Font = New Font("Bahnschrift Light SemiCondensed", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label19.Location = New Point(360, 214)
+        Label19.Location = New Point(101, 479)
         Label19.Name = "Label19"
-        Label19.Size = New Size(75, 14)
+        Label19.Size = New Size(90, 18)
         Label19.TabIndex = 101
         Label19.Text = "1 Double Bed |"
         ' 
@@ -637,9 +634,9 @@ Partial Class formAdmin
         ' 
         Label18.AutoSize = True
         Label18.Font = New Font("Bahnschrift Light SemiCondensed", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label18.Location = New Point(360, 379)
+        Label18.Location = New Point(411, 505)
         Label18.Name = "Label18"
-        Label18.Size = New Size(70, 14)
+        Label18.Size = New Size(83, 18)
         Label18.TabIndex = 100
         Label18.Text = "2 Twin Beds |"
         ' 
@@ -647,9 +644,9 @@ Partial Class formAdmin
         ' 
         Label17.AutoSize = True
         Label17.Font = New Font("Bahnschrift Light SemiCondensed", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label17.Location = New Point(360, 44)
+        Label17.Location = New Point(94, 276)
         Label17.Name = "Label17"
-        Label17.Size = New Size(70, 14)
+        Label17.Size = New Size(83, 18)
         Label17.TabIndex = 99
         Label17.Text = "2 Twin Beds |"
         ' 
@@ -657,9 +654,9 @@ Partial Class formAdmin
         ' 
         Label16.AutoSize = True
         Label16.Font = New Font("Bahnschrift Light SemiCondensed", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label16.Location = New Point(69, 379)
+        Label16.Location = New Point(411, 276)
         Label16.Name = "Label16"
-        Label16.Size = New Size(62, 14)
+        Label16.Size = New Size(75, 18)
         Label16.TabIndex = 98
         Label16.Text = "1 King Bed |"
         ' 
@@ -667,9 +664,9 @@ Partial Class formAdmin
         ' 
         Label15.AutoSize = True
         Label15.Font = New Font("Bahnschrift Light SemiCondensed", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label15.Location = New Point(82, 214)
+        Label15.Location = New Point(411, 59)
         Label15.Name = "Label15"
-        Label15.Size = New Size(72, 14)
+        Label15.Size = New Size(86, 18)
         Label15.TabIndex = 97
         Label15.Text = "1 Queen Bed |"
         ' 
@@ -677,19 +674,18 @@ Partial Class formAdmin
         ' 
         Label14.AutoSize = True
         Label14.Font = New Font("Bahnschrift Light SemiCondensed", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label14.Location = New Point(82, 44)
+        Label14.Location = New Point(94, 59)
         Label14.Name = "Label14"
-        Label14.Size = New Size(75, 14)
+        Label14.Size = New Size(90, 18)
         Label14.TabIndex = 96
         Label14.Text = "1 Double Bed |"
         ' 
         ' btnPresidentialRoomDetails
         ' 
         btnPresidentialRoomDetails.Font = New Font("Bahnschrift SemiCondensed", 9F)
-        btnPresidentialRoomDetails.Location = New Point(570, 310)
-        btnPresidentialRoomDetails.Margin = New Padding(3, 2, 3, 2)
+        btnPresidentialRoomDetails.Location = New Point(651, 413)
         btnPresidentialRoomDetails.Name = "btnPresidentialRoomDetails"
-        btnPresidentialRoomDetails.Size = New Size(216, 22)
+        btnPresidentialRoomDetails.Size = New Size(247, 29)
         btnPresidentialRoomDetails.TabIndex = 95
         btnPresidentialRoomDetails.Text = "ROOM DETAILS"
         btnPresidentialRoomDetails.UseVisualStyleBackColor = True
@@ -699,9 +695,9 @@ Partial Class formAdmin
         Label12.AutoSize = True
         Label12.BackColor = Color.Transparent
         Label12.Font = New Font("Bahnschrift SemiCondensed", 9F)
-        Label12.Location = New Point(570, 289)
+        Label12.Location = New Point(651, 385)
         Label12.Name = "Label12"
-        Label12.Size = New Size(87, 14)
+        Label12.Size = New Size(107, 18)
         Label12.TabIndex = 92
         Label12.Text = "ROOM NUMBERS:"
         ' 
@@ -710,19 +706,18 @@ Partial Class formAdmin
         Label13.AutoSize = True
         Label13.BackColor = Color.Transparent
         Label13.Font = New Font("Bahnschrift SemiCondensed", 9F)
-        Label13.Location = New Point(570, 259)
+        Label13.Location = New Point(651, 345)
         Label13.Name = "Label13"
-        Label13.Size = New Size(99, 14)
+        Label13.Size = New Size(118, 18)
         Label13.TabIndex = 91
         Label13.Text = "AVAILABLE ROOMS:"
         ' 
         ' btnExecutiveRoomDetails
         ' 
         btnExecutiveRoomDetails.Font = New Font("Bahnschrift SemiCondensed", 9F)
-        btnExecutiveRoomDetails.Location = New Point(289, 478)
-        btnExecutiveRoomDetails.Margin = New Padding(3, 2, 3, 2)
+        btnExecutiveRoomDetails.Location = New Point(324, 637)
         btnExecutiveRoomDetails.Name = "btnExecutiveRoomDetails"
-        btnExecutiveRoomDetails.Size = New Size(216, 22)
+        btnExecutiveRoomDetails.Size = New Size(247, 29)
         btnExecutiveRoomDetails.TabIndex = 90
         btnExecutiveRoomDetails.Text = "ROOM DETAILS"
         btnExecutiveRoomDetails.UseVisualStyleBackColor = True
@@ -732,9 +727,9 @@ Partial Class formAdmin
         Label10.AutoSize = True
         Label10.BackColor = Color.Transparent
         Label10.Font = New Font("Bahnschrift SemiCondensed", 9F)
-        Label10.Location = New Point(289, 457)
+        Label10.Location = New Point(324, 609)
         Label10.Name = "Label10"
-        Label10.Size = New Size(87, 14)
+        Label10.Size = New Size(107, 18)
         Label10.TabIndex = 87
         Label10.Text = "ROOM NUMBERS:"
         ' 
@@ -743,19 +738,18 @@ Partial Class formAdmin
         Label11.AutoSize = True
         Label11.BackColor = Color.Transparent
         Label11.Font = New Font("Bahnschrift SemiCondensed", 9F)
-        Label11.Location = New Point(289, 427)
+        Label11.Location = New Point(324, 569)
         Label11.Name = "Label11"
-        Label11.Size = New Size(99, 14)
+        Label11.Size = New Size(118, 18)
         Label11.TabIndex = 86
         Label11.Text = "AVAILABLE ROOMS:"
         ' 
         ' btnStandardRoomDetails
         ' 
         btnStandardRoomDetails.Font = New Font("Bahnschrift SemiCondensed", 9F)
-        btnStandardRoomDetails.Location = New Point(289, 310)
-        btnStandardRoomDetails.Margin = New Padding(3, 2, 3, 2)
+        btnStandardRoomDetails.Location = New Point(9, 637)
         btnStandardRoomDetails.Name = "btnStandardRoomDetails"
-        btnStandardRoomDetails.Size = New Size(216, 22)
+        btnStandardRoomDetails.Size = New Size(247, 29)
         btnStandardRoomDetails.TabIndex = 85
         btnStandardRoomDetails.Text = "ROOM DETAILS"
         btnStandardRoomDetails.UseVisualStyleBackColor = True
@@ -765,9 +759,9 @@ Partial Class formAdmin
         Label8.AutoSize = True
         Label8.BackColor = Color.Transparent
         Label8.Font = New Font("Bahnschrift SemiCondensed", 9F)
-        Label8.Location = New Point(289, 289)
+        Label8.Location = New Point(9, 609)
         Label8.Name = "Label8"
-        Label8.Size = New Size(87, 14)
+        Label8.Size = New Size(107, 18)
         Label8.TabIndex = 82
         Label8.Text = "ROOM NUMBERS:"
         ' 
@@ -776,19 +770,18 @@ Partial Class formAdmin
         Label9.AutoSize = True
         Label9.BackColor = Color.Transparent
         Label9.Font = New Font("Bahnschrift SemiCondensed", 9F)
-        Label9.Location = New Point(289, 259)
+        Label9.Location = New Point(9, 569)
         Label9.Name = "Label9"
-        Label9.Size = New Size(99, 14)
+        Label9.Size = New Size(118, 18)
         Label9.TabIndex = 81
         Label9.Text = "AVAILABLE ROOMS:"
         ' 
         ' btnTwinRoomDetails
         ' 
         btnTwinRoomDetails.Font = New Font("Bahnschrift SemiCondensed", 9F)
-        btnTwinRoomDetails.Location = New Point(289, 138)
-        btnTwinRoomDetails.Margin = New Padding(3, 2, 3, 2)
+        btnTwinRoomDetails.Location = New Point(10, 413)
         btnTwinRoomDetails.Name = "btnTwinRoomDetails"
-        btnTwinRoomDetails.Size = New Size(216, 22)
+        btnTwinRoomDetails.Size = New Size(247, 29)
         btnTwinRoomDetails.TabIndex = 80
         btnTwinRoomDetails.Text = "ROOM DETAILS"
         btnTwinRoomDetails.UseVisualStyleBackColor = True
@@ -798,9 +791,9 @@ Partial Class formAdmin
         Label6.AutoSize = True
         Label6.BackColor = Color.Transparent
         Label6.Font = New Font("Bahnschrift SemiCondensed", 9F)
-        Label6.Location = New Point(289, 116)
+        Label6.Location = New Point(10, 384)
         Label6.Name = "Label6"
-        Label6.Size = New Size(87, 14)
+        Label6.Size = New Size(107, 18)
         Label6.TabIndex = 77
         Label6.Text = "ROOM NUMBERS:"
         ' 
@@ -809,19 +802,18 @@ Partial Class formAdmin
         Label7.AutoSize = True
         Label7.BackColor = Color.Transparent
         Label7.Font = New Font("Bahnschrift SemiCondensed", 9F)
-        Label7.Location = New Point(289, 86)
+        Label7.Location = New Point(10, 344)
         Label7.Name = "Label7"
-        Label7.Size = New Size(99, 14)
+        Label7.Size = New Size(118, 18)
         Label7.TabIndex = 76
         Label7.Text = "AVAILABLE ROOMS:"
         ' 
         ' btnKingRoomDetails
         ' 
         btnKingRoomDetails.Font = New Font("Bahnschrift SemiCondensed", 9F)
-        btnKingRoomDetails.Location = New Point(9, 478)
-        btnKingRoomDetails.Margin = New Padding(3, 2, 3, 2)
+        btnKingRoomDetails.Location = New Point(324, 413)
         btnKingRoomDetails.Name = "btnKingRoomDetails"
-        btnKingRoomDetails.Size = New Size(216, 22)
+        btnKingRoomDetails.Size = New Size(247, 29)
         btnKingRoomDetails.TabIndex = 75
         btnKingRoomDetails.Text = "ROOM DETAILS"
         btnKingRoomDetails.UseVisualStyleBackColor = True
@@ -831,9 +823,9 @@ Partial Class formAdmin
         Label4.AutoSize = True
         Label4.BackColor = Color.Transparent
         Label4.Font = New Font("Bahnschrift SemiCondensed", 9F)
-        Label4.Location = New Point(9, 457)
+        Label4.Location = New Point(324, 385)
         Label4.Name = "Label4"
-        Label4.Size = New Size(87, 14)
+        Label4.Size = New Size(107, 18)
         Label4.TabIndex = 72
         Label4.Text = "ROOM NUMBERS:"
         ' 
@@ -842,19 +834,18 @@ Partial Class formAdmin
         Label5.AutoSize = True
         Label5.BackColor = Color.Transparent
         Label5.Font = New Font("Bahnschrift SemiCondensed", 9F)
-        Label5.Location = New Point(9, 427)
+        Label5.Location = New Point(324, 345)
         Label5.Name = "Label5"
-        Label5.Size = New Size(99, 14)
+        Label5.Size = New Size(118, 18)
         Label5.TabIndex = 71
         Label5.Text = "AVAILABLE ROOMS:"
         ' 
         ' btnQueenRoomDetails
         ' 
         btnQueenRoomDetails.Font = New Font("Bahnschrift SemiCondensed", 9F)
-        btnQueenRoomDetails.Location = New Point(9, 310)
-        btnQueenRoomDetails.Margin = New Padding(3, 2, 3, 2)
+        btnQueenRoomDetails.Location = New Point(324, 187)
         btnQueenRoomDetails.Name = "btnQueenRoomDetails"
-        btnQueenRoomDetails.Size = New Size(216, 22)
+        btnQueenRoomDetails.Size = New Size(247, 29)
         btnQueenRoomDetails.TabIndex = 70
         btnQueenRoomDetails.Text = "ROOM DETAILS"
         btnQueenRoomDetails.UseVisualStyleBackColor = True
@@ -864,9 +855,9 @@ Partial Class formAdmin
         Label2.AutoSize = True
         Label2.BackColor = Color.Transparent
         Label2.Font = New Font("Bahnschrift SemiCondensed", 9F)
-        Label2.Location = New Point(9, 289)
+        Label2.Location = New Point(324, 159)
         Label2.Name = "Label2"
-        Label2.Size = New Size(87, 14)
+        Label2.Size = New Size(107, 18)
         Label2.TabIndex = 67
         Label2.Text = "ROOM NUMBERS:"
         ' 
@@ -875,19 +866,18 @@ Partial Class formAdmin
         Label3.AutoSize = True
         Label3.BackColor = Color.Transparent
         Label3.Font = New Font("Bahnschrift SemiCondensed", 9F)
-        Label3.Location = New Point(9, 259)
+        Label3.Location = New Point(324, 119)
         Label3.Name = "Label3"
-        Label3.Size = New Size(99, 14)
+        Label3.Size = New Size(118, 18)
         Label3.TabIndex = 66
         Label3.Text = "AVAILABLE ROOMS:"
         ' 
         ' btnSingleRoomDetails
         ' 
         btnSingleRoomDetails.Font = New Font("Bahnschrift SemiCondensed", 9F)
-        btnSingleRoomDetails.Location = New Point(9, 138)
-        btnSingleRoomDetails.Margin = New Padding(3, 2, 3, 2)
+        btnSingleRoomDetails.Location = New Point(10, 184)
         btnSingleRoomDetails.Name = "btnSingleRoomDetails"
-        btnSingleRoomDetails.Size = New Size(216, 22)
+        btnSingleRoomDetails.Size = New Size(247, 29)
         btnSingleRoomDetails.TabIndex = 65
         btnSingleRoomDetails.Text = "ROOM DETAILS"
         btnSingleRoomDetails.UseVisualStyleBackColor = True
@@ -896,9 +886,9 @@ Partial Class formAdmin
         ' 
         lblPresidentialRoom.AutoSize = True
         lblPresidentialRoom.Font = New Font("Bahnschrift SemiCondensed", 12F, FontStyle.Bold)
-        lblPresidentialRoom.Location = New Point(605, 162)
+        lblPresidentialRoom.Location = New Point(691, 216)
         lblPresidentialRoom.Name = "lblPresidentialRoom"
-        lblPresidentialRoom.Size = New Size(124, 19)
+        lblPresidentialRoom.Size = New Size(150, 24)
         lblPresidentialRoom.TabIndex = 60
         lblPresidentialRoom.Text = "Presidential Room"
         ' 
@@ -907,9 +897,9 @@ Partial Class formAdmin
         lblRoomNumbers1.AutoSize = True
         lblRoomNumbers1.BackColor = Color.Transparent
         lblRoomNumbers1.Font = New Font("Bahnschrift SemiCondensed", 9F)
-        lblRoomNumbers1.Location = New Point(9, 116)
+        lblRoomNumbers1.Location = New Point(10, 155)
         lblRoomNumbers1.Name = "lblRoomNumbers1"
-        lblRoomNumbers1.Size = New Size(87, 14)
+        lblRoomNumbers1.Size = New Size(107, 18)
         lblRoomNumbers1.TabIndex = 62
         lblRoomNumbers1.Text = "ROOM NUMBERS:"
         ' 
@@ -918,9 +908,9 @@ Partial Class formAdmin
         lblAvailableRooms1.AutoSize = True
         lblAvailableRooms1.BackColor = Color.Transparent
         lblAvailableRooms1.Font = New Font("Bahnschrift SemiCondensed", 9F)
-        lblAvailableRooms1.Location = New Point(9, 86)
+        lblAvailableRooms1.Location = New Point(10, 115)
         lblAvailableRooms1.Name = "lblAvailableRooms1"
-        lblAvailableRooms1.Size = New Size(99, 14)
+        lblAvailableRooms1.Size = New Size(118, 18)
         lblAvailableRooms1.TabIndex = 61
         lblAvailableRooms1.Text = "AVAILABLE ROOMS:"
         ' 
@@ -928,9 +918,9 @@ Partial Class formAdmin
         ' 
         lblExucutiveRoom.AutoSize = True
         lblExucutiveRoom.Font = New Font("Bahnschrift SemiCondensed", 12F, FontStyle.Bold)
-        lblExucutiveRoom.Location = New Point(346, 334)
+        lblExucutiveRoom.Location = New Point(395, 445)
         lblExucutiveRoom.Name = "lblExucutiveRoom"
-        lblExucutiveRoom.Size = New Size(108, 19)
+        lblExucutiveRoom.Size = New Size(134, 24)
         lblExucutiveRoom.TabIndex = 52
         lblExucutiveRoom.Text = "Executive Room"
         ' 
@@ -938,9 +928,9 @@ Partial Class formAdmin
         ' 
         lblStandardRoom.AutoSize = True
         lblStandardRoom.Font = New Font("Bahnschrift SemiCondensed", 12F, FontStyle.Bold)
-        lblStandardRoom.Location = New Point(346, 162)
+        lblStandardRoom.Location = New Point(3, 445)
         lblStandardRoom.Name = "lblStandardRoom"
-        lblStandardRoom.Size = New Size(107, 19)
+        lblStandardRoom.Size = New Size(128, 24)
         lblStandardRoom.TabIndex = 44
         lblStandardRoom.Text = "Standard Room"
         ' 
@@ -948,9 +938,9 @@ Partial Class formAdmin
         ' 
         lblTwinRoom.AutoSize = True
         lblTwinRoom.Font = New Font("Bahnschrift SemiCondensed", 12F, FontStyle.Bold)
-        lblTwinRoom.Location = New Point(360, 3)
+        lblTwinRoom.Location = New Point(3, 216)
         lblTwinRoom.Name = "lblTwinRoom"
-        lblTwinRoom.Size = New Size(77, 19)
+        lblTwinRoom.Size = New Size(93, 24)
         lblTwinRoom.TabIndex = 36
         lblTwinRoom.Text = "Twin Room"
         ' 
@@ -959,9 +949,9 @@ Partial Class formAdmin
         lblKingRoom.AutoSize = True
         lblKingRoom.BackColor = SystemColors.ButtonHighlight
         lblKingRoom.Font = New Font("Bahnschrift SemiCondensed", 12F, FontStyle.Bold)
-        lblKingRoom.Location = New Point(5, 334)
+        lblKingRoom.Location = New Point(411, 219)
         lblKingRoom.Name = "lblKingRoom"
-        lblKingRoom.Size = New Size(77, 19)
+        lblKingRoom.Size = New Size(93, 24)
         lblKingRoom.TabIndex = 28
         lblKingRoom.Text = "King Room"
         ' 
@@ -970,9 +960,9 @@ Partial Class formAdmin
         lblQueenRoom.AutoSize = True
         lblQueenRoom.BackColor = SystemColors.ButtonHighlight
         lblQueenRoom.Font = New Font("Bahnschrift SemiCondensed", 12F, FontStyle.Bold)
-        lblQueenRoom.Location = New Point(3, 162)
+        lblQueenRoom.Location = New Point(408, 4)
         lblQueenRoom.Name = "lblQueenRoom"
-        lblQueenRoom.Size = New Size(87, 19)
+        lblQueenRoom.Size = New Size(108, 24)
         lblQueenRoom.TabIndex = 20
         lblQueenRoom.Text = "Queen Room"
         ' 
@@ -981,9 +971,9 @@ Partial Class formAdmin
         lblSingleRoom.AutoSize = True
         lblSingleRoom.BackColor = SystemColors.ButtonHighlight
         lblSingleRoom.Font = New Font("Bahnschrift SemiCondensed", 12F, FontStyle.Bold)
-        lblSingleRoom.Location = New Point(3, 3)
+        lblSingleRoom.Location = New Point(3, 4)
         lblSingleRoom.Name = "lblSingleRoom"
-        lblSingleRoom.Size = New Size(87, 19)
+        lblSingleRoom.Size = New Size(106, 24)
         lblSingleRoom.TabIndex = 7
         lblSingleRoom.Text = "Single Room"
         ' 
@@ -991,9 +981,10 @@ Partial Class formAdmin
         ' 
         tabGuests.AutoScroll = True
         tabGuests.Controls.Add(dgvGuestTable)
-        tabGuests.Location = New Point(4, 24)
+        tabGuests.Location = New Point(4, 29)
+        tabGuests.Margin = New Padding(3, 4, 3, 4)
         tabGuests.Name = "tabGuests"
-        tabGuests.Size = New Size(793, 502)
+        tabGuests.Size = New Size(907, 674)
         tabGuests.TabIndex = 2
         tabGuests.Text = "Guests"
         tabGuests.UseVisualStyleBackColor = True
@@ -1004,11 +995,12 @@ Partial Class formAdmin
         dgvGuestTable.AllowUserToDeleteRows = False
         dgvGuestTable.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         dgvGuestTable.Columns.AddRange(New DataGridViewColumn() {columnEdit, columnFirstName, columnLastnName, columnArrival, columnDeparture, columnTotalGuests})
-        dgvGuestTable.Location = New Point(1, 3)
+        dgvGuestTable.Location = New Point(1, 4)
+        dgvGuestTable.Margin = New Padding(3, 4, 3, 4)
         dgvGuestTable.Name = "dgvGuestTable"
         dgvGuestTable.RowHeadersVisible = False
         dgvGuestTable.RowHeadersWidth = 51
-        dgvGuestTable.Size = New Size(787, 496)
+        dgvGuestTable.Size = New Size(899, 661)
         dgvGuestTable.TabIndex = 0
         ' 
         ' columnEdit
@@ -1070,9 +1062,10 @@ Partial Class formAdmin
         ' tabGuestInfo
         ' 
         tabGuestInfo.Controls.Add(dgvGuestInfo)
-        tabGuestInfo.Location = New Point(4, 24)
+        tabGuestInfo.Location = New Point(4, 29)
+        tabGuestInfo.Margin = New Padding(3, 4, 3, 4)
         tabGuestInfo.Name = "tabGuestInfo"
-        tabGuestInfo.Size = New Size(793, 502)
+        tabGuestInfo.Size = New Size(907, 674)
         tabGuestInfo.TabIndex = 3
         tabGuestInfo.Text = "Guest Info"
         tabGuestInfo.UseVisualStyleBackColor = True
@@ -1084,10 +1077,11 @@ Partial Class formAdmin
         dgvGuestInfo.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         dgvGuestInfo.Columns.AddRange(New DataGridViewColumn() {DataGridViewTextBoxColumn1, DataGridViewTextBoxColumn2, DataGridViewTextBoxColumn3, DataGridViewTextBoxColumn4, DataGridViewTextBoxColumn5})
         dgvGuestInfo.Location = New Point(0, 0)
+        dgvGuestInfo.Margin = New Padding(3, 4, 3, 4)
         dgvGuestInfo.Name = "dgvGuestInfo"
         dgvGuestInfo.RowHeadersVisible = False
         dgvGuestInfo.RowHeadersWidth = 51
-        dgvGuestInfo.Size = New Size(793, 502)
+        dgvGuestInfo.Size = New Size(906, 669)
         dgvGuestInfo.TabIndex = 1
         ' 
         ' DataGridViewTextBoxColumn1
@@ -1139,29 +1133,31 @@ Partial Class formAdmin
         ' 
         Label1.AutoSize = True
         Label1.Font = New Font("Consolas", 20.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label1.Location = New Point(12, 23)
+        Label1.Location = New Point(14, 31)
         Label1.Name = "Label1"
-        Label1.Size = New Size(419, 32)
+        Label1.Size = New Size(530, 40)
         Label1.TabIndex = 1
         Label1.Text = "San Antonio Nom Pass Resort"
         ' 
         ' btnRefresh
         ' 
-        btnRefresh.Location = New Point(690, 32)
+        btnRefresh.Location = New Point(789, 43)
+        btnRefresh.Margin = New Padding(3, 4, 3, 4)
         btnRefresh.Name = "btnRefresh"
-        btnRefresh.Size = New Size(75, 23)
+        btnRefresh.Size = New Size(86, 31)
         btnRefresh.TabIndex = 2
         btnRefresh.Text = "Refresh"
         btnRefresh.UseVisualStyleBackColor = True
         ' 
         ' formAdmin
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(800, 598)
+        ClientSize = New Size(914, 797)
         Controls.Add(btnRefresh)
         Controls.Add(Label1)
         Controls.Add(tbcAdmin)
+        Margin = New Padding(3, 4, 3, 4)
         Name = "formAdmin"
         Text = "formAdmin"
         tbcAdmin.ResumeLayout(False)
@@ -1171,13 +1167,6 @@ Partial Class formAdmin
         GroupBox1.PerformLayout()
         tabRooms.ResumeLayout(False)
         tabRooms.PerformLayout()
-        CType(nudPresidentialRoomNumbers, ComponentModel.ISupportInitialize).EndInit()
-        CType(nudStandardRoomNumbers, ComponentModel.ISupportInitialize).EndInit()
-        CType(nudExecutiveRoomNumbers, ComponentModel.ISupportInitialize).EndInit()
-        CType(nudTwinRoomNumbers, ComponentModel.ISupportInitialize).EndInit()
-        CType(nudKingRoomNumbers, ComponentModel.ISupportInitialize).EndInit()
-        CType(nudQueenRoomNumbers, ComponentModel.ISupportInitialize).EndInit()
-        CType(nudSingleRoomNumbers, ComponentModel.ISupportInitialize).EndInit()
         CType(nudPresidentialAvailableRooms, ComponentModel.ISupportInitialize).EndInit()
         CType(nudExecutiveAvailableRooms, ComponentModel.ISupportInitialize).EndInit()
         CType(nudStandardAvailableRooms, ComponentModel.ISupportInitialize).EndInit()
@@ -1288,11 +1277,11 @@ Partial Class formAdmin
     Friend WithEvents nudExecutiveAvailableRooms As NumericUpDown
     Friend WithEvents nudStandardAvailableRooms As NumericUpDown
     Friend WithEvents nudPresidentialAvailableRooms As NumericUpDown
-    Friend WithEvents nudExecutiveRoomNumbers As NumericUpDown
-    Friend WithEvents nudTwinRoomNumbers As NumericUpDown
-    Friend WithEvents nudKingRoomNumbers As NumericUpDown
-    Friend WithEvents nudQueenRoomNumbers As NumericUpDown
-    Friend WithEvents nudSingleRoomNumbers As NumericUpDown
-    Friend WithEvents nudPresidentialRoomNumbers As NumericUpDown
-    Friend WithEvents nudStandardRoomNumbers As NumericUpDown
+    Friend WithEvents cbSingleRoomNumbers As ComboBox
+    Friend WithEvents cbKingRoomNumbers As ComboBox
+    Friend WithEvents cbQueenRoomNumbers As ComboBox
+    Friend WithEvents cbPresidentialRoomNumbers As ComboBox
+    Friend WithEvents cbExecutiveRoomNumbers As ComboBox
+    Friend WithEvents cbStandardRoomNumbers As ComboBox
+    Friend WithEvents cbTwinRoomNumbers As ComboBox
 End Class

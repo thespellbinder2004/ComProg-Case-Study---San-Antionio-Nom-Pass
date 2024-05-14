@@ -166,7 +166,7 @@ Public Class formBooking
     End Function
 
     Private Sub btnEnterGuest_Click(sender As Object, e As EventArgs) Handles btnEnterGuest.Click
-        lbxGuestNames.
+
     End Sub
 
 

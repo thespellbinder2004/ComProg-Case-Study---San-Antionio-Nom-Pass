@@ -32,7 +32,7 @@ Partial Class formBooking
         Label6 = New Label()
         Label7 = New Label()
         cbSex = New ComboBox()
-        TextBox3 = New TextBox()
+        txtAddress = New TextBox()
         Label8 = New Label()
         dtpArrival = New DateTimePicker()
         Label9 = New Label()
@@ -146,12 +146,12 @@ Partial Class formBooking
         cbSex.Size = New Size(221, 23)
         cbSex.TabIndex = 3
         ' 
-        ' TextBox3
+        ' txtAddress
         ' 
-        TextBox3.Location = New Point(48, 300)
-        TextBox3.Name = "TextBox3"
-        TextBox3.Size = New Size(450, 23)
-        TextBox3.TabIndex = 9
+        txtAddress.Location = New Point(48, 300)
+        txtAddress.Name = "txtAddress"
+        txtAddress.Size = New Size(450, 23)
+        txtAddress.TabIndex = 9
         ' 
         ' Label8
         ' 
@@ -344,7 +344,7 @@ Partial Class formBooking
         Controls.Add(Label10)
         Controls.Add(dtpArrival)
         Controls.Add(Label9)
-        Controls.Add(TextBox3)
+        Controls.Add(txtAddress)
         Controls.Add(Label8)
         Controls.Add(dtpBirth)
         Controls.Add(txtLastName)
@@ -375,7 +375,7 @@ Partial Class formBooking
     Friend WithEvents Label6 As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents cbSex As ComboBox
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents txtAddress As TextBox
     Friend WithEvents Label8 As Label
     Friend WithEvents dtpArrival As DateTimePicker
     Friend WithEvents Label9 As Label

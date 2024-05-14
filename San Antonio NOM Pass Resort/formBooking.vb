@@ -2,12 +2,14 @@
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 
 Public Class formBooking
-    Public intTotalNight As Integer = 0
+
     Public intTotalGuests As Integer = 0
     Public intSeniorGuests As Integer = 0
     Public intMinorGuests As Integer = 0
     Public intRegularGuests As Integer = 0
-    Public intReceiptNumber As Integer = 0
+
+
+
 
     Dim curUserFullName As String
     Dim curUserArrivalDate As String
@@ -38,9 +40,10 @@ Public Class formBooking
         Dim strGuestRegular As String
         Dim strGuestTotal As String
         Dim strStayLength As String
+        Dim strAddress
 
         'For the combobox, it can be seen in the properties.
-        Public Sub New(ByVal firstName As String, ByVal lastName As String, ByVal sex As String, ByVal birthday As String, ByVal arrival As String, ByVal departure As String, ByVal regular As String, ByVal senior As String, ByVal minor As String, ByVal total As String, ByVal stayLength As String)
+        Public Sub New(ByVal firstName As String, ByVal lastName As String, ByVal sex As String, ByVal birthday As String, ByVal arrival As String, ByVal departure As String, ByVal regular As String, ByVal senior As String, ByVal minor As String, ByVal total As String, ByVal stayLength As String, ByVal address As String)
             strFirstName = firstName
             strLastName = lastName
             strSex = sex
@@ -52,9 +55,10 @@ Public Class formBooking
             strGuestRegular = regular
             strGuestTotal = total
             strStayLength = stayLength
+            strAddress = address
         End Sub
         Function getCustomerDetails()
-            Return strFirstName + "-" + strLastName + "-" + strSex + "-" + strDatBirth + "-" + strDatArrival + "-" + strDatDeparture + "-" + strGuestRegular + "-" + strGuestSenior + "-" + strGuestMinor + "-" + strGuestTotal + "-" + strStayLength
+            Return strFirstName + "-" + strLastName + "-" + strSex + "-" + strDatBirth + "-" + strDatArrival + "-" + strDatDeparture + "-" + strGuestRegular + "-" + strGuestSenior + "-" + strGuestMinor + "-" + strGuestTotal + "-" + strStayLength + "-" + strAddress
         End Function
 
     End Class
@@ -70,9 +74,10 @@ Public Class formBooking
         Dim guestReg = nudRegularGuests.Value.ToString
         Dim guestTotal = (nudSeniorGuests.Value + nudMinorGuests.Value + nudSeniorGuests.Value).ToString
         Dim intStayLength = Math.Round((dtpDeparture.Value - dtpArrival.Value).TotalDays)
+        Dim strAddress = txtAddress.Text
 
 
-        Dim customerInfo = New CustomerDetails(nameFirst, nameLast, sex, dateBirth, dateArrival, dateDeparture, guestReg, guestSen, guestMin, guestTotal, intStayLength)
+        Dim customerInfo = New CustomerDetails(nameFirst, nameLast, sex, dateBirth, dateArrival, dateDeparture, guestReg, guestSen, guestMin, guestTotal, intStayLength, strAddress)
         listCustomerInfo = Globals.getSplitString(customerInfo.getCustomerDetails())
 
         curUserFullName = nameFirst + " " + nameLast

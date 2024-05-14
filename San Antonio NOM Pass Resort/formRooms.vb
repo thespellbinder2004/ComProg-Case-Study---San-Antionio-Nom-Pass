@@ -50,7 +50,7 @@ Public Class formRooms
             Dim listCustomer As New List(Of String)
             listCustomer = formBooking.getListCustomerInfo()
             listCustomer.Add(typeRoom)
-            listCustomer.Add(listRoomNums(index)(cbIndex))
+            listCustomer.Add(listRoomNums(index)(cbIndex + 1))
 
             totalBill = calcTotalBill(formBooking.getGuestToPay, formBooking.getLengthOfStay, roomCost, maxCapacity)
             listCustomer.Add(totalBill)

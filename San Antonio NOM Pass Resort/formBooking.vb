@@ -15,6 +15,7 @@ Public Class formBooking
     Dim curUserLengthOfStay As Double
 
     Dim listCustomerInfo As New List(Of String)
+    Dim listOccupants As New List(Of String)
     Function getListCustomerInfo()
         Return listCustomerInfo
     End Function
@@ -166,8 +167,34 @@ Public Class formBooking
     End Function
 
     Private Sub btnEnterGuest_Click(sender As Object, e As EventArgs) Handles btnEnterGuest.Click
+<<<<<<< Updated upstream
+=======
+        lbxGuestNames.Items.Add(txtGuestName.Text)
+
+        Dim strGuestType = cbGuestType.SelectedItem
+
+        If strGuestType = "Guest" Then
+            intRegularGuests += 1
+        ElseIf strGuestType = "Senior" Then
+            intSeniorGuests += 1
+        ElseIf strGuestType = "Below 7" Then
+            intMinorGuests += 1
+        End If
+>>>>>>> Stashed changes
 
     End Sub
+
+
+    Private Sub btnClearList_Click(sender As Object, e As EventArgs) Handles btnClearList.Click
+        intRegularGuests = 0
+        intMinorGuests = 0
+        intSeniorGuests = 0
+        lbxGuestNames.Items.Clear()
+        txtGuestName.Clear()
+
+    End Sub
+
+
 
 
     'GETTER FUNCTIONS

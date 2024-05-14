@@ -21,6 +21,99 @@
 
     'GUEST TAB BY JOSEPH
     'START ------------------------------------------
+    Dim ListofRooms As List(Of String) = Globals.getRoomsList()
+    Dim SingleRoom As List(Of String) = Globals.getSplitString(Globals.getRoomsList()(0))
+    Dim TwinRoom As List(Of String) = Globals.getSplitString(Globals.getRoomsList()(1))
+    Dim StandardRoom As List(Of String) = Globals.getSplitString(Globals.getRoomsList()(2))
+    Dim QueenRoom As List(Of String) = Globals.getSplitString(Globals.getRoomsList()(3))
+    Dim KingRoom As List(Of String) = Globals.getSplitString(Globals.getRoomsList()(4))
+    Dim ExecutiveRoom As List(Of String) = Globals.getSplitString(Globals.getRoomsList()(5))
+    Dim PresidentialRoom As List(Of String) = Globals.getSplitString(Globals.getRoomsList()(6))
+
+
+    Private Sub btnRefresh_Click(sender As Object, e As EventArgs) Handles btnRefresh.Click
+        'ROOM NUMBERS CLEAR 
+        cbSingleRoomNumbers.Items.Clear()
+        cbTwinRoomNumbers.Items.Clear()
+        cbStandardRoomNumbers.Items.Clear()
+        cbQueenRoomNumbers.Items.Clear()
+        cbKingRoomNumbers.Items.Clear()
+        cbExecutiveRoomNumbers.Items.Clear()
+        cbPresidentialRoomNumbers.Items.Clear()
+        'END ------------------------------------
+        listCustomer = Globals.getCustomerList()
+        dgvGuestTable.Rows.Clear()
+        For i = 0 To (listCustomer.Count - 1)
+            Dim listInfo As List(Of String) = Globals.getSplitString(listCustomer(i))
+            dgvGuestTable.Rows.Add("Edit", listInfo(0), listInfo(1), listInfo(4), listInfo(5), listInfo(10))
+        Next
+
+        'SINGLE ROOM
+        nudSingleAvailableRooms.Value = SingleRoom.Count - 1
+
+
+        For i = 1 To SingleRoom.Count - 1
+            cbSingleRoomNumbers.Items.Add(SingleRoom(i))
+        Next
+        cbSingleRoomNumbers.SelectedIndex = 0
+
+        'TWIN ROOM  
+        nudTwinAvailableRooms.Value = TwinRoom.Count - 1
+
+
+        For i = 1 To TwinRoom.Count - 1
+            cbTwinRoomNumbers.Items.Add(TwinRoom(i))
+        Next
+        cbTwinRoomNumbers.SelectedIndex = 0
+        '
+        'STANDARD ROOM  
+        nudStandardAvailableRooms.Value = StandardRoom.Count - 1
+
+
+        For i = 1 To StandardRoom.Count - 1
+            cbStandardRoomNumbers.Items.Add(StandardRoom(i))
+        Next
+        cbStandardRoomNumbers.SelectedIndex = 0
+
+        'QUEEN ROOM
+        nudQueenAvailableRooms.Value = QueenRoom.Count - 1
+
+
+        For i = 1 To QueenRoom.Count - 1
+            cbQueenRoomNumbers.Items.Add(QueenRoom(i))
+        Next
+        cbQueenRoomNumbers.SelectedIndex = 0
+
+        'KING ROOM
+        nudKingAvailableRooms.Value = KingRoom.Count - 1
+
+
+        For i = 1 To KingRoom.Count - 1
+            cbKingRoomNumbers.Items.Add(KingRoom(i))
+        Next
+        cbKingRoomNumbers.SelectedIndex = 0
+
+        'EXECUTIVE ROOM
+        nudExecutiveAvailableRooms.Value = ExecutiveRoom.Count - 1
+
+
+        For i = 1 To ExecutiveRoom.Count - 1
+            cbExecutiveRoomNumbers.Items.Add(ExecutiveRoom(i))
+        Next
+        cbExecutiveRoomNumbers.SelectedIndex = 0
+
+        'PRESIDENTIAL ROOM
+        nudPresidentialAvailableRooms.Value = PresidentialRoom.Count - 1
+
+
+        For i = 1 To PresidentialRoom.Count - 1
+            cbPresidentialRoomNumbers.Items.Add(PresidentialRoom(i))
+        Next
+        cbPresidentialRoomNumbers.SelectedIndex = 0
+
+
+
+    End Sub
     Private Sub DataGridView2_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvGuestTable.CellContentClick
         Dim colName As String = dgvGuestTable.Columns(e.ColumnIndex).Name
         Dim rowIndex = dgvGuestTable.Rows(e.RowIndex).Index.ToString
@@ -53,10 +146,11 @@
 
     'REFRESH AND LOAD
     'START ------------------------------------------
-    Private Sub btnRefresh_Click(sender As Object, e As EventArgs) Handles btnRefresh.Click
-        listCustomer = Globals.getCustomerList()
+    Private Sub btnRefresh_Click(sender As Object, e As EventArgs)
+        listCustomer = Globals.getCustomerList
         dgvGuestTable.Rows.Clear()
-        For i = 0 To (listCustomer.Count - 1)
+
+        For i = 0 To listCustomer.Count - 1
             Dim listInfo As List(Of String) = Globals.getSplitString(listCustomer(i))
             dgvGuestTable.Rows.Add("Edit", listInfo(0), listInfo(1), listInfo(4), listInfo(5), listInfo(10))
         Next

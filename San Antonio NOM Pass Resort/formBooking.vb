@@ -166,9 +166,8 @@ Public Class formBooking
         Return Val(curUserLengthOfStay)
     End Function
 
-    Private Sub btnEnterGuest_Click(sender As Object, e As EventArgs) Handles btnEnterGuest.Click
-<<<<<<< Updated upstream
-=======
+    Private Sub btnEnterGuest_Click(sender As Object, e As EventArgs) Handles btnEnterGuest.Click, btnClearList.Click
+
         lbxGuestNames.Items.Add(txtGuestName.Text)
 
         Dim strGuestType = cbGuestType.SelectedItem
@@ -180,7 +179,7 @@ Public Class formBooking
         ElseIf strGuestType = "Below 7" Then
             intMinorGuests += 1
         End If
->>>>>>> Stashed changes
+
 
     End Sub
 

@@ -50,6 +50,7 @@ Partial Class formBooking
         Label2 = New Label()
         cbGuestType = New ComboBox()
         btnEnterGuest = New Button()
+        btnClearList = New Button()
         CType(nudRegularGuests, ComponentModel.ISupportInitialize).BeginInit()
         CType(nudMinorGuests, ComponentModel.ISupportInitialize).BeginInit()
         CType(nudSeniorGuests, ComponentModel.ISupportInitialize).BeginInit()
@@ -304,10 +305,22 @@ Partial Class formBooking
         btnEnterGuest.ForeColor = SystemColors.ButtonFace
         btnEnterGuest.Location = New Point(404, 410)
         btnEnterGuest.Name = "btnEnterGuest"
-        btnEnterGuest.Size = New Size(121, 74)
+        btnEnterGuest.Size = New Size(121, 69)
         btnEnterGuest.TabIndex = 14
         btnEnterGuest.Text = "Enter"
         btnEnterGuest.UseVisualStyleBackColor = False
+        ' 
+        ' btnClearList
+        ' 
+        btnClearList.BackColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
+        btnClearList.Font = New Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        btnClearList.ForeColor = SystemColors.ButtonFace
+        btnClearList.Location = New Point(404, 485)
+        btnClearList.Name = "btnClearList"
+        btnClearList.Size = New Size(121, 63)
+        btnClearList.TabIndex = 14
+        btnClearList.Text = "Clear"
+        btnClearList.UseVisualStyleBackColor = False
         ' 
         ' formBooking
         ' 
@@ -324,6 +337,7 @@ Partial Class formBooking
         Controls.Add(Label12)
         Controls.Add(Label11)
         Controls.Add(btnCancel)
+        Controls.Add(btnClearList)
         Controls.Add(btnEnterGuest)
         Controls.Add(btnSubmit)
         Controls.Add(dtpDeparture)
@@ -379,5 +393,6 @@ Partial Class formBooking
     Friend WithEvents Label2 As Label
     Friend WithEvents cbGuestType As ComboBox
     Friend WithEvents btnEnterGuest As Button
+    Friend WithEvents btnClearList As Button
 
 End Class

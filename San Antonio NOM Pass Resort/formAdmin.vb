@@ -31,7 +31,55 @@
     Dim PresidentialRoom As List(Of String) = Globals.getSplitString(Globals.getRoomsList()(6))
 
 
+
+    Private Sub DataGridView2_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvGuestTable.CellContentClick
+        Dim colName As String = dgvGuestTable.Columns(e.ColumnIndex).Name
+        Dim rowIndex = dgvGuestTable.Rows(e.RowIndex).Index.ToString
+
+        If colName = "columnEdit" Then
+            listCurCustomer = Globals.getSplitString(listCustomer(rowIndex))
+            tbcAdmin.SelectedTab = tabGuestInfo
+
+            TextBox0.Text = listCurCustomer(0)
+            TextBox1.Text = listCurCustomer(1)
+            TextBox2.Text = listCurCustomer(2)
+            TextBox3.Text = listCurCustomer(3)
+            TextBox4.Text = listCurCustomer(4)
+
+
+            For i = 0 To listCurCustomer.Count - 1
+                'MsgBox(listCurCustomer(i))
+
+            Next
+
+        End If
+
+
+    End Sub
+    'GUEST TAB BY JOSEPH
+    'END ------------------------------------------
+
+
+
+
+    'REFRESH AND LOAD
+    'START ------------------------------------------
     Private Sub btnRefresh_Click(sender As Object, e As EventArgs) Handles btnRefresh.Click
+        loadData()
+
+
+    End Sub
+
+    Sub loadData()
+        listCustomer = Globals.getCustomerList
+        dgvGuestTable.Rows.Clear()
+
+        For i = 0 To listCustomer.Count - 1
+            Dim listInfo As List(Of String) = Globals.getSplitString(listCustomer(i))
+            dgvGuestTable.Rows.Add("Edit", listInfo(0), listInfo(1), listInfo(4), listInfo(5), listInfo(10))
+        Next
+
+
         'ROOM NUMBERS CLEAR 
         cbSingleRoomNumbers.Items.Clear()
         cbTwinRoomNumbers.Items.Clear()
@@ -111,51 +159,10 @@
         Next
         cbPresidentialRoomNumbers.SelectedIndex = 0
 
-
-
     End Sub
-    Private Sub DataGridView2_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvGuestTable.CellContentClick
-        Dim colName As String = dgvGuestTable.Columns(e.ColumnIndex).Name
-        Dim rowIndex = dgvGuestTable.Rows(e.RowIndex).Index.ToString
 
-        If colName = "columnEdit" Then
-            listCurCustomer = Globals.getSplitString(listCustomer(rowIndex))
-            tbcAdmin.SelectedTab = tabGuestInfo
-
-            TextBox0.Text = listCurCustomer(0)
-            TextBox1.Text = listCurCustomer(1)
-            TextBox2.Text = listCurCustomer(2)
-            TextBox3.Text = listCurCustomer(3)
-            TextBox4.Text = listCurCustomer(4)
-
-
-            For i = 0 To listCurCustomer.Count - 1
-                'MsgBox(listCurCustomer(i))
-
-            Next
-
-        End If
-
-
-    End Sub
-    'GUEST TAB BY JOSEPH
-    'END ------------------------------------------
-
-
-
-
-    'REFRESH AND LOAD
-    'START ------------------------------------------
-    Private Sub btnRefresh_Click(sender As Object, e As EventArgs)
-        listCustomer = Globals.getCustomerList
-        dgvGuestTable.Rows.Clear()
-
-        For i = 0 To listCustomer.Count - 1
-            Dim listInfo As List(Of String) = Globals.getSplitString(listCustomer(i))
-            dgvGuestTable.Rows.Add("Edit", listInfo(0), listInfo(1), listInfo(4), listInfo(5), listInfo(10))
-        Next
-    End Sub
     Private Sub formAdmin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        loadData()
         listCustomer = Globals.getCustomerList()
         dgvGuestTable.Rows.Clear()
         For i = 0 To (listCustomer.Count - 1)

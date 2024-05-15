@@ -40,7 +40,7 @@ Public Class formBooking
         Dim strGuestRegular As String
         Dim strGuestTotal As String
         Dim strStayLength As String
-        Dim strAddress
+        Dim strAddress As String
 
         'For the combobox, it can be seen in the properties.
         Public Sub New(ByVal firstName As String, ByVal lastName As String, ByVal sex As String, ByVal birthday As String, ByVal arrival As String, ByVal departure As String, ByVal regular As String, ByVal senior As String, ByVal minor As String, ByVal total As String, ByVal stayLength As String, ByVal address As String)

@@ -17,6 +17,7 @@
     '9. 	Guest Minor
     '10.	Guest Total
     '11.	Stay Length
+    '12.    Address
 
 
     'GUEST TAB BY JOSEPH
@@ -44,9 +45,15 @@
             TextBox1.Text = listCurCustomer(1)
             TextBox2.Text = listCurCustomer(2)
             TextBox3.Text = listCurCustomer(3)
-            TextBox4.Text = listCurCustomer(4)
-
-
+            'txtbox4 age need fucntion
+            TextBox4.Text = listCurCustomer(0)
+            'txtbox5 # of guest
+            TextBox5.Text = listCurCustomer(0)
+            'txtbox6 address
+            TextBox6.Text = listCurCustomer(11)
+            'txtbox7 room type
+            TextBox7.Text = listCurCustomer(0)
+            'txtBox8 room Number
             For i = 0 To listCurCustomer.Count - 1
                 'MsgBox(listCurCustomer(i))
 
@@ -175,9 +182,14 @@
 
     End Sub
 
-    Private Sub tabGuestInfo_Click(sender As Object, e As EventArgs) Handles tabGuestInfo.Click
+    Private Sub tabRooms_Click(sender As Object, e As EventArgs) Handles tabRooms.Click
 
     End Sub
+
+
+
+
+
 
 
     'REFRESH AND LOAD

@@ -170,6 +170,9 @@ Public Class formBooking
     Function getLengthOfStay()
         Return Val(curUserLengthOfStay)
     End Function
+    Sub resetForm()
+
+    End Sub
 
     Private Sub btnEnterGuest_Click(sender As Object, e As EventArgs) Handles btnEnterGuest.Click, btnClearList.Click
 

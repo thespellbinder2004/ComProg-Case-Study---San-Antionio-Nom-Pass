@@ -79,7 +79,7 @@ Public Class formRooms
             writerRooms.Close()
 
             Close()
-            formBooking.Show()
+            formReciept.Show()
         End If
 
     End Function
@@ -191,4 +191,5 @@ Public Class formRooms
     Function getTotalBill()
         Return totalBill
     End Function
+
 End Class

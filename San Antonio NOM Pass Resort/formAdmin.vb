@@ -30,30 +30,47 @@
     Dim KingRoom As List(Of String) = Globals.getSplitString(Globals.getRoomsList()(4))
     Dim ExecutiveRoom As List(Of String) = Globals.getSplitString(Globals.getRoomsList()(5))
     Dim PresidentialRoom As List(Of String) = Globals.getSplitString(Globals.getRoomsList()(6))
+    Dim today = Date.Today
 
-
+    'Function for getting the Age
+    Function getAge(ByVal dateBirth As Date) As Integer
+        Dim age As Integer = today.Year - dateBirth.Year
+        If (dateBirth > today.AddYears(-age)) Then
+            age -= 1
+        End If
+        Return age
+    End Function
 
     Private Sub DataGridView2_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvGuestTable.CellContentClick
         Dim colName As String = dgvGuestTable.Columns(e.ColumnIndex).Name
         Dim rowIndex = dgvGuestTable.Rows(e.RowIndex).Index.ToString
 
+
+
         If colName = "columnEdit" Then
             listCurCustomer = Globals.getSplitString(listCustomer(rowIndex))
             tbcAdmin.SelectedTab = tabGuestInfo
+            Dim dateBirth As Date = listCurCustomer(3)
+            Dim age As Integer = getAge(dateBirth)
+
+
 
             TextBox0.Text = listCurCustomer(0)
             TextBox1.Text = listCurCustomer(1)
             TextBox2.Text = listCurCustomer(2)
             TextBox3.Text = listCurCustomer(3)
             'txtbox4 age need fucntion
-            TextBox4.Text = listCurCustomer(0)
+            TextBox4.Text = age
             'txtbox5 # of guest
-            TextBox5.Text = listCurCustomer(0)
+            TextBox5.Text = listCurCustomer(9)
             'txtbox6 address
             TextBox6.Text = listCurCustomer(11)
             'txtbox7 room type
-            TextBox7.Text = listCurCustomer(0)
+            TextBox7.Text = listCurCustomer(12)
             'txtBox8 room Number
+            TextBox8.Text = listCurCustomer(13)
+            'textbox9 total bill
+            TextBox9.Text = listCurCustomer(14)
             For i = 0 To listCurCustomer.Count - 1
                 'MsgBox(listCurCustomer(i))
 

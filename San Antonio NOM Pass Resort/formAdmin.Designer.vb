@@ -24,10 +24,10 @@ Partial Class formAdmin
     Private Sub InitializeComponent()
         tbcAdmin = New TabControl()
         tabAdminInfo = New TabPage()
-        txtAdminContact2 = New TextBox()
-        txtAdminContact1 = New TextBox()
-        txtAdminRole = New TextBox()
-        txtCurrentAdmin = New TextBox()
+        Label54 = New Label()
+        Label53 = New Label()
+        Label52 = New Label()
+        Label51 = New Label()
         Label39 = New Label()
         Label38 = New Label()
         Label37 = New Label()
@@ -163,10 +163,10 @@ Partial Class formAdmin
         ' 
         ' tabAdminInfo
         ' 
-        tabAdminInfo.Controls.Add(txtAdminContact2)
-        tabAdminInfo.Controls.Add(txtAdminContact1)
-        tabAdminInfo.Controls.Add(txtAdminRole)
-        tabAdminInfo.Controls.Add(txtCurrentAdmin)
+        tabAdminInfo.Controls.Add(Label54)
+        tabAdminInfo.Controls.Add(Label53)
+        tabAdminInfo.Controls.Add(Label52)
+        tabAdminInfo.Controls.Add(Label51)
         tabAdminInfo.Controls.Add(Label39)
         tabAdminInfo.Controls.Add(Label38)
         tabAdminInfo.Controls.Add(Label37)
@@ -189,39 +189,51 @@ Partial Class formAdmin
         tabAdminInfo.Text = "Admin Info"
         tabAdminInfo.UseVisualStyleBackColor = True
         ' 
-        ' txtAdminContact2
+        ' Label54
         ' 
-        txtAdminContact2.Location = New Point(220, 439)
-        txtAdminContact2.Name = "txtAdminContact2"
-        txtAdminContact2.Size = New Size(225, 23)
-        txtAdminContact2.TabIndex = 28
+        Label54.AutoSize = True
+        Label54.Font = New Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label54.Location = New Point(215, 444)
+        Label54.Name = "Label54"
+        Label54.Size = New Size(180, 19)
+        Label54.TabIndex = 28
+        Label54.Text = "mcquan214@gmail.com"
         ' 
-        ' txtAdminContact1
+        ' Label53
         ' 
-        txtAdminContact1.Location = New Point(220, 406)
-        txtAdminContact1.Name = "txtAdminContact1"
-        txtAdminContact1.Size = New Size(225, 23)
-        txtAdminContact1.TabIndex = 27
+        Label53.AutoSize = True
+        Label53.Font = New Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label53.Location = New Point(215, 416)
+        Label53.Name = "Label53"
+        Label53.Size = New Size(108, 19)
+        Label53.TabIndex = 27
+        Label53.Text = "09159615022"
         ' 
-        ' txtAdminRole
+        ' Label52
         ' 
-        txtAdminRole.Location = New Point(220, 377)
-        txtAdminRole.Name = "txtAdminRole"
-        txtAdminRole.Size = New Size(225, 23)
-        txtAdminRole.TabIndex = 26
+        Label52.AutoSize = True
+        Label52.Font = New Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label52.Location = New Point(215, 383)
+        Label52.Name = "Label52"
+        Label52.Size = New Size(225, 19)
+        Label52.TabIndex = 26
+        Label52.Text = "Administrative Assistant"
         ' 
-        ' txtCurrentAdmin
+        ' Label51
         ' 
-        txtCurrentAdmin.Location = New Point(220, 348)
-        txtCurrentAdmin.Name = "txtCurrentAdmin"
-        txtCurrentAdmin.Size = New Size(225, 23)
-        txtCurrentAdmin.TabIndex = 25
+        Label51.AutoSize = True
+        Label51.Font = New Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label51.Location = New Point(215, 352)
+        Label51.Name = "Label51"
+        Label51.Size = New Size(162, 19)
+        Label51.TabIndex = 25
+        Label51.Text = "Mc Jamiel D. Quan"
         ' 
         ' Label39
         ' 
         Label39.AutoSize = True
         Label39.Font = New Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label39.Location = New Point(65, 409)
+        Label39.Location = New Point(65, 416)
         Label39.Name = "Label39"
         Label39.Size = New Size(90, 19)
         Label39.TabIndex = 24
@@ -231,11 +243,11 @@ Partial Class formAdmin
         ' 
         Label38.AutoSize = True
         Label38.Font = New Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label38.Location = New Point(65, 380)
+        Label38.Location = New Point(65, 383)
         Label38.Name = "Label38"
-        Label38.Size = New Size(135, 19)
+        Label38.Size = New Size(90, 19)
         Label38.TabIndex = 23
-        Label38.Text = "Role/Position:"
+        Label38.Text = "Position:"
         ' 
         ' Label37
         ' 
@@ -293,9 +305,9 @@ Partial Class formAdmin
         Label26.Font = New Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label26.Location = New Point(184, 70)
         Label26.Name = "Label26"
-        Label26.Size = New Size(234, 19)
+        Label26.Size = New Size(315, 19)
         Label26.TabIndex = 17
-        Label26.Text = "Kaliwa, Doon, Tarlac City"
+        Label26.Text = "Kaliwa, Satabi Langpo, Tarlac City"
         ' 
         ' Label25
         ' 
@@ -366,7 +378,7 @@ Partial Class formAdmin
         Label35.Name = "Label35"
         Label35.Size = New Size(27, 19)
         Label35.TabIndex = 22
-        Label35.Text = "71"
+        Label35.Text = "35"
         ' 
         ' Label34
         ' 
@@ -1425,10 +1437,6 @@ Partial Class formAdmin
     Friend WithEvents Label39 As Label
     Friend WithEvents Label38 As Label
     Friend WithEvents Label37 As Label
-    Friend WithEvents txtAdminContact2 As TextBox
-    Friend WithEvents txtAdminContact1 As TextBox
-    Friend WithEvents txtAdminRole As TextBox
-    Friend WithEvents txtCurrentAdmin As TextBox
     Friend WithEvents dgvGuestTable As DataGridView
     Friend WithEvents btnRefresh As Button
     Friend WithEvents columnEdit As DataGridViewButtonColumn
@@ -1480,4 +1488,8 @@ Partial Class formAdmin
     Friend WithEvents TextBox9 As TextBox
     Friend WithEvents Label50 As Label
     Friend WithEvents TextBox10 As TextBox
+    Friend WithEvents Label52 As Label
+    Friend WithEvents Label51 As Label
+    Friend WithEvents Label54 As Label
+    Friend WithEvents Label53 As Label
 End Class

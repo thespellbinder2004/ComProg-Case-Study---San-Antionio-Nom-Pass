@@ -173,7 +173,26 @@ Public Class formBooking
         Return Val(curUserLengthOfStay)
     End Function
     Sub resetForm()
+        nudRegularGuests.Text = "0"
+        nudSeniorGuests.Text = "0"
+        nudMinorGuests.Text = "0"
+        txtFirstName.Clear()
+        txtLastName.Clear()
+        txtAddress.Clear()
+        txtGuestName.Clear()
+        cbGuestType.Text = ""
+        cbSex.Text = ""
 
+        dtpBirth.Format = DateTimePickerFormat.Custom
+        dtpBirth.CustomFormat = "ddd, MM / dd / yyyy"
+
+        dtpArrival.Format = DateTimePickerFormat.Custom
+        dtpArrival.CustomFormat = "ddd, MM / dd / yyyy"
+        dtpArrival.MinDate = Date.Now
+
+        dtpDeparture.Format = DateTimePickerFormat.Custom
+        dtpDeparture.CustomFormat = "ddd, MM / dd / yyyy"
+        dtpDeparture.MinDate = dtpArrival.Value.AddDays(1)
     End Sub
 
     Private Sub btnEnterGuest_Click(sender As Object, e As EventArgs) Handles btnEnterGuest.Click, btnClearList.Click

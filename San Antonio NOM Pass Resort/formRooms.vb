@@ -139,50 +139,50 @@ Public Class formRooms
     End Sub
 
     Private Sub btnQueenRoomInfo_Click(sender As Object, e As EventArgs) Handles btnQueenRoomInfo.Click
-        If btnSingleRoomInfo.Text.Contains("Info") Then
-            btnSingleRoomInfo.Text = "Max Guest Number: 2" & vbNewLine & "Bathroom: 1" & vbNewLine & "Bedroom: 1"
+        If btnQueenRoomInfo.Text.Contains("Info") Then
+            btnQueenRoomInfo.Text = "Max Guest Number: 2" & vbNewLine & "Bathroom: 1" & vbNewLine & "Bedroom: 1"
         Else
-            btnSingleRoomInfo.Text = "Click for more Info"
+            btnQueenRoomInfo.Text = "Click for more Info"
         End If
     End Sub
 
     Private Sub btnKingRoomInfo_Click(sender As Object, e As EventArgs) Handles btnKingRoomInfo.Click
-        If btnSingleRoomInfo.Text.Contains("Info") Then
-            btnSingleRoomInfo.Text = "Max Guest Number: 3" & vbNewLine & "Bathroom: 1" & vbNewLine & "Bedroom: 1"
+        If btnKingRoomInfo.Text.Contains("Info") Then
+            btnKingRoomInfo.Text = "Max Guest Number: 3" & vbNewLine & "Bathroom: 1" & vbNewLine & "Bedroom: 1"
         Else
-            btnSingleRoomInfo.Text = "Click for more Info"
+            btnKingRoomInfo.Text = "Click for more Info"
         End If
     End Sub
 
     Private Sub btnTwinRoomInfo_Click(sender As Object, e As EventArgs) Handles btnTwinRoomInfo.Click
-        If btnSingleRoomInfo.Text.Contains("Info") Then
-            btnSingleRoomInfo.Text = "Max Guest Number: 4" & vbNewLine & "Bathroom: 2" & vbNewLine & "Bedroom: 2"
+        If btnTwinRoomInfo.Text.Contains("Info") Then
+            btnTwinRoomInfo.Text = "Max Guest Number: 4" & vbNewLine & "Bathroom: 2" & vbNewLine & "Bedroom: 2"
         Else
-            btnSingleRoomInfo.Text = "Click for more Info"
+            btnTwinRoomInfo.Text = "Click for more Info"
         End If
     End Sub
 
     Private Sub btnStandardRoomInfo_Click(sender As Object, e As EventArgs) Handles btnStandardRoomInfo.Click
-        If btnSingleRoomInfo.Text.Contains("Info") Then
-            btnSingleRoomInfo.Text = "Max Guest Number: 6" & vbNewLine & "Bathroom: 2" & vbNewLine & "Bedroom: 2"
+        If btnStandardRoomInfo.Text.Contains("Info") Then
+            btnStandardRoomInfo.Text = "Max Guest Number: 6" & vbNewLine & "Bathroom: 2" & vbNewLine & "Bedroom: 2"
         Else
-            btnSingleRoomInfo.Text = "Click for more Info"
+            btnStandardRoomInfo.Text = "Click for more Info"
         End If
     End Sub
 
     Private Sub btnExecutiveRoomInfo_Click(sender As Object, e As EventArgs) Handles btnExecutiveRoomInfo.Click
-        If btnSingleRoomInfo.Text.Contains("Info") Then
-            btnSingleRoomInfo.Text = "Max Guest Number: 8" & vbNewLine & "Bathroom: 2" & vbNewLine & "Bedroom: 2"
+        If btnExecutiveRoomInfo.Text.Contains("Info") Then
+            btnExecutiveRoomInfo.Text = "Max Guest Number: 8" & vbNewLine & "Bathroom: 2" & vbNewLine & "Bedroom: 2"
         Else
-            btnSingleRoomInfo.Text = "Click for more Info"
+            btnExecutiveRoomInfo.Text = "Click for more Info"
         End If
     End Sub
 
     Private Sub btnPresidentialRoomInfo_Click(sender As Object, e As EventArgs) Handles btnPresidentialRoomInfo.Click
-        If btnSingleRoomInfo.Text.Contains("Info") Then
-            btnSingleRoomInfo.Text = "Max Guest Number: 10" & vbNewLine & "Bathroom: 2" & vbNewLine & "Bedroom: 2"
+        If btnPresidentialRoomInfo.Text.Contains("Info") Then
+            btnPresidentialRoomInfo.Text = "Max Guest Number: 10" & vbNewLine & "Bathroom: 2" & vbNewLine & "Bedroom: 2"
         Else
-            btnSingleRoomInfo.Text = "Click for more Info"
+            btnPresidentialRoomInfo.Text = "Click for more Info"
         End If
     End Sub
 

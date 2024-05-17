@@ -42,6 +42,8 @@ Public Class formBooking
         Dim strStayLength As String
         Dim strAddress As String
 
+        Dim listGuests As List(Of String)
+
 
 
         'For the combobox, it can be seen in the properties.
@@ -63,6 +65,12 @@ Public Class formBooking
             Return strFirstName + "-" + strLastName + "-" + strSex + "-" + strDatBirth + "-" + strDatArrival + "-" + strDatDeparture + "-" + strGuestRegular + "-" + strGuestSenior + "-" + strGuestMinor + "-" + strGuestTotal + "-" + strStayLength + "-" + strAddress
         End Function
 
+        Sub setGuests()
+
+        End Sub
+        Function getGuests()
+
+        End Function
     End Class
     Sub setCustomerDetails()
         Dim nameFirst = txtFirstName.Text
@@ -81,6 +89,7 @@ Public Class formBooking
 
         Dim customerInfo = New CustomerDetails(nameFirst, nameLast, sex, dateBirth, dateArrival, dateDeparture, guestReg, guestSen, guestMin, guestTotal, intStayLength, strAddress)
         listCustomerInfo = Globals.getSplitString(customerInfo.getCustomerDetails())
+
 
         curUserFullName = nameFirst + " " + nameLast
         curUserArrivalDate = dateArrival
@@ -200,6 +209,7 @@ Public Class formBooking
         If txtGuestName.Text = "" Then
             MsgBox("Please input Guest Name")
         Else
+
             lbxGuestNames.Items.Add((lbxGuestNames.Items.Count + 1).ToString + ". " + cbGuestType.SelectedItem + ":  " + txtGuestName.Text)
 
             Dim strGuestType = cbGuestType.SelectedItem
@@ -213,7 +223,11 @@ Public Class formBooking
                 intSeniorGuests += 1
             End If
             intTotalGuests = intRegularGuests + intMinorGuests + intSeniorGuests
+
+            listOccupants.Add((cbGuestType.SelectedItem + ":  " + txtGuestName.Text).ToString)
             MsgBox(intTotalGuests.ToString)
+
+
         End If
 
 
@@ -227,6 +241,7 @@ Public Class formBooking
         intSeniorGuests = 0
         lbxGuestNames.Items.Clear()
         txtGuestName.Clear()
+        listOccupants.Clear()
 
     End Sub
 

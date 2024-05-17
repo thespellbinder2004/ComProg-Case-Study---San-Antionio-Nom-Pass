@@ -60,7 +60,7 @@ Public Class formRooms
             listRoomNums(index).RemoveAt(cbIndex + 1)
 
             Dim pathCustomersTxt As String = Path.GetFullPath("Customers.txt")
-            Dim writerCustomer = New StreamWriter(pathCustomersTxt, True)
+            Dim writerCustomer = New StreamWriter("C:\Users\Gabby\Documents\GitHub\ComProg-Case-Study---San-Antionio-Nom-Pass\San Antonio NOM Pass Resort\Customers.txt", True)
             writerCustomer.WriteLine(customerInfo)
             writerCustomer.Close()
 

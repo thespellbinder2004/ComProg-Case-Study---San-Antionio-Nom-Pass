@@ -5,7 +5,7 @@ Public Class Globals
     Shared pathRoomsTxt As String = Path.GetFullPath("Rooms.txt")
     Shared Function getCustomerList()
         Dim listCustomer As New List(Of String)
-        Dim readerCustomersTxt = New StreamReader(pathCustomersTxt)
+        Dim readerCustomersTxt = New StreamReader("C:\Users\Gabby\Documents\GitHub\ComProg-Case-Study---San-Antionio-Nom-Pass\San Antonio NOM Pass Resort\Customers.txt")
 
         While Not readerCustomersTxt.EndOfStream
             listCustomer.Add(readerCustomersTxt.ReadLine)

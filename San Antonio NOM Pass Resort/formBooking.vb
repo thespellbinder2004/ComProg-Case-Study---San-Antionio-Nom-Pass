@@ -68,13 +68,13 @@ Public Class formBooking
         Dim nameFirst = txtFirstName.Text
         Dim nameLast = txtLastName.Text
         Dim sex = cbSex.Text
-        Dim dateBirth = dtpBirth.Text
-        Dim dateArrival = dtpArrival.Text
-        Dim dateDeparture = dtpDeparture.Text
-        Dim guestSen = nudSeniorGuests.Value.ToString
-        Dim guestMin = nudMinorGuests.Value.ToString
-        Dim guestReg = nudRegularGuests.Value.ToString
-        Dim guestTotal = (nudSeniorGuests.Value + nudMinorGuests.Value + nudSeniorGuests.Value).ToString
+        Dim dateBirth = dtpBirth.Value.ToString("dd/MM/yyyy")
+        Dim dateArrival = dtpArrival.Value.ToString("dd/MM/yyyy")
+        Dim dateDeparture = dtpDeparture.Value.ToString("dd/MM/yyyy")
+        Dim guestSen = intSeniorGuests.ToString
+        Dim guestMin = intMinorGuests.ToString
+        Dim guestReg = intRegularGuests.ToString
+        Dim guestTotal = intTotalGuests.ToString
         Dim intStayLength = Math.Round((dtpDeparture.Value - dtpArrival.Value).TotalDays)
         Dim strAddress = txtAddress.Text
 
@@ -106,14 +106,12 @@ Public Class formBooking
 
         formAdmin.Show()
 
+        resetForm()
 
     End Sub
 
     Private Sub btnSubmit_Click(sender As Object, e As EventArgs) Handles btnSubmit.Click
 
-        intMinorGuests = nudMinorGuests.Value
-        intSeniorGuests = nudSeniorGuests.Value
-        intRegularGuests = nudRegularGuests.Value
         intTotalGuests = intMinorGuests + intSeniorGuests + intRegularGuests
 
         If Not intTotalGuests > 0 Or txtFirstName.Text = "" Or txtLastName.Text = "" Then
@@ -193,25 +191,37 @@ Public Class formBooking
         dtpDeparture.Format = DateTimePickerFormat.Custom
         dtpDeparture.CustomFormat = "ddd, MM / dd / yyyy"
         dtpDeparture.MinDate = dtpArrival.Value.AddDays(1)
+
+        cbGuestType.SelectedIndex = 0
     End Sub
 
-    Private Sub btnEnterGuest_Click(sender As Object, e As EventArgs) Handles btnEnterGuest.Click, btnClearList.Click
+    'GETTER FUNCTIONS
+    'END ------------------------------------------
+    Private Sub btnEnterGuest_Click(sender As Object, e As EventArgs) Handles btnEnterGuest.Click
 
-        lbxGuestNames.Items.Add(txtGuestName.Text)
+        If txtGuestName.Text = "" Then
+            MsgBox("Please input Guest Name")
+        Else
+            lbxGuestNames.Items.Add((lbxGuestNames.Items.Count + 1).ToString + ". " + cbGuestType.SelectedItem + ":  " + txtGuestName.Text)
 
-        Dim strGuestType = cbGuestType.SelectedItem
+            Dim strGuestType = cbGuestType.SelectedItem
 
-        If strGuestType = "Guest" Then
-            intRegularGuests += 1
-        ElseIf strGuestType = "Senior" Then
-            intSeniorGuests += 1
-        ElseIf strGuestType = "Below 7" Then
-            intMinorGuests += 1
+
+            If strGuestType = cbGuestType.Items(0) Then
+                intRegularGuests += 1
+            ElseIf strGuestType = cbGuestType.Items(1) Then
+                intMinorGuests += 1
+            ElseIf strGuestType = cbGuestType.Items(2) Then
+                intSeniorGuests += 1
+            End If
+            intTotalGuests = intRegularGuests + intMinorGuests + intSeniorGuests
+            MsgBox(intTotalGuests.ToString)
         End If
 
 
-    End Sub
 
+
+    End Sub
 
     Private Sub btnClearList_Click(sender As Object, e As EventArgs) Handles btnClearList.Click
         intRegularGuests = 0
@@ -221,11 +231,5 @@ Public Class formBooking
         txtGuestName.Clear()
 
     End Sub
-
-
-
-
-    'GETTER FUNCTIONS
-    'END ------------------------------------------
 
 End Class

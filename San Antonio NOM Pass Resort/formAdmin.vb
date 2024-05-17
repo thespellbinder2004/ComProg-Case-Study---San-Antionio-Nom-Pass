@@ -34,11 +34,18 @@
 
     'Function for getting the Age
     Function getAge(ByVal dateBirth As Date) As Integer
+
+        MsgBox(dateBirth.ToString)
+        MsgBox(dateBirth.Year)
+
         Dim age As Integer = today.Year - dateBirth.Year
+        MsgBox(age.ToString)
         If (dateBirth > today.AddYears(-age)) Then
             age -= 1
         End If
+
         Return age
+
     End Function
 
     Private Sub DataGridView2_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvGuestTable.CellContentClick
@@ -50,7 +57,7 @@
         If colName = "columnEdit" Then
             listCurCustomer = Globals.getSplitString(listCustomer(rowIndex))
             tbcAdmin.SelectedTab = tabGuestInfo
-            Dim dateBirth As Date = listCurCustomer(3)
+            Dim dateBirth As Date = Convert.ToDateTime(listCurCustomer(3))
             Dim age As Integer = getAge(dateBirth)
 
 
@@ -90,8 +97,6 @@
     'START ------------------------------------------
     Private Sub btnRefresh_Click(sender As Object, e As EventArgs) Handles btnRefresh.Click
         loadData()
-
-
     End Sub
 
     Sub loadData()

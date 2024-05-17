@@ -171,9 +171,7 @@ Public Class formBooking
         Return Val(curUserLengthOfStay)
     End Function
     Sub resetForm()
-        nudRegularGuests.Text = "0"
-        nudSeniorGuests.Text = "0"
-        nudMinorGuests.Text = "0"
+
         txtFirstName.Clear()
         txtLastName.Clear()
         txtAddress.Clear()

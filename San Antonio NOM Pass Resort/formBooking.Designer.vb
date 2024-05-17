@@ -253,7 +253,7 @@ Partial Class formBooking
         btnEnterGuest.ForeColor = SystemColors.ButtonFace
         btnEnterGuest.Location = New Point(395, 297)
         btnEnterGuest.Name = "btnEnterGuest"
-        btnEnterGuest.Size = New Size(121, 69)
+        btnEnterGuest.Size = New Size(96, 69)
         btnEnterGuest.TabIndex = 14
         btnEnterGuest.Text = "Enter"
         btnEnterGuest.UseVisualStyleBackColor = False
@@ -265,7 +265,7 @@ Partial Class formBooking
         btnClearList.ForeColor = SystemColors.ButtonFace
         btnClearList.Location = New Point(395, 372)
         btnClearList.Name = "btnClearList"
-        btnClearList.Size = New Size(121, 63)
+        btnClearList.Size = New Size(94, 63)
         btnClearList.TabIndex = 14
         btnClearList.Text = "Clear"
         btnClearList.UseVisualStyleBackColor = False
@@ -274,7 +274,7 @@ Partial Class formBooking
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(546, 646)
+        ClientSize = New Size(528, 646)
         Controls.Add(cbGuestType)
         Controls.Add(Label2)
         Controls.Add(txtGuestName)

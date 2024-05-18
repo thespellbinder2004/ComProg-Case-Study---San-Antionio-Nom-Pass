@@ -8,7 +8,9 @@ Imports System.Runtime.CompilerServices
 Public Class formRooms
 
     Dim listRoomNums As New List(Of List(Of String))
+    Dim listRoomsSelected As New List(Of String)
     Dim totalBill As Double
+
 
 
     Private Sub formRooms_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -17,6 +19,8 @@ Public Class formRooms
     End Sub
 
     Sub Reload()
+        listRoomNums.Clear()
+
         Dim listRooms As List(Of String) = Globals.getRoomsList()
         Dim singleRoom As List(Of String) = Globals.getSplitString(Globals.getRoomsList()(0))
 
@@ -26,10 +30,14 @@ Public Class formRooms
         For i = 0 To listRooms.Count - 1
             listRoomNums.Add(Globals.getSplitString(listRooms(i)))
         Next
-
         For i = 0 To listRoomNums.Count - 1
             setRoomNum(arrCbRoomNum(i), listRoomNums(i))
-            arrCbRoomNum(i).SelectedIndex = 0
+            If arrCbRoomNum(i).Items.Count = 0 Then
+                arrCbRoomNum(i).Text = "Not Available"
+            Else
+                arrCbRoomNum(i).SelectedIndex = 0
+            End If
+
             arrTxtAvailableRoom(i).Text = listRoomNums(i).Count.ToString - 1
         Next
 
@@ -47,22 +55,15 @@ Public Class formRooms
         Dim mbResult = MessageBox.Show("Do you confirm the details that you entered?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
 
         If mbResult = DialogResult.Yes Then
-            Dim listCustomer As New List(Of String)
-            listCustomer = formBooking.getListCustomerInfo()
-            listCustomer.Add(typeRoom)
-            listCustomer.Add(listRoomNums(index)(cbIndex + 1))
 
             totalBill = calcTotalBill(formBooking.getGuestToPay, formBooking.getLengthOfStay, roomCost, maxCapacity)
-            listCustomer.Add(totalBill)
 
-            Dim customerInfo As String = appendAllWithDashes(listCustomer)
+            listRoomsSelected.Add(typeRoom)
+            listRoomsSelected.Add(listRoomNums(index)(cbIndex + 1))
+            listRoomsSelected.Add(roomCost)
+            listRoomsSelected.Add(maxCapacity)
 
             listRoomNums(index).RemoveAt(cbIndex + 1)
-
-            Dim pathCustomersTxt As String = Path.GetFullPath("Customers.txt")
-            Dim writerCustomer = New StreamWriter("C:\Users\Gabby\Documents\GitHub\ComProg-Case-Study---San-Antionio-Nom-Pass\San Antonio NOM Pass Resort\Customers.txt", True)
-            writerCustomer.WriteLine(customerInfo)
-            writerCustomer.Close()
 
             Dim pathRoomsTxt As String = Path.GetFullPath("Rooms.txt")
             System.IO.File.WriteAllText(pathRoomsTxt, "")
@@ -78,18 +79,11 @@ Public Class formRooms
 
             writerRooms.Close()
 
-            Close()
+            Hide()
+            formReciept.Reload()
             formReciept.Show()
         End If
 
-    End Function
-    Function appendAllWithDashes(ByVal listOfString As List(Of String))
-        Dim appendedString As String
-        appendedString = listOfString(0)
-        For i = 1 To listOfString.Count - 1
-            appendedString += "-" + listOfString(i)
-        Next
-        Return appendedString
     End Function
 
     Function calcTotalBill(ByVal Guests As Double, ByVal lengthOfStay As Double, ByVal roomCost As Double, ByVal maxCapacity As Double)
@@ -191,5 +185,7 @@ Public Class formRooms
     Function getTotalBill()
         Return totalBill
     End Function
-
+    Function getSelectedRooms()
+        Return listRoomsSelected
+    End Function
 End Class

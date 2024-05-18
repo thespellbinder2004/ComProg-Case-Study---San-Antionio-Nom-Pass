@@ -37,7 +37,16 @@ Public Class Globals
         Next
     End Function
 
+    Shared Function appendAllWithDashes(ByVal listOfString As List(Of String))
+        Dim appendedString As String
+        appendedString = listOfString(0)
 
+        For i = 1 To listOfString.Count - 1
+            appendedString += "-" + listOfString(i)
+        Next
+
+        Return appendedString
+    End Function
 
 
 End Class

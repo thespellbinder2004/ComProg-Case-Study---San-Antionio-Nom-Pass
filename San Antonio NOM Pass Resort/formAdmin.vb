@@ -204,9 +204,6 @@
 
     End Sub
 
-    Private Sub tabRooms_Click(sender As Object, e As EventArgs) Handles tabRooms.Click
-
-    End Sub
 
 
 

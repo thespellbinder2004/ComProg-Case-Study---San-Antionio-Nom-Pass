@@ -42,10 +42,6 @@ Public Class formBooking
         Dim strStayLength As String
         Dim strAddress As String
 
-        Dim listGuests As List(Of String)
-
-
-
         'For the combobox, it can be seen in the properties.
         Public Sub New(ByVal firstName As String, ByVal lastName As String, ByVal sex As String, ByVal birthday As String, ByVal arrival As String, ByVal departure As String, ByVal regular As String, ByVal senior As String, ByVal minor As String, ByVal total As String, ByVal stayLength As String, ByVal address As String)
             strFirstName = firstName
@@ -65,12 +61,6 @@ Public Class formBooking
             Return strFirstName + "-" + strLastName + "-" + strSex + "-" + strDatBirth + "-" + strDatArrival + "-" + strDatDeparture + "-" + strGuestRegular + "-" + strGuestSenior + "-" + strGuestMinor + "-" + strGuestTotal + "-" + strStayLength + "-" + strAddress
         End Function
 
-        Sub setGuests()
-
-        End Sub
-        Function getGuests()
-
-        End Function
     End Class
     Sub setCustomerDetails()
         Dim nameFirst = txtFirstName.Text
@@ -86,10 +76,8 @@ Public Class formBooking
         Dim intStayLength = Math.Round((dtpDeparture.Value - dtpArrival.Value).TotalDays)
         Dim strAddress = txtAddress.Text
 
-
         Dim customerInfo = New CustomerDetails(nameFirst, nameLast, sex, dateBirth, dateArrival, dateDeparture, guestReg, guestSen, guestMin, guestTotal, intStayLength, strAddress)
         listCustomerInfo = Globals.getSplitString(customerInfo.getCustomerDetails())
-
 
         curUserFullName = nameFirst + " " + nameLast
         curUserArrivalDate = dateArrival
@@ -179,6 +167,9 @@ Public Class formBooking
     Function getLengthOfStay()
         Return Val(curUserLengthOfStay)
     End Function
+    Function getListOccupants()
+        Return listOccupants
+    End Function
     Sub resetForm()
 
         txtFirstName.Clear()
@@ -200,6 +191,13 @@ Public Class formBooking
         dtpDeparture.MinDate = dtpArrival.Value.AddDays(1)
 
         cbGuestType.SelectedIndex = 0
+
+        intRegularGuests = 0
+        intMinorGuests = 0
+        intSeniorGuests = 0
+        lbxGuestNames.Items.Clear()
+        txtGuestName.Clear()
+        listOccupants.Clear()
     End Sub
 
     'GETTER FUNCTIONS
@@ -213,8 +211,6 @@ Public Class formBooking
             lbxGuestNames.Items.Add((lbxGuestNames.Items.Count + 1).ToString + ". " + cbGuestType.SelectedItem + ":  " + txtGuestName.Text)
 
             Dim strGuestType = cbGuestType.SelectedItem
-
-
             If strGuestType = cbGuestType.Items(0) Then
                 intRegularGuests += 1
             ElseIf strGuestType = cbGuestType.Items(1) Then
@@ -223,10 +219,7 @@ Public Class formBooking
                 intSeniorGuests += 1
             End If
             intTotalGuests = intRegularGuests + intMinorGuests + intSeniorGuests
-
             listOccupants.Add((cbGuestType.SelectedItem + ":  " + txtGuestName.Text).ToString)
-            MsgBox(intTotalGuests.ToString)
-
 
         End If
 

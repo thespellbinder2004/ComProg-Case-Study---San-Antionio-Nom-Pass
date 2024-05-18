@@ -204,6 +204,19 @@
 
     End Sub
 
+    Private Sub btnCheckOut_Click(sender As Object, e As EventArgs) Handles btnCheckOut.Click
+        Me.Hide()
+        formReciept.btnAddRoom.Visible = False
+        formReciept.Show()
+
+
+
+
+
+    End Sub
+
+
+
 
 
 

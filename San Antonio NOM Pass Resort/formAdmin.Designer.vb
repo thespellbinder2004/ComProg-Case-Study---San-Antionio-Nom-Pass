@@ -109,6 +109,7 @@ Partial Class formAdmin
         columnDeparture = New DataGridViewTextBoxColumn()
         columnTotalGuests = New DataGridViewTextBoxColumn()
         tabGuestInfo = New TabPage()
+        btnCheckOut = New Button()
         TextBox9 = New TextBox()
         Label50 = New Label()
         TextBox8 = New TextBox()
@@ -1095,6 +1096,7 @@ Partial Class formAdmin
         ' 
         ' tabGuestInfo
         ' 
+        tabGuestInfo.Controls.Add(btnCheckOut)
         tabGuestInfo.Controls.Add(TextBox9)
         tabGuestInfo.Controls.Add(Label50)
         tabGuestInfo.Controls.Add(TextBox8)
@@ -1122,6 +1124,16 @@ Partial Class formAdmin
         tabGuestInfo.TabIndex = 3
         tabGuestInfo.Text = "Guest Info"
         tabGuestInfo.UseVisualStyleBackColor = True
+        ' 
+        ' btnCheckOut
+        ' 
+        btnCheckOut.BackColor = Color.AntiqueWhite
+        btnCheckOut.Location = New Point(496, 400)
+        btnCheckOut.Name = "btnCheckOut"
+        btnCheckOut.Size = New Size(162, 55)
+        btnCheckOut.TabIndex = 27
+        btnCheckOut.Text = "Check-Out"
+        btnCheckOut.UseVisualStyleBackColor = False
         ' 
         ' TextBox9
         ' 
@@ -1492,4 +1504,5 @@ Partial Class formAdmin
     Friend WithEvents Label51 As Label
     Friend WithEvents Label54 As Label
     Friend WithEvents Label53 As Label
+    Friend WithEvents btnCheckOut As Button
 End Class

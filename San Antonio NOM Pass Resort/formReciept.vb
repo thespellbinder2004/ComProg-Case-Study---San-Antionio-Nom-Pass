@@ -8,12 +8,14 @@ Public Class formReciept
     Dim listOccupants As List(Of String)
     Dim intMaxCapacity As Integer = 0
     Dim dblTotalRoomCost As Double = 0
+    Dim receiptNum As Integer
     Private Sub formReciept_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         txtGuestsName.Text = formBooking.getFullName
         txtNumberOfGuest.Text = formBooking.getTotalGuest
         txtArrivalDate.Text = formBooking.getArrivalDate
         txtDepartureDate.Text = formBooking.getDepartureDate
         txtTotalPayment.Text = formRooms.getTotalBill
+        Label2.Text = Me.getRecieptNum.ToString
     End Sub
     Private Sub btnConfirm_Click(sender As Object, e As EventArgs) Handles btnConfirm.Click
 
@@ -28,13 +30,16 @@ Public Class formReciept
         Next
 
         Dim pathCustomersTxt As String = Path.GetFullPath("Customers.txt")
-        Dim writerCustomer = New StreamWriter("C:\Users\Gabby\Documents\GitHub\ComProg-Case-Study---San-Antionio-Nom-Pass\San Antonio NOM Pass Resort\Customers.txt", True)
+        Dim writerCustomer = New StreamWriter("Customers.txt", True)
         writerCustomer.WriteLine(Globals.appendAllWithDashes(formBooking.getListCustomerInfo))
         writerCustomer.Close()
+
+        btnAddRoom.Visible = True
 
         Me.Close()
         formBooking.Show()
         formBooking.resetForm()
+
 
     End Sub
 
@@ -76,4 +81,12 @@ Public Class formReciept
         Return totalBill
     End Function
 
+    Function getRecieptNum()
+        Return receiptNum
+    End Function
+
+    Function newRecieptNum(ByVal receiptNum As Integer)
+        receiptNum = receiptNum + 1
+        Return receiptNum
+    End Function
 End Class

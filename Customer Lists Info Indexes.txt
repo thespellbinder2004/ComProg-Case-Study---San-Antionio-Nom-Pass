@@ -12,8 +12,7 @@ Index   Item
 9.	Guest Total
 10.	Stay Length
 11.	Address
-12.	Rooms:
-...	Occupants
+12.	Rooms: (room type, room number, price, max capacity) 
+...	Occupants:
+last.	Total Bill
 
-
-edit, firstname, lastname, arrival, departure, total guests

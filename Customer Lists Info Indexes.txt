@@ -6,13 +6,14 @@ Index   Item
 3. 	Birthdate
 4. 	Arrival Date
 5. 	Departure Date
-7. 	Guest Regular
-8. 	Guest Senior
-9. 	Guest Minor
-10.	Guest Total
-11.	Stay Length
-12.	Room Type
-13.	Room Number
-14.	Total Bill
+6. 	Guest Regular
+7. 	Guest Senior
+8. 	Guest Minor
+9.	Guest Total
+10.	Stay Length
+11.	Address
+12.	Rooms:
+...	Occupants
+
 
 edit, firstname, lastname, arrival, departure, total guests

@@ -29,6 +29,9 @@ Public Class formReciept
             listCustomerInfo.Add(i)
         Next
 
+
+        listCustomerInfo.Add(dblTotalBill.ToString)
+
         Dim pathCustomersTxt As String = Path.GetFullPath("Customers.txt")
         Dim writerCustomer = New StreamWriter("Customers.txt", True)
         writerCustomer.WriteLine(Globals.appendAllWithDashes(formBooking.getListCustomerInfo))
@@ -39,7 +42,6 @@ Public Class formReciept
         Me.Close()
         formBooking.Show()
         formBooking.resetForm()
-
 
     End Sub
 

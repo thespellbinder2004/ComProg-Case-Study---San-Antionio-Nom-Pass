@@ -57,7 +57,7 @@
         If colName = "columnEdit" Then
             listCurCustomer = Globals.getSplitString(listCustomer(rowIndex))
             tbcAdmin.SelectedTab = tabGuestInfo
-            Dim dateBirth As Date = Convert.ToDateTime(listCurCustomer(3))
+            Dim dateBirth As Date = Convert.ToDateTime(listCurCustomer(5))
             Dim age As Integer = getAge(dateBirth)
 
 

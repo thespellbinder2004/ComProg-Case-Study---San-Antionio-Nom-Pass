@@ -48,5 +48,46 @@ Public Class Globals
         Return appendedString
     End Function
 
+    Shared Function getAvailableRooms()
+        Dim listRoomNum As New List(Of List(Of String))
+        Dim listRooms As List(Of String) = getRoomsList()
+        Dim listCustomer As List(Of String) = getCustomerList()
+
+        Dim indexOccupants As Integer
+        Dim indexRooms As Integer
+
+        'identified index of Occupants: and Rooms:
+        For i = 0 To listCustomer.Count - 1
+            For j = 0 To listCustomer(i).Count - 1
+                If listCustomer(i)(j) = "Occupants:" Then
+                    indexOccupants = j
+                End If
+                If listCustomer(i)(j) = "Rooms:" Then
+                    indexRooms = j
+                End If
+            Next
+        Next
+
+        For i = 0 To listRooms.Count - 1
+            listRoomNum.Add(getSplitString(listRooms(i)))
+        Next
+
+        For Each cust In listCustomer
+            For i = indexRooms + 2 To indexOccupants - 1 Step 4
+                For j = 0 To listRoomNum.Count - 1
+                    If listRoomNum(j).Contains(cust(i)) And cust(cust.Count - 1) = "False" Then
+
+                    End If
+                Next
+
+            Next
+        Next
+
+
+
+
+        Return listRoomNum
+
+    End Function
 
 End Class

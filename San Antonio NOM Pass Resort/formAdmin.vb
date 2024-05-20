@@ -193,10 +193,57 @@
     End Sub
 
     Private Sub btnCheckOut_Click(sender As Object, e As EventArgs) Handles btnCheckOut.Click
+        Panel2.Visible = True
+        Label57.Visible = True
+        Label56.Visible = True
+        Label55.Visible = True
+        txtTotBill.Visible = True
+        txtPaym.Visible = True
+        btnConfi.Visible = True
+        btnCanc.Visible = True
+        txtTotBill.Text = TextBox9.Text
+    End Sub
+
+    Private Sub btnCanc_Click(sender As Object, e As EventArgs) Handles btnCanc.Click
+        Panel2.Visible = False
+        Label57.Visible = False
+        Label56.Visible = False
+        Label55.Visible = False
+        txtTotBill.Visible = False
+        txtPaym.Visible = False
+        btnConfi.Visible = False
+        btnCanc.Visible = False
+        txtPaym.Text = ""
+        txtTotBill.Text = TextBox9.Text
+    End Sub
+
+
+    Private Sub btnConfi_Click(sender As Object, e As EventArgs) Handles btnConfi.Click
+        If txtPaym.Text = txtTotBill.Text Then
+            MsgBox("Payment Confirmed!", 0, "Payment")
+        Else
+            MsgBox("Insufficient Payment", 0, "Payment")
+        End If
+
+        If (Val((txtPaym.Text)) > Val((txtTotBill.Text))) Then
+            MsgBox("Payment Confirmed! Change:" + (Val((txtPaym.Text)) - Val((txtTotBill.Text))).ToString, 0, "Payment")
+        Else
+            MsgBox("Insufficient Payment", 0, "Payment")
+        End If
+
+        Panel2.Visible = False
+        Label57.Visible = False
+        Label56.Visible = False
+        Label55.Visible = False
+        txtTotBill.Visible = False
+        txtPaym.Visible = False
+        btnConfi.Visible = False
+        btnCanc.Visible = False
+        txtPaym.Text = ""
+        txtTotBill.Text = TextBox9.Text
         Me.Hide()
         formReciept.btnAddRoom.Visible = False
         formReciept.Show()
-
     End Sub
 
 

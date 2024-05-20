@@ -29,11 +29,12 @@ Public Class formReciept
             listCustomerInfo.Add(i)
         Next
 
-
         listCustomerInfo.Add(dblTotalBill.ToString)
+        listCustomerInfo.Add("False")
+
 
         Dim pathCustomersTxt As String = Path.GetFullPath("Customers.txt")
-        Dim writerCustomer = New StreamWriter("Customers.txt", True)
+        Dim writerCustomer = New StreamWriter("C:\Users\Gabby\Documents\GitHub\ComProg-Case-Study---San-Antionio-Nom-Pass\San Antonio NOM Pass Resort\Customers.txt", True)
         writerCustomer.WriteLine(Globals.appendAllWithDashes(formBooking.getListCustomerInfo))
         writerCustomer.Close()
 

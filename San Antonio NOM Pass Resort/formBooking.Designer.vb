@@ -46,6 +46,10 @@ Partial Class formBooking
         cbGuestType = New ComboBox()
         btnEnterGuest = New Button()
         btnClearList = New Button()
+        Label3 = New Label()
+        txtUsername = New TextBox()
+        Label11 = New Label()
+        txtPassword = New TextBox()
         SuspendLayout()
         ' 
         ' Label1
@@ -60,7 +64,7 @@ Partial Class formBooking
         ' 
         ' txtFirstName
         ' 
-        txtFirstName.Location = New Point(39, 93)
+        txtFirstName.Location = New Point(37, 141)
         txtFirstName.Name = "txtFirstName"
         txtFirstName.Size = New Size(223, 23)
         txtFirstName.TabIndex = 4
@@ -69,7 +73,7 @@ Partial Class formBooking
         ' 
         Label4.AutoSize = True
         Label4.Font = New Font("Consolas", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label4.Location = New Point(39, 72)
+        Label4.Location = New Point(37, 120)
         Label4.Name = "Label4"
         Label4.Size = New Size(88, 18)
         Label4.TabIndex = 0
@@ -77,7 +81,7 @@ Partial Class formBooking
         ' 
         ' txtLastName
         ' 
-        txtLastName.Location = New Point(268, 93)
+        txtLastName.Location = New Point(266, 141)
         txtLastName.Name = "txtLastName"
         txtLastName.Size = New Size(221, 23)
         txtLastName.TabIndex = 6
@@ -86,7 +90,7 @@ Partial Class formBooking
         ' 
         Label5.AutoSize = True
         Label5.Font = New Font("Consolas", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label5.Location = New Point(268, 72)
+        Label5.Location = New Point(266, 120)
         Label5.Name = "Label5"
         Label5.Size = New Size(80, 18)
         Label5.TabIndex = 5
@@ -95,7 +99,7 @@ Partial Class formBooking
         ' dtpBirth
         ' 
         dtpBirth.CustomFormat = ""
-        dtpBirth.Location = New Point(39, 140)
+        dtpBirth.Location = New Point(37, 188)
         dtpBirth.Name = "dtpBirth"
         dtpBirth.Size = New Size(223, 23)
         dtpBirth.TabIndex = 7
@@ -104,7 +108,7 @@ Partial Class formBooking
         ' 
         Label6.AutoSize = True
         Label6.Font = New Font("Consolas", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label6.Location = New Point(39, 119)
+        Label6.Location = New Point(37, 167)
         Label6.Name = "Label6"
         Label6.Size = New Size(80, 18)
         Label6.TabIndex = 0
@@ -114,7 +118,7 @@ Partial Class formBooking
         ' 
         Label7.AutoSize = True
         Label7.Font = New Font("Consolas", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label7.Location = New Point(268, 119)
+        Label7.Location = New Point(266, 167)
         Label7.Name = "Label7"
         Label7.Size = New Size(32, 18)
         Label7.TabIndex = 2
@@ -123,14 +127,14 @@ Partial Class formBooking
         ' cbSex
         ' 
         cbSex.FormattingEnabled = True
-        cbSex.Location = New Point(268, 140)
+        cbSex.Location = New Point(266, 188)
         cbSex.Name = "cbSex"
         cbSex.Size = New Size(221, 23)
         cbSex.TabIndex = 3
         ' 
         ' txtAddress
         ' 
-        txtAddress.Location = New Point(39, 187)
+        txtAddress.Location = New Point(37, 235)
         txtAddress.Name = "txtAddress"
         txtAddress.Size = New Size(450, 23)
         txtAddress.TabIndex = 9
@@ -139,7 +143,7 @@ Partial Class formBooking
         ' 
         Label8.AutoSize = True
         Label8.Font = New Font("Consolas", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label8.Location = New Point(39, 166)
+        Label8.Location = New Point(37, 214)
         Label8.Name = "Label8"
         Label8.Size = New Size(64, 18)
         Label8.TabIndex = 8
@@ -147,7 +151,7 @@ Partial Class formBooking
         ' 
         ' dtpArrival
         ' 
-        dtpArrival.Location = New Point(39, 234)
+        dtpArrival.Location = New Point(37, 282)
         dtpArrival.Name = "dtpArrival"
         dtpArrival.Size = New Size(223, 23)
         dtpArrival.TabIndex = 11
@@ -156,7 +160,7 @@ Partial Class formBooking
         ' 
         Label9.AutoSize = True
         Label9.Font = New Font("Consolas", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label9.Location = New Point(40, 214)
+        Label9.Location = New Point(38, 262)
         Label9.Name = "Label9"
         Label9.Size = New Size(104, 18)
         Label9.TabIndex = 10
@@ -164,7 +168,7 @@ Partial Class formBooking
         ' 
         ' dtpDeparture
         ' 
-        dtpDeparture.Location = New Point(268, 234)
+        dtpDeparture.Location = New Point(266, 282)
         dtpDeparture.Name = "dtpDeparture"
         dtpDeparture.Size = New Size(223, 23)
         dtpDeparture.TabIndex = 13
@@ -173,7 +177,7 @@ Partial Class formBooking
         ' 
         Label10.AutoSize = True
         Label10.Font = New Font("Consolas", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label10.Location = New Point(269, 214)
+        Label10.Location = New Point(267, 262)
         Label10.Name = "Label10"
         Label10.Size = New Size(120, 18)
         Label10.TabIndex = 12
@@ -184,7 +188,7 @@ Partial Class formBooking
         btnSubmit.BackColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
         btnSubmit.Font = New Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         btnSubmit.ForeColor = SystemColors.ButtonFace
-        btnSubmit.Location = New Point(37, 439)
+        btnSubmit.Location = New Point(35, 487)
         btnSubmit.Name = "btnSubmit"
         btnSubmit.Size = New Size(221, 50)
         btnSubmit.TabIndex = 14
@@ -196,7 +200,7 @@ Partial Class formBooking
         btnCancel.BackColor = Color.Maroon
         btnCancel.Font = New Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         btnCancel.ForeColor = SystemColors.ButtonFace
-        btnCancel.Location = New Point(268, 439)
+        btnCancel.Location = New Point(266, 487)
         btnCancel.Name = "btnCancel"
         btnCancel.Size = New Size(221, 50)
         btnCancel.TabIndex = 14
@@ -207,7 +211,7 @@ Partial Class formBooking
         ' 
         Label12.AutoSize = True
         Label12.Font = New Font("Consolas", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label12.Location = New Point(40, 276)
+        Label12.Location = New Point(38, 324)
         Label12.Name = "Label12"
         Label12.Size = New Size(152, 18)
         Label12.TabIndex = 17
@@ -217,14 +221,14 @@ Partial Class formBooking
         ' 
         lbxGuestNames.FormattingEnabled = True
         lbxGuestNames.ItemHeight = 15
-        lbxGuestNames.Location = New Point(37, 326)
+        lbxGuestNames.Location = New Point(35, 374)
         lbxGuestNames.Name = "lbxGuestNames"
         lbxGuestNames.Size = New Size(352, 109)
         lbxGuestNames.TabIndex = 20
         ' 
         ' txtGuestName
         ' 
-        txtGuestName.Location = New Point(37, 297)
+        txtGuestName.Location = New Point(35, 345)
         txtGuestName.Name = "txtGuestName"
         txtGuestName.Size = New Size(270, 23)
         txtGuestName.TabIndex = 21
@@ -232,7 +236,7 @@ Partial Class formBooking
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Location = New Point(37, 279)
+        Label2.Location = New Point(35, 327)
         Label2.Name = "Label2"
         Label2.Size = New Size(0, 15)
         Label2.TabIndex = 22
@@ -241,7 +245,7 @@ Partial Class formBooking
         ' 
         cbGuestType.FormattingEnabled = True
         cbGuestType.Items.AddRange(New Object() {"Regular", "Below 7", "Senior"})
-        cbGuestType.Location = New Point(313, 297)
+        cbGuestType.Location = New Point(311, 345)
         cbGuestType.Name = "cbGuestType"
         cbGuestType.Size = New Size(76, 23)
         cbGuestType.TabIndex = 23
@@ -251,7 +255,7 @@ Partial Class formBooking
         btnEnterGuest.BackColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
         btnEnterGuest.Font = New Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         btnEnterGuest.ForeColor = SystemColors.ButtonFace
-        btnEnterGuest.Location = New Point(395, 297)
+        btnEnterGuest.Location = New Point(393, 345)
         btnEnterGuest.Name = "btnEnterGuest"
         btnEnterGuest.Size = New Size(96, 69)
         btnEnterGuest.TabIndex = 14
@@ -263,12 +267,46 @@ Partial Class formBooking
         btnClearList.BackColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
         btnClearList.Font = New Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         btnClearList.ForeColor = SystemColors.ButtonFace
-        btnClearList.Location = New Point(395, 372)
+        btnClearList.Location = New Point(393, 420)
         btnClearList.Name = "btnClearList"
         btnClearList.Size = New Size(94, 63)
         btnClearList.TabIndex = 14
         btnClearList.Text = "Clear"
         btnClearList.UseVisualStyleBackColor = False
+        ' 
+        ' Label3
+        ' 
+        Label3.AutoSize = True
+        Label3.Font = New Font("Consolas", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label3.Location = New Point(37, 73)
+        Label3.Name = "Label3"
+        Label3.Size = New Size(80, 18)
+        Label3.TabIndex = 0
+        Label3.Text = "Username:"
+        ' 
+        ' txtUsername
+        ' 
+        txtUsername.Location = New Point(37, 94)
+        txtUsername.Name = "txtUsername"
+        txtUsername.Size = New Size(223, 23)
+        txtUsername.TabIndex = 4
+        ' 
+        ' Label11
+        ' 
+        Label11.AutoSize = True
+        Label11.Font = New Font("Consolas", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label11.Location = New Point(266, 73)
+        Label11.Name = "Label11"
+        Label11.Size = New Size(80, 18)
+        Label11.TabIndex = 5
+        Label11.Text = "Password:"
+        ' 
+        ' txtPassword
+        ' 
+        txtPassword.Location = New Point(266, 94)
+        txtPassword.Name = "txtPassword"
+        txtPassword.Size = New Size(221, 23)
+        txtPassword.TabIndex = 6
         ' 
         ' formBooking
         ' 
@@ -291,11 +329,15 @@ Partial Class formBooking
         Controls.Add(txtAddress)
         Controls.Add(Label8)
         Controls.Add(dtpBirth)
+        Controls.Add(txtPassword)
+        Controls.Add(Label11)
         Controls.Add(txtLastName)
+        Controls.Add(txtUsername)
         Controls.Add(Label5)
         Controls.Add(txtFirstName)
         Controls.Add(cbSex)
         Controls.Add(Label7)
+        Controls.Add(Label3)
         Controls.Add(Label6)
         Controls.Add(Label4)
         Controls.Add(Label1)
@@ -329,5 +371,9 @@ Partial Class formBooking
     Friend WithEvents cbGuestType As ComboBox
     Friend WithEvents btnEnterGuest As Button
     Friend WithEvents btnClearList As Button
+    Friend WithEvents Label3 As Label
+    Friend WithEvents txtUsername As TextBox
+    Friend WithEvents Label11 As Label
+    Friend WithEvents txtPassword As TextBox
 
 End Class

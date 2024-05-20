@@ -1,18 +1,21 @@
 Index   Item
 
-0. 	First Name
-1. 	Last Name
-2. 	Sex
-3. 	Birthdate
-4. 	Arrival Date
-5. 	Departure Date
-6. 	Guest Regular
-7. 	Guest Senior
-8. 	Guest Minor
-9.	Guest Total
-10.	Stay Length
-11.	Address
-12.	Rooms: (room type, room number, price, max capacity) 
+0.	Username
+1.	Password
+2. 	First Name
+3. 	Last Name
+4. 	Sex
+5. 	Birthdate
+6. 	Arrival Date
+7. 	Departure Date
+8. 	Guest Regular
+9. 	Guest Senior
+10. 	Guest Minor
+11.	Guest Total
+12.	Stay Length
+13.	Address
+14.	Rooms: (room type, room number, price, max capacity) 
 ...	Occupants:
-last.	Total Bill
+b4Last 	Total Bill
+Last	Checked Out(true/false)
 

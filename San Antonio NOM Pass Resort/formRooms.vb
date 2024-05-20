@@ -9,19 +9,18 @@ Public Class formRooms
 
     Dim listRoomNums As New List(Of List(Of String))
     Dim listRoomsSelected As New List(Of String)
+    Dim listRooms As New List(Of String)
     Dim totalBill As Double
 
 
 
     Private Sub formRooms_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim listRooms = Globals.getRoomsList()
         Reload()
     End Sub
 
     Sub Reload()
         listRoomNums.Clear()
-
-        Dim listRooms As List(Of String) = Globals.getRoomsList()
+        listRooms = Globals.getRoomsList()
         Dim singleRoom As List(Of String) = Globals.getSplitString(Globals.getRoomsList()(0))
 
         Dim arrCbRoomNum As Array = {cbSingleRoomNumber, cbTwinRoomNumber, cbStandardRoomNumber, cbQueenRoomNumber, cbKingRoomNumber, cbExecutiveRoomNumber, cbPresidentialRoomNumber}

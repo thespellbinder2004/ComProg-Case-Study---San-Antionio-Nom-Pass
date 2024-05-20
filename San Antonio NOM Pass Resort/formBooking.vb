@@ -29,6 +29,8 @@ Public Class formBooking
     End Class
 
     Class CustomerDetails
+        Dim strUsername As String
+        Dim strPassword As String
         Dim strFirstName As String
         Dim strLastName As String
         Dim strSex As String
@@ -43,7 +45,9 @@ Public Class formBooking
         Dim strAddress As String
 
         'For the combobox, it can be seen in the properties.
-        Public Sub New(ByVal firstName As String, ByVal lastName As String, ByVal sex As String, ByVal birthday As String, ByVal arrival As String, ByVal departure As String, ByVal regular As String, ByVal senior As String, ByVal minor As String, ByVal total As String, ByVal stayLength As String, ByVal address As String)
+        Public Sub New(ByVal username As String, ByVal password As String, ByVal firstName As String, ByVal lastName As String, ByVal sex As String, ByVal birthday As String, ByVal arrival As String, ByVal departure As String, ByVal regular As String, ByVal senior As String, ByVal minor As String, ByVal total As String, ByVal stayLength As String, ByVal address As String)
+            strUsername = username
+            strPassword = password
             strFirstName = firstName
             strLastName = lastName
             strSex = sex
@@ -58,11 +62,13 @@ Public Class formBooking
             strAddress = address
         End Sub
         Function getCustomerDetails()
-            Return strFirstName + "-" + strLastName + "-" + strSex + "-" + strDatBirth + "-" + strDatArrival + "-" + strDatDeparture + "-" + strGuestRegular + "-" + strGuestSenior + "-" + strGuestMinor + "-" + strGuestTotal + "-" + strStayLength + "-" + strAddress
+            Return strUsername + "-" + strPassword + "-" + strFirstName + "-" + strLastName + "-" + strSex + "-" + strDatBirth + "-" + strDatArrival + "-" + strDatDeparture + "-" + strGuestRegular + "-" + strGuestSenior + "-" + strGuestMinor + "-" + strGuestTotal + "-" + strStayLength + "-" + strAddress
         End Function
 
     End Class
     Sub setCustomerDetails()
+        Dim userName = txtUsername.Text
+        Dim password = txtPassword.Text
         Dim nameFirst = txtFirstName.Text
         Dim nameLast = txtLastName.Text
         Dim sex = cbSex.Text
@@ -76,7 +82,7 @@ Public Class formBooking
         Dim intStayLength = Math.Round((dtpDeparture.Value - dtpArrival.Value).TotalDays)
         Dim strAddress = txtAddress.Text
 
-        Dim customerInfo = New CustomerDetails(nameFirst, nameLast, sex, dateBirth, dateArrival, dateDeparture, guestReg, guestSen, guestMin, guestTotal, intStayLength, strAddress)
+        Dim customerInfo = New CustomerDetails(userName, password, nameFirst, nameLast, sex, dateBirth, dateArrival, dateDeparture, guestReg, guestSen, guestMin, guestTotal, intStayLength, strAddress)
         listCustomerInfo = Globals.getSplitString(customerInfo.getCustomerDetails())
 
         curUserFullName = nameFirst + " " + nameLast
@@ -111,7 +117,7 @@ Public Class formBooking
 
         intTotalGuests = intMinorGuests + intSeniorGuests + intRegularGuests
 
-        If Not intTotalGuests > 0 Or txtFirstName.Text = "" Or txtLastName.Text = "" Then
+        If Not intTotalGuests > 0 Or txtFirstName.Text = "" Or txtLastName.Text = "" Or txtUsername.Text = "" Or txtPassword.Text = "" Or txtAddress.Text = "" Then
             MessageBox.Show("Please Input Required Elements", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         Else
             Dim result = MessageBox.Show("Do you confirm all information is correctly filled out?", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)
@@ -237,5 +243,6 @@ Public Class formBooking
         listOccupants.Clear()
 
     End Sub
+
 
 End Class

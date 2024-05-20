@@ -61,26 +61,24 @@
             Dim age As Integer = getAge(dateBirth)
 
 
-
-            TextBox0.Text = listCurCustomer(0)
-            TextBox1.Text = listCurCustomer(1)
-            TextBox2.Text = listCurCustomer(2)
-            TextBox3.Text = listCurCustomer(3)
+            TextBox0.Text = listCurCustomer(2)
+            TextBox1.Text = listCurCustomer(3)
+            TextBox2.Text = listCurCustomer(4)
+            TextBox3.Text = listCurCustomer(5)
             'txtbox4 age need fucntion
             TextBox4.Text = age
             'txtbox5 # of guest
-            TextBox5.Text = listCurCustomer(9)
+            TextBox5.Text = listCurCustomer(11)
             'txtbox6 address
-            TextBox6.Text = listCurCustomer(11)
+            TextBox6.Text = listCurCustomer(13)
             'txtbox7 room type
-            TextBox7.Text = listCurCustomer(12)
+            TextBox7.Text = listCurCustomer(14)
             'txtBox8 room Number
-            TextBox8.Text = listCurCustomer(13)
+            TextBox8.Text = listCurCustomer(15)
             'textbox9 total bill
-            TextBox9.Text = listCurCustomer(14)
+            TextBox9.Text = listCurCustomer(16)
             For i = 0 To listCurCustomer.Count - 1
                 'MsgBox(listCurCustomer(i))
-
             Next
 
         End If
@@ -100,12 +98,12 @@
     End Sub
 
     Sub loadData()
-        listCustomer = Globals.getCustomerList
+        listCustomer = Globals.getCustomerList()
         dgvGuestTable.Rows.Clear()
 
         For i = 0 To listCustomer.Count - 1
             Dim listInfo As List(Of String) = Globals.getSplitString(listCustomer(i))
-            dgvGuestTable.Rows.Add("Edit", listInfo(0), listInfo(1), listInfo(4), listInfo(5), listInfo(10))
+            dgvGuestTable.Rows.Add("Edit", listInfo(2), listInfo(3), listInfo(6), listInfo(7), listInfo(12))
         Next
 
 
@@ -122,7 +120,7 @@
         dgvGuestTable.Rows.Clear()
         For i = 0 To (listCustomer.Count - 1)
             Dim listInfo As List(Of String) = Globals.getSplitString(listCustomer(i))
-            dgvGuestTable.Rows.Add("Edit", listInfo(0), listInfo(1), listInfo(4), listInfo(5), listInfo(10))
+            dgvGuestTable.Rows.Add("Edit", listInfo(2), listInfo(3), listInfo(6), listInfo(7), listInfo(12))
         Next
 
         'SINGLE ROOM
@@ -192,16 +190,6 @@
 
     Private Sub formAdmin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         loadData()
-        listCustomer = Globals.getCustomerList()
-        dgvGuestTable.Rows.Clear()
-        For i = 0 To (listCustomer.Count - 1)
-
-            Dim listInfo As List(Of String) = Globals.getSplitString(listCustomer(i))
-            dgvGuestTable.Rows.Add("Edit", listInfo(0), listInfo(1), listInfo(4), listInfo(5), listInfo(10))
-
-        Next
-
-
     End Sub
 
     Private Sub btnCheckOut_Click(sender As Object, e As EventArgs) Handles btnCheckOut.Click
@@ -209,20 +197,7 @@
         formReciept.btnAddRoom.Visible = False
         formReciept.Show()
 
-
-
-
-
     End Sub
-
-
-
-
-
-
-
-
-
 
 
     'REFRESH AND LOAD

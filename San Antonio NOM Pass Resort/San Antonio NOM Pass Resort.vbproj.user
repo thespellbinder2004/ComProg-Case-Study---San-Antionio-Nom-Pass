@@ -19,5 +19,8 @@
     <Compile Update="formTestingDONOTUSE.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="formUser.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

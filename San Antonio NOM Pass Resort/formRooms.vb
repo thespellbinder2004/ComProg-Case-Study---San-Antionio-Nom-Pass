@@ -15,7 +15,10 @@ Public Class formRooms
 
 
     Private Sub formRooms_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Globals.setAvailableRooms()
         Reload()
+
+
     End Sub
 
     Sub Reload()
@@ -67,7 +70,6 @@ Public Class formRooms
             Dim pathRoomsTxt As String = Path.GetFullPath("Rooms.txt")
             System.IO.File.WriteAllText(pathRoomsTxt, "")
             Dim writerRooms = New StreamWriter(pathRoomsTxt, True)
-
             For i = 0 To listRoomNums.Count - 1
                 writerRooms.Write(listRoomNums(i)(0))
                 For j = 1 To listRoomNums(i).Count - 1
@@ -75,7 +77,6 @@ Public Class formRooms
                 Next
                 writerRooms.WriteLine()
             Next
-
             writerRooms.Close()
 
             Hide()

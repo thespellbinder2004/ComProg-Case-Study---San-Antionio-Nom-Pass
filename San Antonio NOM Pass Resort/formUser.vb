@@ -90,6 +90,8 @@ Public Class formUser
     End Sub
 
     Private Sub formUser_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Globals.setAvailableRooms()
+
         Reload()
     End Sub
 

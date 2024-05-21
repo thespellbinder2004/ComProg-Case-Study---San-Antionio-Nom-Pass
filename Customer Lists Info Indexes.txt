@@ -15,7 +15,7 @@ Index   Item
 12.	Stay Length
 13.	Address
 14.	Rooms: (room type, room number, price, max capacity) 
-...	Occupants:
+...	Occupants: (Joseph Castro, Kim Bagtas, Phoebe Lonsagay)
 b4Last 	Total Bill
 Last	Checked Out(true/false)
 

@@ -101,11 +101,9 @@ Public Class Globals
                     indexRooms = j
                 End If
             Next
-            MsgBox(indexRooms.ToString)
 
-            MsgBox(indexOccupants.ToString)
             For j = indexRooms + 2 To indexOccupants - 1 Step 4
-                MsgBox(listCustomerInfo(i)(j))
+
                 For k = 0 To listRoomNum.Count - 1
                     If listRoomNum(k).Contains(listCustomerInfo(i)(j)) And listCustomerInfo(i)(listCustomerInfo(i).Count - 1) = "False" Then
                         listRoomNum(k).RemoveAt(k)

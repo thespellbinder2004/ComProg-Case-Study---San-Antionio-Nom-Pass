@@ -1,8 +1,11 @@
-﻿Imports System.Net.Quic
+﻿Imports System.Drawing.Design
+Imports System.IO
+Imports System.Net.Quic
 
 Public Class formUser
     Dim listCustomer As New List(Of String)
     Dim listCustomerInfo As New List(Of List(Of String))
+    Dim curUser As Integer
     Function Reload()
         listCustomerInfo.Clear()
         listCustomer = Globals.getCustomerList
@@ -38,6 +41,7 @@ Public Class formUser
         Dim logged As Boolean = False
         For i = 0 To listCustomerInfo.Count - 1
             If listCustomerInfo(i)(0) = txtUsername.Text And listCustomerInfo(i)(1) = txtPassword.Text Then
+                curUser = i
                 pnlCustomerDetails.Enabled = True
                 pnlLogIn.Enabled = False
                 MessageBox.Show("Log In Success!", "Log In", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -82,6 +86,12 @@ Public Class formUser
             roomCount += 1
         Next
 
+        Dim guestCount As Integer = 1
+        For j = indexOccupants + 1 To listCustomerInfo(i).Count - 3
+            lbGuests.Items.Add(guestCount.ToString + ". " + listCustomerInfo(i)(j))
+            guestCount += 1
+        Next
+
     End Function
 
     Private Sub btnBookNow_Click(sender As Object, e As EventArgs) Handles btnBookNow.Click
@@ -91,7 +101,6 @@ Public Class formUser
 
     Private Sub formUser_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Globals.setAvailableRooms()
-
         Reload()
     End Sub
 
@@ -99,4 +108,17 @@ Public Class formUser
         Reload()
     End Sub
 
+    Private Sub btnCheckOut_Click(sender As Object, e As EventArgs) Handles btnCheckOut.Click
+        checkOut()
+
+    End Sub
+    Function checkOut()
+        listCustomerInfo(curUser)(listCustomerInfo.Count - 1) = "True"
+        MsgBox(listCustomerInfo(curUser)(listCustomerInfo.Count - 1))
+        Dim pathCustomersTxt As String = Path.GetFullPath("Customers.txt")
+        Dim writerCustomer = System.IO.File.ReadAllLines(pathCustomersTxt)
+        writerCustomer(0) = Globals.appendAllWithDashes(listCustomerInfo(curUser))
+        System.IO.File.WriteAllLines(pathCustomersTxt, writerCustomer)
+
+    End Function
 End Class

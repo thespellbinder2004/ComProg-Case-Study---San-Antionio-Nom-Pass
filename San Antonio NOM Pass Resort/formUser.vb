@@ -62,7 +62,7 @@ Public Class formUser
         txtArrivalDate.Text = listCustomerInfo(i)(6)
         txtDepartureDate.Text = listCustomerInfo(i)(7)
         txtAddress.Text = listCustomerInfo(i)(13)
-
+        txtTotalBill.Text = "₱ " + listCustomerInfo(i)(listCustomerInfo(i).Count - 2)
         Dim indexOccupants As Integer = 0
         Dim indexRooms As Integer = 0
 
@@ -121,4 +121,8 @@ Public Class formUser
         System.IO.File.WriteAllLines(pathCustomersTxt, writerCustomer)
 
     End Function
+
+    Private Sub pnlLogIn_Paint(sender As Object, e As PaintEventArgs) Handles pnlLogIn.Paint
+
+    End Sub
 End Class

@@ -113,11 +113,11 @@ Public Class formUser
 
     End Sub
     Function checkOut()
-        listCustomerInfo(curUser)(listCustomerInfo.Count - 1) = "True"
+        listCustomerInfo(curUser)(listCustomerInfo(curUser).Count - 1) = "True"
         MsgBox(listCustomerInfo(curUser)(listCustomerInfo.Count - 1))
         Dim pathCustomersTxt As String = Path.GetFullPath("Customers.txt")
         Dim writerCustomer = System.IO.File.ReadAllLines(pathCustomersTxt)
-        writerCustomer(0) = Globals.appendAllWithDashes(listCustomerInfo(curUser))
+        writerCustomer(curUser) = Globals.appendAllWithDashes(listCustomerInfo(curUser))
         System.IO.File.WriteAllLines(pathCustomersTxt, writerCustomer)
 
     End Function

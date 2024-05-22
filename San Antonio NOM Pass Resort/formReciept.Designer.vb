@@ -124,61 +124,66 @@ Partial Class formReciept
         ' 
         txtGuestsName.BackColor = Color.Gainsboro
         txtGuestsName.BorderStyle = BorderStyle.FixedSingle
+        txtGuestsName.Enabled = False
         txtGuestsName.ForeColor = SystemColors.WindowText
         txtGuestsName.Location = New Point(176, 75)
         txtGuestsName.Margin = New Padding(3, 4, 3, 4)
         txtGuestsName.Name = "txtGuestsName"
         txtGuestsName.ReadOnly = True
         txtGuestsName.Size = New Size(188, 27)
-        txtGuestsName.TabIndex = 20
+        txtGuestsName.TabIndex = 0
         ' 
         ' txtNumberOfGuest
         ' 
         txtNumberOfGuest.BackColor = Color.Gainsboro
         txtNumberOfGuest.BorderStyle = BorderStyle.FixedSingle
+        txtNumberOfGuest.Enabled = False
         txtNumberOfGuest.ForeColor = SystemColors.WindowText
         txtNumberOfGuest.Location = New Point(213, 113)
         txtNumberOfGuest.Margin = New Padding(3, 4, 3, 4)
         txtNumberOfGuest.Name = "txtNumberOfGuest"
         txtNumberOfGuest.ReadOnly = True
         txtNumberOfGuest.Size = New Size(152, 27)
-        txtNumberOfGuest.TabIndex = 21
+        txtNumberOfGuest.TabIndex = 1
         ' 
         ' txtArrivalDate
         ' 
         txtArrivalDate.BackColor = Color.Gainsboro
         txtArrivalDate.BorderStyle = BorderStyle.FixedSingle
+        txtArrivalDate.Enabled = False
         txtArrivalDate.ForeColor = SystemColors.WindowText
         txtArrivalDate.Location = New Point(197, 191)
         txtArrivalDate.Margin = New Padding(3, 4, 3, 4)
         txtArrivalDate.Name = "txtArrivalDate"
         txtArrivalDate.ReadOnly = True
         txtArrivalDate.Size = New Size(168, 27)
-        txtArrivalDate.TabIndex = 22
+        txtArrivalDate.TabIndex = 2
         ' 
         ' txtDepartureDate
         ' 
         txtDepartureDate.BackColor = Color.Gainsboro
         txtDepartureDate.BorderStyle = BorderStyle.FixedSingle
+        txtDepartureDate.Enabled = False
         txtDepartureDate.ForeColor = SystemColors.WindowText
         txtDepartureDate.Location = New Point(197, 229)
         txtDepartureDate.Margin = New Padding(3, 4, 3, 4)
         txtDepartureDate.Name = "txtDepartureDate"
         txtDepartureDate.ReadOnly = True
         txtDepartureDate.Size = New Size(168, 27)
-        txtDepartureDate.TabIndex = 23
+        txtDepartureDate.TabIndex = 3
         ' 
         ' txtTotalPayment
         ' 
         txtTotalPayment.BackColor = Color.Gainsboro
         txtTotalPayment.BorderStyle = BorderStyle.FixedSingle
+        txtTotalPayment.Enabled = False
         txtTotalPayment.ForeColor = SystemColors.WindowText
         txtTotalPayment.Location = New Point(213, 295)
         txtTotalPayment.Margin = New Padding(3, 4, 3, 4)
         txtTotalPayment.Name = "txtTotalPayment"
         txtTotalPayment.ReadOnly = True
         txtTotalPayment.Size = New Size(152, 27)
-        txtTotalPayment.TabIndex = 25
+        txtTotalPayment.TabIndex = 4
         ' 
         ' Label6
         ' 
@@ -195,7 +200,7 @@ Partial Class formReciept
         btnConfirm.Location = New Point(74, 423)
         btnConfirm.Name = "btnConfirm"
         btnConfirm.Size = New Size(94, 29)
-        btnConfirm.TabIndex = 26
+        btnConfirm.TabIndex = 5
         btnConfirm.Text = "Confirm"
         btnConfirm.UseVisualStyleBackColor = True
         ' 
@@ -204,7 +209,7 @@ Partial Class formReciept
         btnAddRoom.Location = New Point(222, 423)
         btnAddRoom.Name = "btnAddRoom"
         btnAddRoom.Size = New Size(94, 29)
-        btnAddRoom.TabIndex = 27
+        btnAddRoom.TabIndex = 6
         btnAddRoom.Text = "Add Room"
         btnAddRoom.UseVisualStyleBackColor = True
         ' 

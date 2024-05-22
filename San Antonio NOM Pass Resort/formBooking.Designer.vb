@@ -56,61 +56,64 @@ Partial Class formBooking
         ' 
         Label1.AutoSize = True
         Label1.Font = New Font("Consolas", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label1.Location = New Point(48, 36)
+        Label1.Location = New Point(55, 48)
         Label1.Name = "Label1"
-        Label1.Size = New Size(280, 22)
+        Label1.Size = New Size(363, 28)
         Label1.TabIndex = 0
         Label1.Text = "San Antonio NOM Pass Resort"
         ' 
         ' txtFirstName
         ' 
-        txtFirstName.Location = New Point(37, 141)
+        txtFirstName.Location = New Point(42, 188)
+        txtFirstName.Margin = New Padding(3, 4, 3, 4)
         txtFirstName.Name = "txtFirstName"
-        txtFirstName.Size = New Size(223, 23)
-        txtFirstName.TabIndex = 4
+        txtFirstName.Size = New Size(254, 27)
+        txtFirstName.TabIndex = 2
         ' 
         ' Label4
         ' 
         Label4.AutoSize = True
         Label4.Font = New Font("Consolas", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label4.Location = New Point(37, 120)
+        Label4.Location = New Point(42, 160)
         Label4.Name = "Label4"
-        Label4.Size = New Size(88, 18)
+        Label4.Size = New Size(110, 22)
         Label4.TabIndex = 0
         Label4.Text = "First Name"
         ' 
         ' txtLastName
         ' 
-        txtLastName.Location = New Point(266, 141)
+        txtLastName.Location = New Point(304, 188)
+        txtLastName.Margin = New Padding(3, 4, 3, 4)
         txtLastName.Name = "txtLastName"
-        txtLastName.Size = New Size(221, 23)
-        txtLastName.TabIndex = 6
+        txtLastName.Size = New Size(252, 27)
+        txtLastName.TabIndex = 3
         ' 
         ' Label5
         ' 
         Label5.AutoSize = True
         Label5.Font = New Font("Consolas", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label5.Location = New Point(266, 120)
+        Label5.Location = New Point(304, 160)
         Label5.Name = "Label5"
-        Label5.Size = New Size(80, 18)
+        Label5.Size = New Size(100, 22)
         Label5.TabIndex = 5
         Label5.Text = "Last Name"
         ' 
         ' dtpBirth
         ' 
         dtpBirth.CustomFormat = ""
-        dtpBirth.Location = New Point(37, 188)
+        dtpBirth.Location = New Point(42, 251)
+        dtpBirth.Margin = New Padding(3, 4, 3, 4)
         dtpBirth.Name = "dtpBirth"
-        dtpBirth.Size = New Size(223, 23)
-        dtpBirth.TabIndex = 7
+        dtpBirth.Size = New Size(254, 27)
+        dtpBirth.TabIndex = 4
         ' 
         ' Label6
         ' 
         Label6.AutoSize = True
         Label6.Font = New Font("Consolas", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label6.Location = New Point(37, 167)
+        Label6.Location = New Point(42, 223)
         Label6.Name = "Label6"
-        Label6.Size = New Size(80, 18)
+        Label6.Size = New Size(100, 22)
         Label6.TabIndex = 0
         Label6.Text = "Birthdate"
         ' 
@@ -118,68 +121,72 @@ Partial Class formBooking
         ' 
         Label7.AutoSize = True
         Label7.Font = New Font("Consolas", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label7.Location = New Point(266, 167)
+        Label7.Location = New Point(304, 223)
         Label7.Name = "Label7"
-        Label7.Size = New Size(32, 18)
+        Label7.Size = New Size(40, 22)
         Label7.TabIndex = 2
         Label7.Text = "Sex"
         ' 
         ' cbSex
         ' 
         cbSex.FormattingEnabled = True
-        cbSex.Location = New Point(266, 188)
+        cbSex.Location = New Point(304, 251)
+        cbSex.Margin = New Padding(3, 4, 3, 4)
         cbSex.Name = "cbSex"
-        cbSex.Size = New Size(221, 23)
-        cbSex.TabIndex = 3
+        cbSex.Size = New Size(252, 28)
+        cbSex.TabIndex = 5
         ' 
         ' txtAddress
         ' 
-        txtAddress.Location = New Point(37, 235)
+        txtAddress.Location = New Point(42, 313)
+        txtAddress.Margin = New Padding(3, 4, 3, 4)
         txtAddress.Name = "txtAddress"
-        txtAddress.Size = New Size(450, 23)
-        txtAddress.TabIndex = 9
+        txtAddress.Size = New Size(514, 27)
+        txtAddress.TabIndex = 6
         ' 
         ' Label8
         ' 
         Label8.AutoSize = True
         Label8.Font = New Font("Consolas", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label8.Location = New Point(37, 214)
+        Label8.Location = New Point(42, 285)
         Label8.Name = "Label8"
-        Label8.Size = New Size(64, 18)
+        Label8.Size = New Size(80, 22)
         Label8.TabIndex = 8
         Label8.Text = "Address"
         ' 
         ' dtpArrival
         ' 
-        dtpArrival.Location = New Point(37, 282)
+        dtpArrival.Location = New Point(42, 376)
+        dtpArrival.Margin = New Padding(3, 4, 3, 4)
         dtpArrival.Name = "dtpArrival"
-        dtpArrival.Size = New Size(223, 23)
-        dtpArrival.TabIndex = 11
+        dtpArrival.Size = New Size(254, 27)
+        dtpArrival.TabIndex = 7
         ' 
         ' Label9
         ' 
         Label9.AutoSize = True
         Label9.Font = New Font("Consolas", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label9.Location = New Point(38, 262)
+        Label9.Location = New Point(43, 349)
         Label9.Name = "Label9"
-        Label9.Size = New Size(104, 18)
+        Label9.Size = New Size(130, 22)
         Label9.TabIndex = 10
         Label9.Text = "Arrival Date"
         ' 
         ' dtpDeparture
         ' 
-        dtpDeparture.Location = New Point(266, 282)
+        dtpDeparture.Location = New Point(304, 376)
+        dtpDeparture.Margin = New Padding(3, 4, 3, 4)
         dtpDeparture.Name = "dtpDeparture"
-        dtpDeparture.Size = New Size(223, 23)
-        dtpDeparture.TabIndex = 13
+        dtpDeparture.Size = New Size(254, 27)
+        dtpDeparture.TabIndex = 8
         ' 
         ' Label10
         ' 
         Label10.AutoSize = True
         Label10.Font = New Font("Consolas", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label10.Location = New Point(267, 262)
+        Label10.Location = New Point(305, 349)
         Label10.Name = "Label10"
-        Label10.Size = New Size(120, 18)
+        Label10.Size = New Size(150, 22)
         Label10.TabIndex = 12
         Label10.Text = "Departure Date"
         ' 
@@ -188,9 +195,10 @@ Partial Class formBooking
         btnSubmit.BackColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
         btnSubmit.Font = New Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         btnSubmit.ForeColor = SystemColors.ButtonFace
-        btnSubmit.Location = New Point(35, 487)
+        btnSubmit.Location = New Point(40, 649)
+        btnSubmit.Margin = New Padding(3, 4, 3, 4)
         btnSubmit.Name = "btnSubmit"
-        btnSubmit.Size = New Size(221, 50)
+        btnSubmit.Size = New Size(253, 67)
         btnSubmit.TabIndex = 14
         btnSubmit.Text = "Submit Reservation"
         btnSubmit.UseVisualStyleBackColor = False
@@ -200,10 +208,11 @@ Partial Class formBooking
         btnCancel.BackColor = Color.Maroon
         btnCancel.Font = New Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         btnCancel.ForeColor = SystemColors.ButtonFace
-        btnCancel.Location = New Point(266, 487)
+        btnCancel.Location = New Point(304, 649)
+        btnCancel.Margin = New Padding(3, 4, 3, 4)
         btnCancel.Name = "btnCancel"
-        btnCancel.Size = New Size(221, 50)
-        btnCancel.TabIndex = 14
+        btnCancel.Size = New Size(253, 67)
+        btnCancel.TabIndex = 15
         btnCancel.Text = "Cancel"
         btnCancel.UseVisualStyleBackColor = False
         ' 
@@ -211,54 +220,57 @@ Partial Class formBooking
         ' 
         Label12.AutoSize = True
         Label12.Font = New Font("Consolas", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label12.Location = New Point(38, 324)
+        Label12.Location = New Point(43, 432)
         Label12.Name = "Label12"
-        Label12.Size = New Size(152, 18)
+        Label12.Size = New Size(190, 22)
         Label12.TabIndex = 17
         Label12.Text = "Input Guest Names:"
         ' 
         ' lbxGuestNames
         ' 
         lbxGuestNames.FormattingEnabled = True
-        lbxGuestNames.ItemHeight = 15
-        lbxGuestNames.Location = New Point(35, 374)
+        lbxGuestNames.Location = New Point(40, 499)
+        lbxGuestNames.Margin = New Padding(3, 4, 3, 4)
         lbxGuestNames.Name = "lbxGuestNames"
-        lbxGuestNames.Size = New Size(352, 109)
-        lbxGuestNames.TabIndex = 20
+        lbxGuestNames.Size = New Size(402, 144)
+        lbxGuestNames.TabIndex = 12
         ' 
         ' txtGuestName
         ' 
-        txtGuestName.Location = New Point(35, 345)
+        txtGuestName.Location = New Point(40, 460)
+        txtGuestName.Margin = New Padding(3, 4, 3, 4)
         txtGuestName.Name = "txtGuestName"
-        txtGuestName.Size = New Size(270, 23)
-        txtGuestName.TabIndex = 21
+        txtGuestName.Size = New Size(308, 27)
+        txtGuestName.TabIndex = 9
         ' 
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Location = New Point(35, 327)
+        Label2.Location = New Point(40, 436)
         Label2.Name = "Label2"
-        Label2.Size = New Size(0, 15)
+        Label2.Size = New Size(0, 20)
         Label2.TabIndex = 22
         ' 
         ' cbGuestType
         ' 
         cbGuestType.FormattingEnabled = True
         cbGuestType.Items.AddRange(New Object() {"Regular", "Below 7", "Senior"})
-        cbGuestType.Location = New Point(311, 345)
+        cbGuestType.Location = New Point(355, 460)
+        cbGuestType.Margin = New Padding(3, 4, 3, 4)
         cbGuestType.Name = "cbGuestType"
-        cbGuestType.Size = New Size(76, 23)
-        cbGuestType.TabIndex = 23
+        cbGuestType.Size = New Size(86, 28)
+        cbGuestType.TabIndex = 10
         ' 
         ' btnEnterGuest
         ' 
         btnEnterGuest.BackColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
         btnEnterGuest.Font = New Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         btnEnterGuest.ForeColor = SystemColors.ButtonFace
-        btnEnterGuest.Location = New Point(393, 345)
+        btnEnterGuest.Location = New Point(449, 460)
+        btnEnterGuest.Margin = New Padding(3, 4, 3, 4)
         btnEnterGuest.Name = "btnEnterGuest"
-        btnEnterGuest.Size = New Size(96, 69)
-        btnEnterGuest.TabIndex = 14
+        btnEnterGuest.Size = New Size(110, 92)
+        btnEnterGuest.TabIndex = 11
         btnEnterGuest.Text = "Enter"
         btnEnterGuest.UseVisualStyleBackColor = False
         ' 
@@ -267,10 +279,11 @@ Partial Class formBooking
         btnClearList.BackColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
         btnClearList.Font = New Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         btnClearList.ForeColor = SystemColors.ButtonFace
-        btnClearList.Location = New Point(393, 420)
+        btnClearList.Location = New Point(449, 560)
+        btnClearList.Margin = New Padding(3, 4, 3, 4)
         btnClearList.Name = "btnClearList"
-        btnClearList.Size = New Size(94, 63)
-        btnClearList.TabIndex = 14
+        btnClearList.Size = New Size(107, 84)
+        btnClearList.TabIndex = 13
         btnClearList.Text = "Clear"
         btnClearList.UseVisualStyleBackColor = False
         ' 
@@ -278,41 +291,43 @@ Partial Class formBooking
         ' 
         Label3.AutoSize = True
         Label3.Font = New Font("Consolas", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label3.Location = New Point(37, 73)
+        Label3.Location = New Point(42, 97)
         Label3.Name = "Label3"
-        Label3.Size = New Size(80, 18)
+        Label3.Size = New Size(100, 22)
         Label3.TabIndex = 0
         Label3.Text = "Username:"
         ' 
         ' txtUsername
         ' 
-        txtUsername.Location = New Point(37, 94)
+        txtUsername.Location = New Point(42, 125)
+        txtUsername.Margin = New Padding(3, 4, 3, 4)
         txtUsername.Name = "txtUsername"
-        txtUsername.Size = New Size(223, 23)
-        txtUsername.TabIndex = 4
+        txtUsername.Size = New Size(254, 27)
+        txtUsername.TabIndex = 0
         ' 
         ' Label11
         ' 
         Label11.AutoSize = True
         Label11.Font = New Font("Consolas", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label11.Location = New Point(266, 73)
+        Label11.Location = New Point(304, 97)
         Label11.Name = "Label11"
-        Label11.Size = New Size(80, 18)
+        Label11.Size = New Size(100, 22)
         Label11.TabIndex = 5
         Label11.Text = "Password:"
         ' 
         ' txtPassword
         ' 
-        txtPassword.Location = New Point(266, 94)
+        txtPassword.Location = New Point(304, 125)
+        txtPassword.Margin = New Padding(3, 4, 3, 4)
         txtPassword.Name = "txtPassword"
-        txtPassword.Size = New Size(221, 23)
-        txtPassword.TabIndex = 6
+        txtPassword.Size = New Size(252, 27)
+        txtPassword.TabIndex = 1
         ' 
         ' formBooking
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(528, 646)
+        ClientSize = New Size(603, 861)
         Controls.Add(cbGuestType)
         Controls.Add(Label2)
         Controls.Add(txtGuestName)
@@ -341,6 +356,7 @@ Partial Class formBooking
         Controls.Add(Label6)
         Controls.Add(Label4)
         Controls.Add(Label1)
+        Margin = New Padding(3, 4, 3, 4)
         Name = "formBooking"
         Text = "formBooking"
         ResumeLayout(False)

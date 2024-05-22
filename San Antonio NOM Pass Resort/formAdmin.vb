@@ -244,6 +244,7 @@
         Me.Hide()
         formReciept.btnAddRoom.Visible = False
         formReciept.Show()
+
     End Sub
 
 

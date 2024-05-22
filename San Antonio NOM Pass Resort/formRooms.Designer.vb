@@ -87,9 +87,9 @@ Partial Class formRooms
         lblRoom.AutoSize = True
         lblRoom.BackColor = SystemColors.ControlDark
         lblRoom.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        lblRoom.Location = New Point(261, 3)
+        lblRoom.Location = New Point(298, 4)
         lblRoom.Name = "lblRoom"
-        lblRoom.Size = New Size(75, 24)
+        lblRoom.Size = New Size(95, 29)
         lblRoom.TabIndex = 0
         lblRoom.Text = "Rooms"
         ' 
@@ -98,9 +98,9 @@ Partial Class formRooms
         lblSAR.AutoSize = True
         lblSAR.BackColor = SystemColors.ControlDark
         lblSAR.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        lblSAR.Location = New Point(219, 23)
+        lblSAR.Location = New Point(250, 31)
         lblSAR.Name = "lblSAR"
-        lblSAR.Size = New Size(166, 15)
+        lblSAR.Size = New Size(199, 18)
         lblSAR.TabIndex = 1
         lblSAR.Text = "San Antonio NOM Resort"
         ' 
@@ -109,9 +109,9 @@ Partial Class formRooms
         Label2.AutoSize = True
         Label2.BackColor = SystemColors.ControlDark
         Label2.Font = New Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label2.Location = New Point(10, 135)
+        Label2.Location = New Point(11, 180)
         Label2.Name = "Label2"
-        Label2.Size = New Size(99, 17)
+        Label2.Size = New Size(115, 20)
         Label2.TabIndex = 6
         Label2.Text = "Single Room"
         ' 
@@ -120,9 +120,9 @@ Partial Class formRooms
         Label5.AutoSize = True
         Label5.BackColor = SystemColors.ControlDark
         Label5.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label5.Location = New Point(10, 149)
+        Label5.Location = New Point(11, 199)
         Label5.Name = "Label5"
-        Label5.Size = New Size(69, 15)
+        Label5.Size = New Size(79, 18)
         Label5.TabIndex = 10
         Label5.Text = "999/Night"
         ' 
@@ -131,9 +131,9 @@ Partial Class formRooms
         Label6.AutoSize = True
         Label6.BackColor = SystemColors.ControlDark
         Label6.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label6.Location = New Point(10, 165)
+        Label6.Location = New Point(11, 220)
         Label6.Name = "Label6"
-        Label6.Size = New Size(110, 13)
+        Label6.Size = New Size(134, 16)
         Label6.TabIndex = 11
         Label6.Text = "AVAILABLE ROOMS:"
         ' 
@@ -142,9 +142,9 @@ Partial Class formRooms
         Label8.AutoSize = True
         Label8.BackColor = SystemColors.ControlDark
         Label8.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label8.Location = New Point(10, 185)
+        Label8.Location = New Point(11, 247)
         Label8.Name = "Label8"
-        Label8.Size = New Size(100, 13)
+        Label8.Size = New Size(122, 16)
         Label8.TabIndex = 13
         Label8.Text = "ROOM NUMBERS:"
         ' 
@@ -152,11 +152,10 @@ Partial Class formRooms
         ' 
         btnSingleRoomBook.FlatStyle = FlatStyle.Flat
         btnSingleRoomBook.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        btnSingleRoomBook.Location = New Point(10, 212)
-        btnSingleRoomBook.Margin = New Padding(3, 2, 3, 2)
+        btnSingleRoomBook.Location = New Point(11, 283)
         btnSingleRoomBook.Name = "btnSingleRoomBook"
-        btnSingleRoomBook.Size = New Size(172, 22)
-        btnSingleRoomBook.TabIndex = 15
+        btnSingleRoomBook.Size = New Size(197, 29)
+        btnSingleRoomBook.TabIndex = 4
         btnSingleRoomBook.Text = "Book Now"
         btnSingleRoomBook.UseVisualStyleBackColor = True
         ' 
@@ -164,22 +163,21 @@ Partial Class formRooms
         ' 
         txtSingleAvailableRoom.BorderStyle = BorderStyle.None
         txtSingleAvailableRoom.Enabled = False
-        txtSingleAvailableRoom.Location = New Point(124, 164)
-        txtSingleAvailableRoom.Margin = New Padding(3, 2, 3, 2)
+        txtSingleAvailableRoom.Location = New Point(142, 219)
         txtSingleAvailableRoom.Name = "txtSingleAvailableRoom"
-        txtSingleAvailableRoom.Size = New Size(59, 16)
-        txtSingleAvailableRoom.TabIndex = 16
+        txtSingleAvailableRoom.Size = New Size(67, 20)
+        txtSingleAvailableRoom.TabIndex = 2
         txtSingleAvailableRoom.Text = "5"
         txtSingleAvailableRoom.TextAlign = HorizontalAlignment.Center
         ' 
         ' txtQueenAvailableRoom
         ' 
         txtQueenAvailableRoom.BorderStyle = BorderStyle.None
-        txtQueenAvailableRoom.Location = New Point(328, 164)
-        txtQueenAvailableRoom.Margin = New Padding(3, 2, 3, 2)
+        txtQueenAvailableRoom.Enabled = False
+        txtQueenAvailableRoom.Location = New Point(375, 219)
         txtQueenAvailableRoom.Name = "txtQueenAvailableRoom"
-        txtQueenAvailableRoom.Size = New Size(59, 16)
-        txtQueenAvailableRoom.TabIndex = 24
+        txtQueenAvailableRoom.Size = New Size(67, 20)
+        txtQueenAvailableRoom.TabIndex = 6
         txtQueenAvailableRoom.Text = "5"
         txtQueenAvailableRoom.TextAlign = HorizontalAlignment.Center
         ' 
@@ -187,11 +185,10 @@ Partial Class formRooms
         ' 
         btnQueenRoomBook.FlatStyle = FlatStyle.Flat
         btnQueenRoomBook.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        btnQueenRoomBook.Location = New Point(214, 212)
-        btnQueenRoomBook.Margin = New Padding(3, 2, 3, 2)
+        btnQueenRoomBook.Location = New Point(245, 283)
         btnQueenRoomBook.Name = "btnQueenRoomBook"
-        btnQueenRoomBook.Size = New Size(172, 22)
-        btnQueenRoomBook.TabIndex = 23
+        btnQueenRoomBook.Size = New Size(197, 29)
+        btnQueenRoomBook.TabIndex = 8
         btnQueenRoomBook.Text = "Book Now"
         btnQueenRoomBook.UseVisualStyleBackColor = True
         ' 
@@ -200,9 +197,9 @@ Partial Class formRooms
         Label1.AutoSize = True
         Label1.BackColor = SystemColors.ControlDark
         Label1.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label1.Location = New Point(214, 184)
+        Label1.Location = New Point(245, 245)
         Label1.Name = "Label1"
-        Label1.Size = New Size(100, 13)
+        Label1.Size = New Size(122, 16)
         Label1.TabIndex = 22
         Label1.Text = "ROOM NUMBERS:"
         ' 
@@ -211,9 +208,9 @@ Partial Class formRooms
         Label3.AutoSize = True
         Label3.BackColor = SystemColors.ControlDark
         Label3.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label3.Location = New Point(214, 165)
+        Label3.Location = New Point(245, 220)
         Label3.Name = "Label3"
-        Label3.Size = New Size(110, 13)
+        Label3.Size = New Size(134, 16)
         Label3.TabIndex = 21
         Label3.Text = "AVAILABLE ROOMS:"
         ' 
@@ -222,9 +219,9 @@ Partial Class formRooms
         Label4.AutoSize = True
         Label4.BackColor = SystemColors.ControlDark
         Label4.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label4.Location = New Point(214, 149)
+        Label4.Location = New Point(245, 199)
         Label4.Name = "Label4"
-        Label4.Size = New Size(77, 15)
+        Label4.Size = New Size(88, 18)
         Label4.TabIndex = 20
         Label4.Text = "1199/Night"
         ' 
@@ -233,9 +230,9 @@ Partial Class formRooms
         Label7.AutoSize = True
         Label7.BackColor = SystemColors.ControlDark
         Label7.Font = New Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label7.Location = New Point(214, 135)
+        Label7.Location = New Point(245, 180)
         Label7.Name = "Label7"
-        Label7.Size = New Size(102, 17)
+        Label7.Size = New Size(117, 20)
         Label7.TabIndex = 19
         Label7.Text = "Queen Room"
         ' 
@@ -243,11 +240,10 @@ Partial Class formRooms
         ' 
         txtKingAvailableRoom.BorderStyle = BorderStyle.None
         txtKingAvailableRoom.Enabled = False
-        txtKingAvailableRoom.Location = New Point(531, 164)
-        txtKingAvailableRoom.Margin = New Padding(3, 2, 3, 2)
+        txtKingAvailableRoom.Location = New Point(607, 219)
         txtKingAvailableRoom.Name = "txtKingAvailableRoom"
-        txtKingAvailableRoom.Size = New Size(59, 16)
-        txtKingAvailableRoom.TabIndex = 32
+        txtKingAvailableRoom.Size = New Size(67, 20)
+        txtKingAvailableRoom.TabIndex = 10
         txtKingAvailableRoom.Text = "5"
         txtKingAvailableRoom.TextAlign = HorizontalAlignment.Center
         ' 
@@ -255,11 +251,10 @@ Partial Class formRooms
         ' 
         btnKingRoomBook.FlatStyle = FlatStyle.Flat
         btnKingRoomBook.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        btnKingRoomBook.Location = New Point(417, 212)
-        btnKingRoomBook.Margin = New Padding(3, 2, 3, 2)
+        btnKingRoomBook.Location = New Point(477, 283)
         btnKingRoomBook.Name = "btnKingRoomBook"
-        btnKingRoomBook.Size = New Size(172, 22)
-        btnKingRoomBook.TabIndex = 31
+        btnKingRoomBook.Size = New Size(197, 29)
+        btnKingRoomBook.TabIndex = 12
         btnKingRoomBook.Text = "Book Now"
         btnKingRoomBook.UseVisualStyleBackColor = True
         ' 
@@ -268,9 +263,9 @@ Partial Class formRooms
         Label9.AutoSize = True
         Label9.BackColor = SystemColors.ControlDark
         Label9.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label9.Location = New Point(417, 184)
+        Label9.Location = New Point(477, 245)
         Label9.Name = "Label9"
-        Label9.Size = New Size(100, 13)
+        Label9.Size = New Size(122, 16)
         Label9.TabIndex = 30
         Label9.Text = "ROOM NUMBERS:"
         ' 
@@ -279,9 +274,9 @@ Partial Class formRooms
         Label10.AutoSize = True
         Label10.BackColor = SystemColors.ControlDark
         Label10.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label10.Location = New Point(417, 165)
+        Label10.Location = New Point(477, 220)
         Label10.Name = "Label10"
-        Label10.Size = New Size(110, 13)
+        Label10.Size = New Size(134, 16)
         Label10.TabIndex = 29
         Label10.Text = "AVAILABLE ROOMS:"
         ' 
@@ -290,9 +285,9 @@ Partial Class formRooms
         Label11.AutoSize = True
         Label11.BackColor = SystemColors.ControlDark
         Label11.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label11.Location = New Point(417, 149)
+        Label11.Location = New Point(477, 199)
         Label11.Name = "Label11"
-        Label11.Size = New Size(77, 15)
+        Label11.Size = New Size(88, 18)
         Label11.TabIndex = 28
         Label11.Text = "1399/Night"
         ' 
@@ -301,9 +296,9 @@ Partial Class formRooms
         Label12.AutoSize = True
         Label12.BackColor = SystemColors.ControlDark
         Label12.Font = New Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label12.Location = New Point(417, 135)
+        Label12.Location = New Point(477, 180)
         Label12.Name = "Label12"
-        Label12.Size = New Size(86, 17)
+        Label12.Size = New Size(100, 20)
         Label12.TabIndex = 27
         Label12.Text = "King Room"
         ' 
@@ -311,11 +306,10 @@ Partial Class formRooms
         ' 
         txtExecutiveAvailableRoom.BorderStyle = BorderStyle.None
         txtExecutiveAvailableRoom.Enabled = False
-        txtExecutiveAvailableRoom.Location = New Point(531, 363)
-        txtExecutiveAvailableRoom.Margin = New Padding(3, 2, 3, 2)
+        txtExecutiveAvailableRoom.Location = New Point(607, 484)
         txtExecutiveAvailableRoom.Name = "txtExecutiveAvailableRoom"
-        txtExecutiveAvailableRoom.Size = New Size(59, 16)
-        txtExecutiveAvailableRoom.TabIndex = 56
+        txtExecutiveAvailableRoom.Size = New Size(67, 20)
+        txtExecutiveAvailableRoom.TabIndex = 22
         txtExecutiveAvailableRoom.Text = "5"
         txtExecutiveAvailableRoom.TextAlign = HorizontalAlignment.Center
         ' 
@@ -323,11 +317,10 @@ Partial Class formRooms
         ' 
         btnExecRoomBook.FlatStyle = FlatStyle.Flat
         btnExecRoomBook.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        btnExecRoomBook.Location = New Point(417, 400)
-        btnExecRoomBook.Margin = New Padding(3, 2, 3, 2)
+        btnExecRoomBook.Location = New Point(477, 533)
         btnExecRoomBook.Name = "btnExecRoomBook"
-        btnExecRoomBook.Size = New Size(172, 22)
-        btnExecRoomBook.TabIndex = 55
+        btnExecRoomBook.Size = New Size(197, 29)
+        btnExecRoomBook.TabIndex = 24
         btnExecRoomBook.Text = "Book Now"
         btnExecRoomBook.UseVisualStyleBackColor = True
         ' 
@@ -335,9 +328,9 @@ Partial Class formRooms
         ' 
         Label13.AutoSize = True
         Label13.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label13.Location = New Point(417, 384)
+        Label13.Location = New Point(477, 512)
         Label13.Name = "Label13"
-        Label13.Size = New Size(100, 13)
+        Label13.Size = New Size(122, 16)
         Label13.TabIndex = 54
         Label13.Text = "ROOM NUMBERS:"
         ' 
@@ -345,9 +338,9 @@ Partial Class formRooms
         ' 
         Label14.AutoSize = True
         Label14.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label14.Location = New Point(417, 364)
+        Label14.Location = New Point(477, 485)
         Label14.Name = "Label14"
-        Label14.Size = New Size(110, 13)
+        Label14.Size = New Size(134, 16)
         Label14.TabIndex = 53
         Label14.Text = "AVAILABLE ROOMS:"
         ' 
@@ -355,9 +348,9 @@ Partial Class formRooms
         ' 
         Label15.AutoSize = True
         Label15.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label15.Location = New Point(417, 348)
+        Label15.Location = New Point(477, 464)
         Label15.Name = "Label15"
-        Label15.Size = New Size(77, 15)
+        Label15.Size = New Size(88, 18)
         Label15.TabIndex = 52
         Label15.Text = "2299/Night"
         ' 
@@ -365,9 +358,9 @@ Partial Class formRooms
         ' 
         Label16.AutoSize = True
         Label16.Font = New Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label16.Location = New Point(417, 334)
+        Label16.Location = New Point(477, 445)
         Label16.Name = "Label16"
-        Label16.Size = New Size(123, 17)
+        Label16.Size = New Size(144, 20)
         Label16.TabIndex = 51
         Label16.Text = "Executive Room"
         ' 
@@ -375,11 +368,10 @@ Partial Class formRooms
         ' 
         txtStandardAvailableRoom.BorderStyle = BorderStyle.None
         txtStandardAvailableRoom.Enabled = False
-        txtStandardAvailableRoom.Location = New Point(328, 363)
-        txtStandardAvailableRoom.Margin = New Padding(3, 2, 3, 2)
+        txtStandardAvailableRoom.Location = New Point(375, 484)
         txtStandardAvailableRoom.Name = "txtStandardAvailableRoom"
-        txtStandardAvailableRoom.Size = New Size(59, 16)
-        txtStandardAvailableRoom.TabIndex = 48
+        txtStandardAvailableRoom.Size = New Size(67, 20)
+        txtStandardAvailableRoom.TabIndex = 18
         txtStandardAvailableRoom.Text = "5"
         txtStandardAvailableRoom.TextAlign = HorizontalAlignment.Center
         ' 
@@ -387,11 +379,10 @@ Partial Class formRooms
         ' 
         btnStandardRoomBook.FlatStyle = FlatStyle.Flat
         btnStandardRoomBook.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        btnStandardRoomBook.Location = New Point(214, 400)
-        btnStandardRoomBook.Margin = New Padding(3, 2, 3, 2)
+        btnStandardRoomBook.Location = New Point(245, 533)
         btnStandardRoomBook.Name = "btnStandardRoomBook"
-        btnStandardRoomBook.Size = New Size(172, 22)
-        btnStandardRoomBook.TabIndex = 47
+        btnStandardRoomBook.Size = New Size(197, 29)
+        btnStandardRoomBook.TabIndex = 20
         btnStandardRoomBook.Text = "Book Now"
         btnStandardRoomBook.UseVisualStyleBackColor = True
         ' 
@@ -399,9 +390,9 @@ Partial Class formRooms
         ' 
         Label17.AutoSize = True
         Label17.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label17.Location = New Point(214, 384)
+        Label17.Location = New Point(245, 512)
         Label17.Name = "Label17"
-        Label17.Size = New Size(100, 13)
+        Label17.Size = New Size(122, 16)
         Label17.TabIndex = 46
         Label17.Text = "ROOM NUMBERS:"
         ' 
@@ -409,9 +400,9 @@ Partial Class formRooms
         ' 
         Label18.AutoSize = True
         Label18.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label18.Location = New Point(214, 364)
+        Label18.Location = New Point(245, 485)
         Label18.Name = "Label18"
-        Label18.Size = New Size(110, 13)
+        Label18.Size = New Size(134, 16)
         Label18.TabIndex = 45
         Label18.Text = "AVAILABLE ROOMS:"
         ' 
@@ -419,9 +410,9 @@ Partial Class formRooms
         ' 
         Label19.AutoSize = True
         Label19.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label19.Location = New Point(214, 348)
+        Label19.Location = New Point(245, 464)
         Label19.Name = "Label19"
-        Label19.Size = New Size(77, 15)
+        Label19.Size = New Size(88, 18)
         Label19.TabIndex = 44
         Label19.Text = "1999/Night"
         ' 
@@ -429,9 +420,9 @@ Partial Class formRooms
         ' 
         Label20.AutoSize = True
         Label20.Font = New Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label20.Location = New Point(214, 334)
+        Label20.Location = New Point(245, 445)
         Label20.Name = "Label20"
-        Label20.Size = New Size(120, 17)
+        Label20.Size = New Size(138, 20)
         Label20.TabIndex = 43
         Label20.Text = "Standard Room"
         ' 
@@ -439,11 +430,10 @@ Partial Class formRooms
         ' 
         txtTwinAvailableRoom.BorderStyle = BorderStyle.None
         txtTwinAvailableRoom.Enabled = False
-        txtTwinAvailableRoom.Location = New Point(124, 363)
-        txtTwinAvailableRoom.Margin = New Padding(3, 2, 3, 2)
+        txtTwinAvailableRoom.Location = New Point(142, 484)
         txtTwinAvailableRoom.Name = "txtTwinAvailableRoom"
-        txtTwinAvailableRoom.Size = New Size(59, 16)
-        txtTwinAvailableRoom.TabIndex = 40
+        txtTwinAvailableRoom.Size = New Size(67, 20)
+        txtTwinAvailableRoom.TabIndex = 14
         txtTwinAvailableRoom.Text = "5"
         txtTwinAvailableRoom.TextAlign = HorizontalAlignment.Center
         ' 
@@ -451,11 +441,10 @@ Partial Class formRooms
         ' 
         btnTwinRoomBook.FlatStyle = FlatStyle.Flat
         btnTwinRoomBook.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        btnTwinRoomBook.Location = New Point(10, 400)
-        btnTwinRoomBook.Margin = New Padding(3, 2, 3, 2)
+        btnTwinRoomBook.Location = New Point(11, 533)
         btnTwinRoomBook.Name = "btnTwinRoomBook"
-        btnTwinRoomBook.Size = New Size(172, 22)
-        btnTwinRoomBook.TabIndex = 39
+        btnTwinRoomBook.Size = New Size(197, 29)
+        btnTwinRoomBook.TabIndex = 16
         btnTwinRoomBook.Text = "Book Now"
         btnTwinRoomBook.UseVisualStyleBackColor = True
         ' 
@@ -463,9 +452,9 @@ Partial Class formRooms
         ' 
         Label21.AutoSize = True
         Label21.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label21.Location = New Point(10, 384)
+        Label21.Location = New Point(11, 512)
         Label21.Name = "Label21"
-        Label21.Size = New Size(100, 13)
+        Label21.Size = New Size(122, 16)
         Label21.TabIndex = 38
         Label21.Text = "ROOM NUMBERS:"
         ' 
@@ -473,9 +462,9 @@ Partial Class formRooms
         ' 
         Label22.AutoSize = True
         Label22.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label22.Location = New Point(10, 364)
+        Label22.Location = New Point(11, 485)
         Label22.Name = "Label22"
-        Label22.Size = New Size(110, 13)
+        Label22.Size = New Size(134, 16)
         Label22.TabIndex = 37
         Label22.Text = "AVAILABLE ROOMS:"
         ' 
@@ -483,9 +472,9 @@ Partial Class formRooms
         ' 
         Label23.AutoSize = True
         Label23.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label23.Location = New Point(10, 348)
+        Label23.Location = New Point(11, 464)
         Label23.Name = "Label23"
-        Label23.Size = New Size(77, 15)
+        Label23.Size = New Size(88, 18)
         Label23.TabIndex = 36
         Label23.Text = "1799/Night"
         ' 
@@ -493,9 +482,9 @@ Partial Class formRooms
         ' 
         Label24.AutoSize = True
         Label24.Font = New Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label24.Location = New Point(10, 334)
+        Label24.Location = New Point(11, 445)
         Label24.Name = "Label24"
-        Label24.Size = New Size(87, 17)
+        Label24.Size = New Size(102, 20)
         Label24.TabIndex = 35
         Label24.Text = "Twin Room"
         ' 
@@ -503,11 +492,10 @@ Partial Class formRooms
         ' 
         txtPresidentialAvailableRoom.BorderStyle = BorderStyle.None
         txtPresidentialAvailableRoom.Enabled = False
-        txtPresidentialAvailableRoom.Location = New Point(328, 552)
-        txtPresidentialAvailableRoom.Margin = New Padding(3, 2, 3, 2)
+        txtPresidentialAvailableRoom.Location = New Point(375, 736)
         txtPresidentialAvailableRoom.Name = "txtPresidentialAvailableRoom"
-        txtPresidentialAvailableRoom.Size = New Size(59, 16)
-        txtPresidentialAvailableRoom.TabIndex = 64
+        txtPresidentialAvailableRoom.Size = New Size(67, 20)
+        txtPresidentialAvailableRoom.TabIndex = 26
         txtPresidentialAvailableRoom.Text = "5"
         txtPresidentialAvailableRoom.TextAlign = HorizontalAlignment.Center
         ' 
@@ -515,11 +503,10 @@ Partial Class formRooms
         ' 
         btnPresRoomBook.FlatStyle = FlatStyle.Flat
         btnPresRoomBook.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        btnPresRoomBook.Location = New Point(214, 589)
-        btnPresRoomBook.Margin = New Padding(3, 2, 3, 2)
+        btnPresRoomBook.Location = New Point(245, 785)
         btnPresRoomBook.Name = "btnPresRoomBook"
-        btnPresRoomBook.Size = New Size(172, 22)
-        btnPresRoomBook.TabIndex = 63
+        btnPresRoomBook.Size = New Size(197, 29)
+        btnPresRoomBook.TabIndex = 28
         btnPresRoomBook.Text = "Book Now"
         btnPresRoomBook.UseVisualStyleBackColor = True
         ' 
@@ -527,9 +514,9 @@ Partial Class formRooms
         ' 
         Label25.AutoSize = True
         Label25.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label25.Location = New Point(214, 572)
+        Label25.Location = New Point(245, 763)
         Label25.Name = "Label25"
-        Label25.Size = New Size(100, 13)
+        Label25.Size = New Size(122, 16)
         Label25.TabIndex = 62
         Label25.Text = "ROOM NUMBERS:"
         ' 
@@ -537,9 +524,9 @@ Partial Class formRooms
         ' 
         Label26.AutoSize = True
         Label26.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label26.Location = New Point(214, 553)
+        Label26.Location = New Point(245, 737)
         Label26.Name = "Label26"
-        Label26.Size = New Size(110, 13)
+        Label26.Size = New Size(134, 16)
         Label26.TabIndex = 61
         Label26.Text = "AVAILABLE ROOMS:"
         ' 
@@ -547,9 +534,9 @@ Partial Class formRooms
         ' 
         Label27.AutoSize = True
         Label27.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label27.Location = New Point(214, 537)
+        Label27.Location = New Point(245, 716)
         Label27.Name = "Label27"
-        Label27.Size = New Size(77, 15)
+        Label27.Size = New Size(88, 18)
         Label27.TabIndex = 60
         Label27.Text = "2699/Night"
         ' 
@@ -557,9 +544,9 @@ Partial Class formRooms
         ' 
         Label28.AutoSize = True
         Label28.Font = New Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label28.Location = New Point(214, 523)
+        Label28.Location = New Point(245, 697)
         Label28.Name = "Label28"
-        Label28.Size = New Size(140, 17)
+        Label28.Size = New Size(163, 20)
         Label28.TabIndex = 59
         Label28.Text = "Presidential Room"
         ' 
@@ -568,11 +555,10 @@ Partial Class formRooms
         btnSingleRoomInfo.FlatStyle = FlatStyle.Flat
         btnSingleRoomInfo.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnSingleRoomInfo.Image = My.Resources.Resources.formRoomsBG
-        btnSingleRoomInfo.Location = New Point(10, 42)
-        btnSingleRoomInfo.Margin = New Padding(3, 2, 3, 2)
+        btnSingleRoomInfo.Location = New Point(11, 56)
         btnSingleRoomInfo.Name = "btnSingleRoomInfo"
-        btnSingleRoomInfo.Size = New Size(172, 92)
-        btnSingleRoomInfo.TabIndex = 66
+        btnSingleRoomInfo.Size = New Size(197, 123)
+        btnSingleRoomInfo.TabIndex = 5
         btnSingleRoomInfo.Text = "Click for More Info"
         btnSingleRoomInfo.UseVisualStyleBackColor = True
         ' 
@@ -580,11 +566,10 @@ Partial Class formRooms
         ' 
         btnQueenRoomInfo.FlatStyle = FlatStyle.Flat
         btnQueenRoomInfo.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        btnQueenRoomInfo.Location = New Point(214, 42)
-        btnQueenRoomInfo.Margin = New Padding(3, 2, 3, 2)
+        btnQueenRoomInfo.Location = New Point(245, 56)
         btnQueenRoomInfo.Name = "btnQueenRoomInfo"
-        btnQueenRoomInfo.Size = New Size(172, 92)
-        btnQueenRoomInfo.TabIndex = 67
+        btnQueenRoomInfo.Size = New Size(197, 123)
+        btnQueenRoomInfo.TabIndex = 9
         btnQueenRoomInfo.Text = "Click for More Info"
         btnQueenRoomInfo.UseVisualStyleBackColor = True
         ' 
@@ -592,11 +577,10 @@ Partial Class formRooms
         ' 
         btnKingRoomInfo.FlatStyle = FlatStyle.Flat
         btnKingRoomInfo.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        btnKingRoomInfo.Location = New Point(417, 42)
-        btnKingRoomInfo.Margin = New Padding(3, 2, 3, 2)
+        btnKingRoomInfo.Location = New Point(477, 56)
         btnKingRoomInfo.Name = "btnKingRoomInfo"
-        btnKingRoomInfo.Size = New Size(172, 92)
-        btnKingRoomInfo.TabIndex = 68
+        btnKingRoomInfo.Size = New Size(197, 123)
+        btnKingRoomInfo.TabIndex = 13
         btnKingRoomInfo.Text = "Click for More Info"
         btnKingRoomInfo.UseVisualStyleBackColor = True
         ' 
@@ -604,11 +588,10 @@ Partial Class formRooms
         ' 
         btnTwinRoomInfo.FlatStyle = FlatStyle.Flat
         btnTwinRoomInfo.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        btnTwinRoomInfo.Location = New Point(10, 241)
-        btnTwinRoomInfo.Margin = New Padding(3, 2, 3, 2)
+        btnTwinRoomInfo.Location = New Point(11, 321)
         btnTwinRoomInfo.Name = "btnTwinRoomInfo"
-        btnTwinRoomInfo.Size = New Size(172, 92)
-        btnTwinRoomInfo.TabIndex = 69
+        btnTwinRoomInfo.Size = New Size(197, 123)
+        btnTwinRoomInfo.TabIndex = 17
         btnTwinRoomInfo.Text = "Click for More Info"
         btnTwinRoomInfo.UseVisualStyleBackColor = True
         ' 
@@ -616,11 +599,10 @@ Partial Class formRooms
         ' 
         btnStandardRoomInfo.FlatStyle = FlatStyle.Flat
         btnStandardRoomInfo.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        btnStandardRoomInfo.Location = New Point(214, 241)
-        btnStandardRoomInfo.Margin = New Padding(3, 2, 3, 2)
+        btnStandardRoomInfo.Location = New Point(245, 321)
         btnStandardRoomInfo.Name = "btnStandardRoomInfo"
-        btnStandardRoomInfo.Size = New Size(172, 92)
-        btnStandardRoomInfo.TabIndex = 70
+        btnStandardRoomInfo.Size = New Size(197, 123)
+        btnStandardRoomInfo.TabIndex = 21
         btnStandardRoomInfo.Text = "Click for More Info"
         btnStandardRoomInfo.UseVisualStyleBackColor = True
         ' 
@@ -628,11 +610,10 @@ Partial Class formRooms
         ' 
         btnExecutiveRoomInfo.FlatStyle = FlatStyle.Flat
         btnExecutiveRoomInfo.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        btnExecutiveRoomInfo.Location = New Point(417, 241)
-        btnExecutiveRoomInfo.Margin = New Padding(3, 2, 3, 2)
+        btnExecutiveRoomInfo.Location = New Point(477, 321)
         btnExecutiveRoomInfo.Name = "btnExecutiveRoomInfo"
-        btnExecutiveRoomInfo.Size = New Size(172, 92)
-        btnExecutiveRoomInfo.TabIndex = 71
+        btnExecutiveRoomInfo.Size = New Size(197, 123)
+        btnExecutiveRoomInfo.TabIndex = 25
         btnExecutiveRoomInfo.Text = "Click for More Info"
         btnExecutiveRoomInfo.UseVisualStyleBackColor = True
         ' 
@@ -640,11 +621,10 @@ Partial Class formRooms
         ' 
         btnPresidentialRoomInfo.FlatStyle = FlatStyle.Flat
         btnPresidentialRoomInfo.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        btnPresidentialRoomInfo.Location = New Point(214, 429)
-        btnPresidentialRoomInfo.Margin = New Padding(3, 2, 3, 2)
+        btnPresidentialRoomInfo.Location = New Point(245, 572)
         btnPresidentialRoomInfo.Name = "btnPresidentialRoomInfo"
-        btnPresidentialRoomInfo.Size = New Size(172, 92)
-        btnPresidentialRoomInfo.TabIndex = 72
+        btnPresidentialRoomInfo.Size = New Size(197, 123)
+        btnPresidentialRoomInfo.TabIndex = 29
         btnPresidentialRoomInfo.Text = "Click for More Info"
         btnPresidentialRoomInfo.UseVisualStyleBackColor = True
         ' 
@@ -653,72 +633,79 @@ Partial Class formRooms
         cbSingleRoomNumber.DropDownStyle = ComboBoxStyle.DropDownList
         cbSingleRoomNumber.FormattingEnabled = True
         cbSingleRoomNumber.Items.AddRange(New Object() {"asdf", "sad", "fsa", "fsad", "fsdaf", "sda"})
-        cbSingleRoomNumber.Location = New Point(124, 184)
+        cbSingleRoomNumber.Location = New Point(142, 245)
+        cbSingleRoomNumber.Margin = New Padding(3, 4, 3, 4)
         cbSingleRoomNumber.Name = "cbSingleRoomNumber"
-        cbSingleRoomNumber.Size = New Size(59, 23)
-        cbSingleRoomNumber.TabIndex = 73
+        cbSingleRoomNumber.Size = New Size(67, 28)
+        cbSingleRoomNumber.TabIndex = 3
         ' 
         ' cbQueenRoomNumber
         ' 
         cbQueenRoomNumber.DropDownStyle = ComboBoxStyle.DropDownList
         cbQueenRoomNumber.FormattingEnabled = True
-        cbQueenRoomNumber.Location = New Point(328, 184)
+        cbQueenRoomNumber.Location = New Point(375, 245)
+        cbQueenRoomNumber.Margin = New Padding(3, 4, 3, 4)
         cbQueenRoomNumber.Name = "cbQueenRoomNumber"
-        cbQueenRoomNumber.Size = New Size(59, 23)
-        cbQueenRoomNumber.TabIndex = 74
+        cbQueenRoomNumber.Size = New Size(67, 28)
+        cbQueenRoomNumber.TabIndex = 7
         ' 
         ' cbKingRoomNumber
         ' 
         cbKingRoomNumber.DropDownStyle = ComboBoxStyle.DropDownList
         cbKingRoomNumber.FormattingEnabled = True
-        cbKingRoomNumber.Location = New Point(531, 185)
+        cbKingRoomNumber.Location = New Point(607, 247)
+        cbKingRoomNumber.Margin = New Padding(3, 4, 3, 4)
         cbKingRoomNumber.Name = "cbKingRoomNumber"
-        cbKingRoomNumber.Size = New Size(59, 23)
-        cbKingRoomNumber.TabIndex = 75
+        cbKingRoomNumber.Size = New Size(67, 28)
+        cbKingRoomNumber.TabIndex = 11
         ' 
         ' cbTwinRoomNumber
         ' 
         cbTwinRoomNumber.DropDownStyle = ComboBoxStyle.DropDownList
         cbTwinRoomNumber.FormattingEnabled = True
-        cbTwinRoomNumber.Location = New Point(119, 377)
+        cbTwinRoomNumber.Location = New Point(136, 503)
+        cbTwinRoomNumber.Margin = New Padding(3, 4, 3, 4)
         cbTwinRoomNumber.Name = "cbTwinRoomNumber"
-        cbTwinRoomNumber.Size = New Size(59, 23)
-        cbTwinRoomNumber.TabIndex = 76
+        cbTwinRoomNumber.Size = New Size(67, 28)
+        cbTwinRoomNumber.TabIndex = 15
         ' 
         ' cbStandardRoomNumber
         ' 
         cbStandardRoomNumber.DropDownStyle = ComboBoxStyle.DropDownList
         cbStandardRoomNumber.FormattingEnabled = True
-        cbStandardRoomNumber.Location = New Point(328, 380)
+        cbStandardRoomNumber.Location = New Point(375, 507)
+        cbStandardRoomNumber.Margin = New Padding(3, 4, 3, 4)
         cbStandardRoomNumber.Name = "cbStandardRoomNumber"
-        cbStandardRoomNumber.Size = New Size(59, 23)
-        cbStandardRoomNumber.TabIndex = 77
+        cbStandardRoomNumber.Size = New Size(67, 28)
+        cbStandardRoomNumber.TabIndex = 19
         ' 
         ' cbExecutiveRoomNumber
         ' 
         cbExecutiveRoomNumber.DropDownStyle = ComboBoxStyle.DropDownList
         cbExecutiveRoomNumber.FormattingEnabled = True
-        cbExecutiveRoomNumber.Location = New Point(528, 377)
+        cbExecutiveRoomNumber.Location = New Point(603, 503)
+        cbExecutiveRoomNumber.Margin = New Padding(3, 4, 3, 4)
         cbExecutiveRoomNumber.Name = "cbExecutiveRoomNumber"
-        cbExecutiveRoomNumber.Size = New Size(59, 23)
-        cbExecutiveRoomNumber.TabIndex = 78
+        cbExecutiveRoomNumber.Size = New Size(67, 28)
+        cbExecutiveRoomNumber.TabIndex = 23
         ' 
         ' cbPresidentialRoomNumber
         ' 
         cbPresidentialRoomNumber.DropDownStyle = ComboBoxStyle.DropDownList
         cbPresidentialRoomNumber.FormattingEnabled = True
-        cbPresidentialRoomNumber.Location = New Point(328, 568)
+        cbPresidentialRoomNumber.Location = New Point(375, 757)
+        cbPresidentialRoomNumber.Margin = New Padding(3, 4, 3, 4)
         cbPresidentialRoomNumber.Name = "cbPresidentialRoomNumber"
-        cbPresidentialRoomNumber.Size = New Size(59, 23)
-        cbPresidentialRoomNumber.TabIndex = 79
+        cbPresidentialRoomNumber.Size = New Size(67, 28)
+        cbPresidentialRoomNumber.TabIndex = 27
         ' 
         ' formRooms
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackgroundImage = My.Resources.Resources.formBookingBG1
         BackgroundImageLayout = ImageLayout.Center
-        ClientSize = New Size(613, 705)
+        ClientSize = New Size(701, 940)
         Controls.Add(cbPresidentialRoomNumber)
         Controls.Add(cbExecutiveRoomNumber)
         Controls.Add(cbStandardRoomNumber)
@@ -777,7 +764,6 @@ Partial Class formRooms
         Controls.Add(Label2)
         Controls.Add(lblSAR)
         Controls.Add(lblRoom)
-        Margin = New Padding(3, 2, 3, 2)
         Name = "formRooms"
         StartPosition = FormStartPosition.CenterScreen
         Text = "Form1"

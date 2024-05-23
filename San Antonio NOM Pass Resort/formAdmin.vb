@@ -199,7 +199,7 @@ Public Class formAdmin
     End Sub
 
     Private Sub btnCheckOut_Click(sender As Object, e As EventArgs) Handles btnCheckOut.Click
-        Panel2.Visible = True
+        pnlPayment.Visible = True
         Label57.Visible = True
         Label56.Visible = True
         Label55.Visible = True
@@ -211,7 +211,7 @@ Public Class formAdmin
     End Sub
 
     Private Sub btnCanc_Click(sender As Object, e As EventArgs) Handles btnCanc.Click
-        Panel2.Visible = False
+        pnlPayment.Visible = False
         Label57.Visible = False
         Label56.Visible = False
         Label55.Visible = False
@@ -234,7 +234,7 @@ Public Class formAdmin
         ElseIf MsgBox("Insufficient Payment", 0, "Payment") Then
         End If
 
-        Panel2.Visible = False
+        pnlPayment.Visible = False
         Label57.Visible = False
         Label56.Visible = False
         Label55.Visible = False
@@ -250,25 +250,13 @@ Public Class formAdmin
     Sub checkOut()
         intChange = (Val((txtPaym.Text)) - Val((txtTotBill.Text)))
         strPayment = Val(txtPaym.Text)
-        Me.Hide()
-        formReciept.btnAddRoom.Visible = False
-        formReciept.Show()
-
-        formReciept.txtGuestsName.Text = listCurCustomer(2) + " " + listCurCustomer(3)
-        formReciept.txtNumberOfGuest.Text = listCurCustomer(11)
-        formReciept.txtArrivalDate.Text = listCurCustomer(6)
-        formReciept.txtDepartureDate.Text = listCurCustomer(7)
-        formReciept.txtTotalPayment.Text = listCurCustomer(listCurCustomer.Count - 2)
-        formReciept.txtPayment.Text = strPayment
-        formReciept.txtChange.Text = intChange
-
+        MessageBox.Show($"Change: {intChange}", "Check Out", MessageBoxButtons.OK, MessageBoxIcon.Information)
         listCurCustomer(listCurCustomer.Count - 1) = "True"
-        MsgBox(listCurCustomer(listCurCustomer.Count - 1))
         Dim pathCustomersTxt As String = Path.GetFullPath("Customers.txt")
         Dim writerCustomer = System.IO.File.ReadAllLines(pathCustomersTxt)
         writerCustomer(intCounter) = Globals.appendAllWithDashes(listCurCustomer)
         System.IO.File.WriteAllLines(pathCustomersTxt, writerCustomer)
-
+        tbcAdmin.SelectedIndex() = 0
     End Sub
 
 

@@ -20,7 +20,7 @@ Partial Class formAdmin
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         tbcAdmin = New TabControl()
         tabAdminInfo = New TabPage()
@@ -118,7 +118,7 @@ Partial Class formAdmin
         columnDeparture = New DataGridViewTextBoxColumn()
         columnTotalGuests = New DataGridViewTextBoxColumn()
         tabGuestInfo = New TabPage()
-        Panel2 = New Panel()
+        pnlPayment = New Panel()
         btnCanc = New Button()
         btnConfi = New Button()
         txtPaym = New TextBox()
@@ -164,7 +164,7 @@ Partial Class formAdmin
         tabGuests.SuspendLayout()
         CType(dgvGuestTable, ComponentModel.ISupportInitialize).BeginInit()
         tabGuestInfo.SuspendLayout()
-        Panel2.SuspendLayout()
+        pnlPayment.SuspendLayout()
         SuspendLayout()
         ' 
         ' tbcAdmin
@@ -202,7 +202,7 @@ Partial Class formAdmin
         tabAdminInfo.Controls.Add(Label21)
         tabAdminInfo.Location = New Point(4, 24)
         tabAdminInfo.Name = "tabAdminInfo"
-        tabAdminInfo.Padding = New Padding(3, 3, 3, 3)
+        tabAdminInfo.Padding = New Padding(3)
         tabAdminInfo.Size = New Size(793, 502)
         tabAdminInfo.TabIndex = 0
         tabAdminInfo.Text = "Admin Info"
@@ -541,7 +541,7 @@ Partial Class formAdmin
         tabRooms.Controls.Add(lblSingleRoom)
         tabRooms.Location = New Point(4, 24)
         tabRooms.Name = "tabRooms"
-        tabRooms.Padding = New Padding(3, 3, 3, 3)
+        tabRooms.Padding = New Padding(3)
         tabRooms.Size = New Size(793, 502)
         tabRooms.TabIndex = 1
         tabRooms.Text = "Rooms"
@@ -1204,7 +1204,7 @@ Partial Class formAdmin
         ' 
         ' tabGuestInfo
         ' 
-        tabGuestInfo.Controls.Add(Panel2)
+        tabGuestInfo.Controls.Add(pnlPayment)
         tabGuestInfo.Controls.Add(btnCheckOut)
         tabGuestInfo.Controls.Add(TextBox9)
         tabGuestInfo.Controls.Add(Label50)
@@ -1234,22 +1234,22 @@ Partial Class formAdmin
         tabGuestInfo.Text = "Guest Info"
         tabGuestInfo.UseVisualStyleBackColor = True
         ' 
-        ' Panel2
+        ' pnlPayment
         ' 
-        Panel2.BorderStyle = BorderStyle.FixedSingle
-        Panel2.Controls.Add(btnCanc)
-        Panel2.Controls.Add(btnConfi)
-        Panel2.Controls.Add(txtPaym)
-        Panel2.Controls.Add(txtTotBill)
-        Panel2.Controls.Add(Label57)
-        Panel2.Controls.Add(Label56)
-        Panel2.Controls.Add(Label55)
-        Panel2.Location = New Point(189, 72)
-        Panel2.Margin = New Padding(3, 2, 3, 2)
-        Panel2.Name = "Panel2"
-        Panel2.Size = New Size(380, 241)
-        Panel2.TabIndex = 28
-        Panel2.Visible = False
+        pnlPayment.BorderStyle = BorderStyle.FixedSingle
+        pnlPayment.Controls.Add(btnCanc)
+        pnlPayment.Controls.Add(btnConfi)
+        pnlPayment.Controls.Add(txtPaym)
+        pnlPayment.Controls.Add(txtTotBill)
+        pnlPayment.Controls.Add(Label57)
+        pnlPayment.Controls.Add(Label56)
+        pnlPayment.Controls.Add(Label55)
+        pnlPayment.Location = New Point(189, 72)
+        pnlPayment.Margin = New Padding(3, 2, 3, 2)
+        pnlPayment.Name = "pnlPayment"
+        pnlPayment.Size = New Size(380, 241)
+        pnlPayment.TabIndex = 28
+        pnlPayment.Visible = False
         ' 
         ' btnCanc
         ' 
@@ -1579,8 +1579,8 @@ Partial Class formAdmin
         CType(dgvGuestTable, ComponentModel.ISupportInitialize).EndInit()
         tabGuestInfo.ResumeLayout(False)
         tabGuestInfo.PerformLayout()
-        Panel2.ResumeLayout(False)
-        Panel2.PerformLayout()
+        pnlPayment.ResumeLayout(False)
+        pnlPayment.PerformLayout()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -1704,7 +1704,7 @@ Partial Class formAdmin
     Friend WithEvents columnDeparture As DataGridViewTextBoxColumn
     Friend WithEvents columnTotalGuests As DataGridViewTextBoxColumn
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents Panel2 As Panel
+    Friend WithEvents pnlPayment As Panel
     Friend WithEvents Label56 As Label
     Friend WithEvents Label55 As Label
     Friend WithEvents txtPaym As TextBox

@@ -22,7 +22,6 @@ Partial Class formBooking
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Label1 = New Label()
         txtFirstName = New TextBox()
         Label4 = New Label()
         txtLastName = New TextBox()
@@ -46,159 +45,159 @@ Partial Class formBooking
         cbGuestType = New ComboBox()
         btnEnterGuest = New Button()
         btnClearList = New Button()
+        PictureBox1 = New PictureBox()
         Label3 = New Label()
-        txtUsername = New TextBox()
+        Label1 = New Label()
         Label11 = New Label()
+        txtUsername = New TextBox()
+        Label13 = New Label()
         txtPassword = New TextBox()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
-        ' 
-        ' Label1
-        ' 
-        Label1.AutoSize = True
-        Label1.Font = New Font("Consolas", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label1.Location = New Point(55, 48)
-        Label1.Name = "Label1"
-        Label1.Size = New Size(363, 28)
-        Label1.TabIndex = 0
-        Label1.Text = "San Antonio NOM Pass Resort"
         ' 
         ' txtFirstName
         ' 
-        txtFirstName.Location = New Point(42, 188)
-        txtFirstName.Margin = New Padding(3, 4, 3, 4)
+        txtFirstName.Location = New Point(88, 171)
         txtFirstName.Name = "txtFirstName"
-        txtFirstName.Size = New Size(254, 27)
-        txtFirstName.TabIndex = 2
+        txtFirstName.Size = New Size(223, 23)
+        txtFirstName.TabIndex = 4
         ' 
         ' Label4
         ' 
         Label4.AutoSize = True
+        Label4.BackColor = Color.Transparent
         Label4.Font = New Font("Consolas", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label4.Location = New Point(42, 160)
+        Label4.ForeColor = Color.White
+        Label4.Location = New Point(88, 150)
         Label4.Name = "Label4"
-        Label4.Size = New Size(110, 22)
+        Label4.Size = New Size(88, 18)
         Label4.TabIndex = 0
         Label4.Text = "First Name"
         ' 
         ' txtLastName
         ' 
-        txtLastName.Location = New Point(304, 188)
-        txtLastName.Margin = New Padding(3, 4, 3, 4)
+        txtLastName.Location = New Point(353, 171)
         txtLastName.Name = "txtLastName"
-        txtLastName.Size = New Size(252, 27)
-        txtLastName.TabIndex = 3
+        txtLastName.Size = New Size(221, 23)
+        txtLastName.TabIndex = 6
         ' 
         ' Label5
         ' 
         Label5.AutoSize = True
+        Label5.BackColor = Color.Transparent
         Label5.Font = New Font("Consolas", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label5.Location = New Point(304, 160)
+        Label5.ForeColor = Color.White
+        Label5.Location = New Point(353, 150)
         Label5.Name = "Label5"
-        Label5.Size = New Size(100, 22)
+        Label5.Size = New Size(80, 18)
         Label5.TabIndex = 5
         Label5.Text = "Last Name"
         ' 
         ' dtpBirth
         ' 
         dtpBirth.CustomFormat = ""
-        dtpBirth.Location = New Point(42, 251)
-        dtpBirth.Margin = New Padding(3, 4, 3, 4)
+        dtpBirth.Location = New Point(88, 221)
         dtpBirth.Name = "dtpBirth"
-        dtpBirth.Size = New Size(254, 27)
-        dtpBirth.TabIndex = 4
+        dtpBirth.Size = New Size(223, 23)
+        dtpBirth.TabIndex = 7
         ' 
         ' Label6
         ' 
         Label6.AutoSize = True
+        Label6.BackColor = Color.Transparent
         Label6.Font = New Font("Consolas", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label6.Location = New Point(42, 223)
+        Label6.ForeColor = Color.White
+        Label6.Location = New Point(88, 200)
         Label6.Name = "Label6"
-        Label6.Size = New Size(100, 22)
+        Label6.Size = New Size(80, 18)
         Label6.TabIndex = 0
         Label6.Text = "Birthdate"
         ' 
         ' Label7
         ' 
         Label7.AutoSize = True
+        Label7.BackColor = Color.Transparent
         Label7.Font = New Font("Consolas", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label7.Location = New Point(304, 223)
+        Label7.ForeColor = Color.White
+        Label7.Location = New Point(353, 200)
         Label7.Name = "Label7"
-        Label7.Size = New Size(40, 22)
+        Label7.Size = New Size(32, 18)
         Label7.TabIndex = 2
         Label7.Text = "Sex"
         ' 
         ' cbSex
         ' 
         cbSex.FormattingEnabled = True
-        cbSex.Location = New Point(304, 251)
-        cbSex.Margin = New Padding(3, 4, 3, 4)
+        cbSex.Location = New Point(353, 221)
         cbSex.Name = "cbSex"
-        cbSex.Size = New Size(252, 28)
-        cbSex.TabIndex = 5
+        cbSex.Size = New Size(221, 23)
+        cbSex.TabIndex = 3
         ' 
         ' txtAddress
         ' 
-        txtAddress.Location = New Point(42, 313)
-        txtAddress.Margin = New Padding(3, 4, 3, 4)
+        txtAddress.Location = New Point(88, 269)
         txtAddress.Name = "txtAddress"
-        txtAddress.Size = New Size(514, 27)
-        txtAddress.TabIndex = 6
+        txtAddress.Size = New Size(487, 23)
+        txtAddress.TabIndex = 9
         ' 
         ' Label8
         ' 
         Label8.AutoSize = True
+        Label8.BackColor = Color.Transparent
         Label8.Font = New Font("Consolas", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label8.Location = New Point(42, 285)
+        Label8.ForeColor = Color.White
+        Label8.Location = New Point(88, 248)
         Label8.Name = "Label8"
-        Label8.Size = New Size(80, 22)
+        Label8.Size = New Size(64, 18)
         Label8.TabIndex = 8
         Label8.Text = "Address"
         ' 
         ' dtpArrival
         ' 
-        dtpArrival.Location = New Point(42, 376)
-        dtpArrival.Margin = New Padding(3, 4, 3, 4)
+        dtpArrival.Location = New Point(89, 315)
         dtpArrival.Name = "dtpArrival"
-        dtpArrival.Size = New Size(254, 27)
-        dtpArrival.TabIndex = 7
+        dtpArrival.Size = New Size(223, 23)
+        dtpArrival.TabIndex = 11
         ' 
         ' Label9
         ' 
         Label9.AutoSize = True
+        Label9.BackColor = Color.Transparent
         Label9.Font = New Font("Consolas", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label9.Location = New Point(43, 349)
+        Label9.ForeColor = Color.White
+        Label9.Location = New Point(90, 295)
         Label9.Name = "Label9"
-        Label9.Size = New Size(130, 22)
+        Label9.Size = New Size(104, 18)
         Label9.TabIndex = 10
         Label9.Text = "Arrival Date"
         ' 
         ' dtpDeparture
         ' 
-        dtpDeparture.Location = New Point(304, 376)
-        dtpDeparture.Margin = New Padding(3, 4, 3, 4)
+        dtpDeparture.Location = New Point(352, 315)
         dtpDeparture.Name = "dtpDeparture"
-        dtpDeparture.Size = New Size(254, 27)
-        dtpDeparture.TabIndex = 8
+        dtpDeparture.Size = New Size(223, 23)
+        dtpDeparture.TabIndex = 13
         ' 
         ' Label10
         ' 
         Label10.AutoSize = True
+        Label10.BackColor = Color.Transparent
         Label10.Font = New Font("Consolas", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label10.Location = New Point(305, 349)
+        Label10.ForeColor = Color.White
+        Label10.Location = New Point(353, 295)
         Label10.Name = "Label10"
-        Label10.Size = New Size(150, 22)
+        Label10.Size = New Size(120, 18)
         Label10.TabIndex = 12
         Label10.Text = "Departure Date"
         ' 
         ' btnSubmit
         ' 
-        btnSubmit.BackColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
+        btnSubmit.BackColor = Color.DarkSlateGray
         btnSubmit.Font = New Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         btnSubmit.ForeColor = SystemColors.ButtonFace
-        btnSubmit.Location = New Point(40, 649)
-        btnSubmit.Margin = New Padding(3, 4, 3, 4)
+        btnSubmit.Location = New Point(75, 546)
         btnSubmit.Name = "btnSubmit"
-        btnSubmit.Size = New Size(253, 67)
+        btnSubmit.Size = New Size(234, 56)
         btnSubmit.TabIndex = 14
         btnSubmit.Text = "Submit Reservation"
         btnSubmit.UseVisualStyleBackColor = False
@@ -208,126 +207,165 @@ Partial Class formBooking
         btnCancel.BackColor = Color.Maroon
         btnCancel.Font = New Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         btnCancel.ForeColor = SystemColors.ButtonFace
-        btnCancel.Location = New Point(304, 649)
-        btnCancel.Margin = New Padding(3, 4, 3, 4)
+        btnCancel.Location = New Point(361, 546)
         btnCancel.Name = "btnCancel"
-        btnCancel.Size = New Size(253, 67)
-        btnCancel.TabIndex = 15
+        btnCancel.Size = New Size(234, 56)
+        btnCancel.TabIndex = 14
         btnCancel.Text = "Cancel"
         btnCancel.UseVisualStyleBackColor = False
         ' 
         ' Label12
         ' 
         Label12.AutoSize = True
+        Label12.BackColor = Color.Transparent
         Label12.Font = New Font("Consolas", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label12.Location = New Point(43, 432)
+        Label12.ForeColor = Color.White
+        Label12.Location = New Point(93, 360)
         Label12.Name = "Label12"
-        Label12.Size = New Size(190, 22)
+        Label12.Size = New Size(152, 18)
         Label12.TabIndex = 17
         Label12.Text = "Input Guest Names:"
         ' 
         ' lbxGuestNames
         ' 
         lbxGuestNames.FormattingEnabled = True
-        lbxGuestNames.Location = New Point(40, 499)
-        lbxGuestNames.Margin = New Padding(3, 4, 3, 4)
+        lbxGuestNames.ItemHeight = 15
+        lbxGuestNames.Location = New Point(90, 410)
         lbxGuestNames.Name = "lbxGuestNames"
-        lbxGuestNames.Size = New Size(402, 144)
-        lbxGuestNames.TabIndex = 12
+        lbxGuestNames.Size = New Size(365, 109)
+        lbxGuestNames.TabIndex = 20
         ' 
         ' txtGuestName
         ' 
-        txtGuestName.Location = New Point(40, 460)
-        txtGuestName.Margin = New Padding(3, 4, 3, 4)
+        txtGuestName.Location = New Point(90, 381)
         txtGuestName.Name = "txtGuestName"
-        txtGuestName.Size = New Size(308, 27)
-        txtGuestName.TabIndex = 9
+        txtGuestName.Size = New Size(283, 23)
+        txtGuestName.TabIndex = 21
         ' 
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Location = New Point(40, 436)
+        Label2.Location = New Point(90, 363)
         Label2.Name = "Label2"
-        Label2.Size = New Size(0, 20)
+        Label2.Size = New Size(0, 15)
         Label2.TabIndex = 22
         ' 
         ' cbGuestType
         ' 
         cbGuestType.FormattingEnabled = True
         cbGuestType.Items.AddRange(New Object() {"Regular", "Below 7", "Senior"})
-        cbGuestType.Location = New Point(355, 460)
-        cbGuestType.Margin = New Padding(3, 4, 3, 4)
+        cbGuestType.Location = New Point(379, 381)
         cbGuestType.Name = "cbGuestType"
-        cbGuestType.Size = New Size(86, 28)
-        cbGuestType.TabIndex = 10
+        cbGuestType.Size = New Size(76, 23)
+        cbGuestType.TabIndex = 23
         ' 
         ' btnEnterGuest
         ' 
-        btnEnterGuest.BackColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
+        btnEnterGuest.BackColor = Color.DarkSlateGray
         btnEnterGuest.Font = New Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         btnEnterGuest.ForeColor = SystemColors.ButtonFace
-        btnEnterGuest.Location = New Point(449, 460)
-        btnEnterGuest.Margin = New Padding(3, 4, 3, 4)
+        btnEnterGuest.Location = New Point(479, 377)
         btnEnterGuest.Name = "btnEnterGuest"
-        btnEnterGuest.Size = New Size(110, 92)
-        btnEnterGuest.TabIndex = 11
+        btnEnterGuest.Size = New Size(96, 61)
+        btnEnterGuest.TabIndex = 14
         btnEnterGuest.Text = "Enter"
         btnEnterGuest.UseVisualStyleBackColor = False
         ' 
         ' btnClearList
         ' 
-        btnClearList.BackColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
+        btnClearList.BackColor = Color.DarkSlateGray
         btnClearList.Font = New Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         btnClearList.ForeColor = SystemColors.ButtonFace
-        btnClearList.Location = New Point(449, 560)
-        btnClearList.Margin = New Padding(3, 4, 3, 4)
+        btnClearList.Location = New Point(479, 454)
         btnClearList.Name = "btnClearList"
-        btnClearList.Size = New Size(107, 84)
-        btnClearList.TabIndex = 13
+        btnClearList.Size = New Size(96, 61)
+        btnClearList.TabIndex = 14
         btnClearList.Text = "Clear"
         btnClearList.UseVisualStyleBackColor = False
+        ' 
+        ' PictureBox1
+        ' 
+        PictureBox1.BackColor = Color.Transparent
+        PictureBox1.Image = My.Resources.Resources._863ddd18_06e3_448e_8aa3_d6c3760816ca_removebg_preview__1_1
+        PictureBox1.Location = New Point(24, 27)
+        PictureBox1.Name = "PictureBox1"
+        PictureBox1.Size = New Size(91, 66)
+        PictureBox1.SizeMode = PictureBoxSizeMode.Zoom
+        PictureBox1.TabIndex = 24
+        PictureBox1.TabStop = False
         ' 
         ' Label3
         ' 
         Label3.AutoSize = True
-        Label3.Font = New Font("Consolas", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label3.Location = New Point(42, 97)
+        Label3.BackColor = Color.Transparent
+        Label3.Font = New Font("Consolas", 26.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label3.ForeColor = Color.White
+        Label3.Location = New Point(107, 50)
         Label3.Name = "Label3"
-        Label3.Size = New Size(100, 22)
-        Label3.TabIndex = 0
-        Label3.Text = "Username:"
+        Label3.Size = New Size(531, 41)
+        Label3.TabIndex = 25
+        Label3.Text = "San Antonio NOM Pass Resort"
         ' 
-        ' txtUsername
+        ' Label1
         ' 
-        txtUsername.Location = New Point(42, 125)
-        txtUsername.Margin = New Padding(3, 4, 3, 4)
-        txtUsername.Name = "txtUsername"
-        txtUsername.Size = New Size(254, 27)
-        txtUsername.TabIndex = 0
+        Label1.AutoSize = True
+        Label1.BackColor = Color.Transparent
+        Label1.Font = New Font("Consolas", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label1.ForeColor = Color.Gainsboro
+        Label1.Location = New Point(113, 31)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(130, 24)
+        Label1.TabIndex = 26
+        Label1.Text = "Welcome to"
         ' 
         ' Label11
         ' 
         Label11.AutoSize = True
+        Label11.BackColor = Color.Transparent
         Label11.Font = New Font("Consolas", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label11.Location = New Point(304, 97)
+        Label11.ForeColor = Color.White
+        Label11.Location = New Point(87, 103)
         Label11.Name = "Label11"
-        Label11.Size = New Size(100, 22)
-        Label11.TabIndex = 5
-        Label11.Text = "Password:"
+        Label11.Size = New Size(72, 18)
+        Label11.TabIndex = 0
+        Label11.Text = "Username"
+        ' 
+        ' txtUsername
+        ' 
+        txtUsername.Location = New Point(87, 124)
+        txtUsername.Name = "txtUsername"
+        txtUsername.Size = New Size(223, 23)
+        txtUsername.TabIndex = 4
+        ' 
+        ' Label13
+        ' 
+        Label13.AutoSize = True
+        Label13.BackColor = Color.Transparent
+        Label13.Font = New Font("Consolas", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label13.ForeColor = Color.White
+        Label13.Location = New Point(352, 103)
+        Label13.Name = "Label13"
+        Label13.Size = New Size(72, 18)
+        Label13.TabIndex = 5
+        Label13.Text = "Password"
         ' 
         ' txtPassword
         ' 
-        txtPassword.Location = New Point(304, 125)
-        txtPassword.Margin = New Padding(3, 4, 3, 4)
+        txtPassword.Location = New Point(352, 124)
         txtPassword.Name = "txtPassword"
-        txtPassword.Size = New Size(252, 27)
-        txtPassword.TabIndex = 1
+        txtPassword.Size = New Size(221, 23)
+        txtPassword.TabIndex = 6
         ' 
         ' formBooking
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(603, 861)
+        BackColor = Color.CadetBlue
+        BackgroundImage = My.Resources.Resources.Desktop___1
+        ClientSize = New Size(684, 646)
+        Controls.Add(Label1)
+        Controls.Add(Label3)
+        Controls.Add(PictureBox1)
         Controls.Add(cbGuestType)
         Controls.Add(Label2)
         Controls.Add(txtGuestName)
@@ -345,25 +383,22 @@ Partial Class formBooking
         Controls.Add(Label8)
         Controls.Add(dtpBirth)
         Controls.Add(txtPassword)
-        Controls.Add(Label11)
+        Controls.Add(Label13)
         Controls.Add(txtLastName)
         Controls.Add(txtUsername)
         Controls.Add(Label5)
         Controls.Add(txtFirstName)
         Controls.Add(cbSex)
         Controls.Add(Label7)
-        Controls.Add(Label3)
+        Controls.Add(Label11)
         Controls.Add(Label6)
         Controls.Add(Label4)
-        Controls.Add(Label1)
-        Margin = New Padding(3, 4, 3, 4)
         Name = "formBooking"
         Text = "formBooking"
+        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
-
-    Friend WithEvents Label1 As Label
     Friend WithEvents txtFirstName As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents txtLastName As TextBox
@@ -387,9 +422,12 @@ Partial Class formBooking
     Friend WithEvents cbGuestType As ComboBox
     Friend WithEvents btnEnterGuest As Button
     Friend WithEvents btnClearList As Button
+    Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents txtUsername As TextBox
+    Friend WithEvents Label1 As Label
     Friend WithEvents Label11 As Label
+    Friend WithEvents txtUsername As TextBox
+    Friend WithEvents Label13 As Label
     Friend WithEvents txtPassword As TextBox
 
 End Class

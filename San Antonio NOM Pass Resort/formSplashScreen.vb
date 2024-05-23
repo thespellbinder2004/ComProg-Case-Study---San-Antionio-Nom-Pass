@@ -5,7 +5,8 @@
         If ProgressBar1.Value = ProgressBar1.Maximum Then
             Timer1.Stop()
             Me.Hide()
-            formBooking.Show()
+            formUser.Show()
+
         Else
             ProgressBar1.PerformStep()
 

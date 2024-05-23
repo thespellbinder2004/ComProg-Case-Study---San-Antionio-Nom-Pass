@@ -18,10 +18,10 @@ Public Class formRooms
         Globals.setAvailableRooms()
         Reload()
 
-
     End Sub
 
     Sub Reload()
+        Globals.setAvailableRooms()
         listRoomNums.Clear()
         listRooms = Globals.getRoomsList()
         Dim singleRoom As List(Of String) = Globals.getSplitString(Globals.getRoomsList()(0))
@@ -41,6 +41,7 @@ Public Class formRooms
             End If
 
             arrTxtAvailableRoom(i).Text = listRoomNums(i).Count.ToString - 1
+
         Next
 
     End Sub

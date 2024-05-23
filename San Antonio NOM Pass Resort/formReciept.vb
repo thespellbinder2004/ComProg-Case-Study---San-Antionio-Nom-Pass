@@ -41,9 +41,16 @@ Public Class formReciept
 
         btnAddRoom.Visible = True
 
-        Me.Close()
-        formBooking.Show()
-        formBooking.resetForm()
+        If Globals.typeUser = "Admin" Then
+            Me.Close()
+            formAdmin.Show()
+        Else
+            Me.Close()
+            formBooking.Show()
+            formBooking.resetForm()
+        End If
+
+
 
     End Sub
 

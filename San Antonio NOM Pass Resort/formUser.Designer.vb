@@ -59,8 +59,10 @@ Partial Class formUser
         txtFirstName = New TextBox()
         Label40 = New Label()
         pnlLogIn = New Panel()
+        btnAdmin = New Button()
         btnBookNow = New Button()
         btnSubmit = New Button()
+        Label8 = New Label()
         Label2 = New Label()
         Label5 = New Label()
         Label4 = New Label()
@@ -75,13 +77,9 @@ Partial Class formUser
         ' pnlCustomerDetails
         ' 
         pnlCustomerDetails.AutoScroll = True
-
         pnlCustomerDetails.BackColor = Color.Transparent
         pnlCustomerDetails.BackgroundImage = My.Resources.Resources.Desktop___1__1_
-
-        pnlCustomerDetails.BackColor = SystemColors.ActiveBorder
         pnlCustomerDetails.Controls.Add(pnlPayment)
-
         pnlCustomerDetails.Controls.Add(lbRooms)
         pnlCustomerDetails.Controls.Add(lbGuests)
         pnlCustomerDetails.Controls.Add(Panel1)
@@ -126,7 +124,7 @@ Partial Class formUser
         pnlPayment.Controls.Add(Label57)
         pnlPayment.Controls.Add(Label56)
         pnlPayment.Controls.Add(Label55)
-        pnlPayment.Location = New Point(201, 112)
+        pnlPayment.Location = New Point(216, 442)
         pnlPayment.Margin = New Padding(3, 2, 3, 2)
         pnlPayment.Name = "pnlPayment"
         pnlPayment.Size = New Size(380, 241)
@@ -185,7 +183,7 @@ Partial Class formUser
         ' Label56
         ' 
         Label56.AutoSize = True
-        Label56.Font = New Font("Consolas", 12.0F)
+        Label56.Font = New Font("Consolas", 12F)
         Label56.Location = New Point(44, 89)
         Label56.Name = "Label56"
         Label56.Size = New Size(108, 19)
@@ -195,7 +193,7 @@ Partial Class formUser
         ' Label55
         ' 
         Label55.AutoSize = True
-        Label55.Font = New Font("Consolas", 12.0F)
+        Label55.Font = New Font("Consolas", 12F)
         Label55.Location = New Point(44, 134)
         Label55.Name = "Label55"
         Label55.Size = New Size(81, 19)
@@ -222,22 +220,19 @@ Partial Class formUser
         ' 
         ' Panel1
         ' 
-        Panel1.BackColor = SystemColors.ActiveCaption
-        Panel1.Location = New Point(9, 759)
+        Panel1.BackColor = Color.Transparent
+        Panel1.Location = New Point(3, 737)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(750, 81)
+        Panel1.Size = New Size(750, 32)
         Panel1.TabIndex = 50
         ' 
         ' Label7
         ' 
         Label7.AutoSize = True
-        Label7.Font = New Font("Consolas", 12.0F)
-
+        Label7.BackColor = Color.Transparent
+        Label7.Font = New Font("Consolas", 12F)
         Label7.ForeColor = Color.White
-        Label7.Location = New Point(79, 341)
-
         Label7.Location = New Point(69, 256)
-
         Label7.Name = "Label7"
         Label7.Size = New Size(126, 19)
         Label7.TabIndex = 7
@@ -246,13 +241,10 @@ Partial Class formUser
         ' Label3
         ' 
         Label3.AutoSize = True
-        Label3.Font = New Font("Consolas", 12.0F)
-
+        Label3.BackColor = Color.Transparent
+        Label3.Font = New Font("Consolas", 12F)
         Label3.ForeColor = Color.White
-        Label3.Location = New Point(130, 217)
-
         Label3.Location = New Point(114, 163)
-
         Label3.Name = "Label3"
         Label3.Size = New Size(54, 19)
         Label3.TabIndex = 7
@@ -280,7 +272,7 @@ Partial Class formUser
         ' 
         ' txtTotalBill
         ' 
-        txtTotalBill.Font = New Font("Consolas", 12.0F)
+        txtTotalBill.Font = New Font("Consolas", 12F)
         txtTotalBill.Location = New Point(168, 604)
         txtTotalBill.Name = "txtTotalBill"
         txtTotalBill.Size = New Size(197, 26)
@@ -289,13 +281,9 @@ Partial Class formUser
         ' Label50
         ' 
         Label50.AutoSize = True
-        Label50.Font = New Font("Consolas", 12.0F)
-
+        Label50.Font = New Font("Consolas", 12F)
         Label50.ForeColor = Color.White
-        Label50.Location = New Point(45, 809)
-
         Label50.Location = New Point(39, 607)
-
         Label50.Name = "Label50"
         Label50.Size = New Size(117, 19)
         Label50.TabIndex = 47
@@ -304,13 +292,9 @@ Partial Class formUser
         ' Label49
         ' 
         Label49.AutoSize = True
-        Label49.Font = New Font("Consolas", 12.0F)
-
+        Label49.Font = New Font("Consolas", 12F)
         Label49.ForeColor = Color.White
-        Label49.Location = New Point(120, 492)
-
         Label49.Location = New Point(105, 369)
-
         Label49.Name = "Label49"
         Label49.Size = New Size(63, 19)
         Label49.TabIndex = 45
@@ -319,13 +303,9 @@ Partial Class formUser
         ' Label46
         ' 
         Label46.AutoSize = True
-        Label46.Font = New Font("Consolas", 12.0F)
-
+        Label46.Font = New Font("Consolas", 12F)
         Label46.ForeColor = Color.White
-        Label46.Location = New Point(58, 625)
-
         Label46.Location = New Point(51, 469)
-
         Label46.Name = "Label46"
         Label46.Size = New Size(144, 19)
         Label46.TabIndex = 41
@@ -334,7 +314,7 @@ Partial Class formUser
         ' Label47
         ' 
         Label47.AutoSize = True
-        Label47.Font = New Font("Consolas", 36.0F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label47.Font = New Font("Consolas", 36F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
         Label47.Location = New Point(159, -82)
         Label47.Name = "Label47"
         Label47.Size = New Size(466, 56)
@@ -343,7 +323,7 @@ Partial Class formUser
         ' 
         ' txtLastName
         ' 
-        txtLastName.Font = New Font("Consolas", 12.0F)
+        txtLastName.Font = New Font("Consolas", 12F)
         txtLastName.Location = New Point(207, 66)
         txtLastName.Name = "txtLastName"
         txtLastName.Size = New Size(470, 26)
@@ -352,13 +332,10 @@ Partial Class formUser
         ' Label41
         ' 
         Label41.AutoSize = True
-        Label41.Font = New Font("Consolas", 12.0F)
-
+        Label41.BackColor = Color.Transparent
+        Label41.Font = New Font("Consolas", 12F)
         Label41.ForeColor = Color.White
-        Label41.Location = New Point(89, 92)
-
         Label41.Location = New Point(78, 69)
-
         Label41.Name = "Label41"
         Label41.Size = New Size(99, 19)
         Label41.TabIndex = 38
@@ -366,7 +343,7 @@ Partial Class formUser
         ' 
         ' txtAddress
         ' 
-        txtAddress.Font = New Font("Consolas", 12.0F)
+        txtAddress.Font = New Font("Consolas", 12F)
         txtAddress.Location = New Point(207, 112)
         txtAddress.Name = "txtAddress"
         txtAddress.Size = New Size(470, 26)
@@ -375,13 +352,10 @@ Partial Class formUser
         ' Label45
         ' 
         Label45.AutoSize = True
-        Label45.Font = New Font("Consolas", 12.0F)
-
+        Label45.BackColor = Color.Transparent
+        Label45.Font = New Font("Consolas", 12F)
         Label45.ForeColor = Color.White
-        Label45.Location = New Point(89, 155)
-
         Label45.Location = New Point(78, 116)
-
         Label45.Name = "Label45"
         Label45.Size = New Size(90, 19)
         Label45.TabIndex = 36
@@ -389,7 +363,7 @@ Partial Class formUser
         ' 
         ' txtBirthday
         ' 
-        txtBirthday.Font = New Font("Consolas", 12.0F)
+        txtBirthday.Font = New Font("Consolas", 12F)
         txtBirthday.Location = New Point(207, 204)
         txtBirthday.Name = "txtBirthday"
         txtBirthday.Size = New Size(197, 26)
@@ -398,13 +372,10 @@ Partial Class formUser
         ' Label44
         ' 
         Label44.AutoSize = True
-        Label44.Font = New Font("Consolas", 12.0F)
-
+        Label44.BackColor = Color.Transparent
+        Label44.Font = New Font("Consolas", 12F)
         Label44.ForeColor = Color.White
-        Label44.Location = New Point(89, 276)
-
         Label44.Location = New Point(78, 207)
-
         Label44.Name = "Label44"
         Label44.Size = New Size(99, 19)
         Label44.TabIndex = 34
@@ -412,7 +383,7 @@ Partial Class formUser
         ' 
         ' txtDepartureDate
         ' 
-        txtDepartureDate.Font = New Font("Consolas", 12.0F)
+        txtDepartureDate.Font = New Font("Consolas", 12F)
         txtDepartureDate.Location = New Point(207, 300)
         txtDepartureDate.Name = "txtDepartureDate"
         txtDepartureDate.Size = New Size(197, 26)
@@ -421,13 +392,10 @@ Partial Class formUser
         ' Label6
         ' 
         Label6.AutoSize = True
-        Label6.Font = New Font("Consolas", 12.0F)
-
+        Label6.BackColor = Color.Transparent
+        Label6.Font = New Font("Consolas", 12F)
         Label6.ForeColor = Color.White
-        Label6.Location = New Point(58, 404)
-
         Label6.Location = New Point(51, 303)
-
         Label6.Name = "Label6"
         Label6.Size = New Size(144, 19)
         Label6.TabIndex = 32
@@ -435,7 +403,7 @@ Partial Class formUser
         ' 
         ' txtSex
         ' 
-        txtSex.Font = New Font("Consolas", 12.0F)
+        txtSex.Font = New Font("Consolas", 12F)
         txtSex.Location = New Point(490, 162)
         txtSex.Name = "txtSex"
         txtSex.Size = New Size(186, 26)
@@ -443,7 +411,7 @@ Partial Class formUser
         ' 
         ' txtArrivalDate
         ' 
-        txtArrivalDate.Font = New Font("Consolas", 12.0F)
+        txtArrivalDate.Font = New Font("Consolas", 12F)
         txtArrivalDate.Location = New Point(207, 250)
         txtArrivalDate.Name = "txtArrivalDate"
         txtArrivalDate.Size = New Size(197, 26)
@@ -452,13 +420,10 @@ Partial Class formUser
         ' Label43
         ' 
         Label43.AutoSize = True
-        Label43.Font = New Font("Consolas", 12.0F)
-
+        Label43.BackColor = Color.Transparent
+        Label43.Font = New Font("Consolas", 12F)
         Label43.ForeColor = Color.White
-        Label43.Location = New Point(483, 216)
-
         Label43.Location = New Point(423, 162)
-
         Label43.Name = "Label43"
         Label43.Size = New Size(54, 19)
         Label43.TabIndex = 32
@@ -466,7 +431,7 @@ Partial Class formUser
         ' 
         ' txtAge
         ' 
-        txtAge.Font = New Font("Consolas", 12.0F)
+        txtAge.Font = New Font("Consolas", 12F)
         txtAge.Location = New Point(207, 159)
         txtAge.Name = "txtAge"
         txtAge.Size = New Size(197, 26)
@@ -475,7 +440,7 @@ Partial Class formUser
         ' Label42
         ' 
         Label42.AutoSize = True
-        Label42.Font = New Font("Consolas", 12.0F)
+        Label42.Font = New Font("Consolas", 12F)
         Label42.Location = New Point(-37, 157)
         Label42.Name = "Label42"
         Label42.Size = New Size(54, 19)
@@ -484,7 +449,7 @@ Partial Class formUser
         ' 
         ' txtFirstName
         ' 
-        txtFirstName.Font = New Font("Consolas", 12.0F)
+        txtFirstName.Font = New Font("Consolas", 12F)
         txtFirstName.Location = New Point(207, 20)
         txtFirstName.Name = "txtFirstName"
         txtFirstName.Size = New Size(470, 26)
@@ -493,13 +458,10 @@ Partial Class formUser
         ' Label40
         ' 
         Label40.AutoSize = True
-        Label40.Font = New Font("Consolas", 12.0F)
-
+        Label40.BackColor = Color.Transparent
+        Label40.Font = New Font("Consolas", 12F)
         Label40.ForeColor = Color.White
-        Label40.Location = New Point(89, 29)
-
         Label40.Location = New Point(78, 22)
-
         Label40.Name = "Label40"
         Label40.Size = New Size(117, 19)
         Label40.TabIndex = 28
@@ -509,8 +471,10 @@ Partial Class formUser
         ' 
         pnlLogIn.BackColor = Color.Transparent
         pnlLogIn.BackgroundImage = My.Resources.Resources.Desktop___1
+        pnlLogIn.Controls.Add(btnAdmin)
         pnlLogIn.Controls.Add(btnBookNow)
         pnlLogIn.Controls.Add(btnSubmit)
+        pnlLogIn.Controls.Add(Label8)
         pnlLogIn.Controls.Add(Label2)
         pnlLogIn.Controls.Add(Label5)
         pnlLogIn.Controls.Add(Label4)
@@ -522,15 +486,22 @@ Partial Class formUser
         pnlLogIn.Size = New Size(281, 502)
         pnlLogIn.TabIndex = 0
         ' 
+        ' btnAdmin
+        ' 
+        btnAdmin.BackColor = SystemColors.Control
+        btnAdmin.Location = New Point(183, 435)
+        btnAdmin.Margin = New Padding(3, 4, 3, 4)
+        btnAdmin.Name = "btnAdmin"
+        btnAdmin.Size = New Size(78, 23)
+        btnAdmin.TabIndex = 3
+        btnAdmin.Text = "Admin"
+        btnAdmin.UseVisualStyleBackColor = False
+        ' 
         ' btnBookNow
         ' 
         btnBookNow.BackColor = SystemColors.Control
-
-        btnBookNow.Location = New Point(214, 620)
-        btnBookNow.Margin = New Padding(3, 4, 3, 4)
-
         btnBookNow.Location = New Point(184, 465)
-
+        btnBookNow.Margin = New Padding(3, 4, 3, 4)
         btnBookNow.Name = "btnBookNow"
         btnBookNow.Size = New Size(78, 23)
         btnBookNow.TabIndex = 3
@@ -546,76 +517,63 @@ Partial Class formUser
         btnSubmit.Text = "Submit"
         btnSubmit.UseVisualStyleBackColor = True
         ' 
+        ' Label8
+        ' 
+        Label8.AutoSize = True
+        Label8.BackColor = Color.Transparent
+        Label8.Font = New Font("Consolas", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label8.ForeColor = Color.White
+        Label8.Location = New Point(38, 440)
+        Label8.Name = "Label8"
+        Label8.Size = New Size(126, 14)
+        Label8.TabIndex = 0
+        Label8.Text = "Are you an admin?"
+        ' 
         ' Label2
         ' 
         Label2.AutoSize = True
-
         Label2.BackColor = Color.Transparent
-        Label2.Font = New Font("Consolas", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label2.Font = New Font("Consolas", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label2.ForeColor = Color.White
-        Label2.Location = New Point(45, 213)
-        Label2.Name = "Label2"
-        Label2.Size = New Size(80, 18)
-
         Label2.Location = New Point(39, 160)
         Label2.Name = "Label2"
-        Label2.Size = New Size(60, 15)
-
+        Label2.Size = New Size(70, 14)
         Label2.TabIndex = 0
         Label2.Text = "Password:"
         ' 
         ' Label5
         ' 
         Label5.AutoSize = True
-
         Label5.BackColor = Color.Transparent
-        Label5.Font = New Font("Consolas", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label5.Font = New Font("Consolas", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label5.ForeColor = Color.White
-        Label5.Location = New Point(55, 625)
+        Label5.Location = New Point(39, 470)
         Label5.Name = "Label5"
-        Label5.Size = New Size(160, 18)
-
-        Label5.Location = New Point(63, 469)
-        Label5.Name = "Label5"
-        Label5.Size = New Size(115, 15)
-
+        Label5.Size = New Size(140, 14)
         Label5.TabIndex = 0
         Label5.Text = "Haven't booked yet?"
         ' 
         ' Label4
         ' 
         Label4.AutoSize = True
-
         Label4.BackColor = Color.Transparent
-        Label4.Font = New Font("Consolas", 18.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label4.Font = New Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label4.ForeColor = Color.White
-        Label4.Location = New Point(25, 48)
-        Label4.Name = "Label4"
-        Label4.Size = New Size(111, 36)
-
-        Label4.Font = New Font("Segoe UI", 18.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label4.Location = New Point(22, 36)
         Label4.Name = "Label4"
         Label4.Size = New Size(80, 32)
-
         Label4.TabIndex = 0
         Label4.Text = "Log In"
         ' 
         ' Label1
         ' 
         Label1.AutoSize = True
-
         Label1.BackColor = Color.Transparent
-        Label1.Font = New Font("Consolas", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label1.Font = New Font("Consolas", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label1.ForeColor = Color.White
-        Label1.Location = New Point(45, 133)
-        Label1.Name = "Label1"
-        Label1.Size = New Size(80, 18)
-
         Label1.Location = New Point(39, 100)
         Label1.Name = "Label1"
-        Label1.Size = New Size(63, 15)
-
+        Label1.Size = New Size(70, 14)
         Label1.TabIndex = 0
         Label1.Text = "Username:"
         ' 
@@ -623,6 +581,7 @@ Partial Class formUser
         ' 
         txtPassword.Location = New Point(39, 178)
         txtPassword.Name = "txtPassword"
+        txtPassword.PasswordChar = "*"c
         txtPassword.Size = New Size(197, 23)
         txtPassword.TabIndex = 1
         ' 
@@ -697,4 +656,6 @@ Partial Class formUser
     Friend WithEvents Label57 As Label
     Friend WithEvents Label56 As Label
     Friend WithEvents Label55 As Label
+    Friend WithEvents btnAdmin As Button
+    Friend WithEvents Label8 As Label
 End Class

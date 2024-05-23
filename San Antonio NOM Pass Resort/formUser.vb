@@ -155,4 +155,11 @@ Public Class formUser
     Private Sub btnCanc_Click(sender As Object, e As EventArgs) Handles btnCanc.Click
         pnlPayment.Hide()
     End Sub
+
+    Private Sub btnAdmin_Click(sender As Object, e As EventArgs) Handles btnAdmin.Click
+        formAdminLogin.Show()
+
+        Me.Close()
+
+    End Sub
 End Class

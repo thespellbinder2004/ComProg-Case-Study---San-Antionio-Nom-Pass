@@ -57,13 +57,42 @@ Public Class formAdmin
 
 
         If colName = "columnEdit" Then
-
+            loadData()
             listCurCustomer = Globals.getSplitString(listCustomer(rowIndex))
             tbcAdmin.SelectedTab = tabGuestInfo
             Dim dateBirth As Date = Convert.ToDateTime(listCurCustomer(5))
             Dim age As Integer = getAge(dateBirth)
             intCounter = rowIndex
 
+            Dim indexOccupants As Integer
+            Dim indexRooms As Integer
+
+            For j = 0 To listCurCustomer.Count - 1
+                If listCurCustomer(j) = "Occupants:" Then
+                    indexOccupants = j
+                End If
+                If listCurCustomer(j) = "Rooms:" Then
+                    indexRooms = j
+                End If
+            Next
+
+            Dim roomCount As Integer = 1
+            For j = indexRooms + 1 To indexOccupants - 1 Step 4
+                lbRooms.Items.Add(roomCount.ToString + ".")
+                lbRooms.Items.Add("Type: " + listCurCustomer(j))
+                lbRooms.Items.Add("Room Number: " + listCurCustomer(j + 1))
+                lbRooms.Items.Add("Price: " + listCurCustomer(j + 2))
+                lbRooms.Items.Add("Max Capacity: " + listCurCustomer(j + 3))
+                lbRooms.Items.Add("")
+                roomCount += 1
+            Next
+            Dim guestCount As Integer = 1
+            For j = indexOccupants + 1 To listCurCustomer.Count - 3
+                lbGuests.Items.Add(guestCount.ToString + ". " + listCurCustomer(j))
+                guestCount += 1
+            Next
+
+            listCurCustomer(listCurCustomer.Count - 1) = "True"
 
             TextBox0.Text = listCurCustomer(2)
             TextBox1.Text = listCurCustomer(3)
@@ -75,15 +104,16 @@ Public Class formAdmin
             TextBox5.Text = listCurCustomer(11)
             'txtbox6 address
             TextBox6.Text = listCurCustomer(13)
-            'txtbox7 room type
-            TextBox7.Text = listCurCustomer(15)
-            'txtBox8 room Number
-            TextBox8.Text = listCurCustomer(16)
+            'txtBox8 room *need fix*
+
             'textbox9 total bill
             TextBox9.Text = listCurCustomer(listCurCustomer.Count - 2)
-            For i = 0 To listCurCustomer.Count - 1
-                'MsgBox(listCurCustomer(i))
-            Next
+            'Texbox10 arraival
+            TextBox10.Text = listCurCustomer(6)
+            'textbox11 departure
+            TextBox11.Text = listCurCustomer(7)
+            'TextBox12 list of guest *need fix*
+            'TextBox12.Text = 
 
         End If
 
@@ -109,6 +139,9 @@ Public Class formAdmin
             Dim listInfo As List(Of String) = Globals.getSplitString(listCustomer(i))
             dgvGuestTable.Rows.Add("Edit", listInfo(2), listInfo(3), listInfo(6), listInfo(7), listInfo(12))
         Next
+
+        lbGuests.Items.Clear()
+        lbRooms.Items.Clear()
 
 
         'ROOM NUMBERS CLEAR 
@@ -197,22 +230,15 @@ Public Class formAdmin
     End Sub
 
     Private Sub btnCheckOut_Click(sender As Object, e As EventArgs) Handles btnCheckOut.Click
-
-        If Not listCurCustomer(listCurCustomer.Count - 1) = "True" Then
-            pnlPayment.Visible = True
-            Label57.Visible = True
-            Label56.Visible = True
-            Label55.Visible = True
-            txtTotBill.Visible = True
-            txtPaym.Visible = True
-            btnConfi.Visible = True
-            btnCanc.Visible = True
-            txtTotBill.Text = TextBox9.Text
-        Else
-            MessageBox.Show("Customer has already Checked Out", "Admin", MessageBoxButtons.OK, MessageBoxIcon.Hand)
-        End If
-
-
+        pnlPayment.Visible = True
+        Label57.Visible = True
+        Label56.Visible = True
+        Label55.Visible = True
+        txtTotBill.Visible = True
+        txtPaym.Visible = True
+        btnConfi.Visible = True
+        btnCanc.Visible = True
+        txtTotBill.Text = TextBox9.Text
     End Sub
 
     Private Sub btnCanc_Click(sender As Object, e As EventArgs) Handles btnCanc.Click
@@ -226,8 +252,6 @@ Public Class formAdmin
         btnCanc.Visible = False
         txtPaym.Text = ""
         txtTotBill.Text = TextBox9.Text
-
-
     End Sub
 
 
@@ -257,15 +281,35 @@ Public Class formAdmin
     Sub checkOut()
         intChange = (Val((txtPaym.Text)) - Val((txtTotBill.Text)))
         strPayment = Val(txtPaym.Text)
+        MessageBox.Show($"Change: {intChange}", "Check Out", MessageBoxButtons.OK, MessageBoxIcon.Information)
         listCurCustomer(listCurCustomer.Count - 1) = "True"
         Dim pathCustomersTxt As String = Path.GetFullPath("Customers.txt")
         Dim writerCustomer = System.IO.File.ReadAllLines(pathCustomersTxt)
         writerCustomer(intCounter) = Globals.appendAllWithDashes(listCurCustomer)
         System.IO.File.WriteAllLines(pathCustomersTxt, writerCustomer)
         tbcAdmin.SelectedIndex() = 0
-        loadData()
+    End Sub
+
+    Private Sub tabGuestInfo_Click(sender As Object, e As EventArgs) Handles tabGuestInfo.Click
 
     End Sub
+
+    Private Sub btnLogOut_Click(sender As Object, e As EventArgs) Handles btnLogOut.Click
+        formAdminLogin.Show()
+        Globals.typeUser = "Customer"
+        Close()
+    End Sub
+
+    Private Sub btnBook_Click(sender As Object, e As EventArgs) Handles btnBook.Click
+        Hide()
+        formRooms.Reload()
+        formBooking.Show()
+    End Sub
+
+
+
+
+
 
 
 

@@ -4,6 +4,9 @@
     <Compile Update="formAdmin.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="formAdminLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="formBooking.vb">
       <SubType>Form</SubType>
     </Compile>

@@ -1,6 +1,7 @@
 ﻿Imports System.IO
 
 Public Class Globals
+    Public Shared typeUser As String = "Customer"
     Shared pathCustomersTxt As String = Path.GetFullPath("Customers.txt")
     Shared pathRoomsTxt As String = Path.GetFullPath("Rooms.txt")
     Shared pathRoomsTemplateTxt As String = Path.GetFullPath("RoomsTemplate.txt")

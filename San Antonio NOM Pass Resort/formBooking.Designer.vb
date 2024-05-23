@@ -52,6 +52,8 @@ Partial Class formBooking
         txtUsername = New TextBox()
         Label13 = New Label()
         txtPassword = New TextBox()
+        btnBookNow = New Button()
+        Label14 = New Label()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -356,6 +358,29 @@ Partial Class formBooking
         txtPassword.Size = New Size(221, 23)
         txtPassword.TabIndex = 6
         ' 
+        ' btnBookNow
+        ' 
+        btnBookNow.BackColor = SystemColors.Control
+        btnBookNow.Location = New Point(539, 630)
+        btnBookNow.Margin = New Padding(3, 4, 3, 4)
+        btnBookNow.Name = "btnBookNow"
+        btnBookNow.Size = New Size(78, 23)
+        btnBookNow.TabIndex = 28
+        btnBookNow.Text = "Log In"
+        btnBookNow.UseVisualStyleBackColor = False
+        ' 
+        ' Label14
+        ' 
+        Label14.AutoSize = True
+        Label14.BackColor = Color.Transparent
+        Label14.Font = New Font("Consolas", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label14.ForeColor = Color.White
+        Label14.Location = New Point(408, 636)
+        Label14.Name = "Label14"
+        Label14.Size = New Size(112, 14)
+        Label14.TabIndex = 27
+        Label14.Text = "Already booked?"
+        ' 
         ' formBooking
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
@@ -363,6 +388,8 @@ Partial Class formBooking
         BackColor = Color.CadetBlue
         BackgroundImage = My.Resources.Resources.Desktop___1
         ClientSize = New Size(684, 675)
+        Controls.Add(btnBookNow)
+        Controls.Add(Label14)
         Controls.Add(Label1)
         Controls.Add(Label3)
         Controls.Add(PictureBox1)
@@ -429,5 +456,7 @@ Partial Class formBooking
     Friend WithEvents txtUsername As TextBox
     Friend WithEvents Label13 As Label
     Friend WithEvents txtPassword As TextBox
+    Friend WithEvents btnBookNow As Button
+    Friend WithEvents Label14 As Label
 
 End Class

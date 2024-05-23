@@ -107,8 +107,6 @@ Public Class formBooking
         dtpDeparture.CustomFormat = "ddd, MM / dd / yyyy"
         dtpDeparture.MinDate = dtpArrival.Value.AddDays(1)
 
-        formAdmin.Show()
-
         resetForm()
 
     End Sub
@@ -125,6 +123,7 @@ Public Class formBooking
             If result = DialogResult.OK Then
 
                 formRooms.Show()
+                formRooms.Reload()
                 setCustomerDetails()
                 Hide()
 
@@ -244,5 +243,8 @@ Public Class formBooking
 
     End Sub
 
-
+    Private Sub btnBookNow_Click(sender As Object, e As EventArgs) Handles btnBookNow.Click
+        formUser.Show()
+        Me.Close()
+    End Sub
 End Class

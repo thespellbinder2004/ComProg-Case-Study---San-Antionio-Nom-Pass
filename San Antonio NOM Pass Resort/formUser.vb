@@ -112,7 +112,7 @@ Public Class formUser
         checkOut()
 
     End Sub
-    Function checkOut()
+    Sub checkOut()
         listCustomerInfo(curUser)(listCustomerInfo(curUser).Count - 1) = "True"
         MsgBox(listCustomerInfo(curUser)(listCustomerInfo.Count - 1))
         Dim pathCustomersTxt As String = Path.GetFullPath("Customers.txt")
@@ -120,9 +120,9 @@ Public Class formUser
         writerCustomer(curUser) = Globals.appendAllWithDashes(listCustomerInfo(curUser))
         System.IO.File.WriteAllLines(pathCustomersTxt, writerCustomer)
 
-    End Function
+    End Sub
 
-    Private Sub pnlLogIn_Paint(sender As Object, e As PaintEventArgs) Handles pnlLogIn.Paint
+    Private Sub pnlCustomerDetails_Paint(sender As Object, e As PaintEventArgs) Handles pnlCustomerDetails.Paint
 
     End Sub
 End Class

@@ -1,6 +1,7 @@
 ﻿Imports System.IO
 
 Public Class formReciept
+
     Dim dblTotalBill As Double
     Dim totalGuests As Integer
     Dim listRoomsSelected As List(Of String)
@@ -71,9 +72,7 @@ Public Class formReciept
         dblTotalBill = calcTotalBill(formBooking.getGuestToPay, formBooking.getLengthOfStay, dblTotalRoomCost, intMaxCapacity)
 
     End Sub
-    Sub setRooms()
 
-    End Sub
     Function calcTotalBill(ByVal Guests As Double, ByVal lengthOfStay As Double, ByVal roomCost As Double, ByVal maxCapacity As Double)
         Dim totalBill As Double
         Dim additionBill As Double = 0

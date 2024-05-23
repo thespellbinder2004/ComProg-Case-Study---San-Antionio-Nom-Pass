@@ -1,8 +1,12 @@
-﻿Public Class formAdmin
+﻿Imports System.IO
+
+Public Class formAdmin
 
     Dim listCustomer As List(Of String) = Globals.getCustomerList()
     Dim listCurCustomer As List(Of String)
-
+    Public intChange As Double
+    Public strPayment As Double
+    Dim intCounter As Integer
 
     'Customer Info List 
     'Index  Item
@@ -53,13 +57,15 @@
         Dim rowIndex = dgvGuestTable.Rows(e.RowIndex).Index.ToString
 
 
-
         If colName = "columnEdit" Then
+
             listCurCustomer = Globals.getSplitString(listCustomer(rowIndex))
             tbcAdmin.SelectedTab = tabGuestInfo
             Dim dateBirth As Date = Convert.ToDateTime(listCurCustomer(5))
             Dim age As Integer = getAge(dateBirth)
+            intCounter = rowIndex
 
+            listCurCustomer(listCurCustomer.Count - 1) = "True"
 
             TextBox0.Text = listCurCustomer(2)
             TextBox1.Text = listCurCustomer(3)
@@ -72,11 +78,11 @@
             'txtbox6 address
             TextBox6.Text = listCurCustomer(13)
             'txtbox7 room type
-            TextBox7.Text = listCurCustomer(14)
+            TextBox7.Text = listCurCustomer(15)
             'txtBox8 room Number
-            TextBox8.Text = listCurCustomer(15)
+            TextBox8.Text = listCurCustomer(16)
             'textbox9 total bill
-            TextBox9.Text = listCurCustomer(16)
+            TextBox9.Text = listCurCustomer(listCurCustomer.Count - 2)
             For i = 0 To listCurCustomer.Count - 1
                 'MsgBox(listCurCustomer(i))
             Next
@@ -220,15 +226,12 @@
 
     Private Sub btnConfi_Click(sender As Object, e As EventArgs) Handles btnConfi.Click
         If txtPaym.Text = txtTotBill.Text Then
+            checkOut()
             MsgBox("Payment Confirmed!", 0, "Payment")
-        Else
-            MsgBox("Insufficient Payment", 0, "Payment")
-        End If
-
-        If (Val((txtPaym.Text)) > Val((txtTotBill.Text))) Then
+        ElseIf (Val((txtPaym.Text)) > Val((txtTotBill.Text))) Then
+            checkOut()
             MsgBox("Payment Confirmed! Change:" + (Val((txtPaym.Text)) - Val((txtTotBill.Text))).ToString, 0, "Payment")
-        Else
-            MsgBox("Insufficient Payment", 0, "Payment")
+        ElseIf MsgBox("Insufficient Payment", 0, "Payment") Then
         End If
 
         Panel2.Visible = False
@@ -241,9 +244,30 @@
         btnCanc.Visible = False
         txtPaym.Text = ""
         txtTotBill.Text = TextBox9.Text
+
+
+    End Sub
+    Sub checkOut()
+        intChange = (Val((txtPaym.Text)) - Val((txtTotBill.Text)))
+        strPayment = Val(txtPaym.Text)
         Me.Hide()
         formReciept.btnAddRoom.Visible = False
         formReciept.Show()
+
+        formReciept.txtGuestsName.Text = listCurCustomer(2) + " " + listCurCustomer(3)
+        formReciept.txtNumberOfGuest.Text = listCurCustomer(11)
+        formReciept.txtArrivalDate.Text = listCurCustomer(6)
+        formReciept.txtDepartureDate.Text = listCurCustomer(7)
+        formReciept.txtTotalPayment.Text = listCurCustomer(listCurCustomer.Count - 2)
+        formReciept.txtPayment.Text = strPayment
+        formReciept.txtChange.Text = intChange
+
+        listCurCustomer(listCurCustomer.Count - 1) = "True"
+        MsgBox(listCurCustomer(listCurCustomer.Count - 1))
+        Dim pathCustomersTxt As String = Path.GetFullPath("Customers.txt")
+        Dim writerCustomer = System.IO.File.ReadAllLines(pathCustomersTxt)
+        writerCustomer(intCounter) = Globals.appendAllWithDashes(listCurCustomer)
+        System.IO.File.WriteAllLines(pathCustomersTxt, writerCustomer)
 
     End Sub
 

@@ -38,6 +38,10 @@ Partial Class formReciept
         Label6 = New Label()
         btnConfirm = New Button()
         btnAddRoom = New Button()
+        Label7 = New Label()
+        Label8 = New Label()
+        txtPayment = New TextBox()
+        txtChange = New TextBox()
         SuspendLayout()
         ' 
         ' Label1
@@ -104,7 +108,7 @@ Partial Class formReciept
         ' 
         Label4.AutoSize = True
         Label4.Font = New Font("Consolas", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label4.Location = New Point(34, 353)
+        Label4.Location = New Point(41, 461)
         Label4.Name = "Label4"
         Label4.Size = New Size(330, 44)
         Label4.TabIndex = 18
@@ -197,7 +201,7 @@ Partial Class formReciept
         ' 
         ' btnConfirm
         ' 
-        btnConfirm.Location = New Point(74, 423)
+        btnConfirm.Location = New Point(74, 531)
         btnConfirm.Name = "btnConfirm"
         btnConfirm.Size = New Size(94, 29)
         btnConfirm.TabIndex = 5
@@ -206,22 +210,66 @@ Partial Class formReciept
         ' 
         ' btnAddRoom
         ' 
-        btnAddRoom.Location = New Point(222, 423)
+        btnAddRoom.Location = New Point(222, 531)
         btnAddRoom.Name = "btnAddRoom"
         btnAddRoom.Size = New Size(94, 29)
         btnAddRoom.TabIndex = 6
         btnAddRoom.Text = "Add Room"
         btnAddRoom.UseVisualStyleBackColor = True
         ' 
+        ' Label7
+        ' 
+        Label7.AutoSize = True
+        Label7.Font = New Font("Consolas", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label7.Location = New Point(41, 351)
+        Label7.Name = "Label7"
+        Label7.Size = New Size(90, 22)
+        Label7.TabIndex = 24
+        Label7.Text = "Payment:"
+        ' 
+        ' Label8
+        ' 
+        Label8.AutoSize = True
+        Label8.Font = New Font("Consolas", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label8.Location = New Point(41, 403)
+        Label8.Name = "Label8"
+        Label8.Size = New Size(80, 22)
+        Label8.TabIndex = 24
+        Label8.Text = "Change:"
+        ' 
+        ' txtPayment
+        ' 
+        txtPayment.BackColor = Color.Gainsboro
+        txtPayment.BorderStyle = BorderStyle.FixedSingle
+        txtPayment.Enabled = False
+        txtPayment.Location = New Point(156, 350)
+        txtPayment.Name = "txtPayment"
+        txtPayment.Size = New Size(209, 27)
+        txtPayment.TabIndex = 25
+        ' 
+        ' txtChange
+        ' 
+        txtChange.BackColor = Color.Gainsboro
+        txtChange.BorderStyle = BorderStyle.FixedSingle
+        txtChange.Enabled = False
+        txtChange.Location = New Point(156, 402)
+        txtChange.Name = "txtChange"
+        txtChange.Size = New Size(208, 27)
+        txtChange.TabIndex = 26
+        ' 
         ' formReciept
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = SystemColors.ButtonHighlight
-        ClientSize = New Size(410, 492)
+        ClientSize = New Size(410, 598)
+        Controls.Add(txtChange)
+        Controls.Add(txtPayment)
         Controls.Add(btnAddRoom)
         Controls.Add(btnConfirm)
         Controls.Add(txtTotalPayment)
+        Controls.Add(Label8)
+        Controls.Add(Label7)
         Controls.Add(Label6)
         Controls.Add(txtDepartureDate)
         Controls.Add(txtArrivalDate)
@@ -259,4 +307,8 @@ Partial Class formReciept
     Friend WithEvents Label6 As Label
     Friend WithEvents btnConfirm As Button
     Friend WithEvents btnAddRoom As Button
+    Friend WithEvents Label7 As Label
+    Friend WithEvents Label8 As Label
+    Friend WithEvents txtPayment As TextBox
+    Friend WithEvents txtChange As TextBox
 End Class

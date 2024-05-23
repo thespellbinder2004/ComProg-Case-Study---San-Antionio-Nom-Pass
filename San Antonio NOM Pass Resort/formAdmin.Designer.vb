@@ -765,6 +765,7 @@ Partial Class formAdmin
         nudPresidentialAvailableRooms.Location = New Point(627, 1060)
         nudPresidentialAvailableRooms.Margin = New Padding(3, 2, 3, 2)
         nudPresidentialAvailableRooms.Name = "nudPresidentialAvailableRooms"
+        nudPresidentialAvailableRooms.ReadOnly = True
         nudPresidentialAvailableRooms.Size = New Size(108, 23)
         nudPresidentialAvailableRooms.TabIndex = 13
         ' 
@@ -773,6 +774,7 @@ Partial Class formAdmin
         nudExecutiveAvailableRooms.Location = New Point(627, 875)
         nudExecutiveAvailableRooms.Margin = New Padding(3, 2, 3, 2)
         nudExecutiveAvailableRooms.Name = "nudExecutiveAvailableRooms"
+        nudExecutiveAvailableRooms.ReadOnly = True
         nudExecutiveAvailableRooms.Size = New Size(108, 23)
         nudExecutiveAvailableRooms.TabIndex = 11
         ' 
@@ -781,6 +783,7 @@ Partial Class formAdmin
         nudStandardAvailableRooms.Location = New Point(628, 386)
         nudStandardAvailableRooms.Margin = New Padding(3, 2, 3, 2)
         nudStandardAvailableRooms.Name = "nudStandardAvailableRooms"
+        nudStandardAvailableRooms.ReadOnly = True
         nudStandardAvailableRooms.Size = New Size(108, 23)
         nudStandardAvailableRooms.TabIndex = 5
         ' 
@@ -789,6 +792,7 @@ Partial Class formAdmin
         nudTwinAvailableRooms.Location = New Point(628, 227)
         nudTwinAvailableRooms.Margin = New Padding(3, 2, 3, 2)
         nudTwinAvailableRooms.Name = "nudTwinAvailableRooms"
+        nudTwinAvailableRooms.ReadOnly = True
         nudTwinAvailableRooms.Size = New Size(108, 23)
         nudTwinAvailableRooms.TabIndex = 3
         ' 
@@ -797,6 +801,7 @@ Partial Class formAdmin
         nudKingAvailableRooms.Location = New Point(627, 707)
         nudKingAvailableRooms.Margin = New Padding(3, 2, 3, 2)
         nudKingAvailableRooms.Name = "nudKingAvailableRooms"
+        nudKingAvailableRooms.ReadOnly = True
         nudKingAvailableRooms.Size = New Size(108, 23)
         nudKingAvailableRooms.TabIndex = 9
         ' 
@@ -805,6 +810,7 @@ Partial Class formAdmin
         nudQueenAvailableRooms.Location = New Point(629, 548)
         nudQueenAvailableRooms.Margin = New Padding(3, 2, 3, 2)
         nudQueenAvailableRooms.Name = "nudQueenAvailableRooms"
+        nudQueenAvailableRooms.ReadOnly = True
         nudQueenAvailableRooms.Size = New Size(108, 23)
         nudQueenAvailableRooms.TabIndex = 7
         ' 
@@ -813,6 +819,7 @@ Partial Class formAdmin
         nudSingleAvailableRooms.Location = New Point(628, 56)
         nudSingleAvailableRooms.Margin = New Padding(3, 2, 3, 2)
         nudSingleAvailableRooms.Name = "nudSingleAvailableRooms"
+        nudSingleAvailableRooms.ReadOnly = True
         nudSingleAvailableRooms.Size = New Size(108, 23)
         nudSingleAvailableRooms.TabIndex = 1
         ' 

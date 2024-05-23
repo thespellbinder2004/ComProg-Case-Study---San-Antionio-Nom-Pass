@@ -35,12 +35,14 @@ Public Class formUser
         txtSex.ReadOnly = True
         txtTotalBill.ReadOnly = True
 
+        pnlPayment.Hide()
+
     End Function
 
     Private Sub btnSubmit_Click(sender As Object, e As EventArgs) Handles btnSubmit.Click
         Dim logged As Boolean = False
         For i = 0 To listCustomerInfo.Count - 1
-            If listCustomerInfo(i)(0) = txtUsername.Text And listCustomerInfo(i)(1) = txtPassword.Text Then
+            If listCustomerInfo(i)(0) = txtUsername.Text And listCustomerInfo(i)(1) = txtPassword.Text And listCustomerInfo(i)(listCustomerInfo(i).Count - 1) = "False" Then
                 curUser = i
                 pnlCustomerDetails.Enabled = True
                 pnlLogIn.Enabled = False
@@ -72,6 +74,7 @@ Public Class formUser
         txtDepartureDate.Text = listCustomerInfo(i)(7)
         txtAddress.Text = listCustomerInfo(i)(13)
         txtTotalBill.Text = "₱ " + listCustomerInfo(i)(listCustomerInfo(i).Count - 2)
+        txtTotBill.Text = listCustomerInfo(i)(listCustomerInfo(i).Count - 2)
         Dim indexOccupants As Integer = 0
         Dim indexRooms As Integer = 0
 
@@ -118,20 +121,38 @@ Public Class formUser
     End Sub
 
     Private Sub btnCheckOut_Click(sender As Object, e As EventArgs) Handles btnCheckOut.Click
-        checkOut()
+        pnlPayment.Show()
 
     End Sub
     Sub checkOut()
+        Dim intChange = (Val((txtPaym.Text)) - Val((txtTotBill.Text)))
+        Dim strPayment = Val(txtPaym.Text)
+        MessageBox.Show($"Change: ₱ {intChange}")
         listCustomerInfo(curUser)(listCustomerInfo(curUser).Count - 1) = "True"
-        MsgBox(listCustomerInfo(curUser)(listCustomerInfo.Count - 1))
         Dim pathCustomersTxt As String = Path.GetFullPath("Customers.txt")
         Dim writerCustomer = System.IO.File.ReadAllLines(pathCustomersTxt)
         writerCustomer(curUser) = Globals.appendAllWithDashes(listCustomerInfo(curUser))
         System.IO.File.WriteAllLines(pathCustomersTxt, writerCustomer)
-
+        pnlPayment.Hide()
+        Reload()
     End Sub
 
     Private Sub pnlCustomerDetails_Paint(sender As Object, e As PaintEventArgs) Handles pnlCustomerDetails.Paint
 
+    End Sub
+
+    Private Sub btnConfi_Click(sender As Object, e As EventArgs) Handles btnConfi.Click
+
+        If Val(txtPaym.Text) >= Val(txtTotBill.Text) Then
+            checkOut()
+            MsgBox("Payment Confirmed!", 0, "Payment")
+        Else
+            MessageBox.Show("Payment Insufficient!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End If
+
+    End Sub
+
+    Private Sub btnCanc_Click(sender As Object, e As EventArgs) Handles btnCanc.Click
+        pnlPayment.Hide()
     End Sub
 End Class

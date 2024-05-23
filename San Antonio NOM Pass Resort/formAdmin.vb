@@ -39,11 +39,10 @@ Public Class formAdmin
     'Function for getting the Age
     Function getAge(ByVal dateBirth As Date) As Integer
 
-        MsgBox(dateBirth.ToString)
-        MsgBox(dateBirth.Year)
+
 
         Dim age As Integer = today.Year - dateBirth.Year
-        MsgBox(age.ToString)
+
         If (dateBirth > today.AddYears(-age)) Then
             age -= 1
         End If

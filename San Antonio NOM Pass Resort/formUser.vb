@@ -54,10 +54,19 @@ Public Class formUser
             MessageBox.Show("Incorrect Username or Password, try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End If
     End Sub
+    Function getAge(ByVal dateBirth As Date) As Integer
+        Dim age As Integer = Today.Year - dateBirth.Year
+        If (dateBirth > Today.AddYears(-age)) Then
+            age -= 1
+        End If
+        Return age
+
+    End Function
     Function setInfo(ByVal i As Integer)
         txtFirstName.Text = listCustomerInfo(i)(2)
         txtLastName.Text = listCustomerInfo(i)(3)
         txtSex.Text = listCustomerInfo(i)(4)
+        txtAge.Text = getAge(listCustomerInfo(i)(5)).ToString
         txtBirthday.Text = listCustomerInfo(i)(5)
         txtArrivalDate.Text = listCustomerInfo(i)(6)
         txtDepartureDate.Text = listCustomerInfo(i)(7)

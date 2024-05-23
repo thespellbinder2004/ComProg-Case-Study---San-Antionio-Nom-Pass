@@ -362,7 +362,7 @@ Partial Class formBooking
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.CadetBlue
         BackgroundImage = My.Resources.Resources.Desktop___1
-        ClientSize = New Size(684, 646)
+        ClientSize = New Size(684, 675)
         Controls.Add(Label1)
         Controls.Add(Label3)
         Controls.Add(PictureBox1)

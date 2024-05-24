@@ -52,7 +52,7 @@ Public Class formAdmin
     End Function
 
     Private Sub DataGridView2_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvGuestTable.CellContentClick
-        Dim colName As String = dgvGuestTable.Columns(e.ColumnIndex).Name
+        Dim colName = dgvGuestTable.Columns(e.ColumnIndex).Name
         Dim rowIndex = dgvGuestTable.Rows(e.RowIndex).Index.ToString
 
 
@@ -60,8 +60,8 @@ Public Class formAdmin
             loadData()
             listCurCustomer = Globals.getSplitString(listCustomer(rowIndex))
             tbcAdmin.SelectedTab = tabGuestInfo
-            Dim dateBirth As Date = Convert.ToDateTime(listCurCustomer(5))
-            Dim age As Integer = getAge(dateBirth)
+            Dim dateBirth = Convert.ToDateTime(listCurCustomer(5))
+            Dim age = getAge(dateBirth)
             intCounter = rowIndex
 
             Dim indexOccupants As Integer
@@ -76,7 +76,7 @@ Public Class formAdmin
                 End If
             Next
 
-            Dim roomCount As Integer = 1
+            Dim roomCount = 1
             For j = indexRooms + 1 To indexOccupants - 1 Step 4
                 lbRooms.Items.Add(roomCount.ToString + ".")
                 lbRooms.Items.Add("Type: " + listCurCustomer(j))
@@ -86,7 +86,7 @@ Public Class formAdmin
                 lbRooms.Items.Add("")
                 roomCount += 1
             Next
-            Dim guestCount As Integer = 1
+            Dim guestCount = 1
             For j = indexOccupants + 1 To listCurCustomer.Count - 3
                 lbGuests.Items.Add(guestCount.ToString + ". " + listCurCustomer(j))
                 guestCount += 1
@@ -259,9 +259,9 @@ Public Class formAdmin
         If txtPaym.Text = txtTotBill.Text Then
             checkOut()
             MsgBox("Payment Confirmed!", 0, "Payment")
-        ElseIf (Val((txtPaym.Text)) > Val((txtTotBill.Text))) Then
+        ElseIf Val(txtPaym.Text) > Val(txtTotBill.Text) Then
             checkOut()
-            MsgBox("Payment Confirmed! Change:" + (Val((txtPaym.Text)) - Val((txtTotBill.Text))).ToString, 0, "Payment")
+            MsgBox("Payment Confirmed! Change:" + (Val(txtPaym.Text) - Val(txtTotBill.Text)).ToString, 0, "Payment")
         ElseIf MsgBox("Insufficient Payment", 0, "Payment") Then
         End If
 

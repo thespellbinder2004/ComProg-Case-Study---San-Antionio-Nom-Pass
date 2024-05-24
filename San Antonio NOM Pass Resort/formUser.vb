@@ -26,6 +26,8 @@ Public Class formUser
         txtUsername.Clear()
         lbGuests.Items.Clear()
         lbRooms.Items.Clear()
+        txtArrivalDate.Clear()
+        txtDepartureDate.Clear()
 
         txtAddress.ReadOnly = True
         txtAge.ReadOnly = True

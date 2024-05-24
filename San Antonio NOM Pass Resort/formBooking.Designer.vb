@@ -62,7 +62,7 @@ Partial Class formBooking
         txtFirstName.Location = New Point(88, 171)
         txtFirstName.Name = "txtFirstName"
         txtFirstName.Size = New Size(223, 23)
-        txtFirstName.TabIndex = 4
+        txtFirstName.TabIndex = 3
         ' 
         ' Label4
         ' 
@@ -81,7 +81,7 @@ Partial Class formBooking
         txtLastName.Location = New Point(353, 171)
         txtLastName.Name = "txtLastName"
         txtLastName.Size = New Size(221, 23)
-        txtLastName.TabIndex = 6
+        txtLastName.TabIndex = 4
         ' 
         ' Label5
         ' 
@@ -101,7 +101,7 @@ Partial Class formBooking
         dtpBirth.Location = New Point(88, 221)
         dtpBirth.Name = "dtpBirth"
         dtpBirth.Size = New Size(223, 23)
-        dtpBirth.TabIndex = 7
+        dtpBirth.TabIndex = 5
         ' 
         ' Label6
         ' 
@@ -131,6 +131,7 @@ Partial Class formBooking
         ' 
         cbSex.FormattingEnabled = True
         cbSex.Location = New Point(353, 221)
+        cbSex.MaxDropDownItems = 6
         cbSex.Name = "cbSex"
         cbSex.Size = New Size(221, 23)
         cbSex.TabIndex = 3
@@ -140,7 +141,7 @@ Partial Class formBooking
         txtAddress.Location = New Point(88, 269)
         txtAddress.Name = "txtAddress"
         txtAddress.Size = New Size(487, 23)
-        txtAddress.TabIndex = 9
+        txtAddress.TabIndex = 7
         ' 
         ' Label8
         ' 
@@ -159,7 +160,7 @@ Partial Class formBooking
         dtpArrival.Location = New Point(89, 315)
         dtpArrival.Name = "dtpArrival"
         dtpArrival.Size = New Size(223, 23)
-        dtpArrival.TabIndex = 11
+        dtpArrival.TabIndex = 8
         ' 
         ' Label9
         ' 
@@ -178,7 +179,7 @@ Partial Class formBooking
         dtpDeparture.Location = New Point(352, 315)
         dtpDeparture.Name = "dtpDeparture"
         dtpDeparture.Size = New Size(223, 23)
-        dtpDeparture.TabIndex = 13
+        dtpDeparture.TabIndex = 9
         ' 
         ' Label10
         ' 
@@ -212,7 +213,7 @@ Partial Class formBooking
         btnCancel.Location = New Point(361, 546)
         btnCancel.Name = "btnCancel"
         btnCancel.Size = New Size(234, 56)
-        btnCancel.TabIndex = 14
+        btnCancel.TabIndex = 15
         btnCancel.Text = "Cancel"
         btnCancel.UseVisualStyleBackColor = False
         ' 
@@ -242,7 +243,7 @@ Partial Class formBooking
         txtGuestName.Location = New Point(90, 381)
         txtGuestName.Name = "txtGuestName"
         txtGuestName.Size = New Size(283, 23)
-        txtGuestName.TabIndex = 21
+        txtGuestName.TabIndex = 10
         ' 
         ' Label2
         ' 
@@ -259,7 +260,7 @@ Partial Class formBooking
         cbGuestType.Location = New Point(379, 381)
         cbGuestType.Name = "cbGuestType"
         cbGuestType.Size = New Size(76, 23)
-        cbGuestType.TabIndex = 23
+        cbGuestType.TabIndex = 11
         ' 
         ' btnEnterGuest
         ' 
@@ -269,7 +270,7 @@ Partial Class formBooking
         btnEnterGuest.Location = New Point(479, 377)
         btnEnterGuest.Name = "btnEnterGuest"
         btnEnterGuest.Size = New Size(96, 61)
-        btnEnterGuest.TabIndex = 14
+        btnEnterGuest.TabIndex = 12
         btnEnterGuest.Text = "Enter"
         btnEnterGuest.UseVisualStyleBackColor = False
         ' 
@@ -281,7 +282,7 @@ Partial Class formBooking
         btnClearList.Location = New Point(479, 454)
         btnClearList.Name = "btnClearList"
         btnClearList.Size = New Size(96, 61)
-        btnClearList.TabIndex = 14
+        btnClearList.TabIndex = 13
         btnClearList.Text = "Clear"
         btnClearList.UseVisualStyleBackColor = False
         ' 
@@ -305,7 +306,7 @@ Partial Class formBooking
         Label3.Location = New Point(107, 50)
         Label3.Name = "Label3"
         Label3.Size = New Size(531, 41)
-        Label3.TabIndex = 25
+        Label3.TabIndex = 24
         Label3.Text = "San Antonio NOM Pass Resort"
         ' 
         ' Label1
@@ -317,7 +318,7 @@ Partial Class formBooking
         Label1.Location = New Point(113, 31)
         Label1.Name = "Label1"
         Label1.Size = New Size(130, 24)
-        Label1.TabIndex = 26
+        Label1.TabIndex = 21
         Label1.Text = "Welcome to"
         ' 
         ' Label11
@@ -329,7 +330,7 @@ Partial Class formBooking
         Label11.Location = New Point(87, 103)
         Label11.Name = "Label11"
         Label11.Size = New Size(72, 18)
-        Label11.TabIndex = 0
+        Label11.TabIndex = 4
         Label11.Text = "Username"
         ' 
         ' txtUsername
@@ -337,7 +338,7 @@ Partial Class formBooking
         txtUsername.Location = New Point(87, 124)
         txtUsername.Name = "txtUsername"
         txtUsername.Size = New Size(223, 23)
-        txtUsername.TabIndex = 4
+        txtUsername.TabIndex = 1
         ' 
         ' Label13
         ' 
@@ -356,7 +357,7 @@ Partial Class formBooking
         txtPassword.Location = New Point(352, 124)
         txtPassword.Name = "txtPassword"
         txtPassword.Size = New Size(221, 23)
-        txtPassword.TabIndex = 6
+        txtPassword.TabIndex = 2
         ' 
         ' btnBookNow
         ' 
